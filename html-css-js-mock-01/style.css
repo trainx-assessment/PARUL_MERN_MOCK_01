@@ -1,0 +1,46 @@
+*{
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+body{
+    background-color: rgb(228, 228, 228);
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+header{padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+.Student_Registration_Form{
+    width: max-content;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+main{
+    background-color:white;
+    border: 0;
+    padding : 20px;
+    border-radius: 12px;
+}
+.get{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+.courselist{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
