@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Student Application Management System</h2>
+  <h5>Register and manage student applications</h5>
+  
+  <form>
+    <div class="form-group">
+      <label for="name">Student Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" name="phone" required>
+    </div>
+
+    <div class="form-group">
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+    </div>
+
+    <div class="form-group">
+      <label>Gender:</label>
+      <div class="radio-group">
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="course">Course:</label>
+      <select id="course" name="course" required>
+        <option value="">Select Course</option>
+        <option value="web">Web Development</option>
+        <option value="uiux">UI/UX</option>
+        <option value="python">Python</option>
+        <option value="data">Data Analytics</option>
+        <option value="mern">MERN Stack</option>
+        <option value="cloud">Cloud Computing</option>
+      </select>
+    </div>
+
+    <div class="form-group h">
+      <label>Skills:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" value="HTML"> HTML</label>
+        <label><input type="checkbox" value="CSS"> CSS</label>
+        <label><input type="checkbox" value="JavaScript"> JavaScript</label>
+        <label><input type="checkbox" value="Git"> Git</label>
+        <label><input type="checkbox" value="React"> React</label>
+        <label><input type="checkbox" value="Node.js"> Node.js</label>
+      </div>
+    </div>
+
+    <div class="form-group h">
+      <label for="about">About Student:</label>
+      <textarea id="about" name="about" rows="7"></textarea>
+    </div>
+
+    <div class="form-group h">
+      <label for="photo">Profile Photo:</label>
+      <input type="file" id="photo" name="photo" accept="image/*">
+    </div>
+
+    <div class="form-group h buttons">
+      <button type="submit">Register Student</button>
+      <button type="reset">Reset Form</button>
+    </div>
+  </form>
+    <div id="studentContainer"></div>
+        <div id="statistics">
+            <h2>Student Statistics</h2>
+            <p id="totalStudents">Total Students: 0</p>
+            <p id="webDevCount">Web Development: 0</p>
+            <p id="uiuxCount">UI/UX: 0</p>
+            <p id="pythonCount">Python: 0</p>
+            <p id="dataCount">Data Analytics: 0</p>
+            <p id="mernCount">MERN Stack: 0</p>
+            <p id="cloudCount">Cloud Computing: 0</p>
+        </div>
+
+</body>
+</html>
