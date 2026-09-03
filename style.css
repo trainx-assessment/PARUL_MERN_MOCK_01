@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body,html{
+    height: 100%;
+    width: 100%; 
+}
+header{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(110, 101, 231);
+}
+main{
+    height:100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(175, 211, 243);
+}
+
+#registration{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:10px
+}
+form{
+    height: 100%;
+    width: 100%;
+    gap:10px;
+    background-color: antiquewhite;
+    padding: 50px ;
+}
+.button{
+    height: 100px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    height: 30px;
+    width: 60px;
+    color: rgb(47, 54, 54);
+    background-color: burlywood;
+}
+select{
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+}
+input{
+    padding: 8px;
+    border: 10px;
+}
