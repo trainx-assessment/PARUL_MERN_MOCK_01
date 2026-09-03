@@ -66,10 +66,14 @@ function validate() {
     } : null;
 }
 function persist() {
-    if (!Array.isArray(students)) {
-        console.log("Array is not defined");
-    } else {
+    try {
         localStorage.setItem("students", JSON.stringify(students));
+    } catch (error) {
+        if (error.name === "QuotaExceededError") {
+            alert("Storage is full. Please remove some student records or use smaller images.");
+        } else {
+            throw error;
+        }
     }
 }
 
