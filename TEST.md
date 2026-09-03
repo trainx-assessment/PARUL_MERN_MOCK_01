@@ -29,7 +29,9 @@ Build a complete **Student Application Management System** where users can regis
 
 ---
 
-# Task 1 — Project Setup & HTML Structure
+
+```javascript
+const students =# Task 1 — Project Setup & HTML Structure
 
 ### Suggested Time: 20 Minutes
 
@@ -459,9 +461,7 @@ Accepted examples:
 ### Suggested Time: 20 Minutes
 
 Create a JavaScript array:
-
-```javascript
-const students = [];
+ [];
 ```
 
 After successful validation, create a student object.
