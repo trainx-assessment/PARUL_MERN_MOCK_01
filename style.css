@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+    background: rgb(209, 242, 255);
+    color: rgb(0, 0, 0);
+    padding: 20px 20px;
+    display: flex;
+    justify-content: center;
+}
+.header h1 {
+    font-size: 32px;
+    font-weight: 300;
+}
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+.form-section, .statistics-section, .filter-section, .students-section {
+    background: rgb(209, 242, 255);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0, 51, 58, 0.455);
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.form-group label {
+    font-weight: bold;
+}
+input,select,textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #a3a3a3;
+    border-radius: 6px;
+    font-size: 15px;
+}
+.radio-group,.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+.radio-group label,.checkbox-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+    background: #2563eb;
+    color: white;
+}
+.btn:hover {
+    background: #1d4ed8;
+}
+.about {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #4b5563;
+}
+.footer {
+    text-align: center;
+    background: rgb(209, 242, 255);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+}
+@media(max-width: 768px){
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .header-content {
+        padding-right: 100px;
+    }
+}
