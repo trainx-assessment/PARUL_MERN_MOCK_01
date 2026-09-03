@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-content">
+
+            <div>
+
+
+                <h1>
+                    Student Application Management System
+                </h1>
+
+                <p>
+                    Register and manage student applications
+                </p>
+            </div>
+
+        </div>
+    </header>
+    <main class="main">
+        <div class="maincontainer">
+            <form id="studentForm" novalidate>
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="studentName">
+                            Student Name
+                        </label>
+
+                        <input type="text" id="studentName" name="studentName" maxlength="40" required>
+
+                        <small class="validation-message" id="studentNameError"></small>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="studentEmail">
+                            Email
+                        </label>
+
+                        <input type="email" id="studentEmail" name="studentEmail" required>
+
+                        <small class="validation-message" id="studentEmailError"></small>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="studentPhone">
+                            Phone Number
+                        </label>
+
+                        <input type="text" id="studentPhone" name="studentPhone" inputmode="numeric" maxlength="10"
+                            required>
+
+                        <small class="validation-message" id="studentPhoneError"></small>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="studentDob">
+                            Date of Birth
+                        </label>
+
+                        <input type="date" id="studentDob" name="studentDob" required>
+
+                        <small class="validation-message" id="studentDobError"></small>
+
+                    </div>
+
+
+
+                    <fieldset class="form-group">
+
+                        <legend>
+                            Gender
+                        </legend>
+
+                        <div class="choice-row">
+
+                            <label>
+                                <input type="radio" name="gender" value="Male">
+                                Male
+                            </label>
+
+                            <label>
+                                <input type="radio" name="gender" value="Female">
+                                Female
+                            </label>
+
+                            <label>
+                                <input type="radio" name="gender" value="Other">
+                                Other
+                            </label>
+
+                        </div>
+
+                        <small class="validation-message" id="genderError"></small>
+
+                    </fieldset>
+
+
+
+                    <div class="form-group">
+
+                        <label for="studentCourse">
+                            Course
+                        </label>
+
+                        <select id="studentCourse" name="studentCourse" required>
+
+                            <option value="">
+                                Select Course
+                            </option>
+
+                            <option value="Web Development">
+                                Web Development
+                            </option>
+
+                            <option value="UI/UX">
+                                UI/UX
+                            </option>
+
+                            <option value="Python">
+                                Python
+                            </option>
+
+                            <option value="Data Analytics">
+                                Data Analytics
+                            </option>
+
+                            <option value="MERN Stack">
+                                MERN Stack
+                            </option>
+
+                            <option value="Cloud Computing">
+                                Cloud Computing
+                            </option>
+
+                        </select>
+
+                        <small class="validation-message" id="studentCourseError"></small>
+
+                    </div>
+
+
+
+                    <fieldset class="form-group full-width">
+
+                        <legend>
+                            Skills
+                        </legend>
+
+                        <div class="choice-grid">
+
+                            <label>
+                                <input type="checkbox" name="skills" value="HTML">
+                                HTML
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="skills" value="CSS">
+                                CSS
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="skills" value="JavaScript">
+                                JavaScript
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="skills" value="Git">
+                                Git
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="skills" value="React">
+                                React
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="skills" value="Node.js">
+                                Node.js
+                            </label>
+
+                        </div>
+
+                        <small class="validation-message" id="skillsError"></small>
+
+                    </fieldset>
+
+
+
+                    <div class="form-group full-width">
+
+                        <label for="studentAbout">
+                            About Student
+                        </label>
+
+                        <textarea id="studentAbout" name="studentAbout" maxlength="200" rows="5" required></textarea>
+
+                        <div class="textarea-footer">
+
+                            <small class="hint">
+                                Minimum 20 characters.
+                                Maximum 200 characters.
+                            </small>
+
+                            <small id="characterCounter">
+                                0 / 200
+                            </small>
+
+                        </div>
+
+                        <small class="validation-message" id="studentAboutError"></small>
+
+                    </div>
+
+
+
+                    <div class="form-group full-width">
+
+                        <label for="studentPhoto">
+                            Profile Photo
+                        </label>
+
+                        <input type="file" id="studentPhoto" name="studentPhoto" accept="image/*" required>
+
+                        <small class="hint">
+                            Accept image files only
+                        </small>
+
+                        <small class="validation-message" id="studentPhotoError"></small>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-actions">
+
+                    <button type="submit" id="submitButton" class="first-button">
+                        Register Student
+                    </button>
+
+                    <button type="button" id="resetButton" class="second-button">
+                        Reset Form
+                    </button>
+
+                </div>
+
+            </form>
+
+            <section
+            class="stats-section"
+            aria-labelledby="stats-title"
+        >
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">Overview</p>
+
+                    <h2 id="stats-title">
+                        Student Statistics
+                    </h2>
+                </div>
+
+            </div>
+
+            <div
+                class="stats-grid"
+                id="statsContainer"
+            ></div>
+
+        </section>
+
+
+       
+        <section
+            class="panel"
+            aria-labelledby="search-title"
+        >
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">Directory</p>
+
+                    <h2 id="search-title">
+                        Search and Filter Students
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="search-grid">
+
+                
+                <div class="form-group">
+
+                    <label for="searchInput">
+                        Search Students
+                    </label>
+
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="Search student by name..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                
+                <div class="form-group">
+
+                    <label for="courseFilter">
+                        Filter by Course
+                    </label>
+
+                    <select id="courseFilter">
+
+                        <option value="">
+                            All Courses
+                        </option>
+
+                        <option value="Web Development">
+                            Web Development
+                        </option>
+
+                        <option value="UI/UX">
+                            UI/UX
+                        </option>
+
+                        <option value="Python">
+                            Python
+                        </option>
+
+                        <option value="Data Analytics">
+                            Data Analytics
+                        </option>
+
+                        <option value="MERN Stack">
+                            MERN Stack
+                        </option>
+
+                        <option value="Cloud Computing">
+                            Cloud Computing
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+            <section aria-labelledby="students-title">
+
+                <div class="section-heading">
+
+                    <div>
+
+
+                        <h2 id="students-title">
+                            Student Applications
+                        </h2>
+                    </div>
+
+                    <span id="resultCount" class="result-count">
+                        0 students
+                    </span>
+
+                </div>
+
+
+
+                <div id="studentContainer" class="student-grid" aria-live="polite"></div>
+
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                Student Application Management System
+                &mdash;
+                HTML5, CSS3 &amp; Vanilla JavaScript
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
