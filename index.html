@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Application Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="maincontainer">
+    <div class="formcontainer">
+      <header>
+        <h1>Student Application Management System</h1>
+        <h4>Register and manage student applications</h4>
+      </header>
+
+      <form action="registration">
+        <label for="studentName"><b>Student Name :</b></label>
+        <input type="text" id="studentName" placeholder="eg. Praveen">
+
+        <label for="email"><b>Email :</b></label>
+        <input type="email" id="email" placeholder="abc@gmail.com">
+
+        <label for="phone"><b>Phone Number :</b></label>
+        <input type="text" id="phone" placeholder="eg. 9287828280">
+
+        <label for="dob"><b>Date of Birth :</b></label>
+        <input type="date" id="dob">
+
+        <label><b>Gender :</b></label>
+        <div class="gender">
+          <input type="radio" name="Gender" value="male"> Male
+          <input type="radio" name="Gender" value="female"> Female
+          <input type="radio" name="Gender" value="other"> Other
+        </div>
+
+        <label for="courses"><b>Courses :</b></label>
+        <select id="courses" name="courses">
+          <option value="">Select course</option>
+          <option>Web Development</option>
+          <option>UI/UX</option>
+          <option>Python</option>
+          <option>Data Analytics</option>
+          <option>MERN Stack</option>
+          <option>Cloud Computing</option>
+        </select>
+
+        <label><b>Skills :</b></label>
+        <div class="skills">
+          <input type="checkbox"> HTML
+          <input type="checkbox"> CSS
+          <input type="checkbox"> JavaScript
+          <input type="checkbox"> Git
+          <input type="checkbox"> React
+          <input type="checkbox"> Node.js
+        </div>
+
+        <label for="about"><b>About Student :</b></label>
+        <textarea id="about" name="about" maxlength="200" rows="4" cols="50"
+          placeholder="Write about the student (max 200 characters)..."></textarea>
+        <small>Maximum 200 characters</small>
+
+        <label for="photo"><b>Profile Photo :</b></label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+
+        <div class="btn">
+          <button type="submit" class="register">Register Student</button>
+          <button type="reset" class="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="studentContainer"></div>
+    <div id="statistics"></div>
+
+  </div>
+</body>
+</html>

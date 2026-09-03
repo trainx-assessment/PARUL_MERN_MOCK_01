@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(233, 237, 246);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  
+}
+
+header h4 {
+  margin: 15px;
+  color: rgb(57, 52, 52);
+}
+
+.formcontainer {
+  margin: 25px;
+  padding: 20px;
+  background-color: rgb(236, 212, 245);
+  border-radius: 10px;
+  width: 600px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input:hover, select:hover, textarea:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.gender, .skills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: aquamarine;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: mediumaquamarine;
+}
