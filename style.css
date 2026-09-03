@@ -1,0 +1,36 @@
+.header {
+    height: 100px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.form {
+    height: 400px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.stat {
+    height: 100px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.filter {
+    height: 80px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+.cards {
+    height: 300px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.footer {
+    height: 50px;
+    width: 100%;
+    border-radius: 8px;
+}
