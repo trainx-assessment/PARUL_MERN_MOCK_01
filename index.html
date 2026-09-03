@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+    </header>
+
+    <div class="container-main">
+    <div class="container-form">
+        <form>
+            <div class="con1">
+            <p style=" font-size: large;">First Name:</p>
+            <input type="text" name="first-name" id="first-name" required> 
+            <p style=" font-size: large;">Email:</p>   
+            <input type="email" name="email-id" id="email-id" required> 
+            </div>
+        
+            <div class="con1">
+            <p style=" font-size: large;">Phone Number:</p>
+            <input type="text" name="phone-no" id="phone-no" required> 
+            <p style=" font-size: large;">Date of Birth:</p>
+            <input type="date" name="birth-date" id="birth-date" required>
+            </div>
+
+            <div class="con1" style="justify-self:left">
+                <p style=" font-size: large;">Gender:</p>
+                <input type="radio" name="female" id="female"><p>Female</p>
+                <input type="radio" name="male" id="male"><p>Male</p>
+                <input type="radio" name="other" id="other"><p>Other</p>
+            </div>
+
+
+            <div class="con1"  style="justify-self:left">
+                <p style=" font-size: large;">Course:</p>
+                <input type="checkbox" name="user-skils-1" id="user-skils-1"> <p>Web Development</p>
+                <input type="checkbox" name="user-skils-2" id="user-skils-2"> <p>UI/UX</p>
+                <input type="checkbox" name="user-skils-3" id="user-skils-3"> <p>Python</p>
+                <input type="checkbox" name="user-skils-4" id="user-skils-4"> <p>Data Analytics</p>
+                <input type="checkbox" name="user-skils-5" id="user-skils-5"> <p>MERN Stack</p>
+                <input type="checkbox" name="user-skils-6" id="user-skils-6"> <p>Cloud Computing</p>
+                </div>
+
+
+            <div class="con1"  style="justify-self:left">
+            <p style=" font-size: large;">Skills:</p>
+            <input type="checkbox" name="skill-1" id="skill-1"> <p>HTML </p>
+            <input type="checkbox" name="skill-2" id="skill-2"> <p>CSS</p> 
+            <input type="checkbox" name="skill-3" id="skill-3"> <p>JavaScript </p>
+            <input type="checkbox" name="skill-4" id="skill-4"> <p>Git</p>
+            <input type="checkbox" name="skill-5" id="skill-5"> <p>React </p>
+            <input type="checkbox" name="skill-6" id="skill-6"> <p>Node js </p>
+            </div>
+
+            <div class="con1"  style="justify-self:left">
+            <p style=" font-size: large;"> About Student: </p>
+            <textarea name="about-student" id="about-student" style="width: 700px;"> About you</textarea> 
+            </div>
+
+            <div class="con1"  style="justify-self:left">
+            <p style=" font-size: large;">Profile Photo:</p>
+            <input type="file" name="profile-photo" id="profile-photo" required>
+            </div>
+
+            <div class="con1">
+            <button type="submit" style="padding: 3px;" id="submit">Register Student</button>
+            <button type="reset" style="padding: 3px;" id="reset">Reset Form</button>
+            </div>
+
+
+        </form>
+    </div>
+    
+</div>
+    <div class="container-main-1">
+        <div class="card-display">
+            <ul id="student-list">
+
+            </ul>
+            <p>Name:</p><p id="card-name"></p>
+            <p>Email:</p><p id="card-email"></p> 
+            <p>Phone:</p><p id="card-phone"></p>
+            <p>DOB:</p><p id="card-DOB"></p> 
+            <p>Gender:</p><p id="card-Gender"></p> 
+            <p>Gender:</p><p id="card-Gender"></p> 
+
+
+           
+        </div>
+    </div>
+    
+</body>
+<script src="script.js" ></script>
+</html>
+
+
