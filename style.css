@@ -194,37 +194,40 @@ section h2 {
         width: 100%;
     }
 }
+.studentcard-container {
+    width: 90%;
+    max-width: 1200px;
 
-.statistics-section {
-    background-color: #f4f6f8;
-}
+    margin: 30px auto;
 
-
-
-.search-section {
-    background-color: white;
-}
-
-
-
-.students-section {
-    background-color: #f4f6f8;
-}
-
-.student-cards-container {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 20px;
 }
 
 
-.footer {
-    background-color: #1f2937;
-    color: white;
-    text-align: center;
+.student-card {
+    background-color: white;
+
     padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.footer p {
+
+.student-card h2 {
+    color: #2563eb;
+
+    margin-bottom: 15px;
+}
+
+
+.student-card p {
+    margin: 8px 0;
+
     font-size: 14px;
 }
