@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Application Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>Student Application Management System</h1>
+      <p>Register and manage student applications : </p>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Student Registration</h2>
+
+      <form id="studentForm" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" placeholder="e.g. Rahul Sharma">
+          </div>
+          <br></br>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="e.g. rahul@gmail.com">
+          </div>
+
+          <br></br>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" placeholder="978XXXXXXX">
+          </div>
+
+          <br></br>
+
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob">
+          </div>
+
+          <br></br>
+
+          <div class="form-group">
+            <span class="group-label">Gender</span>
+            <div class="inline-options">
+              <label>
+                <input type="radio" name="gender" value="Male"> Male
+              </label>
+              <label>
+                <input type="radio" name="gender" value="Female"> Female
+              </label>
+              <label>
+                <input type="radio" name="gender" value="Other"> Other
+              </label>
+            </div>
+          </div>
+
+          <br></br>
+
+          <div class="form-group">
+            <label for="course">Course</label>
+            <select id="course">
+              <option value="">Select Course</option>
+              <option value="Web Development">Web Development</option>
+              <option value="UI/UX">UI/UX</option>
+              <option value="Python">Python</option>
+              <option value="Data Analytics">Data Analytics</option>
+              <option value="MERN Stack">MERN Stack</option>
+              <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+          </div>
+
+          <br></br>
+
+          <div class="form-group full-row">
+            <span class="group-label">Skills</span>
+            <div class="inline-options">
+              <label>
+                <input type="checkbox" name="skills" value="HTML"> HTML
+              </label>
+              <label>
+                <input type="checkbox" name="skills" value="CSS"> CSS
+              </label>
+              <label>
+                <input type="checkbox" name="skills" value="JavaScript"> JavaScript
+            </label>
+              <label>
+                <input type="checkbox" name="skills" value="Git"> Git
+              </label>
+              <label>
+                <input type="checkbox" name="skills" value="React"> React
+              </label>
+              <label>
+                <input type="checkbox" name="skills" value="Node.js"> Node.js
+              </label>
+            </div>
+          </div>
+
+          <br></br>
+
+          <div class="form-group full-row">
+            <label for="about">About Student</label>
+            <textarea id="about" maxlength="200" rows="3" placeholder="A short note about the student (minimum 20 characters)"></textarea>
+            <div class="char-counter"> / 200</div>
+          </div>
+
+          <br></br>
+
+          <div class="form-group full-row">
+            <label for="photo">Profile Photo</label>
+            <input type="file" id="photo" accept=".jpg,.jpeg,.png,image/jpeg,image/png">
+          </div>
+        </div>
+
+        <br></br>
+
+        <div class="form-actions">
+          <button type="submit" id="submitBtn">Register Student</button>
+          <button type="reset" id="resetBtn">Reset Form</button>
+        </div>
+      </form>
+    </section>
+
+    <br></br>
+
+    <section>
+      <h2>Student Statistics</h2>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <h3 class="stat-value" id="totalCount">0</h3>
+          <p>Total Students</p>
+        </div>
+        <div class="stat-box">
+          <h3 class="stat-value" >0</h3>
+          <p>Web Development</p>
+        </div>
+        <div class="stat-box">
+          <h3 class="stat-value" data-course="UI/UX"></h3>
+          <p>UI/UX</p>
+        </div>
+        <div class="stat-box">
+          <h3 class="stat-value"></h3>
+          <p>Python</p>
+        </div>
+        <div class="stat-box">
+          <h3 class="stat-value"></h3>
+          <p>Data Analytics</p>
+        </div>
+        <div class="stat-box">
+          <h3 class="stat-value"></h3>
+          <p>MERN Stack</p>
+        </div>
+        <div class="stat-box">
+          <h3 class="stat-value"></h3>
+          <p>Cloud Computing</p>
+        </div>
+      </div>
+    </section>
+
+    <br></br>
+
+    <section class="filter-section">
+      <input type="text" id="searchInput" placeholder="Search student name">
+      <select id="courseFilter">
+        <option value="All Courses">All Courses</option>
+        <option value="Web Development">Web Development</option>
+        <option value="UI/UX">UI/UX</option>
+        <option value="Python">Python</option>
+        <option value="Data Analytics">Data Analytics</option>
+        <option value="MERN Stack">MERN Stack</option>
+        <option value="Cloud Computing">Cloud Computing</option>
+      </select>
+    </section>
+
+    <br></br>
+
+    <section>
+      <h2>Registered Students</h2>
+      <div id="studentContainer" class="student-container"></div>
+      <p id="noResults" hidden>No students found</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
