@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 17px;
+    opacity: 0.9;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #1e3a8a;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+#studentForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#studentForm>div:nth-last-child(3),
+#studentForm>div:nth-last-child(2),
+#studentForm>div:last-child {
+    grid-column: 1 / -1;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: #374151;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: inherit;
+    background-color: #fff;
+    transition: 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 7px;
+    accent-color: #2563eb;
+}
+
+#studentForm input[type="radio"]+*,
+#studentForm input[type="checkbox"]+* {
+    display: inline;
+}
+
+#studentForm>div:nth-child(5) label:not(:first-child),
+#studentForm>div:nth-child(7) label:not(:first-child) {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+input[type="file"] {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f9fafb;
+}
+
+#studentForm>div:last-child {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"] {
+    background-color: #2563eb;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(37, 99, 235, 0.25);
+}
+
+button[type="reset"] {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+button[type="reset"]:hover {
+    background-color: #d1d5db;
+    transform: translateY(-2px);
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+.stat-card p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+#search-filter {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 15px;
+    align-items: end;
+}
+
+#search-filter h2 {
+    grid-column: 1 / -1;
+}
+
+#searchInput,
+#filterStatus {
+    margin: 0;
+}
+
+.student-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.student-card {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.student-card h3 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.student-card p {
+    margin: 6px 0;
+    color: #4b5563;
+}
+
+
+footer {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    section {
+        padding: 22px;
+    }
+
+    #studentForm {
+        grid-template-columns: 1fr;
+    }
+
+    #studentForm>div {
+        grid-column: 1 / -1;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .student-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #search-filter {
+        grid-template-columns: 1fr;
+    }
+
+    #search-filter h2 {
+        grid-column: 1;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    main {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 18px;
+        margin-bottom: 20px;
+    }
+
+    section h2 {
+        font-size: 20px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .student-cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    #studentForm>div:last-child {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    footer {
+        padding: 25px 15px;
+    }
+}
+
+.error-message {
+    display: block;
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.input-error {
+    border: 1px solid #dc2626;
+    background-color: #fff7f7;
+}
+
+.input-error:focus {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+#characterCounter {
+    display: block;
+    margin-top: 5px;
+    color: #6b7280;
+    font-size: 13px;
+}
