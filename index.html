@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header_section">
+            <h1>Student Application Management System</h1>
+            <p>Register and manage student applications</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="main_section">
+        <form id="studentRegistrationForm">
+  
+        <div class="student">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required>
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div>
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+        </div>
+
+        <div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="gender">
+            <label>Gender:</label>
+            <input type="radio" id="genderMale" name="gender" value="Male">
+            <label for="genderMale">Male</label>
+    
+            <input type="radio" id="genderFemale" name="gender" value="Female">
+            <label for="genderFemale">Female</label>
+    
+            <input type="radio" id="genderOther" name="gender" value="Other">
+            <label for="genderOther">Other</label>
+        </div>
+
+        <div>
+            <label for="course">Course:</label>
+            <select id="course" name="course">
+            <option value="" disabled selected>Select Course</option>
+            <option value="Web Development">Web Development</option>
+            <option value="UI/UX">UI/UX</option>
+            <option value="Python">Python</option>
+            <option value="Data Analytics">Data Analytics</option>
+            <option value="MERN Stack">MERN Stack</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Skills:</label>
+            <input type="checkbox" id="skillHTML" name="skills" value="HTML">
+            <label for="skillHTML">HTML</label>
+            
+        <input type="checkbox" id="skillCSS" name="skills" value="CSS">
+        <label for="skillCSS">CSS</label>
+    
+        <input type="checkbox" id="skillJS" name="skills" value="JavaScript">
+        <label for="skillJS">JavaScript</label>
+    
+        <input type="checkbox" id="skillGit" name="skills" value="Git">
+        <label for="skillGit">Git</label>
+    
+        <input type="checkbox" id="skillReact" name="skills" value="React">
+        <label for="skillReact">React</label>
+    
+        <input type="checkbox" id="skillNode" name="skills" value="Node.js">
+        <label for="skillNode">Node.js</label>
+        </div>
+
+
+        <div class="about">
+            <label for="aboutStudent">About Student (Max 200 characters):</label>
+            <textarea id="aboutStudent" name="aboutStudent" maxlength="200"></textarea>
+        </div>
+
+        <div>
+            <label for="profilePhoto">Profile Photo:</label>
+            <input type="file" id="profilePhoto" name="profilePhoto" accept="image/*">
+        </div>
+
+        <div class="button">
+            <button type="submit" class="submit">Register Student</button>
+            <button type="reset" class="reset">Reset Form</button>
+        </div>
+
+        </form>
+        </div>
+    </main>
+
+    <section>
+        <div class="student_section">
+            <h1>Student Statistics</h1>
+            <div class="total">
+                <p>Total Students: 0</p>
+            </div>
+            <div class="student_register">
+                <p>Total Students: 1</p>
+                <p>Total Students: 2</p>
+                <p>Total Students: 3</p>
+            </div>
+
+            <div class="eroll-course">
+                <p>Web Development: 0</p>
+                <p>UI/UX: 0</p>
+                <p>Python: 0</p>
+                <p>Data Analytics: 0</p>
+                <p>Mern Stack: 0</p>
+                <p>Cloud Computing: 0</p>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
+</body>
+</html>
