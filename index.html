@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Project Name here -->
+    <header id="project-name">
+        <h1> Student Application Management System </h1>
+        <h3>Register and manage student applications</h3>
+    </header>
+    <!-- header completed -->
+<!-- i need some form here to start the application -->
+<!-- here i will make form -->
+    <div class="box">
+        <div class="application">
+        <form class="form">
+            <!-- name and email div -->
+            <div class="name-email">
+                <div class="name">
+                    <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                </div>
+                <div class="email">
+                    <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            <!-- phone number and date of birth -->
+            <div class="phoneNumber-DOB">
+                <div class="phoneNumber">
+                    <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required pattern="[0-9]{10}" inputmode="numeric">
+                </div>
+               <div class="DOB">
+                 <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+               </div>
+            </div>
+            <!-- student details div -->
+            <div class="studentDetails">
+                <!-- gender inside student details -->
+                <div class="gender">
+                    <label for="gender">Gender</label>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                    <input type="radio" id="Other" name="gender" value="Other" required>
+                    <label for="Other">Other</label>
+                </div>
+                <!-- course inside student details -->
+                <div class="course">
+                    <label for="course">Course:</label>
+                    <input type="text" id="course" name="course" required>
+                </div>
+                <!-- skills inside student details -->
+                <div class="skills">
+                    <label for="skills">Skills:</label>
+                    <input type="text" id="skills" name="skills" required>
+                </div>
+                
+                <!-- profile photo inside student details -->
+                <div class="photo">
+                    <label for="profile-photo">Profile Photo:</label>
+                    <input type="file" id="profile-photo" name="profile-photo" accept="image/*" required>
+                </div>
+            </div>
+            <!-- about inside student details -->
+                <div class="about">
+                    <label for="about">About:</label>
+                    <textarea id="about1" name="about" maxlength="200" required></textarea>
+                </div>
+            <!-- button div -->
+            <div class="button">
+                <button type="submit" id="submit">Submit</button>
+                <button type="reset" id="reset">Reset</button>
+            </div>
+            
+        </form>
+    </div>
+    </div>
+</body>
+
+<script src="server.js"></script>
+
+</html>
