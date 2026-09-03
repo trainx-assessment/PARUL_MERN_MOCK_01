@@ -1,0 +1,46 @@
+    .cont-1 {
+        width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #e13b3b;
+        border-radius: 5px;
+        background-color: #cdb6b6;
+    }
+
+    .main {
+        width: 1600px;
+        height: 15000px;
+        background-color: #d8640b;
+
+    }
+
+    .heading {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .submit-1 {
+        text-align: center;
+        border: 0.5px solid #cccccc;
+        height: 20px;
+        width: 50px;
+        background-color: #0a0ad1;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+    }
+
+    .submit-2 {
+        text-align: center;
+        border: 0.5px solid #cccccc;
+        height: 20px;
+        width: 50px;
+        background-color: #0a0ad1;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-right: -100px;
+    }
