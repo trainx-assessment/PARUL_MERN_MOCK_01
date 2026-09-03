@@ -1,0 +1,258 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: lightgray;
+    font-family: sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+header h1 {
+    font-size: 25px;
+    margin: 0;
+}
+
+header p {
+    margin: 0;
+}
+
+#themeToggleBtn {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+}
+
+main {
+    width: 600px;
+    margin: 20px auto;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+
+.gender-options label,
+.skills-options label {
+    display: inline;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+.gender-options input,
+.skills-options input {
+    width: auto;
+}
+
+.character-counter {
+    font-size: 12px;
+    color: gray;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+button[type="reset"] {
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+.display {
+    background-color: white;
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.total_count {
+    color: blue;
+}
+
+.course-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+input.invalid,
+select.invalid,
+textarea.invalid {
+    border: 2px solid red;
+}
+
+input.valid,
+select.valid,
+textarea.valid {
+    border: 2px solid green;
+}
+
+.students-section {
+    margin-top: 20px;
+}
+
+.search-box {
+    margin-bottom: 15px;
+}
+
+.student-cards {
+    margin-bottom: 10px;
+}
+
+.student-card {
+    background-color: white;
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.student-card img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.edit-btn {
+    background-color: orange;
+    color: white;
+    margin-right: 10px;
+    border: none;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+.no-students {
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode header {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode form,
+body.dark-mode .display,
+body.dark-mode .student-card,
+body.dark-mode .no-students {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode input[type="date"],
+body.dark-mode select,
+body.dark-mode textarea {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border-color: #555555;
+}
+
+body.dark-mode .character-counter {
+    color: #bbb;
+}
+
+body.dark-mode .total_count {
+    color: #64b5f6;
+}
+
+body.dark-mode #themeToggleBtn {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        width: 95%;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
