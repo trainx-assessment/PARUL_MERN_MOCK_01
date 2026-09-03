@@ -1,0 +1,20 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.header{
+    background-color: rgb(212, 175, 11);
+}
+.main{
+    background-color: rgb(155, 172, 59);
+}
+
+
