@@ -49,7 +49,6 @@ Connect:
 ## Page Structure
 
 Create the following main sections:
-
 1. Header
 2. Student Registration Form
 3. Student Statistics
@@ -120,7 +119,7 @@ Male
 Female
 Other
 ```
-
+<>
 ## Course
 
 Use a select dropdown.
