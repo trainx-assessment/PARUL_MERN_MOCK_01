@@ -1,0 +1,480 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- Header Section --- */
+.main-header {
+    color: black;
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.header-content .subtitle {
+    font-size: 0.95rem;
+    color: #a0aec0;
+    margin-top: 4px;
+}
+
+
+/* --- Container Wrapper --- */
+.container {
+    max-width: 1100px;
+    margin: 32px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* --- Card Box Wrapper --- */
+.card-box {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 24px 28px;
+}
+
+.card-box h2 {
+    font-size: 1.35rem;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid black;
+}
+
+/* --- Form Layout --- */
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 16px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.required-star {
+    color: red;
+}
+
+.label-with-counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.char-counter {
+    font-size: 0.82rem;
+}
+
+/* --- Input Elements --- */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 0.92rem;
+    border: 1px solid black;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #4a5568;
+}
+
+input[type="file"] {
+    font-size: 0.9rem;
+    padding: 6px 0;
+} 
+
+.photo-preview-box {
+    margin-top: 10px;
+}
+
+.photo-preview-box img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.photo-preview-box.hidden {
+    display: none;
+}
+
+/* Radio & Checkbox Styling */
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 6px;
+}
+
+.inline-label {
+    font-size: 0.9rem;
+    font-weight: normal;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.inline-label input {
+    cursor: pointer;
+}
+
+/* Validation Messages */
+.error-msg {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    min-height: 18px;
+    display: block;
+}
+
+/* Form Action Buttons */
+.form-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+/* Common Button Styling */
+.btn {
+    padding: 10px 22px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-primary {
+    background-color: green;
+    color: #ffffff;
+}
+
+
+
+.btn-secondary {
+    background-color: gray;
+    color: #ffffff;
+}
+
+
+
+/* --- Statistics Section --- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 14px;
+}
+
+.stat-card {
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 14px;
+    text-align: center;
+}
+
+.stat-card.total-stat {
+    background-color: #2d3748;
+    color: #ffffff;
+    border-color: #2d3748;
+}
+
+.stat-card h3 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.stat-card h4 {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+}
+
+.stat-card p {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.total-stat h3,
+.total-stat p {
+    color: #ffffff;
+}
+
+/* --- Filter & Search Section --- */
+.filter-row {
+    display: flex;
+    gap: 20px;
+}
+
+.filter-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* --- Dynamic Student Cards Section --- */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1rem;
+    padding: 30px 0;
+}
+
+.student-card {
+    border: 1px solid black;
+    border-radius: 8px;;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-header-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.student-photo-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid black;
+    flex-shrink: 0;
+}
+
+.student-name-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    word-break: break-word;
+}
+
+.student-course-badge {
+    display: inline-block;
+    background-color: #edf2f7;
+    color: #2d3748;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-top: 4px;
+}
+
+body.dark-mode .student-course-badge {
+    background-color: #4a5568;
+    color: #ffffff;
+}
+
+.card-details p {
+    font-size: 0.88rem;
+    margin-bottom: 4px;
+    word-break: break-all;
+}
+
+
+
+.card-skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.skill-tag {
+    background-color: #e2e8f0;
+    color: #2d3748;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+body.dark-mode .skill-tag {
+    background-color: #4a5568;
+    color: #f7fafc;
+}
+
+.card-about {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border-left: 3px solid black;
+    word-break: break-word;
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.card-actions button {
+    flex: 1;
+    padding: 8px 0;
+    font-size: 0.85rem;
+}
+
+/* --- Footer --- */
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    border-top: 1px solid black;
+    margin-top: 40px;
+}
+
+/* 1. Medium Devices / Small Laptops (max-width: 992px) */
+@media (max-width: 992px) {
+    .container {
+        margin: 20px auto;
+        padding: 0 16px;
+        gap: 20px;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 2. Tablets & Large Phones (max-width: 768px) */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 18px 24px;
+    }
+
+    .header-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-content .subtitle {
+        font-size: 0.88rem;
+    }
+
+    .form-row,
+    .filter-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .card-box {
+        padding: 20px;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    }
+}
+
+/* 3. Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 16px 20px;
+    }
+
+    .theme-toggle-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .card-box {
+        padding: 16px;
+    }
+
+    .card-box h2 {
+        font-size: 1.18rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+
+    .radio-group,
+    .checkbox-group {
+        gap: 12px;
+    }
+
+    .inline-label {
+        font-size: 0.85rem;
+    }
+}

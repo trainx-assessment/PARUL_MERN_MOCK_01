@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <h1>Student Application Management System</h1>
+            <p class="subtitle">Register and manage student applications</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card-box form-section">
+            <h2 id="formHeading">Student Registration Form</h2>
+            <form id="studentForm" novalidate>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="studentName">Student Name <span class="required-star">*</span></label>
+                        <input type="text" id="studentName" placeholder="e.g. Rahul Sharma">
+                        <small class="error-msg" id="nameError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentEmail">Email Address <span class="required-star">*</span></label>
+                        <input type="email" id="studentEmail" placeholder="e.g. rahul@gmail.com">
+                        <small class="error-msg" id="emailError"></small>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="studentPhone">Phone Number <span class="required-star">*</span></label>
+                        <input type="text" id="studentPhone" placeholder="10-digit number">
+                        <small class="error-msg" id="phoneError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentDob">Date of Birth <span class="required-star">*</span></label>
+                        <input type="date" id="studentDob">
+                        <small class="error-msg" id="dobError"></small>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Gender <span class="required-star">*</span></label>
+                        <div class="radio-group">
+                            <label class="inline-label">
+                                <input type="radio" name="gender" value="Male"> Male
+                            </label>
+                            <label class="inline-label">
+                                <input type="radio" name="gender" value="Female"> Female
+                            </label>
+                            <label class="inline-label">
+                                <input type="radio" name="gender" value="Other"> Other
+                            </label>
+                        </div>
+                        <small class="error-msg" id="genderError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentCourse">Course <span class="required-star">*</span></label>
+                        <select id="studentCourse">
+                            <option value="">Select Course</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="UI/UX">UI/UX</option>
+                            <option value="Python">Python</option>
+                            <option value="Data Analytics">Data Analytics</option>
+                            <option value="MERN Stack">MERN Stack</option>
+                            <option value="Cloud Computing">Cloud Computing</option>
+                        </select>
+                        <small class="error-msg" id="courseError"></small>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Skills <span class="required-star">*</span></label>
+                    <div class="checkbox-group">
+                        <label class="inline-label"><input type="checkbox" name="skill" value="HTML"> HTML</label>
+                        <label class="inline-label"><input type="checkbox" name="skill" value="CSS"> CSS</label>
+                        <label class="inline-label"><input type="checkbox" name="skill" value="JavaScript"> JavaScript</label>
+                        <label class="inline-label"><input type="checkbox" name="skill" value="Git"> Git</label>
+                        <label class="inline-label"><input type="checkbox" name="skill" value="React"> React</label>
+                        <label class="inline-label"><input type="checkbox" name="skill" value="Node.js"> Node.js</label>
+                    </div>
+                    <small class="error-msg" id="skillsError"></small>
+                </div>
+                <div class="form-group full-width">
+                    <div class="label-with-counter">
+                        <label for="studentAbout">About Student <span class="required-star">*</span></label>
+                        <span id="charCounter" class="char-counter">0 / 200</span>
+                    </div>
+                    <textarea id="studentAbout" rows="3" maxlength="200" placeholder="Write a short description about the student (20-200 characters)..."></textarea>
+                    <small class="error-msg" id="aboutError"></small>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="studentPhoto">Profile Photo <span class="required-star">*</span></label>
+                    <input type="file" id="studentPhoto" accept="image/png, image/jpeg, image/jpg">
+                    <small class="error-msg" id="photoError"></small>
+                    <div id="photoPreviewContainer" class="photo-preview-box hidden">
+                        <img id="photoPreview" src="" alt="Profile Preview">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="submitBtn" class="btn btn-primary">Register Student</button>
+                    <button type="button" id="resetBtn" class="btn btn-secondary">Reset Form</button>
+                </div>
+
+            </form>
+        </section>
+
+        <section class="card-box stats-section">
+            <h2>Student Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card total-stat">
+                    <h3>Total Students</h3>
+                    <p id="statTotal">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Web Development</h4>
+                    <p id="statWebDev">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>UI/UX</h4>
+                    <p id="statUiUx">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Python</h4>
+                    <p id="statPython">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Data Analytics</h4>
+                    <p id="statDataAnalytics">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>MERN Stack</h4>
+                    <p id="statMern">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Cloud Computing</h4>
+                    <p id="statCloud">0</p>
+                </div>
+            </div>
+        </section>
+        <section class="card-box filter-section">
+            <h2>Search & Filter Students</h2>
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label for="searchInput">Search by Name</label>
+                    <input type="text" id="searchInput" placeholder="Search student by name...">
+                </div>
+
+                <div class="filter-group">
+                    <label for="courseFilter">Filter by Course</label>
+                    <select id="courseFilter">
+                        <option value="ALL">All Courses</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="UI/UX">UI/UX</option>
+                        <option value="Python">Python</option>
+                        <option value="Data Analytics">Data Analytics</option>
+                        <option value="MERN Stack">MERN Stack</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-box cards-section">
+            <h2>Registered Students</h2>
+            <div id="studentContainer" class="cards-grid">
+                <p id="emptyState" class="empty-state">No students found</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
