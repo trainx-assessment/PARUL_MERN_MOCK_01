@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7fa;
+    color: black;
+}
+
+header {
+    background-color: white;
+    padding: 20px;
+}
+
+.header-content {
+     display: flex;
+    justify-content: space-between; 
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px; 
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="date"], 
+select, 
+textarea, 
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+ 
+input[type="radio"], 
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.radio-group, .checkbox-group {
+    margin-bottom: 10px;
+}
+
+ 
+.error-msg {
+    color: red;
+    font-size: 12px;
+    display: block;
+    height: 15px;
+}
+
+.char-counter {
+    text-align: right;
+    font-size: 12px;
+    color: gray;
+}
+
+ 
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.primary {
+    background-color: blue;
+    color: white;
+}
+
+.secondary {
+    background-color: gray;
+    color: white;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+}
+
+.edit-btn {
+    background-color: black;
+    color: white;
+    margin-right: 10px;
+}
+
+ 
+.dashboard-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.filters-container input {
+    margin-bottom: 10px;
+}
+ 
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.student-card {
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.student-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;  
+    margin-bottom: 10px;
+}
+
+.student-card p {
+    margin-bottom: 5px;
+}
+
+.card-actions {
+    margin-top: 15px;
+    border-top: 1px solid #eeeeee;
+    padding-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+ 
+
