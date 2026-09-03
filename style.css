@@ -217,3 +217,33 @@ footer {
         margin-top: 10px;
     }
 }
+/*  
+   Dark Mode (Bonus Task)
+   Beginners just manually overwrite colors!
+    */
+body.dark-mode {
+    background-color: #222222;
+    color: white;
+}
+
+body.dark-mode header,
+body.dark-mode section,
+body.dark-mode footer,
+body.dark-mode .student-card {
+    background-color: #333333;
+    border-color: #555555;
+}
+
+body.dark-mode input[type="text"], 
+body.dark-mode input[type="email"], 
+body.dark-mode input[type="date"], 
+body.dark-mode select, 
+body.dark-mode textarea {
+    background-color: #444444;
+    color: white;
+    border-color: #666666;
+}
+
+body.dark-mode .card-actions {
+    border-top: 1px solid #555555;
+}

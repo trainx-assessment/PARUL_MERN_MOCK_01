@@ -114,8 +114,46 @@
                 </div>
             </form>
         </section>
-        
+
+         <!-- Stats & Filters Section -->
+        <section class="dashboard-section">
+            <div class="stats-container" id="statsContainer">
+                <h3>Statistics</h3>
+                <p id="totalStudents">Total Students: 0</p>
+                <div id="courseStats" class="course-stats">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <div class="filters-container">
+                <h3>Search & Filter</h3>
+                <input type="text" id="searchInput" placeholder="Search student by name...">
+                <select id="filterCourse">
+                    <option value="All">All Courses</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Python">Python</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="MERN Stack">MERN Stack</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Cards Container -->
+        <section class="cards-section">
+            <h2>Registered Students</h2>
+            <div id="cardsContainer" class="cards-grid">
+            </div>
+            <p id="noResultsMsg" style="display: none; text-align: center; color: var(--text-muted);">No students found</p>
+        </section>
+
     </main>
+
+
+    <footer>
+        <p>&copy; 2026 Student Application Management System</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
