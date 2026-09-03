@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Application Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Student Application Management</h1>
+      <p>Register and manage students</p>
+    </div>
+    <button id="themeButton" type="button">Dark Mode</button>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Student Registration</h2>
+      <form id="studentForm" novalidate>
+        <div class="grid">
+          <label>Student Name *<input id="studentName" type="text" placeholder="Enter student name" /></label>
+          <small class="error-message" id="studentNameError"></small>
+
+          <label>Email *<input id="email" type="email" placeholder="student@example.com" /></label>
+          <small class="error-message" id="emailError"></small>
+
+          <label>Phone Number *<input id="phone" type="text" placeholder="9876543210" /></label>
+          <small class="error-message" id="phoneError"></small>
+
+          <label>Date of Birth *<input id="dob" type="date" /></label>
+          <small class="error-message" id="dobError"></small>
+
+          <fieldset>
+            <legend>Gender *</legend>
+            <label><input type="radio" name="gender" value="Male" /> Male</label>
+            <label><input type="radio" name="gender" value="Female" /> Female</label>
+            <label><input type="radio" name="gender" value="Other" /> Other</label>
+          </fieldset>
+          <small class="error-message" id="genderError"></small>
+
+          <label>Course *
+            <select id="course">
+              <option value="">Select Course</option>
+              <option>Web Development</option>
+              <option>UI/UX</option>
+              <option>Python</option>
+              <option>Data Analytics</option>
+              <option>MERN Stack</option>
+              <option>Cloud Computing</option>
+            </select>
+          </label>
+          <small class="error-message" id="courseError"></small>
+
+          <fieldset class="full">
+            <legend>Skills *</legend>
+            <label><input type="checkbox" name="skills" value="HTML" /> HTML</label>
+            <label><input type="checkbox" name="skills" value="CSS" /> CSS</label>
+            <label><input type="checkbox" name="skills" value="JavaScript" /> JavaScript</label>
+            <label><input type="checkbox" name="skills" value="Git" /> Git</label>
+            <label><input type="checkbox" name="skills" value="React" /> React</label>
+            <label><input type="checkbox" name="skills" value="Node.js" /> Node.js</label>
+          </fieldset>
+          <small class="error-message full" id="skillsError"></small>
+
+          <label class="full">About Student *
+            <textarea id="about" maxlength="200" placeholder="Tell us about the student..."></textarea>
+            <span id="characterCounter">0 / 200</span>
+          </label>
+          <small class="error-message full" id="aboutError"></small>
+
+          <label class="full">Profile Photo *<input id="profilePhoto" type="file" accept="image/*" /></label>
+          <small class="error-message full" id="photoError"></small>
+        </div>
+        <div class="actions">
+          <button id="submitButton" type="submit">Register Student</button>
+          <button id="resetButton" type="button">Reset Form</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Student Statistics</h2>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <section class="card">
+      <h2>Find Students</h2>
+      <div class="filters">
+        <label>Search Student<input id="searchInput" type="text" placeholder="Search student by name..." /></label>
+        <label>Filter by Course
+          <select id="courseFilter">
+            <option value="All Courses">All Courses</option>
+            <option>Web Development</option>
+            <option>UI/UX</option>
+            <option>Python</option>
+            <option>Data Analytics</option>
+            <option>MERN Stack</option>
+            <option>Cloud Computing</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Student Applications</h2>
+      <div id="studentContainer" class="students"></div>
+      <p id="noStudents" class="empty">No students found</p>
+    </section>
+  </main>
+
+  <footer>Student Application Management System &copy; 2026</footer>
+  <script src="script.js"></script>
+</body>
+</html>
