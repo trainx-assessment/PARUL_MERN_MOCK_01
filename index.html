@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT APPLICATION MANAGEMENT SYSTEM</title>
+
+   <link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="heading">
+            <h1>STUDENT APPLICATION MANAGEMENT SYSTEM</h1>
+            <P>Register and manage student applications</P>
+        </div>
+        <header>
+            <div class="main">
+                <div class="cont-1">
+                    <form id="studentForm" action="">
+                        <label for="studentName">Student Name:</label>
+                        <input type="text" id="studentName" name="studentName">
+                        <br>
+                        <br>
+
+                        <label for="studentEmail">Student Email:</label>
+
+                        <input type="email" id="studentEmail" name="studentEmail">
+                        <br>
+                        <br>
+                        <label for="Phone Number">Phone Number:</label>
+                        <input type="tel" id="Phone Number" name="Phone Number">
+                        <br>
+                        <br>
+                        <label for="Date of Birth">Date of Birth:</label>
+                        <input type="date" id="Date of Birth" name="Date of Birth">
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <br>
+
+                            <label>Gender</label>
+                            <div>
+                                <label>
+                                    <input type="radio" name="gender" value="Male" required> Male
+                                </label>
+                                <label>
+                                    <input type="radio" name="gender" value="Female"> Female
+                                </label>
+                                <label>
+                                    <input type="radio" name="gender" value="Other"> Other
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- Course (Select Dropdown) -->
+                        <div class="form-group">
+                            <label for="course">Course</label>
+                            <select id="course" name="course" required>
+                                <option value="">Select Course</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="UI/UX">UI/UX</option>
+                                <option value="Python">Python</option>
+                                <option value="Data Analytics">Data Analytics</option>
+                                <option value="MERN Stack">MERN Stack</option>
+                                <option value="Cloud Computing">Cloud Computing</option>
+                            </select>
+                        </div>
+                        <br>
+                        <!-- Skills (Checkboxes) -->
+                        <div class="form-group">
+                            <label>Skills</label>
+                            <div>
+                                <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+                                <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+                                <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+                                <label><input type="checkbox" name="skills" value="Git"> Git</label>
+                                <label><input type="checkbox" name="skills" value="React"> React</label>
+
+                            </div>
+                        </div>
+                        <br>
+
+
+
+                        <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+                        <br>
+                        <br>
+                        <div class="submit-1">
+                            <button
+                                style="height: 20px; width: 200px; background-color: #1dc0a5; border: 0.5px solid #cccccc; cursor: pointer;"
+                                type="reset">Clear</button>
+
+
+                        </div>
+                            <br>
+                            <div class="submit-2">
+                                <button
+                                    style="height: 20px; width: 200px; background-color: #deaa0d; border: 0.5px solid #cccccc; cursor: pointer;"
+                                    type="submit">Register</button>
+                            </div>
+                    </form>
+                    <div id="registrationDetails" hidden>
+                        <h2>Registration Details</h2>
+                        <p><strong>Name:</strong> <span id="detailName"></span></p>
+                        <p><strong>Email:</strong> <span id="detailEmail"></span></p>
+                        <p><strong>Phone:</strong> <span id="detailPhone"></span></p>
+                        <p><strong>Course:</strong> <span id="detailCourse"></span></p>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+    </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
