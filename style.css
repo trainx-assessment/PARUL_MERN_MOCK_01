@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #5b5cf0;
+    --primary-dark: #4546d8;
+    --secondary: #8b5cf6;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --danger: #ef4444;
+    --white: #ffffff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: #f4f6ff;
+}
+
+.page-bg {
+    min-height: 100vh;
+    padding: 35px 20px 60px;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(139, 92, 246, .14), transparent 25%),
+        radial-gradient(circle at 90% 20%, rgba(91, 92, 240, .14), transparent 25%),
+        linear-gradient(135deg, #f7f8ff, #eef1ff);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 32px;
+    margin-bottom: 24px;
+    color: white;
+    border-radius: 22px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    box-shadow: 0 18px 40px rgba(91, 92, 240, .25);
+}
+
+.hero-icon {
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 18px;
+    background: rgba(255,255,255,.18);
+    font-size: 34px;
+}
+
+.eyebrow,
+.section-label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin: 5px 0 7px;
+    font-size: clamp(27px, 4vw, 40px);
+}
+
+.hero-text {
+    opacity: .9;
+    font-size: 15px;
+}
+
+.form-section,
+.student-header {
+    background: rgba(255,255,255,.96);
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 12px 35px rgba(35, 42, 75, .08);
+}
+
+.section-title,
+.student-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.section-label {
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.section-title h2,
+.student-header h2 {
+    font-size: 24px;
+}
+
+.required-note {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 20px;
+    margin-top: 25px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group {
+    min-width: 0;
+}
+
+.form-group > label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.form-group > label span {
+    color: var(--danger);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    padding: 12px 13px;
+    color: var(--text);
+    background: #fafbff;
+    font-size: 14px;
+    transition: .2s;
+}
+
+input[type="file"] {
+    padding: 10px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(91, 92, 240, .10);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.choice {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 13px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fafbff;
+    cursor: pointer;
+    font-size: 13px;
+    transition: .2s;
+}
+
+.choice:hover {
+    border-color: var(--primary);
+    background: #f3f3ff;
+}
+
+.choice input {
+    accent-color: var(--primary);
+}
+
+.error {
+    display: block;
+    min-height: 16px;
+    margin-top: 5px;
+    color: var(--danger);
+    font-size: 12px;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px 18px;
+    border: 0;
+    border-radius: 12px;
+    color: white;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(91, 92, 240, .22);
+    transition: .2s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 22px rgba(91, 92, 240, .28);
+}
+
+.count-badge {
+    padding: 10px 15px;
+    border-radius: 30px;
+    color: var(--primary-dark);
+    background: #eeeeff;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.student-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.student-card {
+    overflow: hidden;
+    background: white;
+    border: 1px solid #e9e9f4;
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(35, 42, 75, .08);
+    transition: .25s;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 35px rgba(35, 42, 75, .13);
+}
+
+.student-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 18px;
+}
+
+.student-card h3 {
+    margin-bottom: 12px;
+    color: var(--primary-dark);
+    font-size: 21px;
+}
+
+.student-card p {
+    margin-bottom: 8px;
+    color: #4b5563;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 10px 0;
+}
+
+.skill-tag {
+    padding: 5px 9px;
+    border-radius: 20px;
+    color: var(--primary-dark);
+    background: #eeeeff;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.delete-btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 11px;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    background: #ef4444;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+@media (max-width: 850px) {
+    .student-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .page-bg {
+        padding: 18px 12px 40px;
+    }
+
+    .hero {
+        padding: 24px;
+    }
+
+    .hero-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 27px;
+    }
+
+    .form-section,
+    .student-header {
+        padding: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .student-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title,
+    .student-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 430px) {
+    .hero {
+        gap: 12px;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .options {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .choice {
+        width: 100%;
+    }
+}
