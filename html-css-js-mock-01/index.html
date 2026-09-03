@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Student Application System</title>
+    <link rel='stylesheet' href='style.css'>
+    <script src="script.js" defer></script>
+  
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Application System</h1>
+        <p class="form-intro">This is a Student Registration Form</p>
+        
+      
+
+        <form id="registrationForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">NAME:</label>
+                    <input type='text' id='name' placeholder='Enter your name'><br>
+                 
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type='email' id='email' placeholder='Enter your email'><br>
+                   
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type='password' id='password' placeholder='Enter your password'><br>
+                    
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="number" id='phone' placeholder='Enter your phone number'><br>
+                  
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="dob">Date Of Birth:</label>
+                    <input type="date" id='dob'><br>
+                   
+                </div>
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div class="radio-group">
+                        <label><input type='radio' name='gender' value='male'>Male</label>
+                        <label><input type='radio' name='gender' value='female'>Female</label>
+                        <label><input type='radio' name='gender' value='other'>Other</label>
+                    </div>
+                 
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="course">Course:</label>
+                    <select id='course'>
+                        <option value=''>Select a course</option>
+                        <option value='Web Development'>Web Development</option>
+                        <option value='UI/UX'>UI/UX</option>
+                        <option value='Python'>Python</option>
+                        <option value='Data analytics'>Data analytics</option>
+                        <option value='MERN Stack'>MERN Stack</option>
+                        <option value='Cloud Computing'>Cloud Computing</option>
+                    </select><br>
+                    
+                </div>
+            </div>
+
+            <div class="form-row full">
+                <div class="form-group">
+                    <label>Skills:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="skills" value="HTML">HTML</label>
+                        <label><input type="checkbox" name="skills" value="CSS">CSS</label>
+                        <label><input type="checkbox" name="skills" value="JAVA SCRIPT">JAVA SCRIPT</label>
+                        <label><input type="checkbox" name="skills" value="GIT">GIT</label>
+                        <label><input type="checkbox" name="skills" value="NODE.JS">NODE.JS</label>
+                        <label><input type="checkbox" name="skills" value="REACT">REACT</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row full">
+                <div class="form-group">
+                    <label for="about">About (Maximum 200 characters)</label>
+                    <textarea id="about" placeholder="Tell us about yourself..."></textarea><br>
+                </div>
+            </div>
+
+            <div class="form-row full">
+                <div class="form-group">
+                    <label for="profile-photo">Upload Profile Photo:</label>
+                    <input type="file" id="profile-photo" accept="image/*"><br>
+                   
+                </div>
+            </div>
+
+            <div class="button-group">
+                <input type="submit" value="Submit">
+                <input type='reset' value='Reset'>
+            </div>
+        </form>
+    </div>
+
+    <footer>Register and manage student applications</footer>
+
+   
+</body>
+</html>

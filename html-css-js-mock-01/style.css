@@ -1,0 +1,288 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background:  #667eea;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+ h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        .form-intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+
+        form {
+            display: grid;
+            gap: 20px;
+        }
+.form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+       .form-row.full {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        
+        input[type='text'],
+        input[type='email'],
+        input[type='password'],
+        input[type='number'],
+        input[type='date'],
+        input[type='file'],
+        select,
+        textarea {
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+ input[type='text']:focus,
+        input[type='email']:focus,
+        input[type='password']:focus,
+        input[type='number']:focus,
+        input[type='date']:focus,
+        input[type='file']:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            outline: none;
+        }
+
+        input[type='text']:hover,
+        input[type='email']:hover,
+        input[type='password']:hover,
+        input[type='number']:hover,
+        input[type='date']:hover,
+        input[type='file']:hover,
+        select:hover,
+        textarea:hover {
+            border-color: #999;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+       
+        
+
+     
+
+       
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        input[type='radio'],
+        input[type='checkbox'] {
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+            accent-color: #667eea;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.85rem;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        input.error,
+        select.error,
+        textarea.error {
+            border-color: #e74c3c;
+            background-color: #fadbd8;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+            grid-column: 1 / -1;
+        }
+
+        button,
+        input[type='submit'],
+        input[type='reset'] {
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 150px;
+        }
+
+        input[type='submit'] {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        input[type='submit']:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        input[type='submit']:active {
+            transform: translateY(0);
+        }
+
+        input[type='reset'] {
+            background-color: #95a5a6;
+            color: white;
+            box-shadow: 0 4px 15px rgba(149, 165, 166, 0.4);
+        }
+
+        input[type='reset']:hover {
+            background-color: #7f8c8d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(149, 165, 166, 0.6);
+        }
+
+        input[type='reset']:active {
+            transform: translateY(0);
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: none;
+            border: 2px solid #28a745;
+        }
+
+        .success-message.show {
+            display: block;
+        } */
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            button,
+            input[type='submit'],
+            input[type='reset'] {
+                width: 100%;
+            }
+
+            .radio-group,
+            .checkbox-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.25rem;
+            }
+
+            label {
+                font-size: 0.9rem;
+            }
+
+            input[type='text'],
+            input[type='email'],
+            input[type='password'],
+            input[type='number'],
+            input[type='date'],
+            input[type='file'],
+            select,
+            textarea {
+                font-size: 0.95rem;
+                padding: 10px;
+            }
+        }
