@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="first">
+        <h1>student Application Management System</h1>
+        <p>Register and manage student application</p>
+        
+        <button style="background-color: black; color: white;">
+            Dark Mode
+        </button>
+        </div>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Student registraion form</h2>
+            <form id="studentform">
+                <div class="form-group">
+                    <label for="studentname">
+                        student name
+                    </label>
+                    <input type="text"
+                    id="studentname"
+                    placeholder="Enter your name">
+                    <small id="nameerror" class="error"></small>
+                </div>
+                <div class="form-group">
+                    <label for="email">
+                        email
+                    </label>
+                    <input type="email"
+                    id="email"
+                    placeholder="enter email">
+                    <small id="emailerror" class="error"></small>
+                </div>
+                <div class="form-group">
+                    <label for="phone">
+                        phone number
+                    </label>
+                    <input type="text"
+                    id="phone"
+                    placeholder="enter 10 digit number">
+                    <small id="phoneerror" class="error"></small>
+                </div>
+                <div class="form-group">
+                    <label for="dob">
+                        date of birth
+                    </label>
+                    <input type="date"
+                    id="dob">
+                    <small id="doberror" class="error"></small>
+                </div>
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio"
+                            name="gender"
+                            value="Male">
+                            Male
+                        </label>
+                        <label>
+                            <input type="radio"
+                            name="gender"
+                            value="Female">
+                            Female
+                        </label>
+                        <label>
+                            <input type="radio"
+                            name="gender"
+                            value="other">
+                            other
+                        </label>
+                    </div>
+                    <small id="gendererror" class="error"></small>
+                </div>
+                <div class="form-group">
+                    <label for="course">
+                        Course
+                    </label>
+                    <select id="course">
+                        <option value="">
+                            select Course
+                        </option>
+                        <option value="web Development">
+                            web Development
+                        </option>
+                        <option value="UI/UX">
+                            UI/UX
+                        </option>
+                        <option value="Python">
+                            Python
+                        </option>
+                        <option value="Data Analytics">
+                            Data Analytics
+                        </option>
+                        <option value="MERN Stack">
+                            MERN Stack
+                        </option>
+                        <option value="Cloud Computiong">
+                            Cloud Computiong2
+                        </option>
+                    </select>
+                    <small id="courseerror" class="error"></small>
+                </div>
+                <div class="form-group">
+                    <label>
+                        skills
+                    </label>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox"
+                            name="skills"
+                            value="HTML">
+                            HTML
+                        </label>
+                        <label>
+                            <input type="checkbox"
+                            name="skills"
+                            value="CSS">
+                            CSS
+                        </label>
+                        <label>
+                            <input type="checkbox"
+                            name="skills"
+                            value="JavaScript">
+                            JavaScript
+                        </label>
+                        <label>
+                            <input type="checkbox"
+                            name="skills"
+                            value="React">
+                            React
+                        </label>
+                        <label>
+                            <input type="checkbox"
+                            name="skills"
+                            value="Node.js">
+                            Node.js
+                        </label>
+                    </div>
+                    <small id="skillserror" class="error"></small>
+                </div>
+                <div class="form-group fill-width">
+                    <label for="about">
+                        About student
+                    </label>
+                    <textarea  id="about"
+                    maxlength="200"
+                    placeholder="Tell us about the student.."></textarea>
+                    <div id="charactercount">
+                        0/200
+                    </div>
+                    <small>
+                        Maximum 200 characters
+                    </small>
+                    <small id="abouterror" class="error"></small>
+                </div>
+                <div class="form-group full-width">
+                    <label for="photo">
+                        Profile Photo
+                    </label>
+                    <input
+                        type="file"
+                        id="photo"
+                        accept="image/*"
+                    >
+                    <small id="photoerror" class="error"></small>
+                </div>
+                <div class="form-buttons full-width">
+                    <button
+                    type="submit"
+                    id="submitBtn"
+                    class="primary-btn">
+                    Register student</button>
+                    <button
+                        type="reset"
+                        id="resetBtn"
+                        class="reset-btn" >
+                        Reset Form
+                    </button>
+                </div>
+            </form>
+        </section>
+        <section class="statistics">
+            <h2>Student statics</h2>
+            <div class="statistics">
+                <div class="stat-card">
+                    <h3>Total students</h3>
+                    <p id="totalstudents">
+                        0
+                    </p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total students</h3>
+                    <p id="totalstudents">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>webdevelopment</h3>
+                    <p id="webdevelopment">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>UI/UX</h3>
+                    <p id="uiuxCount">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Python</h3>
+                    <p id="pythoncount">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Data Analytics</h3>
+                    <p id="dataanalyticscount">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>MERN Stack</h3>
+                    <p id="merncount">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>cloud computing</h3>
+                    <p id="cloudcount">0</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2>search and filter students</h2>
+            <div class="search-filter">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search student by name..."
+                >
+                <select id="courseFilter">
+                    <option value="">
+                        All courses
+                    </option>
+                    <option value="webdevelopment">
+                        webdevelopment
+                    </option>
+                    <option value="UI/UX">
+                        UI/UX
+                    </option>
+                    <option value="python">python</option>
+                    <option value="data Analytics">
+                        data Analytics
+                    </option>
+
+                    <option value="MERN Stack">
+                        MERN Stack
+                    </option>
+                    <option value="cloud Computing">
+                        cloud Computing
+                    </option>
+                </select>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Student Applications</h2>
+            <div id="studentcards" class="student-cards">
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p> 2026 student Application Management System</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
