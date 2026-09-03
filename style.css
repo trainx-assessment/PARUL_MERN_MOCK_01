@@ -1,0 +1,47 @@
+*{
+    margin: 0%;
+    border: 0px;
+}
+h1,h2{
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction:column;
+    background-color: antiquewhite;
+    font-size: x-large;
+    height: 660px;
+    width: 660px;
+    position: relative;
+    left: 500px;
+    border-radius: 10px;
+}
+header{
+    background-color: aqua;
+    height: 80px;
+}
+#email,#number,#name,#date,#text{
+    background-color: lightblue;
+}
+#submit,#reset{
+    height: 20px;
+    width: 200px;
+    justify-content: center;
+}
+.card{
+    display: flex;
+    height: 500px;
+    width: 1000px;
+    border: 2px solid black;
+    justify-content: space-around;
+    position: relative;
+    left: 300px;
+    margin-top: 20px;
+}
+.card1,.card2,.card3{
+    height: 400px;
+    width: 250px;
+    border: 2px solid black;
+    margin: 50px;
+    text-align: center;
+}

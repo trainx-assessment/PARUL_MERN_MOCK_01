@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Header -->
+        <h1>Student Application Management System</h1>
+        <h2>Register and manage student applications</h2>
+    </header>
+    <!-- Student Registration Form -->
+     <form>
+        <label >Student Name:<input type="text" id="name" placeholder="Enter your name" required></label><br>
+
+        <label>Email:
+        <input type="email" id="email" placeholder="Enter your Email" required></label><br>
+        <label>Phone Number:
+        <input type="text" id="number" placeholder="Enter your phone number" required></label><br>
+
+        <label>Date of Birth:
+        <input type="date" id="date" required></label><br>
+
+        <label>Gender:
+        <input type="radio" name="gender">Male
+        <input type="radio" name="gender">female
+        <input type="radio" name="gender">other
+        </label><br>
+        <label>Course:
+        <select>
+            <option>Select Course</option>
+            <option>Web Development</option>
+            <option>UI/UX</option>
+            <option>Python</option>
+            <option>Data Analytics</option>
+            <option>MERN Stack</option>
+            <option>Cloud Computing</option>
+        </select>
+        </label><br>
+        <label id="skill">Skills:
+        <input type="checkbox" name="choice">HTML
+        <input type="checkbox" name="choice">CSS
+        <input type="checkbox" name="choice">JavaScript
+        <input type="checkbox" name="choice">Git
+        <input type="checkbox" name="choice">React
+        <input type="checkbox" name="choice">Node.js
+        </label><br><br>
+        <label>About Student:</label>
+        <textarea id="text" placeholder="Enter About Yourself" maxlength="200"></textarea><br><br>
+        <label>Profile Photo:<input type="file"></label><br>
+        <button type="submit" id="submit">Register Student</button><br><br>
+        <button type="reset" id="reset">Reset Form</button><br><br>
+     </form>
+     <div class="card">
+        <div class="card1">card1
+        </div>
+        <div class="card2">card2</div>
+        <div class="card3">card3</div>
+     </div>
+</body>
+<script href="script.js"></script>
+</html>
