@@ -1,0 +1,19 @@
+
+form{
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(204, 227, 250);
+    height: 650px;
+    width: 400px;
+    margin-left: 65vh;
+    border-radius: 10px;
+    padding: 20px;
+}
+body{
+    background-color: aliceblue;
+}
+button{
+    height: 30px;
+    border-radius: 10px;
+     background-color: rgb(141, 173, 192);
+}
