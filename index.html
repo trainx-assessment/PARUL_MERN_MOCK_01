@@ -1,0 +1,90 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+    <header class="header">
+        <div class="header-inner">
+            <div>
+                <h1>Student Application Management System</h1>
+                <p class="subtitle">Register and manage student applications with clarity.</p>
+            </div>
+           
+        </div>
+    </header>
+        <div class="name">
+            <label for="name">Name:</label>
+            <input class="user-name" type="text" id="name" placeholder="Enter Student name" required>
+        </div>
+        
+        <div class="studentemail">
+          <label for="email">Email:</label>
+          <input class="user-email" type="text" id="email" placeholder="Enter Student Email" required>
+        </div>
+
+        <div class="student-phone">
+            <label for="phone">Phone Number:</label>
+            <input class="Student-phonenumber" type="number" id="phone" placeholder="Enter your phone number" maxlength="10" required>
+        </div>
+
+        <div class="date">
+            <label for="dob">DOB:</label>
+            <input class="DOB" type="date" id="dob" placeholder="Enter Date Of Birth">
+        </div>
+
+        
+            <label for="gen">Gender</label>
+            <br><label><input type="radio" name="gender" value="Male">Male</label>
+            <br><label><input type="radio" name="gender" value="Female">Female</label>
+            <br><label><input type="radio" name="gender" value="Other">other</label>
+
+        <div class="field">
+            <label for="course">Course</label>
+            <select id="course"
+                                name="course">
+                                <option value="">Select Course</option>
+                                <option>Web Development</option>
+                                <option>UI/UX</option>
+                                <option>Python</option>
+                                <option>Data Analytics</option>
+                                <option>MERN Stack</option>
+                                <option>Cloud Computing</option>
+         </select>
+         <small class="error-message" id="courseError"></small>
+        </div>
+
+        <div class="choice-row">
+            <label >SKILLS:</label>
+            <label>
+                <input type="checkbox" name="skills" value="HTML">
+                                    HTML</label>
+                                    <label>
+                                        <input type="checkbox" name="skills" value="CSS">
+                                    CSS</label>
+                                    <label>
+                                        <input type="checkbox" name="skills" value="JavaScript">
+                                    JavaScript</label>
+                                    <label>
+                                        <input type="checkbox" name="skills" value="Git">
+                                    Git</label>
+                                    <label>
+                                        <input type="checkbox" name="skills" value="React">
+                                    React</label>
+                                    <label>
+                                        <input type="checkbox" name="skills" value="Node.js">
+                                    Node.js</label>
+                                </div>
+                                <small class="error-message" id="skillsError"></small>
+       
+    </main>
+
+
+
+    
