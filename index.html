@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div>
+                <p class="dash">Admissions portal</p>
+                <h1>Student Application Management System</h1>
+                <p style="color: black;">Registering and the managing the student applications</p>
+            </div>
+            <button class="themebtn" id="themetoggle" type="button">Dark Mode</button>
+        </div>
+    </header>
+
+    <main class="page-start">
+        <section class="section-panel">
+            <div class=section-head>
+                <div>
+                    <p class="dash">Application</p>
+                    <h2 class="form-head">Register a Student</h2>
+                </div>
+            </div>
+            <form id="student-form">
+                <div class="form-col">
+                    <div class="field-col">
+                        <label for="studentname">Student Name</label>
+                        <input id="studentname" name="studentname" type="text" autocomplete="name" maxlength="40" required>
+                    </div>
+                    <div class="field-col">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" autocomplete="name" required>
+                    </div>
+                    <div class="field-col">
+                        <label for="phone">Phone Number</label>
+                        <input id="phone" name="phone" type="text" autocomplete="numeric" maxlength="10" required>
+                    </div>
+                    <div class="field-col">
+                        <label for="dob">Date of Birth</label>
+                        <input id="dob" name="dob" type="date" required>
+                    </div>
+                    <fieldset class="field-col">
+                        <legend>Gender</legend>
+                        <div class="choice">
+                            <label><input type="radio" name="gender" value="male">Male</label>
+                            <label><input type="radio" name="gender" value="female">Female</label>
+                            <label><input type="radio" name="gender" value="other">Other</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="field-col">
+                        <label for="course">Course</label>
+                        <select id="course" name="course">
+                            <option value="">Select Course</option>
+                            <option>Web Development</option>
+							<option>UI/UX</option>
+							<option>Python</option>
+							<option>Data Analytics</option>
+							<option>MERN Stack</option>
+							<option>Cloud Computing</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="field-col">
+                        <legend>Skills</legend>
+                        <div class="choice skill">
+                            <label><input type="checkbox" name="skills" value="HTML">HTML</label>
+							<label><input type="checkbox" name="skills" value="CSS">CSS</label>
+							<label><input type="checkbox" name="skills" value="JavaScript">JavaScript</label>
+							<label><input type="checkbox" name="skills" value="Git">Git</label>
+							<label><input type="checkbox" name="skills" value="React">React</label>
+							<label><input type="checkbox" name="skills" value="Node.js">Node.js</label>
+                        </div>
+                    </fieldset>
+                    <div class="field-col" full-width>
+                        <label for="about">About Student</label>
+                        <textarea id="about" name="about" maxlength="200" rows="4" placeholder="Tell us about the your's interests and goals...!!" required></textarea>
+                    </div>
+                    <div class="field-col" full-width>
+                        <label for="photo">Profile photo</label>
+                        <input id="photo" name="photo" type="file" accept="image/jpeg,image/png,image/jpg">
+                    </div>
+                </div>
+                <div class="form-act">
+					<button class="primary-btn" id="submit-btn" type="submit">Register Student</button>
+					<button class="secondary-btn" id="reset-btn" type="reset">Reset Form</button>
+				</div>
+                <p class="form-status" id="formstatus" role="status"></p>
+            </form>
+        </section>
+		<section class="applications-section">
+			<div class="section-heading applications-heading">
+				<div><p class="dash">Directory</p><h2 id="applicationsheading">Student applications</h2></div>
+				<div class="filters">
+                    <label class="visually-hidden" for="searchinput">Search student by name</label>
+                    <input id="searchinput" type="search" placeholder="Search student by name...">
+                    <label class="visually-hidden" for="coursefilter">Filter by course</label>
+                    <select id="courseFilter">
+                        <option value="">All Courses</option>
+                        <option>Web Development</option>
+                        <option>UI/UX</option>
+                        <option>Python</option>
+                        <option>Data Analytics</option>
+                        <option>MERN Stack</option>
+                        <option>Cloud Computing</option>
+                    </select>
+                </div>
+			</div>
+			<div class="student-grid" id="studentContainer"></div>
+		</section>
+    </main>
+     
+</body>
+</html>
