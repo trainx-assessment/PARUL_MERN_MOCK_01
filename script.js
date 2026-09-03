@@ -1,5 +1,4 @@
 
-
 const studentForm = document.querySelector("#studentForm");
 
 const studentName = document.querySelector("#studentName");
