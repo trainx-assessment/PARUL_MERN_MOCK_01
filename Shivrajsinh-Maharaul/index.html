@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Student Application Management System</h1>
+      <h3>Register and manage student applications</h3>
+    </header>
+    <main>
+      <section id="form1">
+        <form id="registerForm">
+          <h2>Register Student</h2>
+          <div class="formUpper">
+            <div>
+              <label for="name">Name :</label>
+              <input required name="name" type="text" />
+            </div>
+            <div>
+              <label for="email">Email :</label>
+              <input required name="email" type="email" />
+            </div>
+            <div>
+              <label for="phoneNumber">Phone Number :</label>
+              <input required name="phoneNumber" type="text" />
+            </div>
+            <div>
+              <label for="dob">Date of Birth :</label>
+              <input required name="dob" type="date" />
+            </div>
+            <div>
+              <label for="gender">Gender :</label>
+              <input type="radio" name="gender" value="Male" /> Male
+              <input type="radio" name="gender" value="female" /> Female
+            </div>
+            <div>
+              <label for="course">Course :</label>
+              <select name="course" required>
+                <option value="Select Course">Select Course</option>
+                <option value="Web Development">Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Python">Python</option>
+                <option value="Data Analytics">Data Analytics</option>
+                <option value="MERN Stack">MERN Stack</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+              </select>
+            </div>
+            <div>
+              <label for="skills">Skills :</label>
+              <input  name="skills" type="checkbox" value="HTML" />HTML
+              <input  name="skills" type="checkbox" value="CSS" />CSS
+              <input
+                
+                name="skills"
+                type="checkbox"
+                value="JavaScript"
+              />JavaScript
+              <input  name="skills" type="checkbox" value="Git" />Git
+              <input
+                
+                name="skills"
+                type="checkbox"
+                value="React"
+              />React
+              <input
+                
+                name="skills"
+                type="checkbox"
+                value="Node.js"
+              />Node.js
+            </div>
+          </div>
+          <div class="formMid">
+            <div>
+              <label for="about">About Student :</label>
+              <textarea maxlength="200" required name="about"></textarea>
+            </div>
+            <div>
+              <label for="photo">Profile Photo :</label>
+              <input type="file" name="photo" required />
+            </div>
+          </div>
+          <div class="formLower">
+            <button type="submit">Register Student</button>
+            <button type="reset">Reset</button>
+          </div>
+        </form>
+      </section>
+      <section class="students">
+      </section>
+      <section id="stats"></section>
+    </main>
+    <footer>
+        &copy; All Rights Reserved - Made By Shivrajsinh Maharaul
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
