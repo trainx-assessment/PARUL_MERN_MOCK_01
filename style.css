@@ -1,0 +1,35 @@
+.header1 {
+    text-align: center;
+}
+
+.header2 {
+    text-align: center;
+}
+#mainForm{
+    /* position: absolute;
+    left:30%;
+    top:13%;
+    text-align:start;
+    background-color: whitesmoke;
+    border: 2px solid white;
+    height: 40%;
+    width: 40%;
+    border-radius: 2%; */
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    gap: 50px;
+    width: 98vw;
+}
+#submit,#reset{
+    color: white;
+    background-color: rgb(111, 152, 193);
+    height:200%;
+    width: 90%;
+    
+}
+.student-count{
+    text-align: center;
+}
+.students-section{
+    text-align: center;
+}
