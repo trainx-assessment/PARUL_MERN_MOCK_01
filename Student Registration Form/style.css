@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    line-height: 1.5;
+}
+header {
+    background: #632418;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1{
+    margin-bottom:5px;
+}
+
+header p{
+    margin-bottom: 15px;
+}
+main{
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+#tx,#tx1,#tx3{
+    text-align:center;
+}
+
+section{
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input,select,textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.options label {
+    font-weight: normal;
+}
+
+.options input {
+    width: auto;
+    margin-right: 5px;
+}
+
+small {
+    color: red;
+    min-height: 20px;
+}
+
+#counter {
+    text-align: right;
+    color: #555;
+    margin-top: 5px;
+}
+
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    border: none;
+    padding: 11px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#submitBtn {
+    background: #2563eb;
+    color: white;
+}
+
+#resetBtn {
+    background: #666;
+    color: white;
+}
+
+#darkModeBtn {
+    background: white;
+    color: #222;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+
+.stats{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+.stats div {
+    background: #eef2ff;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+}
+.search-section {
+    display: flex;
+    gap: 15px;
+}
+.search-section input {
+    flex: 1;
+}
+
+/* Student Cards */
+.student-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.student-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.student-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.student-card h3 {
+    margin-bottom: 10px;
+}
+
+.student-card p {
+    margin: 5px 0;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.edit-btn {
+    background: #f59e0b;
+    color: white;
+}
+
+.delete-btn {
+    background: #dc2626;
+    color: white;
+}
+
+#noStudents {
+    text-align: center;
+    display: none;
+    color: #666;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+
+/* Dark Mode */
+body.dark-mode {
+    background: #111827;
+    color: white;
+}
+
+body.dark-mode section {
+    background: #1f2937;
+}
+
+body.dark-mode .student-card {
+    background: #374151;
+    border-color: #555;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background: #374151;
+    color: white;
+    border-color: #666;
+}
+
+body.dark-mode .stats div {
+    background: #374151;
+    color: white;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .full {
+        grid-column: auto;
+    }
+
+    .student-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 480px) {
+    main {
+        width: 95%;
+    }
+
+    .student-container {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .search-section {
+        flex-direction: column;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+}
