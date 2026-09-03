@@ -1,0 +1,147 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+}
+body{
+    background-color:#f4f4f9;
+    color:#333;
+    padding:10px;
+}
+body.darkMode{
+    background-color:#222;
+    color:#ffffff;
+}
+body.darkMode form, body.darkMode .studentCard{
+    background-color:#333;
+    color:#eee;
+    border:1px solid #444;
+}
+body.darkMode input, body.darkMode select, body.darkMode textarea{
+    background-color:#444;
+    color:#eee;
+    border:1px solid #555;
+}
+header{
+    text-align:center;
+    margin-bottom:20px;
+}
+#darkModeBtn{
+    margin-top:10px;
+    background-color:#333;
+    color: white;
+}
+form{
+    background:white;
+    padding:15px;
+    border-radius:8px;
+    border:1px solid #ddd;
+    max-width:900px;
+    margin:0 auto 20px auto;
+}
+.formGrid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+.fullWidth{
+    margin-top:15px;
+}
+label{
+    display:block;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+input[type="text"],input[type="email"],input[type="date"],input[type="file"],select,textarea{
+    width:100%;
+    padding:8px;
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+.radioGroup,.checkboxGroup{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+.errorText{
+    color:red;
+    font-size:0.85em;
+    display:block;
+    margin-top:5px;
+}
+.formButtons{
+    display:flex;
+    gap:10px;
+}
+button{
+    padding: 10px;
+}
+.deleteBtn{
+    background-color:#dc3545;
+}
+.editBtn{
+    background-color:#28a745;
+}
+.searchFilterSection{
+    max-width:900px;
+    margin:0 auto 20px auto;
+    display:flex;
+    gap:10px;
+}
+.statisticsSection{
+    max-width:900px;
+    margin:0 auto 20px auto;
+}
+#courseStats{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:10px;
+    margin-top:10px;
+}
+.cardsContainer{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:15px;
+    max-width:900px;
+    margin:0 auto;
+}
+.studentCard{
+    background:white;
+    padding:15px;
+    border-radius:8px;
+    border:1px solid #ddd;
+    word-wrap:break-word;
+}
+.studentCard img{
+    width:100px;
+    height:100px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:10px;
+}
+@media(max-width:768px){
+    .formGrid{
+        grid-template-columns:1fr;
+    }
+    .cardsContainer{
+        grid-template-columns:1fr 1fr;
+    }
+    #courseStats{
+        grid-template-columns:1fr 1fr;
+    }
+}
+@media(max-width:480px){
+    .cardsContainer{
+        grid-template-columns:1fr;
+    }
+    .searchFilterSection{
+        flex-direction:column;
+    }
+    #courseStats{
+        grid-template-columns:1fr;
+    }
+    .formButtons{
+        flex-direction:column;
+    }
+}
