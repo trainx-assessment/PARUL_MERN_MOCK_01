@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Student Application Management System</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+      </div>
+    
+    </header>
+      <nav id="navbar">
+        <div class="header-section"><a href="#student-section">Srudent Section</a></div>
+        <div class="header-section"><a href="#search-section">Search Section</a></div>
+        <div class="header-section"><a href="#statistics">Student Statatics </a></div>
+        <div class="header-section"><a href="#footer-section">Footer Section</a></div>
+
+      </nav>
+
+    <main>
+      <!-- Student Registration -->
+      <section class="registration-section" id="studentsection">
+        <div class="container">
+          <h2>Student Registration</h2>
+
+          <form id="studentForm">
+            <!-- Student Name -->
+            <div class="form-group">
+              <label for="studentName">Student Name</label>
+
+              <input type="text" id="studentName" name="studentName" placeholder="Enter student name" required />
+              <small id="studentNameError" class="error-message"></small>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="studentEmail">Email</label>
+
+              <input type="email" id="studentEmail" name="studentEmail" placeholder="Enter email address" required/>
+
+              <small id="studentEmailError" class="error-message"></small>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+              <label for="studentPhone">Phone Number</label>
+
+              <input type="text"id="studentPhone" name="studentPhone" placeholder="Enter 10 digit phone number" required/>
+
+              <small id="studentPhoneError" class="error-message"></small>
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="form-group">
+              <label for="studentDob">Date of Birth</label>
+
+              <input type="date" id="studentDob" name="studentDob" required />
+
+              <small id="studentDobError" class="error-message"></small>
+            </div>
+
+            <!-- Gender -->
+            <div class="form-group">
+              <p class="form-label">Gender</p>
+
+              <div class="radio-group">
+                <label>
+                  <input type="radio" name="gender" value="Male" />
+                  Male
+                </label>
+
+                <label>
+                  <input type="radio" name="gender" value="Female" />
+                  Female
+                </label>
+
+                <label>
+                  <input type="radio" name="gender" value="Other" />
+                  Other
+                </label>
+              </div>
+
+              <small id="genderError" class="error-message"></small>
+            </div>
+
+            <!-- Course -->
+            <div class="form-group">
+              <label for="course">Course</label>
+
+              <select id="course" name="course">
+                <option value="">Select Course</option>
+
+                <option value="Web Development">Web Development</option>
+
+                <option value="UI/UX">UI/UX</option>
+
+                <option value="Python">Python</option>
+
+                <option value="Data Analytics">Data Analytics</option>
+
+                <option value="MERN Stack">MERN Stack</option>
+
+                <option value="Cloud Computing">Cloud Computing</option>
+              </select>
+
+              <small id="courseError" class="error-message"></small>
+            </div>
+
+            <!-- Skills -->
+            <div class="form-group">
+              <p class="form-label">Skills</p>
+
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" name="skills" value="HTML" />
+                  HTML
+                </label>
+
+                <label>
+                  <input type="checkbox" name="skills" value="CSS" />
+                  CSS
+                </label>
+
+                <label>
+                  <input type="checkbox" name="skills" value="JavaScript" />
+                  JavaScript
+                </label>
+
+                <label>
+                  <input type="checkbox" name="skills" value="Git" />
+                  Git
+                </label>
+
+                <label>
+                  <input type="checkbox" name="skills" value="React" />
+                  React
+                </label>
+
+                <label>
+                  <input type="checkbox" name="skills" value="Node.js" />
+                  Node.js
+                </label>
+              </div>
+
+              <small id="skillsError" class="error-message"></small>
+            </div>
+
+            <!-- About Student -->
+            <div class="form-group full-width">
+              <label for="aboutStudent"> About Student </label>
+
+              <textarea id="aboutStudent" name="aboutStudent" rows="5" maxlength="200"placeholder="Tell us about the student..." required></textarea>
+
+              <div class="character-info">
+                <span>Maximum 200 characters</span>
+                <span id="characterCount">0 / 200</span>
+              </div>
+
+              <small id="aboutStudentError" class="error-message"></small>
+            </div>
+
+            <!-- Profile Photo -->
+            <div class="form-group full-width">
+              <label for="profilePhoto"> Profile Photo </label>
+
+              <input type="file" id="profilePhoto" name="profilePhoto" accept="image/jpeg, image/jpg, image/png" required/>
+
+              <small id="profilePhotoError" class="error-message"></small>
+            </div>
+
+            <!-- Form Buttons -->
+            <div class="form-buttons full-width">
+              <button type="submit" id="submitButton">Register Student</button>
+
+              <button type="button" id="resetButton">Reset Form</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Student Statistics -->
+      <section class="statistics-section" id="statistics">
+        <div class="container">
+          <h2>Student Statistics</h2>
+
+          <div id="statisticsContainer" class="statistics-container">
+            <!-- Total Students -->
+            <div class="stat-card">
+              <h3>Total Students</h3>
+              <p id="totalStudents">0</p>
+            </div>
+
+            <!-- Web Development -->
+            <div class="stat-card">
+              <h3>Web Development</h3>
+              <p id="webDevelopmentCount">0</p>
+            </div>
+
+            <!-- UI/UX -->
+            <div class="stat-card">
+              <h3>UI/UX</h3>
+              <p id="uiuxCount">0</p>
+            </div>
+
+            <!-- Python -->
+            <div class="stat-card">
+              <h3>Python</h3>
+              <p id="pythonCount">0</p>
+            </div>
+
+            <!-- Data Analytics -->
+            <div class="stat-card">
+              <h3>Data Analytics</h3>
+              <p id="dataAnalyticsCount">0</p>
+            </div>
+
+            <!-- MERN Stack -->
+            <div class="stat-card">
+              <h3>MERN Stack</h3>
+              <p id="mernStackCount">0</p>
+            </div>
+
+            <!-- Cloud Computing -->
+            <div class="stat-card">
+              <h3>Cloud Computing</h3>
+              <p id="cloudComputingCount">0</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Search and Filter -->
+      <section class="search-section" id="search-section">
+        <div class="container">
+          <h2>Search & Filter Students</h2>
+
+          <div class="search-filter-container">
+            <!-- Search -->
+            <div class="search-box">
+              <label for="searchInput"> Search Student </label>
+
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search student by name..."
+              />
+            </div>
+
+            <!-- Course Filter -->
+            <div class="filter-box">
+              <label for="courseFilter"> Filter by Course </label>
+
+              <select id="courseFilter">
+                <option value="All Courses">All Courses</option>
+
+                <option value="Web Development">Web Development</option>
+
+                <option value="UI/UX">UI/UX</option>
+
+                <option value="Python">Python</option>
+
+                <option value="Data Analytics">Data Analytics</option>
+
+                <option value="MERN Stack">MERN Stack</option>
+
+                <option value="Cloud Computing">Cloud Computing</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Student Applications -->
+      <section class="students-section">
+        <div class="container">
+          <h2>Student Applications</h2>
+
+          <div id="studentContainer" class="student-container">
+            <!--
+                        Student cards will be generated
+                        dynamically using JavaScript.
+                    -->
+          </div>
+
+          <p id="noStudentsMessage" class="no-students-message">
+            No students found
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="footer-section">
+      <div class="container">
+        <p>&copy; 2026 Student Application Management System</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
