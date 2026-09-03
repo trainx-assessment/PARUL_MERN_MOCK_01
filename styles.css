@@ -84,9 +84,98 @@ main{
             border: 2px solid;
             /* width: 80%; */
             height: 30em;
+            display: flex;
+            flex-direction: column;
         }
     }
 }
+.pic{
+    border: 2px solid;
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    background-size: contain;
+    overflow: hidden;
+}
+.card-head{
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.8rem;
+}
+.card-sub {
+    display: flex;
+    flex-direction: column;
+}
+.card-sub-sub{
+    margin: 0.5em;
+    display: flex;
+    justify-content: space-between;
+}
+.card-left, .card-right{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+
+.name{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.about{
+    font-size: 0.6rem;
+    border: 2px solid;
+    margin: 1.2em;
+    height: 40%;
+    padding: 0.4em;
+}
+.course{
+    /* width: 100%; */
+    /* border: 2px solid; */
+    display: flex;
+    margin: 1em;
+    /* flex-direction: column; */
+    /* justify-content: space-around; */
+    align-items: center;
+
+    label{
+        font-weight: bold;
+    }
+
+    ul{
+        margin-left: 1em;
+        display: flex;
+        gap: 1em;
+
+        li{
+            list-style-type: none;
+        }
+    }
+}
+.skills{
+    margin-top: 2em;
+    /* border: 2px solid; */
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    /* flex-direction: column; */
+    /* justify-content: space-around; */
+
+    label{
+        font-weight: bold;
+    }
+
+    ul{
+        margin-left: 1em;
+        display: flex;
+        flex-direction: column;
+        li{
+            font-size: 0.7rem;
+        }
+    }
+}
+
 
 .card button{
     border-radius: 0.2em;
