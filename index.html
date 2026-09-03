@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="body">
+    <h1>Student Registration Form</h1>
+    <form class="form id=studentForm">
+      <div class="first">
+        <label for="student-name">Student Name:</label>
+
+        <input id="student-name" type="text" placeholder="Enter student name" />
+
+        <label>Email:</label>
+
+        <input id="email" type="email" placeholder="Enter Your Email" />
+      </div>
+
+      <br /><br />
+      <div class="second">
+        <label>Phone Number:</label>
+        <input type="text" id="number" placeholder="Phone number" />
+        <p id="phoneError"></p>
+
+        <label>Date of Birth:</label>
+        <input type="date" id="dob" />
+      </div>
+
+      <br /><br />
+
+      <div class="third">
+        <div class="gender">
+          <label>Gender:</label>
+          <input type="radio" id="male" name="gender" />
+          <label>Male</label>
+          <input type="radio" id="female" name="gender" />
+          <label>Female</label>
+          <input type="radio" id="other" name="gender" />
+          <label>Other</label>
+        </div>
+
+        <div class="courses">
+          <label id="cources">Course:</label>
+          <select>
+            <option>Select Course</option>
+            <option>Web Development</option>
+            <option>UI / UX</option>
+            <option>Python</option>
+            <option>Data Analyticss</option>
+            <option>Mern Stack</option>
+            <option>Cloud Computing</option>
+          </select>
+        </div>
+
+        <br /><br />
+
+        <div class="skills">
+          <label id="check">Skills:</label><br />
+          <input type="checkbox" value="HTML" /> HTML
+          <input type="checkbox" value="CSS" /> CSS
+          <input type="checkbox" value="JavaScript" /> JavaScript
+          <input type="checkbox" value="Git" /> Git
+          <input type="checkbox" value="React" /> React
+          <input type="checkbox" value="Node.js" /> Node.js
+        </div>
+      </div>
+
+      <br /><br />
+
+      <div class="footer">
+        <div class="about">
+          <label>About Student:</label><br />
+          <textarea
+            maxlength="200"
+            id="mess"
+            placeholder="Maximum 200 characters"
+          ></textarea>
+        </div>
+        <br /><br />
+
+        <div class="photo">
+          <label>Profile Photo:</label>
+
+          <input type="file" accept="image/.png" />
+        </div>
+
+        <br /><br />
+
+        <div class="btn">
+          <button type="submit">Register student</button>
+
+          <button type="reset">Resets Form</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="student-cards">
+      <div class="card">
+        <h3>Ankit Kumar</h3>
+        <p>Course: Web Development</p>
+        <p>Email: ankit@gmail.com</p>
+      </div>
+
+      <div class="card">
+        <h3>Ankit Maurya</h3>
+        <p>Course: Python</p>
+        <p>Email: maurya@gmail.com</p>
+      </div>
+
+      <div class="card">
+        <h3>Golu Maurya</h3>
+        <p>Course: MERN Stack</p>
+        <p>Email: golu@gmail.com</p>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
