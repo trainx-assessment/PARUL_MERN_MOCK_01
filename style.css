@@ -1,0 +1,6 @@
+/* Basic reset and styles will be added here */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
