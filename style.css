@@ -1,0 +1,228 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    background:white;
+    color:#0b0101;
+    line-height:1.6;
+    font-family: 'Times New Roman', Times, serif;
+    border-color: black;
+    border-radius: 25px;
+}
+header{
+    background:whitesmoke;
+    color:rgb(8, 3, 3);
+    text-align:center;
+    padding:25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+header h1{
+    margin-bottom:10px;
+}
+header p{
+    font-size:16px;
+}
+main{
+    width:90%;
+    max-width:1200px;
+    margin:30px auto;
+}
+section{
+    background:white;
+    margin-bottom:25px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+section h2{
+    margin-bottom:20px;
+    color:#1e4046;
+}
+form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+.form-group label{
+    margin-bottom:8px;
+    font-weight:600;
+}
+.form-group input,
+.form-group select,
+.form-group textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+    outline:none;
+    transition:0.3s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:#2563eb;
+}
+.full-width{
+    grid-column:1/3;
+}
+.radio-group{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+.checkbox-group{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+#charCount{
+    text-align:right;
+    color:#666;
+    font-size:14px;
+    margin-top:5px;
+}
+.error{
+    color:red;
+    font-size:13px;
+    margin-top:5px;
+}
+.button-group{
+    grid-column:1/3;
+    display:flex;
+    gap:15px;
+}
+.button-group button{
+    flex:1;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+.button-group button[type="submit"]{
+    background:#2563eb;
+    color:white;
+}
+.button-group button[type="reset"]{
+    background:#ef4444;
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
+.stats p{
+    background:#f8fafc;
+    padding:15px;
+    border-radius:8px;
+    text-align:center;
+    font-weight:600;
+}
+#searchSection{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    align-items:center;
+}
+#searchSection input, #searchSection select{
+    flex:1;
+    min-width:250px;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+#studentContainer{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+.student-card{
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:20px;
+    background:#fafafa;
+    transition:.3s;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+.student-card:hover{
+    transform:translateY(-5px);
+}
+.student-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+.student-card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+.student-card p{
+    margin:6px 0;
+}
+.student-card button{
+    margin-top:15px;
+    margin-right:10px;
+    padding:10px 18px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    color:white;
+    transition:.3s;
+}
+.student-card .edit-btn{
+    background:#f59e0b;
+}
+.student-card .edit-btn:hover{
+    background:#d97706;
+}
+.student-card .delete-btn{
+    background:#ef4444;
+}
+.student-card .delete-btn:hover{
+    background:#dc2626;
+}
+@media(max-width:100%){
+    form{
+        grid-template-columns:1fr;
+    }
+    .full-width{
+        grid-column:1;
+    }
+    .button-group{
+        grid-column:1;
+        flex-direction:column;
+    }
+}
+@media(max-width:100%){
+    header h1{
+        font-size:24px;
+    }
+    section{
+        padding:18px;
+    }
+    .stats{
+        grid-template-columns:1fr;
+    }
+    #studentContainer{
+        grid-template-columns:1fr;
+    }
+    #searchSection{
+        flex-direction:column;
+    }
+    #searchSection input,
+    #searchSection select{
+        width:100%;
+    }
+}
+}
