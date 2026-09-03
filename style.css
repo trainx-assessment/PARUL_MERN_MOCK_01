@@ -1,0 +1,24 @@
+body{
+    background-color: white;
+    margin: 0;
+    color: black;
+}
+
+#main{
+    background-color:aliceblue;
+    margin: 5rem;
+
+    border: solid black;
+
+}
+
+header{
+    background-color:blue;
+}
+header h1{
+    color:blanchedalmond;
+
+}
+header p{
+    color: yellow;
+}
