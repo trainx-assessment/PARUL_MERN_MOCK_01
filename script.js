@@ -32,7 +32,7 @@ function photoToDataURL(file) {
 
 function createStudentObject() {
     return {
-        id: generateId(),
+        id: currentEditId !== null ? currentEditId : generateId(),
         name: document.getElementById("studentName").value.trim(),
         email: document.getElementById("studentEmail").value.trim(),
         phone: document.getElementById("studentPhone").value.trim(),
@@ -45,6 +45,35 @@ function createStudentObject() {
     };
 }
 
+function fillFormForEdit(student) {
+    document.getElementById("studentName").value = student.name;
+    document.getElementById("studentEmail").value = student.email;
+    document.getElementById("studentPhone").value = student.phone;
+    document.getElementById("studentDob").value = student.dob;
+
+    const genderInputs = form.querySelectorAll('input[name="gender"]');
+    genderInputs.forEach((input) => {
+        input.checked = input.value === student.gender;
+    });
+
+    document.getElementById("studentCourse").value = student.course;
+
+    const skillInputs = form.querySelectorAll('input[name="skills"]');
+    skillInputs.forEach((input) => {
+        input.checked = student.skills.includes(input.value);
+    });
+
+    document.getElementById("studentAbout").value = student.about;
+    const counterDisplay = document.getElementById("counter");
+    counterDisplay.textContent = student.about.length + " / 200";
+    counterDisplay.style.color = student.about.length > 180 ? "red" : "#666";
+
+    document.getElementById("studentPhoto").dataset.preview = student.photo;
+
+    document.getElementById("registerBtn").textContent = "Update Student";
+}
+
+// Function for card renderIng
 function renderStudentCards() {
     const container = document.getElementById("studentCardsContainer");
     container.innerHTML = "";
@@ -135,6 +164,8 @@ function clearSkillsError() {
         errorElement.remove();
     }
 }
+
+// Below are the Finction to validate the input
 
 function validateName() {
     const input = document.getElementById("studentName");
@@ -283,21 +314,26 @@ function validateAbout() {
 function validatePhoto() {
     const input = document.getElementById("studentPhoto");
     const file = input.files[0];
+    const preview = input.dataset.preview;
 
-    if (!file) {
+    if (!file && !preview) {
         showError(input, "Profile photo is required");
         return false;
     }
-    const fileName = file.name.toLowerCase();
-    const allowedExtensions = /\.(jpg|jpeg|png)$/;
-    if (!allowedExtensions.test(fileName)) {
-        showError(input, "Only image files (.jpg, .jpeg, .png) are allowed");
-        return false;
+    if (file) {
+        const fileName = file.name.toLowerCase();
+        const allowedExtensions = /\.(jpg|jpeg|png)$/;
+        if (!allowedExtensions.test(fileName)) {
+            showError(input, "Only image files (.jpg, .jpeg, .png) are allowed");
+            return false;
+        }
     }
     clearError(input);
     return true;
 }
 
+
+// This is a function to update the Statics section
 function updateStatistics() {
     const totalEl = document.getElementById("totalStudents");
     totalEl.textContent = `Total Students: ${students.length}`;
@@ -404,10 +440,29 @@ form.addEventListener("submit", function (event) {
     if (!isValid) return;
 
     const student = createStudentObject();
-    students.push(student);
+    if (currentEditId !== null) {
+        const index = students.findIndex((s) => s.id === currentEditId);
+        if (index !== -1) {
+            students[index] = student;
+        }
+    } else {
+        students.push(student);
+    }
     renderStudentCards();
     updateStatistics();
     resetForm();
+});
+
+document.getElementById("studentCardsContainer").addEventListener("click", function (event) {
+    if (event.target.classList.contains("card-edit-btn")) {
+        const card = event.target.closest(".student-card");
+        const studentId = Number(card.getAttribute("data-id"));
+        const student = students.find((s) => s.id === studentId);
+        if (student) {
+            currentEditId = student.id;
+            fillFormForEdit(student);
+        }
+    }
 });
 
 attachInputListeners();
