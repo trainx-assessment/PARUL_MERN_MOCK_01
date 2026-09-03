@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    color: black;
+}
+header {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+header h1 {
+    margin-bottom: 8px;
+}
+main {
+    width: 80%;
+    margin: 30px;
+}
+section {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+h2 {
+    margin-bottom: 20px;
+}
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.full {
+    grid-column: 1/2;
+}
+label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+input,select,textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 15px;
+}
+textarea {
+    height: 30px;
+}
+.options {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+#count {
+    font-size: 13px;
+    margin-top: 5px;
+}
+button {
+    padding: 10px 18px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.stats {
+    display:grid;
+    grid-template-columns: repeat(20px,20px,20px,20px);
+    gap: 5px;
+}
+
+.stats div{
+    background: white;
+    text-align: center;
+    border-radius: 5px;
+}
+.stats p {
+    font-size: 20px;
+}
+.search {
+    display: flex;
+    gap: 15px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(20px,20px,20px );
+    gap: 10px;
+}
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+.card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 30%;
+    margin: auto;
+}
+.card h3 {
+    text-align: center;
+    margin: 10px;
+}
+.card p {
+    margin: 5px;
+}
+.card button {
+    width: 30%;
+}
+.edit {
+    background: white;
+    color: white;
+}
+.delete {
+    background: white;
+    color: black;
+}
+footer {
+    background: white;
+    color: black;
+    text-align: center;
+}
+
+
