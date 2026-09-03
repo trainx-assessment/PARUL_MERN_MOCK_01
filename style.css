@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+header {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+header h1 {
+    margin-bottom: 8px;
+}
+header p {
+    font-size: 15px;
+}
+#themeToggle {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    color: #333;
+    margin-top: 10px;
+}
+#themeToggle:hover {
+    background-color: #ddd;
+}
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+.form-section,
+.section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #ddd;
+}
+h2 {
+    margin-bottom: 20px;
+}
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.full {
+    grid-column: 1 / 3;
+}
+label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+input,select,textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color:purple;
+}
+.radio-group,
+.checkbox-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.radio-group label,
+.checkbox-group label {
+    font-weight: normal;
+}
+.radio-group input,
+.checkbox-group input {
+    margin-right: 5px;
+}
+.error-message {
+    color: red;
+    font-size: 13px;
+    min-height: 18px;
+}
+.counter {
+    text-align: right;
+    font-size: 13px;
+    color: #666;
+    margin-top: 5px;
+}
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+#submitBtn {
+    background-color: purple;
+    color: white;
+}
+#submitBtn:hover {
+    background-color:purple;
+}
+#resetBtn {
+    background-color: #ddd;
+}
+#resetBtn:hover {
+    background-color: #bbb;
+}
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.stat {
+    border: 1px solid #ddd;
+    padding: 18px;
+    text-align: center;
+    border-radius: 6px;
+}
+.stat h3 {
+    font-size: 25px;
+    color:purple;
+    margin-bottom: 5px;
+}
+.stat p {
+    font-size: 14px;
+    color: #666;
+}
+.search-area {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+#studentCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.student-card {
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: white;
+}
+.student-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.student-content {
+    padding: 15px;
+}
+.student-content h3 {
+    margin-bottom: 10px;
+    color: purple;
+}
+.student-content p {
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+.skills {
+    margin: 10px 0;
+}
+.skill {
+    display: inline-block;
+    background-color: #e5edff;
+    color:purple;
+    padding: 4px 8px;
+    margin: 3px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+.card-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+.edit-btn {
+    background-color: #facc15;
+}
+.delete-btn {
+    background-color: #ef4444;
+    color: white;
+}
+#noStudents {
+    text-align: center;
+    color: #777;
+    padding: 25px;
+    display: none;
+}
+footer {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+body.dark {
+    background-color: #1e1e1e;
+    color: white;
+}
+body.dark header {
+    background-color: #111827;
+}
+body.dark .form-section,
+body.dark .section {
+    background-color: #2d2d2d;
+    color: white;
+}
+body.dark h2 {
+    color: white;
+}
+body.dark input,
+body.dark select,
+body.dark textarea {
+    background-color: #3a3a3a;
+    color: white;
+    border-color: #666;
+}
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+    color: #ccc;
+}
+body.dark .stat {
+    background-color: #3a3a3a;
+    border-color: #555;
+}
+body.dark .stat h3 {
+    color: #60a5fa;
+}
+body.dark .stat p {
+    color: #ddd;
+}
+body.dark .student-card {
+    background-color: #3a3a3a;
+    border-color: #555;
+}
+body.dark .student-content h3 {
+    color: #60a5fa;
+}
+body.dark .student-content p {
+    color: white;
+}
+body.dark .skill {
+    background-color: #555;
+    color: white;
+}
+body.dark .counter {
+    color: #ccc;
+}
+body.dark #noStudents {
+    color: #ddd;
+}
+body.dark footer {
+    background-color: #111827;
+    color: white;
+}
+@media (max-width: 768px) {
+    .form-container {
+        grid-template-columns: 1fr;
+    }
+    .full {
+        grid-column: 1;
+    }
+    .stats {
+        grid-template-columns: 1fr 1fr;
+    }
+    #studentCards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 480px) {
+    main {
+        width: 95%;
+    }
+    .form-section,
+    .section {
+        padding: 18px;
+    }
+    .stats {
+        grid-template-columns: 1fr;
+    }
+    #studentCards {
+        grid-template-columns: 1fr;
+    }
+    .search-area {
+        grid-template-columns: 1fr;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+    button {
+        width: 100%;
+    }
+}
