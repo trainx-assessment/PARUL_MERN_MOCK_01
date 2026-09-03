@@ -1,4 +1,4 @@
-# HTML, CSS & JavaScript Practical Assessment
+script.js# HTML, CSS & JavaScript Practical Assessment
 
 ## Duration
 
