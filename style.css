@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(193, 174, 174);
+    color: rgb(7, 7, 7);
+}
+
+header {
+    background-color: rgb(112, 141, 125);
+    color: rgb(250, 248, 245);
+    text-align: center;
+    padding: 25px;
+}
+
+section h2 {
+    text-align: center;
+    color: crimson;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header p {
+    margin-bottom: 15px;
+}
+
+#darkmode {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: rgb(151, 141, 141);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+
+}
+
+section h2 {
+    color: yellow;
+    margin-bottom: 25px;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 6px;
+}
+
+.full {
+    grid-column: 1 / 3;
+}
+label{
+    display:block;
+    font-weight:bold ;
+    margin-bottom:6px ;
+}
+
+input,section,textarea{
+    width:100% ;
+    padding: 10px;
+    border:1px solid ;
+    border-radius:5px;
+}
+textarea{
+    height: 100px;
+}
+
+.radio-box {
+    display: flex;
+    gap: 15px;
+}
+
+
+.radio-box label {
+    font-weight: normal;
+}
+
+
+.radio-box input {
+    width: auto;
+}
+
+.check-box {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+.check-box label {
+    font-weight: normal;
+}
+
+
+.check-box input {
+    width: auto;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    min-height: 18px;
+}
+
+
+#charCount {
+    text-align: right;
+    color: gray;
+    font-size: 13px;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+
+.buttons button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#submitBtn {
+    background-color:lightblue;
+    color: white;
+}
+
+
+#submitBtn:hover {
+    background-color: lightblue;
+}
+
+
+#resetBtn {
+    background-color:gray;
+    color: white;
+}
+
+#resetBtn:hover {
+    background-color: gray;
+}
+
+
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+
+.statistics div {
+    background-color: gray;
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+
+.statistics h3 {
+    color: lightblue;
+    font-size: 25px;
+}
+
+.search-box {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+}
+
+.student-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+.student-card {
+    background-color: white;
+    border: 1px solid light gray;
+    padding: 15px;
+    border-radius: 8px;
+}
+
