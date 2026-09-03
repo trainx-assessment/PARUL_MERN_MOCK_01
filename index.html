@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><center>
+        <h1>Student Application Management System</h1>
+        <h3>Register and manage student applications</h3>
+    </center></header>
+
+    
+<form action="/" id="studentForm">
+
+    <div class="form-group">
+    <p>Enter your Name:</p>
+    <input type="text" id="studentName" placeholder="Enter your name">
+</div>
+
+<div class="form-group">
+    <p>Enter your Email:</p>
+    <input type="email" id="email" placeholder="Enter your Email">
+</div>
+
+<div class="form-group">
+    <p>Enter your Contact:</p>
+    <input type="tel" id="phone" placeholder="Enter your contact">
+</div>
+
+<div class="form-group">
+    <p>Enter your Date of Birth:</p>
+    <input type="date" id="dob">
+</div>
+
+
+    <div class="form-group">
+    <p>Enter your Gender:</p>
+
+    <label>
+        <input type="radio" name="gender" value="male"> Male
+    </label>
+
+    <label>
+        <input type="radio" name="gender" value="female"> Female
+    </label>
+
+    <label>
+        <input type="radio" name="gender" value="other"> Others
+    </label>
+</div>
+
+
+    <div class="form-group">
+    <p>Enter Your Course:</p>
+
+    <select id="course" name="course">
+        <option value="">Select Course</option>
+        <option value="web-development">Web Development</option>
+        <option value="ui-ux">UI/UX</option>
+        <option value="python">Python</option>
+        <option value="data-analytics">Data Analytics</option>
+        <option value="mern-stack">MERN Stack</option>
+        <option value="cloud-computing">Cloud Computing</option>
+    </select>
+</div>
+
+    <br><br>
+
+
+    
+    <label>Skills:</label><br>
+
+    <input type="checkbox" id="html" name="skills" value="HTML">
+    <label for="html">HTML</label>
+
+    <input type="checkbox" id="css" name="skills" value="CSS">
+    <label for="css">CSS</label>
+
+    <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+    <label for="javascript">JavaScript</label>
+
+    <input type="checkbox" id="git" name="skills" value="Git">
+    <label for="git">Git</label>
+
+    <input type="checkbox" id="react" name="skills" value="React">
+    <label for="react">React</label>
+
+    <input type="checkbox" id="nodejs" name="skills" value="Node.js">
+    <label for="nodejs">Node.js</label>
+
+    <br><br>
+
+
+    
+    <label for="about">About Student:</label><br>
+
+    <textarea
+        id="about"
+        name="about"
+        maxlength="200"
+        placeholder="Maximum 200 characters">
+    </textarea>
+
+    <br><br>
+
+
+    
+    <label for="profile">Profile Photo:</label>
+
+    <input
+        type="file"
+        id="profile"
+        name="profile"
+        accept="image/*">
+
+    <br><br>
+
+
+    
+    <button type="submit">Register Student</button>
+    <button type="reset">Reset Form</button>
+
+</form>
+
+
+    </div>
+    <section class="statistics-section">
+        <h2>Student Statistics</h2> 
+        <div class="statistics-container">
+            <div class="stat-card">
+                <h3>Total Students</h3> 
+                <p id="totalStudents">0</p> 
+            </div> 
+            <div class="stat-card"> 
+                <h3>Web Development</h3> 
+                <p id="webDevelopmentCount">0</p> 
+            </div> <div class="stat-card"> 
+                <h3>UI/UX</h3> 
+                <p id="uiuxCount">0</p> 
+            </div> <div class="stat-card"> 
+                <h3>Python</h3> <p id="pythonCount">0</p> 
+            </div> 
+            <div class="stat-card"> 
+                <h3>Data Analytics</h3> 
+                <p id="dataAnalyticsCount">0</p> 
+            </div> 
+            <div class="stat-card"> 
+                <h3>MERN Stack</h3> 
+                <p id="mernStackCount">0</p> 
+            </div> 
+            <div class="stat-card"> 
+                <h3>Cloud Computing</h3> 
+                <p id="cloudComputingCount">0</p> 
+            </div> 
+        </div> 
+    </section>
+    
+    <section class="search-section">
+        <h2>Search Students</h2> 
+        <div class="search-container"> 
+            <input type="text" id="searchInput" placeholder="Search student by name..." > 
+            <select id="courseFilter"> 
+                <option value="All Courses">All Courses</option> 
+                <option value="Web Development">Web Development</option>
+                <option value="MERN Stack">MERN Stack</option> 
+                <option value="UI/UX">UI/UX</option> 
+                <option value="Python">Python</option> 
+                <option value="Data Analytics">Data Analytics</option> 
+                <option value="Cloud Computing">Cloud Computing</option> 
+            </select> 
+        </div> 
+    </section>
+    
+    <section class="students-section"> 
+        <h2>Student Applications</h2> 
+        <div id="studentContainer" class="student-container">
+            <p id="noStudentsMessage" class="no-students"> No students found </p> 
+        </div> 
+    </section> 
+    <footer> 
+        <p> Student Application Management System </p>
+    </footer> 
+    <script src="script.js"></script>
+</body>
+</html>
+
