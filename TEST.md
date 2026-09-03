@@ -175,7 +175,7 @@ Accept image files only.
 Add two buttons:
 
 ```text
-Register Student
+c
 Reset Form
 ```
 
