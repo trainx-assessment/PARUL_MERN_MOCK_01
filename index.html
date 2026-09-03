@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Student Management System</h1>
+</header>
+
+<main>
+
+    <!-- Registration Form -->
+    <section>
+        <h2>Student Registration</h2>
+
+        <form id="studentForm">
+
+            <input type="text" id="studentName" placeholder="Student Name">
+            
+            <input type="email" id="email" placeholder="Email">
+
+            <input type="text" id="phone" placeholder="Phone">
+
+            <input type="date" id="dob">
+
+            <div>
+                <label>Gender:</label>
+                <input type="radio" name="gender" value="Male"> Male
+                <input type="radio" name="gender" value="Female"> Female
+            </div>
+
+            <select id="course">
+                <option value="">Select Course</option>
+                <option>Web Development</option>
+                <option>UI/UX</option>
+                <option>Python</option>
+                <option>Data Analytics</option>
+                <option>MERN Stack</option>
+                <option>Cloud Computing</option>
+            </select>
+
+            <div>
+                <label>Skills:</label><br>
+                <input type="checkbox" name="skills" value="HTML"> HTML
+                <input type="checkbox" name="skills" value="CSS"> CSS
+                <input type="checkbox" name="skills" value="JavaScript"> JavaScript
+                <input type="checkbox" name="skills" value="Git"> Git
+            </div>
+
+            <textarea id="about" placeholder="About Student"></textarea>
+
+            <input type="file" id="photo" accept="image/*">
+
+            <button type="submit" id="submitBtn">Register Student</button>
+            <button type="reset" id="resetBtn">Reset</button>
+
+        </form>
+    </section>
+
+    <!-- Search -->
+    <section>
+        <input type="text" id="searchInput" placeholder="Search student...">
+
+        <select id="courseFilter">
+            <option value="">All Courses</option>
+            <option>Web Development</option>
+            <option>UI/UX</option>
+            <option>Python</option>
+            <option>Data Analytics</option>
+            <option>MERN Stack</option>
+            <option>Cloud Computing</option>
+        </select>
+    </section>
+
+    <!-- Statistics -->
+    <section>
+        <h2>Students: <span id="totalStudents">0</span></h2>
+    </section>
+
+    <!-- Student Cards -->
+    <section id="studentContainer" class="student-container">
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Student Management System</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

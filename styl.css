@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    color: black;
+}
+
+header, footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+input, select, textarea, button {
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+textarea {
+    min-height: 80px;
+}
+
+button {
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: gray;
+}
+
+.student-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.student-card {
+    background: white;
+    padding: 15px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.student-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#searchInput, #courseFilter {
+    width: 48%;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    #searchInput, #courseFilter {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        width: 95%;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
