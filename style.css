@@ -1,0 +1,291 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #f5f7fb;
+  --panel-color: #ffffff;
+  --primary-color: #2f6fed;
+  --primary-dark: #234db4;
+  --text-color: #1e293b;
+  --muted-color: #64748b;
+  --border-color: #dbe3f0;
+  --error-color: #dc2626;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+}
+
+.site-header {
+  background: var(--primary-color);
+  color: #ffffff;
+  padding: 2rem 0;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-header h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2.2rem;
+}
+
+.site-header p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.theme-toggle {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  min-width: 120px;
+}
+
+main {
+  padding: 2rem 0;
+}
+
+.panel {
+  background: var(--panel-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.panel h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 0.7rem;
+  background: #fff;
+  color: var(--text-color);
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.radio-group,
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 0.7rem;
+  background: #ffffff;
+}
+
+.radio-group label,
+.checkbox-group label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 700;
+}
+
+button[type="submit"]:hover {
+  background: var(--primary-dark);
+}
+
+.secondary-btn {
+  background: #e2e8f0;
+  color: var(--text-color);
+}
+
+.secondary-btn:hover {
+  background: #cbd5e1;
+}
+
+.error-message {
+  color: var(--error-color);
+  min-height: 18px;
+  font-size: 0.85rem;
+}
+
+.helper-text,
+.char-counter {
+  color: var(--muted-color);
+  font-size: 0.85rem;
+}
+
+.char-counter {
+  text-align: right;
+}
+
+.search-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-controls input,
+.search-controls select {
+  flex: 1;
+  min-width: 200px;
+}
+
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.student-card {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.9rem;
+  background: #f8fafc;
+}
+
+.student-card img {
+  width: 72px;
+  height: 96px;
+  float: left;
+  object-fit: cover;
+  border-radius: 4px;
+  margin: 0 1rem 0.5rem 0;
+  border: 1px solid var(--border-color);
+}
+
+.no-students {
+  text-align: center;
+  color: var(--muted-color);
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.student-card h3 {
+  margin: 0 0 0.75rem;
+  min-height: 2.4rem;
+}
+
+.student-card p {
+  margin: 0.35rem 0;
+  color: var(--text-color);
+}
+
+.student-card .skills {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--muted-color);
+}
+
+.card-actions {
+  clear: both;
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.card-actions .edit-btn {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.card-actions .delete-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1rem 0 2rem;
+  color: var(--muted-color);
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-controls {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .panel {
+    padding: 1rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
