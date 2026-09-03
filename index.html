@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+    </header>
+
+    <main class="main-container">
+        <section class="form-box">
+            <h2>Student Registration Form</h2>
+            <form method="POST">
+                
+                <div class="form-group">
+                    <label>Student Name:</label>
+                    <input type="text" name="student_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" name="student_email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number:</label>
+                    <input type="text" name="student_phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Date of Birth:</label>
+                    <input type="date" name="student_dob" required>
+                </div>
+
+                <fieldset class="form-group">
+                    <legend>Gender</legend>
+                    <div class="radio-group">
+                        <label for="gender-male"><input type="radio" id="gender-male" name="gender" value="Male"> Male</label>
+                        <label for="gender-female"><input type="radio" id="gender-female" name="gender" value="Female"> Female</label>
+                        <label for="gender-other"><input type="radio" id="gender-other" name="gender" value="Other"> Other</label>
+                    </div>
+                </fieldset>
+
+                <div class="form-group">
+                    <label>Course:</label>
+                    <select name="course">
+                        <option value="" disabled selected>Select Course</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="UI/UX">UI/UX</option>
+                        <option value="Python">Python</option>
+                        <option value="Data Analytics">Data Analytics</option>
+                        <option value="MERN Stack">MERN Stack</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                    </select>
+                </div>
+
+                <fieldset class="form-group full-width">
+                    <legend>Skills</legend>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+                        <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+                        <label for="skill-javascript"><input type="checkbox" id="skill-javascript" name="skills" value="JavaScript"> JavaScript</label>
+                        <label><input type="checkbox" name="skills" value="Git"> Git</label>
+                        <label><input type="checkbox" name="skills" value="React"> React</label>
+                        <label><input type="checkbox" name="skills" value="Node.js"> Node.js</label>
+                    </div>
+                </fieldset>
+
+                <div class="form-group full-width">
+                    <label>About Student:</label>
+                    <textarea name="about_student" maxlength="200" placeholder="Maximum 200 characters"></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="profile-photo">Profile Photo:</label>
+                    <input type="file" id="profile-photo" name="profile_photo" accept="image">
+                </div>
+
+                <div class="button-group full-width">
+                    <button type="submit" class="btn-save">Register Student</button>
+                    <button type="reset" class="btn-clear">Reset Form</button>
+                </div>
+                
+            </form>
+        </section>
+
+        <section class="stats-box" aria-labelledby="stats-heading">
+            <h2 id="stats-heading">Student Statistics</h2>
+        </section>
+
+        <section class="search-box" aria-labelledby="search-heading">
+            <h2 id="search-heading">Search and Filter</h2>
+        </section>
+
+        <section class="list-box" aria-labelledby="cards-heading">
+            <h2 id="cards-heading">Registered Students</h2>
+            <div class="student-cards-container">
+                <div class="student-card">
+                    <h3>John Doe</h3>
+                    <p>Course: Web Development</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Student Application Management System &copy; 2026</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
