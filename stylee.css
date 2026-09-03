@@ -1,0 +1,24 @@
+.app-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+#footer {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.submit{
+    background-color: #4CAF50;
+
+}
+.submit:hover {
+    background-color: #45a049;
+    
+}
