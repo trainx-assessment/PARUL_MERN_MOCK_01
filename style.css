@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+    line-height: 1.5
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 8px
+}
+
+.header p {
+    font-size: 16px
+}
+
+section {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .08)
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #1f2937
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px
+}
+
+.form-group {
+    margin-bottom: 5px
+}
+
+.form-group label,
+fieldset legend {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px
+}
+
+input[type=text],
+input[type=email],
+input[type=date],
+input[type=file],
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px
+}
+
+textarea {
+    resize: vertical
+}
+
+.full-width {
+    grid-column: 1/-1
+}
+
+.character-limit {
+    font-size: 13px;
+    font-weight: normal;
+    color: #777
+}
+
+#characterCount {
+    display: block;
+    margin-top: 5px;
+    color: #666
+}
+
+fieldset {
+    border: none
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px
+}
+
+.radio-group label,
+.checkbox-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 5px
+}
+
+.error {
+    display: block;
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 4px;
+    min-height: 18px
+}
+
+.image-para {
+    color: #666;
+    font-size: 12px;
+    margin: 8px 0
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px
+}
+
+.btn {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    height: 50px
+}
+
+.btn-primary {
+    background: #2667e9;
+    color: #fff
+}
+
+.btn-secondary {
+    background: #6b7280;
+    color: #fff
+}
+.btn:hover{
+    opacity: 0.9;
+    background-color: #dc2626;
+}
+.btn:hover .statistics-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px
+}
+
+.student-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0
+}
+
+.skill {
+    background: #e5e7eb;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 12px
+}
+.footer {
+    background: #1f2937;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px
+}
+
+@media(max-width:768px) {
+    .statistics-container {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .student-cards {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .search-container {
+        grid-template-columns: 1fr
+    }
+}
+
+@media(max-width:480px) {
+    form {
+        grid-template-columns: 1fr
+    }
+
+    .header h1 {
+        font-size: 24px
+    }
+
+    .statistics-container,
+    .student-cards {
+        grid-template-columns: 1fr
+    }
+
+    .button-group {
+        flex-direction: column
+    }
+
+    .btn {
+        width: 100%
+    }
+}
