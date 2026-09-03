@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header class="header_section">
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+    </header>
+
+
+    <!-- Task 2-->
+
+
+    <main>
+
+
+    <section id="registration-section">
+  <h2>Register Student</h2>
+  <form id="student-form" novalidate>
+    
+
+    <div class="form-group">
+      <label for="student-name">Student Name</label>
+      <input 
+        type="text" 
+        id="student-name" 
+        name="studentName" 
+        placeholder="Enter full name" 
+        required 
+      />
+      <span class="error-message" id="name-error"></span>
+    </div>
+
+    
+
+    <div class="form-group">
+      <label for="student-email">Email</label>
+      <input 
+        type="email" 
+        id="student-email" 
+        name="studentEmail" 
+        placeholder="example@domain.com" 
+        required 
+      />
+      <span class="error-message" id="email-error"></span>
+    </div>
+
+    
+    <div class="form-group">
+      <label for="student-phone">Phone Number</label>
+      <input 
+        type="text" 
+        id="student-phone" 
+        name="studentPhone" 
+        placeholder="10-digit number" 
+        required 
+      />
+      <span class="error-message" id="phone-error"></span>
+    </div>
+ 
+
+    <div class="form-group">
+      <label for="student-dob">Date of Birth</label>
+      <input 
+        type="date" 
+        id="student-dob" 
+        name="studentDob" 
+        required 
+      />
+      <span class="error-message" id="dob-error"></span>
+    </div>
+
+     
+    <div class="form-group">
+      <label>Gender</label>
+      <div class="radio-group">
+        <label for="gender-male">
+          <input type="radio" id="gender-male" name="gender" value="Male" />
+          Male
+        </label>
+        <label for="gender-female">
+          <input type="radio" id="gender-female" name="gender" value="Female" />
+          Female
+        </label>
+        <label for="gender-other">
+          <input type="radio" id="gender-other" name="gender" value="Other" />
+          Other
+        </label>
+      </div>
+      <span class="error-message" id="gender-error"></span>
+    </div>
+
+    
+    <div class="form-group">
+      <label for="student-course">Course</label>
+      <select id="student-course" name="studentCourse" required>
+        <option value="">Select Course</option>
+        <option value="Web Development">Web Development</option>
+        <option value="UI/UX">UI/UX</option>
+        <option value="Python">Python</option>
+        <option value="Data Analytics">Data Analytics</option>
+        <option value="MERN Stack">MERN Stack</option>
+        <option value="Cloud Computing">Cloud Computing</option>
+      </select>
+      <span class="error-message" id="course-error"></span>
+    </div>
+
+     
+    <div class="form-group full-width">
+      <label>Skills</label>
+      <div class="checkbox-group">
+        <label for="skill-html">
+          <input type="checkbox" id="skill-html" name="skills" value="HTML" />
+          HTML
+        </label>
+        <label for="skill-css">
+          <input type="checkbox" id="skill-css" name="skills" value="CSS" />
+          CSS
+        </label>
+        <label for="skill-js">
+          <input type="checkbox" id="skill-js" name="skills" value="JavaScript" />
+          JavaScript
+        </label>
+        <label for="skill-git">
+          <input type="checkbox" id="skill-git" name="skills" value="Git" />
+          Git
+        </label>
+        <label for="skill-react">
+          <input type="checkbox" id="skill-react" name="skills" value="React" />
+          React
+        </label>
+        <label for="skill-node">
+          <input type="checkbox" id="skill-node" name="skills" value="Node.js" />
+          Node.js
+        </label>
+      </div>
+      <span class="error-message" id="skills-error"></span>
+    </div>
+
+     
+    <div class="form-group full-width">
+      <label for="student-about">About Student</label>
+      <textarea 
+        id="student-about" 
+        name="studentAbout" 
+        maxlength="200" 
+        rows="4" 
+        placeholder="Brief description about the student (max 200 characters)..."
+      ></textarea>
+      <div class="counter-container">
+        <span id="char-counter">0 / 200</span>
+      </div>
+      <span class="error-message" id="about-error"></span>
+    </div>
+
+     
+    <div class="form-group full-width">
+      <label for="student-photo">Profile Photo</label>
+      <input 
+        type="file" 
+        id="student-photo" 
+        name="studentPhoto" 
+        accept="image/*" 
+        required 
+      />
+      <span class="error-message" id="photo-error"></span>
+    </div>
+
+     
+    <div class="form-actions full-width">
+      <button type="submit" id="submit-btn">Register Student</button>
+      <button type="reset" id="reset-btn">Reset Form</button>
+    </div>
+  </form>
+</section>
+    </main>
+
+
+
+    <section>
+
+        <div class="student_section">
+            <h1>Student_Statistics</h1>
+        </div>
+
+        <div class="total">
+            <p>Total Students: 0</p>
+            <p>Total Students: 1</p>
+            <p>Total Students: 2</p>
+            
+        </div>
+
+        <div class="student_register">
+            <p>
+                Total Students: 1
+                Total Students: 2
+                Total Students: 3
+
+            </p>
+        </div>
+
+        <div class="enroll-course">
+            <p>
+                <p>Web Development: 0</p> 
+                <p>UI/UX: 0</p>
+                <p>python:0</p>
+                
+                <p>Data Analytics: 0</p>
+                <p>MERN Stack: 0</p>
+                <p>Cloud Computing: 0</p>
+            </p>
+        </div>
+    </section>
+    <form action=""></form>
+    <footer></footer>
+</body>
+</html>
