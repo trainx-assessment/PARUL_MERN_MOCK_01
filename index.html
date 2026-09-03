@@ -121,22 +121,52 @@
 
         <section class="stat">
             <h2>Student Statistics</h2>
-            <p>Total Students: 0</p>
+            <div class="stat-content">
+                <p id="totalStudents">Total Students: 0</p>
+                <div class="course-stats">
+                    <p>Web Development: <span id="statWebDev">0</span></p>
+                    <p>UI/UX: <span id="statUiUx">0</span></p>
+                    <p>Python: <span id="statPython">0</span></p>
+                    <p>Data Analytics: <span id="statDataAnalytics">0</span></p>
+                    <p>MERN Stack: <span id="statMern">0</span></p>
+                    <p>Cloud Computing: <span id="statCloud">0</span></p>
+                </div>
+            </div>
         </section>
 
         <section class="filter">
             <h2>Search and Filter Section</h2>
+            <div class="filter-controls">
+                <div class="form-group">
+                    <label for="searchInput">Search by Name</label>
+                    <input type="text" id="searchInput" placeholder="Search student by name...">
+                </div>
+                <div class="form-group">
+                    <label for="courseFilter">Filter by Course</label>
+                    <select id="courseFilter">
+                        <option value="all">All Courses</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="UI/UX">UI/UX</option>
+                        <option value="Python">Python</option>
+                        <option value="Data Analytics">Data Analytics</option>
+                        <option value="MERN Stack">MERN Stack</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                    </select>
+                </div>
+            </div>
         </section>
 
         <section class="cards">
             <h2>Student Cards Container</h2>
+            <div class="student-cards" id="studentCardsContainer">
+            </div>
         </section>
 
     </main>
 
     
     <footer class="footer">
-        <p> 2024 Student Application Management System</p>
+        <p> 2026 Student Application Management System</p>
     </footer>
 
     <script src="script.js"></script>

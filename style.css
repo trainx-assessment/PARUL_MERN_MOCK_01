@@ -271,8 +271,7 @@ main {
 }
 
 .student-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -318,6 +317,14 @@ main {
         gap: 15px;
     }
 
+    .filter-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .course-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .student-cards {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
@@ -355,6 +362,14 @@ main {
         gap: 8px;
     }
 
+    .filter-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .course-stats {
+        grid-template-columns: 1fr;
+    }
+
     .stat h2,
     .filter h2,
     .cards h2 {
@@ -380,4 +395,169 @@ main {
 
 .input-error {
     border-color: #e74c3c !important;
+}
+
+.stat-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.stat-content p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+}
+
+.course-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.course-stats p {
+    font-size: 14px;
+    color: #555;
+    font-weight: normal;
+}
+
+.course-stats span {
+    font-weight: bold;
+    color: #667eea;
+}
+
+.filter-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.filter-controls .form-group label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.filter-controls input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.filter-controls input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+    outline: none;
+}
+
+.filter-controls select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.filter-controls select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+    outline: none;
+}
+
+.student-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.student-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.student-card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.student-card-details p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+}
+
+.student-card-details .label {
+    font-weight: bold;
+    color: #444;
+}
+
+.student-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.student-skill-tag {
+    background-color: #e8eaf6;
+    color: #1a73e0;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.student-card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card-edit-btn,
+.card-delete-btn {
+    padding: 6px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-edit-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.card-edit-btn:hover {
+    background-color: #1976D2;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.card-delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.card-delete-btn:hover {
+    background-color: #da190b;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.no-students {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: #888;
+    grid-column: 1 / -1;
 }

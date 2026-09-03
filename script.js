@@ -1,5 +1,89 @@
 const students = [];
 let currentEditId = null;
+let nextId = 1;
+
+function generateId() {
+    return nextId++;
+}
+
+function getSelectedGender() {
+    const genderInputs = document.querySelectorAll('input[name="gender"]');
+    for (const input of genderInputs) {
+        if (input.checked) return input.value;
+    }
+    return null;
+}
+
+function getSelectedSkills() {
+    const skillInputs = document.querySelectorAll('input[name="skills"]:checked');
+    return Array.from(skillInputs).map((input) => input.value);
+}
+
+function photoToDataURL(file) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            resolve(e.target.result);
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+    });
+}
+
+function createStudentObject() {
+    return {
+        id: generateId(),
+        name: document.getElementById("studentName").value.trim(),
+        email: document.getElementById("studentEmail").value.trim(),
+        phone: document.getElementById("studentPhone").value.trim(),
+        dob: document.getElementById("studentDob").value,
+        gender: getSelectedGender(),
+        course: document.getElementById("studentCourse").value,
+        skills: getSelectedSkills(),
+        about: document.getElementById("studentAbout").value.trim(),
+        photo: document.getElementById("studentPhoto").dataset.preview || ""
+    };
+}
+
+function renderStudentCards() {
+    const container = document.getElementById("studentCardsContainer");
+    container.innerHTML = "";
+
+    if (students.length === 0) {
+        container.innerHTML = '<p class="no-students">No students found</p>';
+        return;
+    }
+
+    students.forEach((student) => {
+        const card = document.createElement("div");
+        card.classList.add("student-card");
+        card.setAttribute("data-id", student.id);
+
+        card.innerHTML = `
+            <div class="student-card-content">
+                <img src="${student.photo}" alt="${student.name}" class="student-photo">
+                <div class="student-card-details">
+                    <p><span class="label">Name:</span> ${student.name}</p>
+                    <p><span class="label">Email:</span> ${student.email}</p>
+                    <p><span class="label">Phone:</span> ${student.phone}</p>
+                    <p><span class="label">DOB:</span> ${student.dob}</p>
+                    <p><span class="label">Gender:</span> ${student.gender}</p>
+                    <p><span class="label">Course:</span> ${student.course}</p>
+                    <div class="student-skills">
+                        ${student.skills.map((skill) => `<span class="student-skill-tag">${skill}</span>`).join("")}
+                    </div>
+                    <p><span class="label">About:</span> ${student.about}</p>
+                    <div class="student-card-actions">
+                        <button class="card-edit-btn">Edit</button>
+                        <button class="card-delete-btn">Delete</button>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        container.appendChild(card);
+    });
+}
 
 const form = document.getElementById("studentForm");
 const aboutTextarea = document.getElementById("studentAbout");
@@ -124,7 +208,7 @@ function validateDob() {
     today.setHours(0, 0, 0, 0);
 
     if (selectedDate > today) {
-        showError(input, "Future dates are not allowed");
+        showError(input, "WoW!! The Student is not even born - Future dates are not allowed");
         return false;
     }
 
@@ -214,6 +298,64 @@ function validatePhoto() {
     return true;
 }
 
+function updateStatistics() {
+    const totalEl = document.getElementById("totalStudents");
+    totalEl.textContent = `Total Students: ${students.length}`;
+
+    const courseCounts = {};
+    students.forEach((student) => {
+        courseCounts[student.course] = (courseCounts[student.course] || 0) + 1;
+    });
+
+    const courseIds = {
+        "Web Development": "statWebDev",
+        "UI/UX": "statUiUx",
+        "Python": "statPython",
+        "Data Analytics": "statDataAnalytics",
+        "MERN Stack": "statMern",
+        "Cloud Computing": "statCloud"
+    };
+
+    Object.keys(courseIds).forEach((course) => {
+        const el = document.getElementById(courseIds[course]);
+        el.textContent = courseCounts[course] || 0;
+    });
+}
+
+function resetForm() {
+    form.reset();
+    currentEditId = null;
+    document.getElementById("registerBtn").textContent = "Register Student";
+    document.getElementById("counter").textContent = "0 / 200";
+    document.getElementById("counter").style.color = "#666";
+    document.getElementById("studentPhoto").dataset.preview = "";
+
+    const errorElements = form.querySelectorAll(".error-message");
+    errorElements.forEach((el) => el.remove());
+
+    const errorInputs = form.querySelectorAll("input.error, .input-error");
+    errorInputs.forEach((el) => el.classList.remove("input-error"));
+}
+
+document.getElementById("studentPhoto").addEventListener("change", function () {
+    const file = this.files[0];
+    const input = this;
+    if (!file) return;
+
+    const fileName = file.name.toLowerCase();
+    const allowedExtensions = /\.(jpg|jpeg|png)$/;
+    if (!allowedExtensions.test(fileName)) {
+        showError(input, "Only image files (.jpg, .jpeg, .png) are allowed");
+        return;
+    }
+
+    clearError(input);
+
+    photoToDataURL(file).then((dataUrl) => {
+        input.dataset.preview = dataUrl;
+    }).catch(() => {});
+});
+
 function attachInputListeners() {
     const textInputs = form.querySelectorAll(
         "input[type='text'], input[type='email'], input[type='date'], select, textarea"
@@ -260,6 +402,14 @@ form.addEventListener("submit", function (event) {
     if (!validatePhoto()) isValid = false;
 
     if (!isValid) return;
+
+    const student = createStudentObject();
+    students.push(student);
+    renderStudentCards();
+    updateStatistics();
+    resetForm();
 });
 
 attachInputListeners();
+updateStatistics();
+renderStudentCards();
