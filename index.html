@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+    <header><h1>Student Application Management System</h1>
+    <p>Register and manage student applications</p></header>
+    <main>
+<section class="form">
+    <h2>Student Registration Form</h2>
+    <label for="Student Name">Name</label> <input id="name" placeholder="Name" type="text" required>
+
+    <label for="Email">Email</label>
+    <input id="email" placeholder="Email" type="email" required>
+    <label for="Phone Number">Phone Number</label>
+        <input id="number" type="text" placeholder="Phone Number" required>
+    <label for="DOB">Date of birth</label>
+        <input id="dob" type="date" required>
+    <p>Gender</p>
+    <label for="Female">Female</label>  
+    <input type="radio" name="Gender" id="female" value="Female">
+        <label for="Male">Male</label>
+        <input type="radio" name="Gender" id="Male" value="Male">
+        <label for="Others">Others</label>
+        <input type="radio" name="Gender" id="Others" value="Others">
+     <label for="Course">Select Course</label>
+        <input type="search" name="course" value="Select Course">
+        <label for="web development">Web Development</label>
+        <input type="search" name="course" value="Web Development">
+        <label for="UI/UX">UI/UX</label>
+        <input type="search" name="course" value="UI/UX">
+        <label for="Python">Python</label>
+        <input type="search" name="course" value="Python">
+        <label for="Data Analytics">Data Analytics</label>
+        <input type="search" name="course" value="Data Analytics">
+        <br>
+    <p>Skills</p>
+    <label for="html">HTML</label>
+    <input type="checkbox">
+    <label for="css">CSS</label>
+    <input type="checkbox">
+    <label for="JavaScript">JavaScript</label>
+    <input type="checkbox">
+    <label for="git">Git</label>
+    <input type="checkbox">
+    <label for="React">React</label>
+<input type="checkbox">
+<label for="Node">Node.js</label>
+<input type="checkbox">
+    <br>
+    <label for="About">About</label>
+       <input id="about" type="text">
+    
+    <label for="Photo">Choose Photo</label>
+    <input id="photo" type="file">
+    <br>
+    <div class="btn">
+    
+        <button id="register">Register Student</button>
+    <button id="reset">Reset Form</button>
+    </div>
+</section>
+<section class="Cards">
+    <h2>Students Cards</h2>
+    <div class="maincards">
+        <div class="card1">card1</div>
+    <div class="card2">card2</div>
+    <div class="card3">card3</div>
+    </div>
+</section>
+    </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
