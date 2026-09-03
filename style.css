@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body {
+    background-color: rgb(229, 247, 255);
+    color: black
+}
+
+header {
+    background-color: rgb(202, 242, 255);
+    text-align: center;
+    display: flex;
+    padding: 1.5rem;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 2rem;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    border: 1.5px solid;
+    border-color: lightsteelblue;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    color: black;
+}
+
+.form-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
+
+.radio-group label, .checkbox-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    cursor: pointer;
+}
+
+.textarea-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.primary-btn {
+    background-color: rgb(82, 82, 255);
+    color: white;
+}
+
+.primary-btn:hover { background-color: rgb(4, 4, 213); }
+
+.secondary-btn {
+    background-color: var(rgb(166, 166, 166));
+    color: black;
+}
+
+.secondary-btn:hover { background-color: rgb(170, 170, 170); }
+
+.student-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.student-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid brown;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.student-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 2px solid grey;
+}
+
+.student-card h3 {
+    color: black;
+    font-size: 1.25rem;
+}
+
+.student-card p {
+    font-size: 0.9rem;
+}
+
+.card-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgb(202, 242, 255);
+    border-top: 1px solid rgb(202, 242, 255);
+    margin-top: 2rem;
+}
