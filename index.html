@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Campus Flow</title>
+</head>
+
+<body>
+
+    <header>
+        <p id="title">Newbie Application</p>
+    </header>
+    <form>
+
+        <section>
+            <label>Student Name<br><input type="text" id="name" name="name"></label>
+            <span class="error" id="err-name"></span>
+        </section>
+        <section>
+            <label>Email<br><input type="email" id="email" name="email"></label>
+            <span class="error" id="err-email"></span>
+        </section>
+        <section>
+            <label>Phone Number<br><input type="tel" id="phone" name="phone"></label>
+            <span class="error" id="err-phone"></span>
+        </section>
+        <section>
+            <label>Date of Birth<br><input type="date" id="dob" name="dob"></label>
+            <span class="error" id="err-dob"></span>
+        </section>
+        <section>
+            <p>Gender</p>
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+            <span class="error" id="err-gender"></span>
+        </section>
+        <section>
+            <label class="course">Course<br>
+                <select id="course" name="course">
+                    <option value="">Select Course</option>
+                    <option value="webDev">Web Development</option>
+                    <option value="UIUX">UI/UX</option>
+                    <option value="python">Python</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                </select>
+            </label>
+            <span class="error" id="err-course"></span>
+        </section>
+        <section>
+            <p>Skills</p>
+            <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+            <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+            <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+            <label><input type="checkbox" name="skills" value="Git"> Git</label>
+            <span class="error" id="err-skills"></span>
+        </section>
+        <section>
+            <label>About Student<br><textarea id="about" name="about" rows="4"></textarea></label>
+            <span class="error" id="err-about"></span>
+        </section>
+        <section>
+            <label>Profile Photo<br><input type="file" id="photo" name="photo" accept="image/*"></label>
+            <span class="error" id="err-photo"></span>
+        </section>
+        <section>
+            <button type="submit">Submit</button>
+        </section>
+    </form>
+
+    <div class="count-bar">
+        <span>Total Students</span>
+        <strong id="student-count">0</strong>
+    </div>
+
+    <div class="cards" id="cards-container"></div>
+
+    <script src="script.js" defer></script>
+
+</body>
+
+</html>
