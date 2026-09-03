@@ -1,4 +1,10 @@
+const students = [];
 const form = document.getElementById("student-form");
+
+function getNextStudentId() {
+    const lastStudent = students[students.length - 1];
+    return lastStudent ? lastStudent.id + 1 : 1;
+}
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -120,6 +126,23 @@ form.addEventListener("submit", (event) => {
     if (!valid) {
         return;
     }
+
+    const student = {
+        id: getNextStudentId(),
+        name,
+        email,
+        phone,
+        dob,
+        gender: gender.value,
+        course,
+        skills: [skills],
+        about,
+        photo: photo.name
+    };
+
+    students.push(student);
+    form.reset();
+    document.getElementById("about-counter").innerText = "0 / 200";
 });
 
 document.getElementById("student-name").addEventListener("input", () => document.getElementById("name-error").innerText = "");
