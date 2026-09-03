@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #9a92f16d;
+  padding: 40px 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+h4 {
+  text-align: center;
+  color: #000000;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+form {
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
+  background: rgb(255, 255, 255);
+  padding: 30px;
+  border-radius: 12px;
+  border: 3px solid black;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+form > label {
+  display: block;
+  font-weight: bold;
+  color: #374151;
+  margin-top: 15px;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+}
+
+input[type="radio"] {
+  margin: 15px 5px 0 15px;
+}
+
+fieldset {
+  margin-top: 25px;
+  padding: 20px;
+  border: 1px solid #d8d7d7;
+  border-radius: 8px;
+}
+
+legend {
+  font-weight: bold;
+  color: #374151;
+  padding: 0 8px;
+}
+
+fieldset div {
+  margin: 12px 0;
+}
+
+fieldset input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+input[type="file"] {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px dashed #f8f9fb;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button {
+  padding: 12px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background: #1d4ed8;
+}
+
+button[type="reset"] {
+  width: 100%;
+  background: #e5e7eb;
+  color: #374151;
+}
+
+button[type="reset"]:hover {
+  background: #d1d5db;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
