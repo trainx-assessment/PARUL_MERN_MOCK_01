@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student-Task Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Student Application Management System</h1>
+      <button id="darkModeBtn">Dark Mode</button>
+    </header>
+
+    <main>
+      <section class="form">
+        <form id="studentForm">
+          <div class="form-group">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" placeholder="Enter student name" name="studentName" required />
+          </div>
+
+          <br>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter email" name="email" required />
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" placeholder="Enter phone number" name="phone" required />
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label for="dateOfBirth">Date of Birth:</label>
+            <input type="date" id="dateOfBirth" name="dateOfBirth" required />
+          </div>
+          <br>
+
+          <div class="form-group gender-group">
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required />
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female" required />
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gender" value="other" required />
+            <label for="other">Other</label>
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+              <option value="">Select a course</option>
+              <option value="Web Development">Web Development</option>
+              <option value="Python">Python</option>
+              <option value="Data Analytics">Data Analytics</option>
+              <option value="MERN Stack">MERN Stack</option>
+              <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+          </div>
+          <br>
+
+          <div class="form-group skills-group">
+            <label>Skills:</label>
+            <input type="checkbox" id="html" name="skills" value="HTML" />
+            <label for="html">HTML</label>
+
+            <input type="checkbox" id="css" name="skills" value="CSS" />
+            <label for="css">CSS</label>
+
+            <input type="checkbox" id="javascript" name="skills" value="JavaScript" />
+            <label for="javascript">JavaScript</label>
+
+            <input type="checkbox" id="Git" name="skills" value="Git" />
+            <label for="Git">Git</label>
+
+            <input type="checkbox" id="React" name="skills" value="React" />
+            <label for="React">React</label>
+
+            <input type="checkbox" id="Node.js" name="skills" value="Node.js" />
+            <label for="Node.js">Node.js</label>
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label for="about">About Student:</label>
+            <br>
+            <br>
+            <textarea id="about" name="about" rows="7" cols="50" placeholder="Tell us about the student..."></textarea>
+            <small id="charCounter">0 / 200</small>
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label for="profilePicture">Profile Picture:</label>
+            <input type="file" id="profilePicture" name="profilePicture" accept="image/*" />
+          </div>
+          <br>
+
+          <div class="form-actions">
+            <button type="submit">Register Student</button>
+            <button type="reset" class="reset">Reset Form</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="statistics">
+        <h2>Student Statistics</h2>
+        
+        <div class="stats-dashboard">
+          <div class="stat-card total-card">
+            <h3>Total Students</h3>
+            <span class="stat-number" id="totalStudents">0</span>
+          </div>
+
+          <div class="course-stats-grid">
+            <div class="stat-card">
+              <h4>Web Dev</h4>
+              <span class="stat-number" id="countWebDev">0</span>
+            </div>
+            <div class="stat-card">
+              <h4>UI/UX</h4>
+              <span class="stat-number" id="countUIUX">0</span>
+            </div>
+            <div class="stat-card">
+              <h4>Python</h4>
+              <span class="stat-number" id="countPython">0</span>
+            </div>
+            <div class="stat-card">
+              <h4>Data Analytics</h4>
+              <span class="stat-number" id="countData">0</span>
+            </div>
+            <div class="stat-card">
+              <h4>MERN Stack</h4>
+              <span class="stat-number" id="countMERN">0</span>
+            </div>
+            <div class="stat-card">
+              <h4>Cloud Computing</h4>
+              <span class="stat-number" id="countCloud">0</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="search-filter">
+        <h2>Search & Filter Students</h2>
+        
+        <div class="controls-container">
+          <div class="search-box">
+            <label for="searchInput">Search:</label>
+            <input type="text" id="searchInput" placeholder="Search student by name...">
+          </div>
+          
+          <div class="filter-box">
+            <label for="filterCourse">Filter by Course:</label>
+            <select id="filterCourse">
+              <option value="All">All Courses</option>
+              <option value="Web Development">Web Development</option>
+              <option value="UI/UX">UI/UX</option>
+              <option value="Python">Python</option>
+              <option value="Data Analytics">Data Analytics</option>
+              <option value="MERN Stack">MERN Stack</option>
+              <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

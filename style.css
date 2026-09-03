@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: rgb(63, 104, 104);
+
+}  
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    height: 6%;
+    padding: 20px;
+    color: rgb(243, 239, 239);
+} 
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+.form{
+    height: 85%;
+    width: 86.6%;
+    border: 2px solid black;
+    display: flex;
+    font-size: 18px;
+    padding: 30px;
+    border-radius: 4px;
+    position: absolute;
+    background-color: rgb(230, 230, 221);
+}
+
+
+button{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+input,select,textarea{
+    padding: 10px;
+    border-radius: 5px;
+}
+.reset{
+    background-color: red;
+    color: white;
+}
+.statistics {
+    width: 90%;
+    background-color: rgb(230, 230, 221);
+    padding: 30px;
+    border-radius: 4px;
+    border: 2px solid black;
+    margin-top: 20px;
+    position: absolute;
+    top: 95%; 
+    left: 5%; 
+    box-sizing: border-box; 
+}
+
+.statistics h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.stats-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: white;
+    border: 2px solid rgb(63, 104, 104);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.stat-card h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.stat-number {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(63, 104, 104);
+}
+
+.total-card {
+    background-color: rgb(63, 104, 104);
+    border-color: black;
+    color: white;
+}
+
+.total-card h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.total-card .stat-number {
+    color: white;
+    font-size: 36px;
+}
+
+.course-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+}
+
+.student-list {
+    position: absolute;
+    top: 150%; 
+    left: 0;
+    width: 90%;
+    padding: 20px;
+    background-color: rgb(230, 230, 221);
+    box-sizing: border-box;
+}
+
+.search-filter {
+    width: 90%;
+    background-color: rgb(230, 230, 221);
+    padding: 30px;
+    border-radius: 4px;
+    border: 2px solid black;
+    margin-top: 20px;
+    position: absolute;
+    top: 140%;
+    left: 5%;
+    box-sizing: border-box;
+}
+
+.search-filter h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.controls-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box, .filter-box {
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+    min-width: 250px;
+}
+
+.search-box label, .filter-box label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: rgb(63, 104, 104);
+}
+
+.search-box input, .filter-box select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 16px;
+    background-color: white;
+}
+
+.student-list {
+    position: absolute;
+    top: 185%;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(230, 230, 221);
+    text-align: center;
+    box-sizing: border-box;
+}
+.error-message {
+    color: #d9534f;
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+input.error, select.error, textarea.error {
+    border-color: #d9534f;
+    box-shadow: 0 0 5px rgba(217, 83, 79, 0.5);
+}
+
+#charCounter {
+    text-align: right;
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+    color: rgb(63, 104, 104);
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode section {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode label, 
+body.dark-mode .stat-number,
+body.dark-mode #charCounter {
+    color: #90caf9;
+}
+
+body.dark-mode .stat-card {
+    background-color: #2c2c2c;
+    border-color: #444;
+}
+
+body.dark-mode .stat-card h3,
+body.dark-mode .stat-card h4 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .total-card {
+    background-color: #1565c0;
+}
+
+body.dark-mode .student-card {
+    background-color: #2c2c2c;
+    border-top: 5px solid #90caf9;
+    color: #e0e0e0;
+}
+
+body.dark-mode input, 
+body.dark-mode select, 
+body.dark-mode textarea {
+    background-color: #333;
+    color: white;
+    border-color: #555;
+}
+
+#darkModeBtn {
+    margin-top: 15px;
+    background-color: white;
+    color: rgb(63, 104, 104);
+}
+
+body.dark-mode #darkModeBtn {
+    background-color: #333;
+    color: white;
+}
