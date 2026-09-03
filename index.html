@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1> Student Application Management System</h1>
+        <h3>Register and manage student applications</h3>
+
+    </header>
+
+    <main>
+
+        <!-- Student form -->
+
+        <hr>
+
+        <h2> Student Registration form</h2>
+
+        <section>
+
+            <div class="std-form">
+
+                <form>
+
+                    <div class="form">
+
+                        <div class="grid">
+                            <label>Name</label>
+                            <input type="text" placeholder="Enter name" required>
+                        </div>
+
+                        <div class="grid">
+                            <label>EMAIL</label>
+                            <input type="email" placeholder="Enter registered email" required>
+                        </div>
+
+                        <div class="grid">
+                            <label>PHONE-NO:</label>
+                            <input type="number" placeholder="enter your phone number" required>
+                        </div>
+
+                        <div class="grid">
+                            <label>DATE OF BIRTH</label>
+                            <input type="date" placeholder="enter your DOB" required>
+                        </div>
+
+                        <div class="grid">
+                            <label>GENDER</label>
+
+                            <input type="radio" name="GENDER"> Male
+                            <input type="radio" name="GENDER"> FEMALE
+                            <input type="radio" name="GENDER"> others
+
+                        </div>
+
+                        <div  class="grid">
+
+                            <label for=""> Course</label>
+
+                            <select name="course" id="course">
+
+                                <option>Select Course</option>
+                                <option value="">Web Development</option>
+                                <option value="">UI/UX</option>
+                                <option value="">Python</option>
+                                <option value="">Data Analytics</option>
+                                <option value="">MERN Stack</option>
+                                <option value="">Cloud Computing</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="full-row">
+
+                            <label for="">Skills</label>
+
+                            <input type="checkbox"> HTML
+                            <input type="checkbox"> JavaScript
+                            <input type="checkbox"> Git
+                            <input type="checkbox"> React
+                            <input type="checkbox"> Node.js
+
+                        </div>
+
+                        <div  class="full-row">
+
+                            <label for="">About Student</label>
+
+                            <textarea maxlength="200" placeholder="Write Here" ></textarea>
+
+                            
+
+                        </div>
+
+                        <div  class="full-row">
+
+                            <label>PROFILE PHOTO</label>
+
+                            <input type="file" required>
+
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <button id="sub-btn" style="background-color: black; color: white;">
+                        Register Student
+                    </button>
+
+                    <button id="reset-btn" style="background-color: black; color: white;">
+                        Reset form
+                    </button>
+
+                    <br>
+                    <br>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+
+        <!-- Student Statistics -->
+
+        <section>
+
+            <h2> Student Statistics</h2>
+
+            <div class="statistics">
+
+                <div class="stats">
+                    <h3>Total Students</h3>
+                    <p id="total-students">0</p>
+                </div>
+
+                <div class="stats">
+                    <h3>Web Development</h3>
+                    <p id="web-development">0</p>
+                </div>
+
+                <div class="stats">
+                    <h3>UI/UX</h3>
+                    <p id="ui-ux">0</p>
+                </div>
+
+                <div class="stats">
+                    <h3>Python</h3>
+                    <p id="python">0</p>
+                </div>
+
+                <div class="stats">
+                    <h3>Data Analytics</h3>
+                    <p id="data-analytics">0</p>
+                </div>
+
+                <div class="stats">
+                    <h3>MERN Stack</h3>
+                    <p id="mern-stack">0</p>
+                </div>
+
+                <div class="stas">
+                    <h3>Cloud Computing</h3>
+                    <p id="cloud-computing">0</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Search and Filter Section -->
+
+        <section>
+
+            <h2> Search and Filter Section </h2>
+
+            <div class="search">
+
+                <input type="text" id="search" placeholder="Search student by name...">
+
+                <select id="course">
+
+                    <option value="all">All Courses</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Python">Python</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="MERN Stack">MERN Stack</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- Student Cards Container -->
+
+        <section>
+
+            <h2> Student Cards Container </h2>
+
+            <div id="student-cards" class="student-cards">
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <hr>
+
+        Student management System | Since @2026 | All Rights Reserved
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
