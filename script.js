@@ -156,3 +156,87 @@ function showError(id, msg) {
     document.getElementById(id).textContent = msg;
 }
 
+function clearErrors() {
+    document.querySelectorAll('.error-msg').forEach(el => el.textContent = '');
+}
+
+function renderCards() {
+    cardsContainer.innerHTML = '';
+    const searchText = searchInput.value.toLowerCase();
+    const filterText = filterCourse.value;
+
+    const filtered = students.filter(student => {
+        const matchName = student.name.toLowerCase().includes(searchText);
+        const matchCourse = filterText === 'All' || student.course === filterText;
+        return matchName && matchCourse;
+    });
+
+    if (filtered.length === 0) {
+        noResultsMsg.style.display = 'block';
+    } else {
+        noResultsMsg.style.display = 'none';
+        filtered.forEach(student => {
+            const card = document.createElement('div');
+            card.classList.add('student-card');
+            card.setAttribute('data-id', student.id);
+
+            card.innerHTML = `
+                <img src="${student.photo}" alt="Profile Photo">
+                <h3>${student.name}</h3>
+                <p><strong>Email:</strong> ${student.email}</p>
+                <p><strong>Phone:</strong> ${student.phone}</p>
+                <p><strong>DOB:</strong> ${student.dob}</p>
+                <p><strong>Gender:</strong> ${student.gender}</p>
+                <p><strong>Course:</strong> ${student.course}</p>
+                <p><strong>Skills:</strong> ${student.skills.join(', ')}</p>
+                <p><strong>About:</strong> ${student.about}</p>
+                <div class="card-actions">
+                    <button class="edit-btn">Edit</button>
+                    <button class="danger-btn delete-btn">Delete</button>
+                </div>
+            `;
+            cardsContainer.appendChild(card);
+        });
+    }
+}
+
+function handleCardActions(e) {
+    const card = e.target.closest('.student-card');
+    if (!card) return;
+    const id = parseInt(card.getAttribute('data-id'));
+
+    if (e.target.classList.contains('delete-btn')) {
+        if (confirm('Are you sure you want to delete this student?')) {
+            students = students.filter(s => s.id !== id);
+            saveData();
+            renderCards();
+            updateStats();
+        }
+    }
+
+    if (e.target.classList.contains('edit-btn')) {
+        const student = students.find(s => s.id === id);
+        if (student) {
+            document.getElementById('studentName').value = student.name;
+            document.getElementById('studentEmail').value = student.email;
+            document.getElementById('studentPhone').value = student.phone;
+            document.getElementById('studentDob').value = student.dob;
+            document.querySelector(`input[name="gender"][value="${student.gender}"]`).checked = true;
+            document.getElementById('studentCourse').value = student.course;
+            
+            document.querySelectorAll('input[name="skills"]').forEach(cb => {
+                cb.checked = student.skills.includes(cb.value);
+            });
+            
+            document.getElementById('studentAbout').value = student.about;
+            charCount.textContent = student.about.length;
+            
+            currentPhotoBase64 = null; 
+            
+            editingId = id;
+            submitBtn.textContent = 'Update Student';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
+}
+
