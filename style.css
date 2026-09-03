@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  /* font-family: Arial, sans-serif; */
+  background: white;
+  color: black;
+}
+
+header {
+  background: #7b8595;
+  color: white;
+  padding: 18px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 5px;
+}
+
+header p {
+  margin: 0;
+  font-size: 14px;
+}
+
+main {
+  padding: 20px;
+}
+
+form {
+  border: 1px solid #999;
+  padding: 15px;
+  width: 70%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.group {
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  margin-top: 2px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  border: 1px solid #999;
+}
+
+textarea {
+  height: 70px;
+  resize: vertical;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
+}
+
+button {
+  padding: 8px 15px;
+  margin-top: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+#registerBtn {
+  background: #444;
+  color: white;
+  border: none;
+}
+
+.statsSection {
+  border: 1px solid #999;
+  padding: 15px;
+  margin: 20px auto;
+  width: 70%;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+.searchSection {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  box-sizing: border-box;
+}
+
+.searchSection input {
+  width: 60%;
+  padding: 7px;
+  box-sizing: border-box;
+}
+
+.searchSection select {
+  width: 30%;
+  padding: 7px;
+  box-sizing: border-box;
+}
+
+#studentCardsContainer {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+.studentCard {
+  border: 1px solid #999;
+  padding: 10px;
+  width: calc(33.333% - 10px);
+  box-sizing: border-box;
+}
+
+.studentCard img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.cardButtons button {
+  padding: 5px 10px;
+}
+
+.deleteBtn {
+  background: red;
+  color: white;
+  border: none;
+}
+
+footer {
+  background: #444;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.dark-mode {
+  background: #222;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  form,
+  .statsSection {
+    width: 90%;
+  }
+
+  .studentCard {
+    width: calc(50% - 8px);
+  }
+
+  .searchSection input,
+  .searchSection select {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 10px;
+  }
+
+  form,
+  .statsSection,
+  .searchSection,
+  #studentCardsContainer {
+    width: 100%;
+  }
+
+  .studentCard {
+    width: 100%;
+  }
+
+  .studentCard img {
+    height: 180px;
+  }
+
+  button {
+    margin-right: 3px;
+  }
+}
