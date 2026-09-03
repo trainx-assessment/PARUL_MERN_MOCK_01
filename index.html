@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student Registration form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+    <div class="header">
+        <h1>Student Application Management System<br></h1>
+        <span><h2 style="padding-left: 10%;">Register and manage student applications</h2></span>
+    </div>
+
+    <div class="Registration_form">
+        <label id="Student_Name">Student Name :</label>
+        <input type="text" id="Student_Name" placeholder="Enter your name">
+        <br><br>
+
+        <label id="Student_Email">Student Email :</label>
+        <input type="email" id="Student_Email" placeholder="Enter your email">
+        <br><br>
+
+        <label id="Phone_number">Phone Number :</label>
+        <input type="tel" id="Phone_number" placeholder="Enter phone number">
+        <br><br>
+
+        <label id="Date_of_birth">Date of Birth :</label>
+        <input type="date" id="Date_of_birth">
+        <br><br>
+
+        <label id="Gender">Gender :
+        <div style="padding-left: 50%">
+        <h4>Male <input type="radio" name="gender" value="male"></h4>
+        <h4>Female <input type="radio" name="gender" value="female"></h4>
+        <h4>other <input type="radio" name="gender" value="other"></h4>
+        </div>
+        </label>
+        <br><br>
+
+        <label id="select_course">select course :</label> 
+        <select class="course">
+            <option value="Web_Development">Web Development</option>
+            <option value="UI/UX">UI/UX</option>
+            <option value="Python">Python</option>
+            <option value="Datat_Analytics">Data Analytics</option>
+            <option value="Mern Stack">MERN Stack</option>
+            <option value="Cloud_Computing">Cloud Computing</option>
+        </select>
+        <br><br>
+        
+        <label id="Skills">Skills :
+        <span style="padding: 30%;">
+        <div style="padding-left: 50%">
+        <h4>HTML <input type="checkbox" value="HTML"></h4>
+        <h4>CSS <input type="checkbox" value="CSS"></h4>
+        <h4>JavaScript <input type="checkbox" value="JavaScript"></h4>
+        <h4>Git <input type="checkbox" value="Git"></h4>
+        <h4>React <input type="checkbox" value="React"></h4>
+        <h4>Node.Js <input type="checkbox" value="Node.js"></h4>
+        </div>
+        </span>
+        </label>
+        <br><br>
+
+        <label id="About">About :
+            <about id="about"><input type="text" placeholder="write about your self"></about>
+        </label>
+        <br><br>
+
+        <button id="Register_Student">Register Student</button>
+        <button><a href="reset.html">Reset</a></button>
+    </div>
+    <br><br>
+
+    <div class="footer">All data should be match with real document</div>
+    </div>
+</body>
+<script src="Registration.js"></script>
+</html>
