@@ -1,0 +1,203 @@
+  
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color:lightblue;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: white;
+    padding: 20px;
+    border-bottom: 1px solid ;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+}
+ 
+/* Main */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+section h2 {
+    margin-top: 0;
+    font-size: 22px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Form */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+    grid-column: 1 / 3;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    padding: 9px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #777;
+}
+
+/* Radio Buttons */
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-group label {
+    font-weight: normal;
+}
+
+/* Checkboxes */
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+}
+
+
+/* Character Count */
+#characterCount {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+}
+
+/* Buttons */
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 18px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#submitButton {
+    background-color: #ddd;
+}
+
+#resetButton {
+    background-color: #f1f1f1;
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+/* Search Section */
+#searchInput {
+    width: 60%;
+    margin-right: 10px;
+}
+
+#courseFilter {
+    width: 30%;
+}
+
+/* Student Cards */
+#studentContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.student-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #fafafa;
+}
+
+.student-card h3 {
+    margin-top: 0;
+}
+
+.student-card p {
+    margin: 8px 0;
+}
+
+/* Footer */
+footer {
+    
+    padding: 15px;
+     background-color: white;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: 1;
+    }
+
+    #studentContainer {
+        grid-template-columns: 1fr;
+    }
+
+    #searchInput,
+    #courseFilter {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
