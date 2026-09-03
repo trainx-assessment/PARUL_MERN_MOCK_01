@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="form">
+
+        <!-- Header -->
+        <header class="Header">
+            <h1>Student Application Management System</h1>
+            <h3>Register and manage student applications</h3>
+        </header>
+
+        <!-- Student Registration Form -->
+        <main>
+            <form id="Registration_form">
+
+                <div>
+                    <label for="name">Student Name</label>
+                    <input type="text" id="name" placeholder="Enter full name" required>
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="xyz@gmail.com" required>
+                </div>
+
+                <div>
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" placeholder="9876543210" required>
+                </div>
+
+                <div>
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" required>
+                </div>
+
+                <div class="radio-group">
+                    <label>Gender</label>
+
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Male</label>
+
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Female</label>
+
+                    <input type="radio" name="gender" id="other">
+                    <label for="other">Other</label>
+                </div>
+
+                <div>
+                    <label for="course">Select Course</label>
+                    <select id="course">
+                        <option selected>Select Course</option>
+                        <option>Web Development</option>
+                        <option>UI/UX</option>
+                        <option>Python</option>
+                        <option>Data Analytics</option>
+                        <option>MERN Stack</option>
+                        <option>Cloud Computing</option>
+                    </select>
+                </div>
+
+                <div class="skill-group ">
+                    <label>Skills</label><br>
+
+                    <input type="checkbox" id="html">
+                    <label for="html">HTML</label>
+
+                    <input type="checkbox" id="css">
+                    <label for="css">CSS</label>
+
+                    <input type="checkbox" id="javascript">
+                    <label for="javascript">JavaScript</label>
+
+                    <input type="checkbox" id="react">
+                    <label for="react">React</label>
+
+                    <input type="checkbox" id="git">
+                    <label for="git">Git</label>
+
+                    <input type="checkbox" id="node">
+                    <label for="node">Node.js</label>
+                </div>
+
+                <div class="full-width">
+                    <label for="about">About Student</label>
+                    <textarea id="about" maxlength="200" placeholder="Maximum 200 characters"></textarea>
+                </div>
+
+                <div class="full-width">
+                    <label for="photo">Profile Photo</label>
+                    <input type="file" id="photo" >
+                </div>
+
+                <div class="button-group">
+                    <button type="submit">Register Student</button>
+                    <button type="reset">Reset Form</button>
+                </div>
+
+            </form>
+        </main>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
