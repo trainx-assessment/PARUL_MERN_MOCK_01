@@ -54,9 +54,9 @@ Copy the repository URL.
 Open Terminal and run:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/html-css-js-mock-01.git
+git clone https://github.com/YOUR-USERNAME/html-css-js-mock-01.
 ```
-
+code
 
 Then enter the project:
 
@@ -106,7 +106,7 @@ Verify your current branch:
 
 ```bash
 git branch
-```
+``
 
 You should see:
 
@@ -192,7 +192,7 @@ When you have completed the assessment, push your branch to your fork.
 Example:
 
 ```bash
-git push -u origin rahul-sharma
+git pus-h -u origin rahul-sharma
 ```
 
 Replace `rahul-sharma` with your actual branch name.
