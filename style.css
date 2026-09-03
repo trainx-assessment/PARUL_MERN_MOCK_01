@@ -1,6 +1,86 @@
-/* Basic reset and styles will be added here */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+body {
+    font-family: Arial;
+    background: pink;
+}
+
+header {
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+main {
+    width: 90%;
+    margin: 20px auto;
+}
+
+section {
+    background: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid gray;
+}
+
+
+label {
+    margin-top: 10px;
+}
+
+input {
+    padding: 7px;
+    margin: 5px;
+}
+
+select {
+    padding: 7px;
+    margin: 5px;
+}
+
+textarea {
+    width: 80%;
+    height: 60px;
+}
+
+button {
+    background: black;
+    color: pink;
+    padding: 8px;
+    margin: 5px;
+    border: none;
+}
+
+
+
+#studentCardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.student-card {
+    width: 250px;
+    border: 1px solid gray;
+    margin: 10px;
+    padding: 10px;
+    background: #f5f5f5;
+}
+
+
+@media (max-width: 700px) {
+    main {
+        width: 95%;
+    }
+
+    .student-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 400px) {
+    input {
+        width: 90%;
+    }
+
+    textarea {
+        width: 90%;
+    }
 }
