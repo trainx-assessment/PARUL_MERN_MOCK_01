@@ -28,9 +28,9 @@ section h2 {
 }
 
 
-/* ================================
+/*
    Header
-================================ */
+ */
 
 .site-header {
     background-color: #3d4755;
@@ -50,9 +50,7 @@ section h2 {
 }
 
 
-/* ================================
-   Registration Section
-================================ */
+/* Registration Section */
 
 .registration-section {
     background-color: white;
@@ -116,9 +114,7 @@ section h2 {
 }
 
 
-/* ================================
-   Radio Buttons
-================================ */
+/*  Radio Buttons */
 
 .radio-group {
     display: flex;
@@ -139,9 +135,7 @@ section h2 {
 }
 
 
-/* ================================
-   Checkboxes
-================================ */
+/*  Checkboxes */
 
 .checkbox-group {
     display: flex;
@@ -162,9 +156,7 @@ section h2 {
 }
 
 
-/* ================================
-   Character Counter
-================================ */
+/* Character Counter */
 
 .character-info {
     display: flex;
@@ -175,9 +167,7 @@ section h2 {
 }
 
 
-/* ================================
-   Error Messages
-================================ */
+/* Error Messages */
 
 .error-message {
     color: #dc2626;
@@ -187,9 +177,7 @@ section h2 {
 }
 
 
-/* ================================
-   Form Buttons
-================================ */
+/* Form Buttons */
 
 .form-buttons {
     display: flex;
@@ -226,9 +214,7 @@ section h2 {
 }
 
 
-/* ================================
-   Statistics
-================================ */
+/* Statistics */
 
 .statistics-section {
     background-color: #f8fafc;
@@ -267,9 +253,7 @@ section h2 {
 }
 
 
-/* ================================
-   Search and Filter
-================================ */
+/* Search and Filter */
 
 .search-section {
     background-color: white;
@@ -313,9 +297,7 @@ section h2 {
 }
 
 
-/* ================================
-   Student Cards
-================================ */
+/*  Student Cards */
 
 .students-section {
     background-color: #f4f6f8;
@@ -432,9 +414,7 @@ section h2 {
 }
 
 
-/* ================================
-   No Students Message
-================================ */
+/* No Students Message */
 
 .no-students-message {
     text-align: center;
@@ -444,9 +424,7 @@ section h2 {
 }
 
 
-/* ================================
-   Footer
-================================ */
+/*  Footer */
 
 .site-footer {
     background-color: #757779;
@@ -460,10 +438,7 @@ section h2 {
 }
 
 
-/* ================================
-   Tablet
-   768px and below
-================================ */
+/*Tablet 768px and below */
 
 @media (max-width: 768px) {
 
@@ -498,10 +473,7 @@ section h2 {
 }
 
 
-/* ================================
-   Mobile
-   480px and below
-================================ */
+/*  Mobile 480px and below*/
 
 @media (max-width: 480px) {
 
