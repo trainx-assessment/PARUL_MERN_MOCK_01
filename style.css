@@ -11,7 +11,7 @@ body {
 
 header {
     padding: 30px;
-    background-color:  red;
+    background-color: black;
     color: white;
     text-align: center;
 }
@@ -58,7 +58,7 @@ textarea {
     width: 100%;
     padding: 9px;
     border: 1px solid  black
-    border-radius: 4px;
+    border-radius : 4px;
     font: inherit;
 }
 
@@ -100,11 +100,6 @@ button {
 
 button:hover {
     background-color:  darkblue;
-}
-
-footer {
-    padding: 20px;
-    text-align: center;
 }
 
 
