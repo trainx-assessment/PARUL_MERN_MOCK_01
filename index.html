@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Application Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="portal-header">
+    <div class="portal-header-inner">
+      <div class="header-titles">
+        <h1>Student Application Management System</h1>
+        <p class="portal-sub">Register and manage student applications</p>
+      </div>
+      <div class="portal-badge">ADMISSION PORTAL</div>
+    </div>
+  </header>
+
+  <main class="portal-main">
+
+    <section class="portal-column form-pane">
+      <div class="pane-title-bar">
+        <h2>New Student Application</h2>
+        <span class="required-note">* All marked fields mandatory</span>
+      </div>
+
+      <form id="studentForm" novalidate>
+
+        <fieldset class="form-section">
+          <legend>Personal Information</legend>
+          <div class="input-row">
+            <div class="field-item">
+              <label for="studentName">Student Full Name *</label>
+              <input type="text" id="studentName" placeholder="e.g. Rahul Sharma">
+              <span class="error-msg" id="nameError"></span>
+            </div>
+            <div class="field-item">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" placeholder="rahul@example.com">
+              <span class="error-msg" id="emailError"></span>
+            </div>
+          </div>
+
+          <div class="input-row">
+            <div class="field-item">
+              <label for="phone">Mobile Number *</label>
+              <input type="tel" id="phone" placeholder="10-digit number">
+              <span class="error-msg" id="phoneError"></span>
+            </div>
+            <div class="field-item">
+              <label for="dob">Date of Birth *</label>
+              <input type="date" id="dob">
+              <span class="error-msg" id="dobError"></span>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>Course &amp; Profile Details</legend>
+          <div class="input-row">
+            <div class="field-item">
+              <label>Gender *</label>
+              <div class="options-wrapper">
+                <label class="option-label"><input type="radio" name="gender" value="Male"> Male</label>
+                <label class="option-label"><input type="radio" name="gender" value="Female"> Female</label>
+                <label class="option-label"><input type="radio" name="gender" value="Other"> Other</label>
+              </div>
+              <span class="error-msg" id="genderError"></span>
+            </div>
+
+            <div class="field-item">
+              <label for="course">Program / Course *</label>
+              <select id="course">
+                <option value="">-- Select Enrolling Course --</option>
+                <option value="Web Development">Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Python">Python</option>
+                <option value="Data Analytics">Data Analytics</option>
+              </select>
+              <span class="error-msg" id="courseError"></span>
+            </div>
+          </div>
+
+          <div class="field-item full-width">
+            <label>Technical Skills *</label>
+            <div class="options-wrapper">
+              <label class="option-label"><input type="checkbox" name="skills" value="HTML"> HTML</label>
+              <label class="option-label"><input type="checkbox" name="skills" value="CSS"> CSS</label>
+              <label class="option-label"><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+              <label class="option-label"><input type="checkbox" name="skills" value="Git"> Git</label>
+            </div>
+            <span class="error-msg" id="skillsError"></span>
+          </div>
+
+          <div class="field-item full-width">
+            <label for="about">Statement of Purpose / About Student *</label>
+            <textarea id="about" rows="3" placeholder="Brief statement about the student background and goals..."></textarea>
+            <span class="error-msg" id="aboutError"></span>
+          </div>
+
+          <div class="field-item full-width">
+            <label for="photo">Passport Photograph *</label>
+            <div class="file-wrapper">
+              <input type="file" id="photo" accept="image/*">
+            </div>
+            <span class="error-msg" id="photoError"></span>
+          </div>
+        </fieldset>
+
+        <div class="form-command-bar">
+          <button type="submit" class="portal-btn btn-register">Submit Application</button>
+          <button type="reset" class="portal-btn btn-clear" id="resetBtn">Clear Form</button>
+        </div>
+
+      </form>
+    </section>
+
+    <section class="portal-column records-pane">
+      <div class="records-status-bar">
+        <div>
+          <span class="status-kicker">ADMISSION REGISTRY</span>
+          <h3 id="studentCount">Total Students: 0</h3>
+        </div>
+      </div>
+
+      <div class="pane-title-bar">
+        <h2>Submitted Applications</h2>
+      </div>
+
+      <div id="studentContainer" class="records-list"></div>
+      <div id="emptyMessage" class="empty-registry-box">No applicant records in registry. Complete the application form on the left to submit a candidate.</div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
