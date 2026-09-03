@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management Systemt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>SAMS</h1> 
+  <h5>(System Application Management System)</h5>
+  <h4>You can register and manage student applications here</h4>
+  <button id="darkModeBtn">Dark Mode</button>
+</header>
+
+<main>
+
+<section>
+  <h2>Student Registration</h2>
+
+  <form id="studentForm" >
+
+    <label>Student Name</label>
+    <input id="studentName" placeholder="Enter student name" required>
+
+    <label>Email</label>
+    <input type="email" id="email" placeholder="student@example.com" required>
+
+    <label>Phone Number</label>
+    <input id="phone" placeholder="10 digit phone number" maxlength="10" required>
+
+    <label>Date of Birth</label>
+    <input type="date" id="dob" required>
+
+    <label>Gender</label>
+    <div>
+      <label><input type="radio" name="gender" value="Male"> Male</label>
+      <label><input type="radio" name="gender" value="Female"> Female</label>
+      <label><input type="radio" name="gender" value="Other"> Other</label>
+    </div>
+
+
+    <label>About Student</label>
+    <textarea id="about"
+      placeholder="Tell us something about the student..."></textarea>
+   
+
+    <label>Profile Photo</label>
+    <input type="file" id="photo" accept="image/*">
+
+    <br><br>
+    <button type="submit" id="submitBtn">Register Student</button>
+    <button type="reset" id="resetBtn">Reset Form</button>
+
+  </form>
+</section>
+
+<section>
+  <h2>You can Search & Filter Students</h2>
+
+  <label>Search Student</label>
+  <input id="searchInput" placeholder="Search by name...">
+
+  <label>Filter by Course</label>
+  <select id="courseFilter">
+    <option value="all">All Courses</option>
+    <option>Web Development</option>
+    <option>UI/UX</option>
+    <option>Python</option>
+    <option>Data Analytics</option>
+    <option>MERN Stack</option>
+    <option>Cloud Computing</option>
+  </select>
+</section>
+
+</main>
+
+<footer>
+  <p>Student Application Management System</p>
+  <p>Built by Priyanshu's fingers and brain too </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>
