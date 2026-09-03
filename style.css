@@ -1,0 +1,179 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+header {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+header p{
+    color: gray;
+}
+
+fieldset {
+    padding: 20px;
+}
+
+
+#twocol {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 15px;
+   width: 650px;
+   margin-bottom: 15px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field input, .form-field select {
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.form-field div {
+    margin-top: 5px;
+}
+
+.skills {
+    grid-column: 1 / 3;
+}
+
+.full-row {
+    width: 650px;
+    margin-top: 15px;
+    
+}
+
+#form-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.full-row textarea {
+    display: block;
+    width: 100%;
+    height: 80px;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+fieldset {
+    background-color: beige;
+    color: black;
+}
+
+fieldset button {
+    border-radius: 20px;
+    border: 2px solid;
+    
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#reset-button { 
+    color: red;
+    border-color: red;
+    
+}
+
+#submit-button {
+    border-color: green;
+}
+
+#student_cards {
+    width: 650px;
+    margin-top: 25px;
+}
+
+.student-card {
+    border: 1px solid black;
+    padding: 15px;
+
+
+    margin-bottom: 15px;
+}
+.student-card p {
+    margin-top: 6px;
+}
+
+.student-photo {
+    border: 1px solid black;
+
+    
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+
+    
+}
+
+@media (max-width: 768px) {
+    #twocol {
+        grid-template-columns: 1fr;
+        width: 90vw;
+    }
+    .skills {
+        grid-column: auto;
+    }
+    .full-row, #student_cards {
+        width: 90vw;
+    }
+
+
+    
+    fieldset {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    #twocol, .full-row, #student_cards {
+        width: 95vw;
+    }
+
+    #form-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #form-buttons button {
+        margin: 5px 0px;
+    }
+
+    .student-photo {
+        width: 90px;
+        height: 90px;
+    }
+}
