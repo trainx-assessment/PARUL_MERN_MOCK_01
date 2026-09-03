@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Application Management System</title>
+</head>
+<body>
+
+   <div class="main-form">
+
+        <header class="heading">
+            <h1>Student Application Management System</h1>
+            <p>Register and manage student applications</p>
+        </header>
+
+        <form class="form" id="studentForm">
+
+            <p>Enter your name:
+                <input type="text" id="name" placeholder="Abhishek Singh" required>
+            </p>
+
+            <p>Enter your mail:
+                <input type="email" id="email" placeholder="abhishek.s.singh2543@gmail.com" required>
+            </p>
+
+            <p>Enter your phone no:
+                <input type="tel" id="phone" placeholder="9765290015" required>
+            </p>
+
+            <p>Enter your DOB:
+                <input type="date" id="dob" required>
+            </p>
+
+            <p>Enter your Gender:
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </p>
+
+            <p>Message (max 200 characters):
+                <textarea id="message" name="message" maxlength="200" placeholder="Write here..."></textarea>
+            </p>
+
+            <div class="btn-group">
+                <button type="submit">Register Student</button>
+                <button type="reset">Reset Form</button>
+            </div>
+
+        </form>
+
+        <div class="student-card"></div>
+
+    </div>
+
+    <link rel="stylesheet" href="script.js">
+</body>
+</html>
