@@ -1,0 +1,184 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    font-family: arial;
+}
+*{
+    box-sizing: border-box;
+}
+main{
+    width: 95vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+}
+header{
+    padding: 1em;
+    text-align: center;
+}
+
+section{
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid white;
+}
+
+h2{
+    margin-top: 0;
+}
+
+.form-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.full{
+    grid-column: 1 / 3;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.inline{
+    display: inline-block;
+    margin-right: 1em;
+}
+
+input,
+select,
+textarea{
+    width: 100%;
+    padding: 1em;
+}
+
+.inline input{
+    width: auto;
+}
+
+textarea{
+    height: 100px;
+}
+
+span{
+    display: block;
+    color: red;
+    font-size: .75rem;
+}
+
+#counter{
+    text-align: right;
+    margin: 3px 0;
+    font-size: .75rem;
+}
+
+button{
+    padding: 1em 2em;
+    margin-top: 2em;
+    border: none;
+    cursor: pointer;
+}
+
+#submitBtn{
+    color: white;
+}
+
+#resetBtn{
+    color: white;
+}
+
+.stats{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+}
+
+.stats div{
+    padding: 1em;
+    border: 1px solid white;
+}
+
+.search{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2em;
+}
+
+#students{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+}
+
+.student-card{
+    padding: 2em;
+    border: 1px solid white;
+}
+
+.student-card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.skill{
+    display: inline-block;
+    padding: 3px 6px;
+    margin: 3px;
+    border: 1px solid white;
+    font-size: .75rem;
+}
+
+.edit, .delete{
+    color: white;
+}
+
+#noStudents{
+    display: none;
+    text-align: center;
+}
+
+footer{
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid white;
+}
+
+@media(max-width: 768px){
+    .form-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .full{
+        grid-column: 1
+    }
+
+    #students{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .search{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    main{
+        width: 95%;
+
+    }
+    #students{
+        grid-template-columns: 1fr;
+    }
+    .stats{
+        grid-template-columns: 1fr;
+    }
+}
