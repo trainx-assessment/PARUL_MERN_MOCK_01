@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Application Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="ledger">
+
+    <header class="ledger__header">
+      <p class="ledger__folio">Admissions Register</p>
+      <h1 class="ledger__title">Student Application Manager</h1>
+      <p class="ledger__lede">Record every applicant, one entry at a time, and keep a running tally of the cohort.</p>
+    </header>
+
+    <main class="ledger__body">
+
+      <section class="entry-panel" aria-labelledby="formHeading">
+        <h2 id="formHeading" class="entry-panel__heading">New Application</h2>
+
+        <form id="studentForm" class="entry-form" novalidate>
+
+          <div class="field">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" name="studentName" placeholder="e.g. Rahul Sharma" autocomplete="off" />
+            <span class="field__error" id="err-studentName" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="studentEmail">Email</label>
+            <input type="email" id="studentEmail" name="studentEmail" placeholder="student@example.com" autocomplete="off" />
+            <span class="field__error" id="err-studentEmail" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="studentPhone">Phone Number</label>
+            <input type="tel" id="studentPhone" name="studentPhone" placeholder="10-digit number" autocomplete="off" />
+            <span class="field__error" id="err-studentPhone" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="studentDob">Date of Birth</label>
+            <input type="date" id="studentDob" name="studentDob" />
+            <span class="field__error" id="err-studentDob" aria-live="polite"></span>
+          </div>
+
+          <fieldset class="field field--group">
+            <legend>Gender</legend>
+            <div class="radio-row">
+              <label class="radio-row__option">
+                <input type="radio" name="studentGender" value="Female" />
+                <span>Female</span>
+              </label>
+              <label class="radio-row__option">
+                <input type="radio" name="studentGender" value="Male" />
+                <span>Male</span>
+              </label>
+              <label class="radio-row__option">
+                <input type="radio" name="studentGender" value="Other" />
+                <span>Other</span>
+              </label>
+            </div>
+            <span class="field__error" id="err-studentGender" aria-live="polite"></span>
+          </fieldset>
+
+          <div class="field">
+            <label for="studentCourse">Course</label>
+            <select id="studentCourse" name="studentCourse">
+              <option value="">Select a course</option>
+              <option value="Web Development">Web Development</option>
+              <option value="UI/UX">UI/UX</option>
+              <option value="Python">Python</option>
+              <option value="Data Analytics">Data Analytics</option>
+            </select>
+            <span class="field__error" id="err-studentCourse" aria-live="polite"></span>
+          </div>
+
+          <fieldset class="field field--group">
+            <legend>Skills</legend>
+            <div class="checkbox-row">
+              <label class="checkbox-row__option">
+                <input type="checkbox" name="studentSkills" value="HTML" />
+                <span>HTML</span>
+              </label>
+              <label class="checkbox-row__option">
+                <input type="checkbox" name="studentSkills" value="CSS" />
+                <span>CSS</span>
+              </label>
+              <label class="checkbox-row__option">
+                <input type="checkbox" name="studentSkills" value="JavaScript" />
+                <span>JavaScript</span>
+              </label>
+              <label class="checkbox-row__option">
+                <input type="checkbox" name="studentSkills" value="Git" />
+                <span>Git</span>
+              </label>
+            </div>
+            <span class="field__error" id="err-studentSkills" aria-live="polite"></span>
+          </fieldset>
+
+          <div class="field field--wide">
+            <label for="studentAbout">About Student</label>
+            <textarea id="studentAbout" name="studentAbout" rows="4" placeholder="A few lines about the applicant..."></textarea>
+            <span class="field__error" id="err-studentAbout" aria-live="polite"></span>
+          </div>
+
+          <div class="field field--wide">
+            <label for="studentPhoto">Profile Photo</label>
+            <input type="file" id="studentPhoto" name="studentPhoto" accept="image/*" />
+            <span class="field__error" id="err-studentPhoto" aria-live="polite"></span>
+          </div>
+
+          <div class="field field--wide field--submit">
+            <button type="submit" class="btn-submit">Add Student</button>
+          </div>
+
+        </form>
+      </section>
+
+      <section class="roster" aria-labelledby="rosterHeading">
+        <div class="roster__bar">
+          <p class="roster__count" id="studentCount">Total Students: 0</p>
+        </div>
+
+        <div class="roster__grid" id="studentContainer">
+          <p class="roster__empty" id="rosterEmpty">No applications yet. Entries you add will appear here as cards.</p>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
