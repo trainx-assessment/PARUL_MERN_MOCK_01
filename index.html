@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Application Management System</h1>
+    </header>
+    <main>
+        <div>
+        <form action="/">
+        <div class="form">
+                <p>Registration Form </p>
+                <label for="name"> Full Name</label>
+                <input type="text" id="name" placeholder="Ayush Gupta">
+            <br><br>
+                <label for="email">Email Id</label>
+                <input required type="email" id="email" placeholder="24030510500562paruluniversity.ac.in">
+             <br><br>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="84190-45000">
+            <br><br>
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob">
+           <br>
+                <p>Gender</p>
+                <input type="radio" id="male" name="gender">
+                <label for="Male">Male</label>
+           <br>
+                <input type="radio" id="female" name="gender">
+                <label for="Female">Female</label>
+            <br>
+                <input type="radio" id="Other" name="gender">
+                <label for="Other">Other</label>
+            <br>
+                <label for="course">Course</label>
+                <select id="course">
+                    <option disabled selected value>select</option>
+                    <option>Web Development</option>
+                    <option>UI/UX</option> 
+                    <option>Python</option>
+                    <option>Cloud Computing technology</option>
+                </select>
+            <br><br>
+            </div>
+                <label for="skill">Skills</label>
+                <br>
+                    <li>
+                        <input type="checkbox">Html
+                        
+                        <input type="checkbox">CSS
+                        <input type="checkbox">JavaScript
+                        <input type="checkbox">Git
+                        <input type="checkbox">React
+                        <input type="checkbox">Node.js
+                    </li>
+                    <br>
+                <label for="about">About</label>
+                <input type="text" id="about" maxlength="200 characters" placeholder=" just 200 characters">
+                <br>
+                <label for="photo">Profile photo</label>
+                <input type="file" id="photo" maxlength="10MB" accept=".png, .jpg">
+                <br>
+            <button type="submit">Register Student</button>
+            <button type="reset">Reset Form</button>
+        </form>
+        </div>
+    </main>
+    <script href="script.js"></script>
+</body>
+</html>
