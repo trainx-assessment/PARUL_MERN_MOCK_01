@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+    </header>
+    <main>
+        <section>
+            <h2>Register Student</h2>
+            <form id="studentForm">
+            <input type="text" id="name" placeholder="Student Name" minlength="3" maxlength="40" pattern="[A-Za-z]+(?:[ ]+[A-Za-z]+)*"  required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="phone" placeholder="Phone" pattern="[0-9]{10}" required>
+            <input type="date" id="dob" name="dob" required>
+            <select id="gender" name="gender" required>
+                <option value="">Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <select id="course" required>
+                <option value="">Select Course</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Python">Python</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Data Analytics">Data Analytics</option>
+                <option value="MERN Stack">MERN Stack</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+            <fieldset>
+                <legend>Skills</legend>
+                <label><input type="checkbox" name="skills" value="HTML" required> HTML</label>
+                <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+                <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+                <label><input type="checkbox" name="skills" value="Git"> Git</label>
+                <label><input type="checkbox" name="skills" value="React"> React</label>
+                <label><input type="checkbox" name="skills" value="Node.js"> Node.js</label>
+            </fieldset>
+            <textarea id="about" placeholder="About Student"></textarea>
+            <fieldset>
+                <legend>Profile Photo</legend>
+                <input type="file" id="profilePhoto" required>
+            </fieldset>
+            <button type="submit">Register Student</button>
+            <button type="reset">Reset form</button>
+            </form>
+        </section>
+        <section>
+            <h2>Search Students</h2>
+            <input type="text" id="search" placeholder="Search by name">
+            <div id="students"></div>
+        </section>
+    </main>
+    <footer>
+        <h1>Student Application System </h1>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
