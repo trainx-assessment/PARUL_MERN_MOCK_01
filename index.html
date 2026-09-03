@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student management system</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Student Application Management System</h1>
+            <p>Register and manage student applications</p>
+        </div>
+    </header>
+    <main>
+        <section class="registrations-section">
+            <div class="container">
+                <h2>Student Registration</h2>
+
+                <form id="studentForm">
+                    <!-- Student Name -->
+                    <div class="form-group">
+                        <label for="studentName">Student Name</label>
+                        <input type="text" id="studentName" name="studentName" placeholder="Enter student name"
+                            required>
+                 </div>
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email address" required>
+                    </div>
+                    <!-- Phone Number -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone" placeholder="Enter phone number" required>
+                    </div>
+
+                    <!-- Date of Birth -->
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <!-- Gender -->
+                    <div class="form-group">
+                        <label>Gender</label>
+
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="gender" value="Male" required>
+                                Male
+                            </label>
+
+                            <label>
+                                <input type="radio" name="gender" value="Female">
+                                Female
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="Other">
+                                Other
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Course -->
+                    <div class="form-group">
+                        <label for="course">Course</label>
+
+                        <select id="course" name="course" required>
+
+                            <option value="">Select Course</option>
+
+                            <option value="Web Development">
+                                Web Development
+                            </option>
+                            <option value="UI/UX"> UI/UX </option>
+                            <option value="Python">  Python </option>
+
+                            <option value="Data Analytics">
+                                Data Analytics
+                            </option>
+
+                            <option value="MERN Stack">
+                                MERN Stack
+                            </option>
+
+                            <option value="Cloud Computing">
+                                Cloud Computing
+                            </option>
+
+                        </select>
+                    </div>
+
+
+                    <!-- Skills -->
+                    <div class="form-group full-width">
+
+                        <label>Skills</label>
+
+                        <div class="checkbox-group">
+
+                            <label>
+                                <input type="checkbox" name="skills" value="HTML">
+                                HTML
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="skills" value="CSS">
+                                CSS
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="skills" value="JavaScript">
+                                JavaScript
+                            </label>
+                            <label>
+                                <input type="checkbox" name="skills" value="Git">
+                                Git
+                            </label>
+                            <label>
+                                <input type="checkbox" name="skills" value="React">
+                                React
+                            </label>
+                            <label>
+                                <input type="checkbox" name="skills" value="Node.js">
+                                Node.js
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- About Student -->
+                    <div class="form-group full-width">
+
+                        <label for="about">About Student</label>
+
+                        <textarea id="about" name="about" rows="5" maxlength="200"
+                            placeholder="Write something about the student (maximum 200 characters)"></textarea>
+
+                        <small>Maximum 200 characters</small>
+
+                    </div>
+
+                    <!-- Profile Photo -->
+                    <div class="form-group full-width">
+
+                        <label for="profilePhoto">Profile Photo</label>
+
+                        <input type="file" id="profilePhoto" name="profilePhoto" accept="image/*">
+
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="form-buttons full-width">
+
+                        <button type="submit" id="register-btn">
+                            Register Student
+                        </button>
+
+                        <button type="reset" id="reset-btn">
+                            Reset Form
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        </section>
+    </main>
+    <div class="studentcard-container">
+
+    </div>
+<script src="script.js"></script>
+</body>
+
+</html>

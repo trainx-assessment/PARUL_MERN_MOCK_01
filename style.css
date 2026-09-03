@@ -1,0 +1,233 @@
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+.registrations-section.container.h2{
+    background-color: yellow;
+}
+
+.header {
+    background-color: #c96b1e;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 18px;
+}
+
+section {
+    padding: 40px 0;
+}
+
+section h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.registration-section {
+    background-color: rgb(112, 212, 92);
+    margin-top: 30px;
+}
+/* 
+   Registration Form
+ */
+
+#studentForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #7ce2ec;
+    border-radius: 10px;
+    gap: 20px;
+    padding: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.form-group > label {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+
+/* Input and Select */
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group input[type="file"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+
+/* Full Width */
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* Radio Buttons */
+
+.radio-group {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 25px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
+}
+/* Small Text */
+
+.form-group small {
+    margin-top: 5px;
+    color: #6b7280;
+}
+
+
+/* Buttons */
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.form-buttons button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Register Button */
+
+#register-btn {
+    background-color: #2563eb;
+    color: white;
+}
+#reset-btn {
+    background-color: #87e08d;
+    color: #222;
+}
+
+@media (max-width: 765px) {
+    #studentForm {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .radio-group {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 24px;
+    }
+    .header p {
+        font-size: 15px;
+    }
+    #studentForm {
+        padding: 20px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .form-buttons button {
+        width: 100%;
+    }
+}
+.studentcard-container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 30px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.student-card {
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.student-card h2 {
+    color: #2563eb;
+
+    margin-bottom: 15px;
+}
+
+
+.student-card p {
+    margin: 8px 0;
+
+    font-size: 14px;
+}
