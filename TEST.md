@@ -867,11 +867,14 @@ form.addEventListener(
     "submit",
     function (event) {
 
+        event.preventDefault();
+
         const name =
             studentName.value;
 
         if (name.trim() === "") {
             alert("Name is required");
+            return;
         }
 
         const card =
@@ -891,10 +894,13 @@ form.addEventListener(
         deleteButton.textContent =
             "Delete";
 
+        deleteButton.classList.add("delete-btn");
+
         card.appendChild(heading);
         card.appendChild(deleteButton);
 
         studentContainer.appendChild(card);
+        studentName.value = "";
     }
 );
 
@@ -907,7 +913,7 @@ studentContainer.addEventListener(
         ) {
 
             const card =
-                event.target.parentElement;
+                event.target.closest(".student-card");
 
             card.remove();
         }
