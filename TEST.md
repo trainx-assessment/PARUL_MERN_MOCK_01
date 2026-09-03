@@ -679,7 +679,6 @@ Do not create a duplicate student while editing.
 ### Suggested Time: 10 Minutes
 
 Add a search input.
-
 Placeholder:
 
 ```text
