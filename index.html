@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock_Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+      <h1>Student Application Management System</h1>
+      <h3>Register and manage student applications</h3>
+    </header>
+    <div class="wrapper">
+        <h1 class="heading">Student Registerion</h1>
+    <form>
+                <input type="text" id="name" placeholder="Student Name" required>
+                <input type="email" id="email" placeholder="Email Id" required>
+                <input type="number" id="phonenumber" placeholder="Phone Number" required>
+                <input type="date" id="dob" placeholder="Date of Birth" required>
+                <select id="gender" name="Gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                 </select>
+                <select id="course" name="course" required>
+                    <option value="">Select Course</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Python">Python</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="MERN Stack">MERN Stack</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                </select>
+                <input type="text" id="skills" placeholder="Skills" required>
+            </form>
+            <section id="Student_Registration">
+                <input type="text" id="About_Students" placeholder="About Students" min 200 characters required>
+                <input type="file" id="profile_picture" placeholder="Profile Picture" required>
+                
+                <button class="bttn" type="submit">Register</button>
+                <button class="bttn1" type="reset">Reset Form</button>
+                </section>
+    </div>
+    <div class="card_container">
+       <div class="card card1"><p>Card One</p></div>
+       <div class="card card2"><p>Card two</p></div>
+       <div class="card card3"><p>Card three</p></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
