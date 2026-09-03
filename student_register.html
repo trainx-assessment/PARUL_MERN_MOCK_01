@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="con">
+        <div class="box">
+            <h1>Student Registration</h1>
+            <form id="studentForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="date">Date of Birth:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="course">Course:</label>
+                <select id="course" name="course" required>
+                    <option value="">Select Course</option>
+                    <option value="computer-science">Web Development</option>
+                    <option value="mathematics">UI/UX</option>
+                    <option value="physics">Python</option>
+                    <option value="physics">Data Analytics</option>
+                    <option value="physics">MERN Stack</option>
+                    <option value="physics">Cloud Computing</option>
+                </select>
+
+                <fieldset class="skills">
+                    <legend>Skills</legend>
+                    <div class="skill-options">
+                        <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+                        <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+                        <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+                        <label><input type="checkbox" name="skills" value="Git"> Git</label>
+                        <label><input type="checkbox" name="skills" value="React"> React</label>
+                        <label><input type="checkbox" name="skills" value="Node.js"> Node.js</label>
+                    </div>
+                </fieldset>
+
+                <label for="About"> About:</label>
+                <textarea id="About" name="About" minlength="20" maxlength="200" required></textarea>
+
+                <label for="Profile Image">Profile Image:</label>
+                <input type="file" id="Profile Image" name="Profile Image" accept="image/*">
+
+                <label for="Password">Password:</label>
+                <input type="password" id="Password" name="Password" required>
+
+                <fieldset class="gender">
+                    <legend>Gender</legend>
+                    <div class="gender-opt">
+                        <label class="radio-opt" for="male">
+                            <input type="radio" id="male" name="gender" value="male" required>
+                            <span>Male</span>
+                        </label>
+                        <label class="radio-opt" for="female">
+                            <input type="radio" id="female" name="gender" value="female">
+                            <span>Female</span>
+                        </label>
+                        <label class="radio-opt" for="other">
+                            <input type="radio" id="other" name="gender" value="other">
+                            <span>Other</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <div class="btn">
+                    <button type="reset">Reset</button>
+                    <button id="submitButton" type="submit">Register</button>
+                </div>
+            </form>
+            <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+            <a class="back-link" href="index.html">Back to student list</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
