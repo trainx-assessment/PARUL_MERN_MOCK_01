@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Student Registration Form</h1>
+        <h3>Register and manage student applications</h3>
+    </header>
+    <main>
+        <form>
+
+            <label>Student Name : </label>
+            <input type="text" required>
+            <br><br>
+
+            <label>Email : </label>
+            <input type="email" required>
+            <br><br>
+
+            <label>Phone Number : </label>
+            <input type="text" required>
+            <br><br>
+
+            <label>Date of Birth : </label>
+            <input type="date" required>
+            <br><br>
+
+            <label>Gender : </label>
+
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+
+            <br><br>
+
+            <label>Course : </label>
+
+            <select>
+                <option>Select Course</option>
+                <option>Web Development</option>
+                <option>UI/UX</option>
+                <option>Python</option>
+                <option>Data Analytics</option>
+                <option>MERN Stack</option>
+                <option>Cloud Computing</option>
+            </select>
+
+            <br><br>
+
+            <label>Skills : </label>
+
+            <input type="checkbox"> HTML
+            <input type="checkbox"> CSS
+            <input type="checkbox"> JavaScript
+            <input type="checkbox"> Git
+            <input type="checkbox"> React
+            <input type="checkbox"> Node.js
+
+            <br><br>
+
+            <label>About Student : </label>
+            <br>
+            <textarea rows="5" cols="30" maxlength="200"></textarea>
+
+            <p>Maximum 200 characters</p>
+
+            <label>Profile Photo : </label>
+            <input type="file" accept="image/*">
+
+            <br><br>
+
+            <button type="submit">Register Student</button>
+            <button type="reset">Reset Form</button>
+
+        </form>
+    </main>
+</body>
+
+</html>
