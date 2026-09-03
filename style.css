@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+header {
+  background-color: white;
+  color: black;
+  padding: 15px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header h4 {
+  
+  font-weight: bold;
+}
+#RegisterationForm {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#form {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: white;
+  padding: 30px;
+  border: 1px solid rgb(193, 186, 186);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.one{
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+.about-section{
+    width: 100%;
+    display: flex ;
+    flex-direction: column;
+    align-items: flex-start;
+    
+
+
+}
+
+.about-section textarea{
+    display: block;
+    width: 100%;
+    height: 120px;
+    margin-top: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%
+}
+
+#StudentPhoto {
+    margin-left: 10px;
+}
+
+button{
+    padding: 10px 20px;
+    border: 1px solid rgb(193, 186, 186);
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
