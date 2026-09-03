@@ -44,7 +44,6 @@ header {
     padding: 15px;
 }
 
-/* 2 column layout */
 .row {
     display: flex;
     gap: 15px;
@@ -127,7 +126,6 @@ textarea {
     gap: 10px;
 }
 
-/* Cards */
 .student-cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
