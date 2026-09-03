@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f2f5f9;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 30px 0 30px 20px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: blue;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+select,
+textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #2563eb;
+}
+
+
+label[for="studentPhoto"] {
+    font-weight: bold;
+    margin-bottom: -10px;
+}
+
+#studentPhoto {
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.gender,
+.skills {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.gender input,
+.skills input {
+    margin-right: 5px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button {
+    padding: 12px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+.student-card {
+    margin-top: 15px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fafafa;
+}
+
+.student-card h3 {
+    margin-bottom: 10px;
+}
+
+.student-card p {
+    margin-bottom: 8px;
+}
+
+.student-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.delete-btn {
+    background-color: red;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
