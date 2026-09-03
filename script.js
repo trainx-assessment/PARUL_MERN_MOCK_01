@@ -1,7 +1,7 @@
+
 const students = [];
 
 const studentForm = document.getElementById("student-form");
-
 const studentName = document.getElementById("student-name");
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
@@ -9,13 +9,10 @@ const dob = document.getElementById("dob");
 const course = document.getElementById("course");
 const about = document.getElementById("about");
 const profilePhoto = document.getElementById("profile-photo");
-
 const searchInput = document.getElementById("search-input");
 const courseFilter = document.getElementById("course-filter");
-
 const studentCardsContainer =
     document.getElementById("student-cards-container");
-
 const studentStatistics =
     document.getElementById("student-statistics");
 
@@ -33,6 +30,7 @@ function showError(input, message) {
     const error = document.createElement("small");
 
     error.classList.add("error-message");
+
     error.textContent = message;
 
     input.parentElement.appendChild(error);
@@ -64,6 +62,7 @@ about.addEventListener("input", function () {
 
     aboutCounter.textContent =
         about.value.length + " / 200";
+
 });
 
 
@@ -98,6 +97,7 @@ function displayStudents(studentList = students) {
         const photo = document.createElement("img");
 
         photo.src = student.photo;
+
         photo.alt = student.name;
 
         card.appendChild(photo);
@@ -169,6 +169,7 @@ function displayStudents(studentList = students) {
         const editButton = document.createElement("button");
 
         editButton.textContent = "Edit";
+
         editButton.classList.add("edit-btn");
 
         card.appendChild(editButton);
@@ -177,12 +178,14 @@ function displayStudents(studentList = students) {
         const deleteButton = document.createElement("button");
 
         deleteButton.textContent = "Delete";
+
         deleteButton.classList.add("delete-btn");
 
         card.appendChild(deleteButton);
 
 
         studentCardsContainer.appendChild(card);
+
     });
 }
 
@@ -204,6 +207,7 @@ function updateStatistics() {
 
     studentStatistics.innerHTML = "";
 
+
     const total = document.createElement("p");
 
     total.textContent =
@@ -221,12 +225,14 @@ function updateStatistics() {
 
             }).length;
 
+
         const item = document.createElement("p");
 
         item.textContent =
             courseName + ": " + count;
 
         studentStatistics.appendChild(item);
+
     });
 }
 
@@ -475,6 +481,7 @@ studentForm.addEventListener("submit", function (event) {
     selectedSkills.forEach(function (skill) {
 
         skills.push(skill.value);
+
     });
 
 
@@ -494,6 +501,7 @@ studentForm.addEventListener("submit", function (event) {
             students.find(function (student) {
 
                 return student.id === editingStudentId;
+
             });
 
 
@@ -517,6 +525,7 @@ studentForm.addEventListener("submit", function (event) {
                     );
             }
         }
+
 
     } else {
 
@@ -567,16 +576,17 @@ studentForm.addEventListener("submit", function (event) {
 
     // --------------------
     // Task 12 Reset
-    // After Successful Registration
     // --------------------
 
     studentForm.reset();
 
     editingStudentId = null;
 
+
     studentForm.querySelector(
         'button[type="submit"]'
     ).textContent = "Register Student";
+
 
     aboutCounter.textContent = "0 / 200";
 
@@ -585,7 +595,9 @@ studentForm.addEventListener("submit", function (event) {
         studentForm.querySelectorAll(".error-message");
 
     errors.forEach(function (error) {
+
         error.remove();
+
     });
 
 
@@ -602,26 +614,24 @@ studentForm.addEventListener("submit", function (event) {
 
 studentForm.addEventListener("reset", function () {
 
-    // Cancel edit mode
     editingStudentId = null;
 
 
-    // Change button back
     studentForm.querySelector(
         'button[type="submit"]'
     ).textContent = "Register Student";
 
 
-    // Remove validation messages
     const errors =
         studentForm.querySelectorAll(".error-message");
 
     errors.forEach(function (error) {
+
         error.remove();
+
     });
 
 
-    // Reset counter
     aboutCounter.textContent = "0 / 200";
 
 });
@@ -659,6 +669,7 @@ studentCardsContainer.addEventListener(
                     "Are you sure you want to delete this student?"
                 );
 
+
             if (!confirmed) {
                 return;
             }
@@ -668,6 +679,7 @@ studentCardsContainer.addEventListener(
                 students.findIndex(function (student) {
 
                     return student.id === studentId;
+
                 });
 
 
@@ -694,6 +706,7 @@ studentCardsContainer.addEventListener(
                 students.find(function (student) {
 
                     return student.id === studentId;
+
                 });
 
 
@@ -714,6 +727,7 @@ studentCardsContainer.addEventListener(
 
             about.value = student.about;
 
+
             aboutCounter.textContent =
                 student.about.length + " / 200";
 
@@ -723,10 +737,12 @@ studentCardsContainer.addEventListener(
                     'input[name="gender"]'
                 );
 
+
             genderRadio.forEach(function (radio) {
 
                 radio.checked =
                     radio.value === student.gender;
+
             });
 
 
@@ -735,12 +751,14 @@ studentCardsContainer.addEventListener(
                     'input[name="skills"]'
                 );
 
+
             skillCheckboxes.forEach(function (checkbox) {
 
                 checkbox.checked =
                     student.skills.includes(
                         checkbox.value
                     );
+
             });
 
 
@@ -757,6 +775,7 @@ studentCardsContainer.addEventListener(
                 behavior: "smooth"
             });
         }
+
     }
 );
 
@@ -789,6 +808,7 @@ function performSearch() {
 
 
             return matchesSearch && matchesCourse;
+
         });
 
 
@@ -803,6 +823,7 @@ searchInput.addEventListener(
     function () {
 
         performSearch();
+
     }
 );
 
@@ -814,6 +835,7 @@ courseFilter.addEventListener(
     function () {
 
         performSearch();
+
     }
 );
 
@@ -825,3 +847,34 @@ courseFilter.addEventListener(
 displayStudents();
 
 updateStatistics();
+
+
+// --------------------
+// Bonus Task - Dark Mode
+// --------------------
+
+const themeToggle =
+    document.getElementById("theme-toggle");
+
+
+themeToggle.addEventListener(
+    "click",
+    function () {
+
+        document.body.classList.toggle("dark-mode");
+
+
+        if (
+            document.body.classList.contains("dark-mode")
+        ) {
+
+            themeToggle.textContent = "Light Mode";
+
+        } else {
+
+            themeToggle.textContent = "Dark Mode";
+
+        }
+
+    }
+);
