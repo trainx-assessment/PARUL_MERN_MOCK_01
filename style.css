@@ -1,0 +1,80 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header{
+    height: 150px;
+    width: 100%;
+    padding: 20px;
+    background-color:black;
+    color: white;
+}
+.left-header{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.hero{
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.task2{
+    margin-top: 30px;
+    height:  500px;
+    width: 600px;
+    border: 1px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.first>button{
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+.first{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cards{
+    height: 200px;
+    width: 100%;
+    margin: 20px;
+    margin-top: 50px;
+}
+.parent{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.child{
+    background-color: black;
+    color: white;
+    height: 220px;
+    width: 25%;
+    border-radius: 20px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
