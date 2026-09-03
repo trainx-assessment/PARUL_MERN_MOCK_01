@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="main">
+            <h1>Student Application Management System</h1>
+            <p>Register and manage Student applications</p>
+        </div>
+    </header>
+    <div class="hero">
+        <button id="New Student">Add a Studnet</button>
+        <div class="form">
+     <form action="">
+              <h2>Register Student</h2>
+                <div class="details">
+                    <div class="ip">
+                        Enter Name:
+                        <input type="text" required id="stdname">
+                 </div>
+                    <div class="ip">
+                        Enter Email:
+                        <input type="email" required id="stdmail">
+                    </div>
+                    <div class="ip">
+                        Enter Phone Number:
+                        <input type="tel" required id="stdphone">
+                    </div>
+                    <div class="ip">
+                        Enter Date of Birth:
+                        <input type="date" required id="stddob">
+                    </div>
+                </div>
+                <div class="gender">
+                    <div class="ip">
+                        Choose Gender:
+                        <div class="choose">
+                            <div class="male">
+                                Male:
+                                <input type="radio" id="male" name="gender">
+                            </div>
+
+                            <div class="female">
+                                Female:
+                                <input type="radio" id="female" name="gender">
+                            </div>
+
+                            <div class="other">
+                                Other:
+                                <input type="radio" id="other" name="gender">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="course">
+
+                    <div class="ip">
+                        Choose Course
+
+                        <select id="sel">
+                            <option value="Select">Select course</option>
+                            <option value="WebD">Web Development</option>
+                            <option value="UI/UX">UI/UX</option>
+                            <option value="Python">Python</option>
+                            <option value="Data">Data Analytics</option>
+                            <option value="MERN">MERN Stack</option>
+                            <option value="Cloud">Cloud Computing</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="skills">
+
+                    <div class="ip">
+                        Choose Skills:
+
+                        <div class="opt">
+
+                            <input type="checkbox">HTML <br>
+                            <input type="checkbox">CSS <br>
+                            <input type="checkbox">JavaScript <br>
+                            <input type="checkbox">Git <br>
+                            <input type="checkbox">React <br>
+                            <input type="checkbox">Node.js
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="self"><div class="ip">
+                        Tell us About yourself:
+                        <textarea id="self"></textarea>
+                    </div><div class="ip" id="photo">
+                        Upload Profile Photo:
+                        <input type="file">
+                    </div>
+                </div>
+                <div class="buttons">
+
+                    <div class="ip">
+                        <button id="register">Register</button>
+                        <button type="reset">Reset</button>
+                    </div>
+    </div>
+                 </form>
+       </div>
+    </div>
+
+    <div class="information" id="Student-container">
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
