@@ -240,3 +240,38 @@ function handleCardActions(e) {
     }
 }
 
+function updateStats() {
+    totalStudentsEl.textContent = `Total Students: ${students.length}`;
+    
+    const courses = ["Web Development", "UI/UX", "Python", "Data Analytics", "MERN Stack", "Cloud Computing"];
+    statsContainer.innerHTML = '';
+
+    courses.forEach(course => {
+        const count = students.filter(s => s.course === course).length;
+        const div = document.createElement('div');
+        div.innerHTML = `<strong>${course}:</strong> ${count}`;
+        statsContainer.appendChild(div);
+    });
+}
+
+function resetForm() {
+    form.reset();
+    clearErrors();
+    charCount.textContent = '0';
+    currentPhotoBase64 = null;
+    editingId = null;
+    submitBtn.textContent = 'Register Student';
+}
+
+function saveData() {
+    localStorage.setItem('students', JSON.stringify(students));
+}
+
+function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')) {
+        themeToggle.textContent = 'Light Mode';
+    } else {
+        themeToggle.textContent = 'Dark Mode';
+    }
+}
