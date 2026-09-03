@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Application Management System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <h1>Student Application Management System</h1>
+      <p class="subtitle">Register and manage student applications</p>
+    </div>
+  </header>
+
+  <main class="page-shell">
+
+    <!-- ============ REGISTRATION FORM ============ -->
+    <section class="card form-card" id="registration-section" aria-labelledby="registration-heading">
+      <h2 id="registration-heading">Student Registration</h2>
+
+      <form id="studentForm" novalidate>
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" name="studentName" placeholder="e.g. Rahul Sharma" autocomplete="off">
+            <span class="error-message" id="error-studentName"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="e.g. rahul@example.com" autocomplete="off">
+            <span class="error-message" id="error-email"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" placeholder="10-digit mobile number" autocomplete="off">
+            <span class="error-message" id="error-phone"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob">
+            <span class="error-message" id="error-dob"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Gender</label>
+            <div class="option-row" id="genderGroup">
+              <label class="option-pill">
+                <input type="radio" name="gender" value="Male"> <span>Male</span>
+              </label>
+              <label class="option-pill">
+                <input type="radio" name="gender" value="Female"> <span>Female</span>
+              </label>
+              <label class="option-pill">
+                <input type="radio" name="gender" value="Other"> <span>Other</span>
+              </label>
+            </div>
+            <span class="error-message" id="error-gender"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="course">Course</label>
+            <select id="course" name="course">
+              <option value="">Select Course</option>
+              <option value="Web Development">Web Development</option>
+              <option value="UI/UX">UI/UX</option>
+              <option value="Python">Python</option>
+              <option value="Data Analytics">Data Analytics</option>
+              <option value="MERN Stack">MERN Stack</option>
+              <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+            <span class="error-message" id="error-course"></span>
+          </div>
+
+          <div class="form-group full-row">
+            <label>Skills</label>
+            <div class="option-row" id="skillsGroup">
+              <label class="option-pill"><input type="checkbox" name="skills" value="HTML"> <span>HTML</span></label>
+              <label class="option-pill"><input type="checkbox" name="skills" value="CSS"> <span>CSS</span></label>
+              <label class="option-pill"><input type="checkbox" name="skills" value="JavaScript"> <span>JavaScript</span></label>
+              <label class="option-pill"><input type="checkbox" name="skills" value="Git"> <span>Git</span></label>
+              <label class="option-pill"><input type="checkbox" name="skills" value="React"> <span>React</span></label>
+              <label class="option-pill"><input type="checkbox" name="skills" value="Node.js"> <span>Node.js</span></label>
+            </div>
+            <span class="error-message" id="error-skills"></span>
+          </div>
+
+          <div class="form-group full-row">
+            <label for="about">About Student</label>
+            <textarea id="about" name="about" rows="4" maxlength="200" placeholder="A short note about the student (20–200 characters)"></textarea>
+            <div class="char-counter" id="charCounter">0 / 200</div>
+            <span class="error-message" id="error-about"></span>
+          </div>
+
+          <div class="form-group full-row">
+            <label for="photo">Profile Photo</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+            <span class="error-message" id="error-photo"></span>
+          </div>
+
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="submitBtn" class="btn btn-primary">Register Student</button>
+          <button type="reset" id="resetBtn" class="btn btn-secondary">Reset Form</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ============ STATISTICS ============ -->
+    <section class="card stats-card" id="stats-section" aria-labelledby="stats-heading">
+      <h2 id="stats-heading">Student Statistics</h2>
+      <div class="stats-grid" id="statsGrid"></div>
+    </section>
+
+    <!-- ============ SEARCH & FILTER ============ -->
+    <section class="card search-card" id="search-section" aria-label="Search and filter students">
+      <div class="search-filter-row">
+        <input type="text" id="searchInput" placeholder="Search student by name...">
+        <select id="courseFilter">
+          <option value="All Courses">All Courses</option>
+          <option value="Web Development">Web Development</option>
+          <option value="UI/UX">UI/UX</option>
+          <option value="Python">Python</option>
+          <option value="Data Analytics">Data Analytics</option>
+          <option value="MERN Stack">MERN Stack</option>
+          <option value="Cloud Computing">Cloud Computing</option>
+        </select>
+        <button type="button" id="darkModeToggle" class="btn btn-ghost">Dark Mode</button>
+      </div>
+    </section>
+
+    <!-- ============ STUDENT CARDS ============ -->
+    <section aria-label="Registered students">
+      <div class="student-cards-container" id="studentCardsContainer"></div>
+      <p class="no-results" id="noResultsMessage" hidden>No students found</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Student Application Management System &middot; Built with HTML, CSS &amp; JavaScript</p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
