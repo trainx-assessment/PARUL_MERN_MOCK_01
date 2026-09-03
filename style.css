@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+header{
+    background-color: #2ec0c5;
+    text-align: center;
+    padding: 3ex;
+}
+/* .info{
+    padding: 20ex;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    line-height: 2;
+    display:flex;
+    align-items: center;
+
+}  */
+.big{
+    text-align: center;
+}
+.info {
+    display: grid;
+    min-height: 100vh;
+    /* place-items: center; */
+    padding: 24px;
+    margin-left:25%;
+    height: 100%;
+    width: 50%;
+    border-radius: 6px;
+    background: #f0ecee;
+    margin-bottom: 20px;
+    border:1px solid black;
+    /* border-radius: 10px; */
+}
+.i1{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* width: px; */
+    height: 30px;
+}
+.Input1{
+    height: 20px;
+    width: 100px;
+    border-radius: 5px;
+}
+.gender{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.skill{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top:35px;
+}
+/* .textsection{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 30%;
+    width: 100%;
+    margin-top:50px;
+} */
+.file{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 30%;
+    width: 100%;
+    margin-top:50px;
+}
+.cards{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:15px;
+    border: 1px solid black;
+}
+.card{
+    width: 70%;
+    height: 100%;
+    margin-top:20px;
+    margin-left: 25%;
+    margin-bottom: 50px;
+    border: 1px solid black;
+    height: 90%;
+    /* border-radius: 50%; */
+}
+

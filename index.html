@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Application Management System</h1>
+        <h4>Register and manage student applications</h4>
+    </header>
+    <div class="big">Student Registration Form</p>
+        
+    <div class="info">
+        
+        <div class="i1">
+            Name:<input type="text" id="Input1" placeholder="Enter name">
+        </div>
+        <div class="i1">
+            Email:<input type="email" id="Input2" placeholder="Enter email">
+        </div>
+        <div class="i1">
+            Phone Number:<input type="text" id="Input3" placeholder="Enter phone number">
+        </div>
+        <div class="i1">
+            Date of Birth:<input type="date" id="Input4" placeholder="Enter date of birth">
+        </div>
+        <div class="i1">
+            Select Gender:<div class="gender">
+                <input type="radio" id="Input5" name="gender" value="male">Male
+                <input type="radio" id="Input6" name="gender" value="female">Female
+                <input type="radio" id="Input7" name="gender" value="other">Other
+            </div>
+        </div>
+        
+            <select id="Input8" name="dropdown">
+            <option value="course1">Select Course</option>
+            <option value="course2">Web Development</option>
+            <option value="course3">UI/UX</option>
+            <option value="course4">Python</option>
+            <option value="course5">Data Analytics</option>
+            <option value="course6">Mern Stack</option>
+            <option value="course7">Cloud Computing</option>
+        </select>
+        <div class="skill">
+            <p>Skills:</p>
+            <div class="skills">
+            <input type="checkbox" id="html" name="skills" value="HTML">
+            <label for="html">HTML</label>
+            <input type="checkbox" id="css" name="skills" value="CSS">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+            <label for="javascript">JavaScript</label>
+            <input type="checkbox" id="git" name="skills" value="Git">
+            <label for="git">Git</label>
+            <input type="checkbox" id="react" name="skills" value="React">
+            <label for="react">React</label>
+            <input type="checkbox" id="nodejs" name="skills" value="Node.js">
+            <label for="nodejs">Node.js</label>
+        </div>
+        </div>
+        <div class="textsection"></div>
+        About Student:<textarea id="searchInput1" placeholder="About Student"  required></textarea>
+        <div class="file">
+            <input type="file" id="searchInput2" placeholder="Upload your file" required></textarea>
+        </div>
+        
+        <Button class="last1">Register Student</Button>
+        <button class="last2">Reset Form</button>
+    </div>
+    <section>
+        <div class="cards">
+            <div class="card">
+                <h2>Student Name:Yasaswine</h2>
+                <p>Email:yasaswine@gmail.com</p>
+                <p>Phone Number:1234567890</p>
+                <p>Date of Birth:2000-01-01</p>
+                <p>Gender:Female</p>    
+                <p>Course:Web Development</p>
+                <p>Skills:HTML,CSS,JavaScript</p>
+                <p>About Student:This is Yasaswine</p>
+            </div>
+            <div class="card">
+                <h2>Student Name:Uday</h2>
+                <p>Email:uday123@gmail.com</p>
+                <p>Phone Number:0987654323</p>
+                <p>Date of Birth:2001-07-26</p>
+                <p>Gender:Male</p>    
+                <p>Course:UI/UX</p>
+                <p>Skills:HTML,CSS,Node.js</p>
+                <p>About Student:This is Uday</p>
+            </div>
+            <div class="card">
+                <h2>Student Name:Lokesh</h2>
+                <p>Email:lokesh2006@gmail.com</p>
+                <p>Phone Number:2345678961</p>
+                <p>Date of Birth:2006-01-06</p>
+                <p>Gender:male</p>    
+                <p>Course:MERN Stack</p>
+                <p>Skills:HTML,Git,JavaScript</p>
+                <p>About Student:This is Lokesh,Pursing Engineering</p>
+            </div>
+    </section> 
+    <script src="script.js"></script>
+</body>
+</html>
