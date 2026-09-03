@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Application Manager</h1>
+
+        <div class="s-count">
+            Total Students: <span id="total">0</span>
+        </div>
+
+        <form id="sForm" novalidate>
+            <div class="form-group">
+                <label for="sName">Student Name</label>
+                <input type="text" id="sName" name="sName" placeholder="Enter student name">
+                <span class="error-message" id="nErr"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter email">
+                <span class="error-message" id="eErr"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" placeholder="Enter 10-digit phone number">
+                <span class="error-message" id="pErr"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob">
+                <span class="error-message" id="dErr"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="gender" value="Male"> Male
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="gender" value="Female"> Female
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="gender" value="Other"> Other
+                    </label>
+                </div>
+                <span class="error-message" id="gErr"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Course</label>
+                <select id="course" name="course">
+                    <option value="">Select a course</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Python">Python</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                </select>
+                <span class="error-message" id="cErr"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Skills</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="skills" value="HTML"> HTML
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="skills" value="CSS"> CSS
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="skills" value="JavaScript"> JavaScript
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="skills" value="Git"> Git
+                    </label>
+                </div>
+                <span class="error-message" id="skErr"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="about">About Student</label>
+                <textarea id="about" name="about" placeholder="Tell us about the student"></textarea>
+                <span class="error-message" id="abErr"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="photo">Profile Photo</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+                <span class="error-message" id="phErr"></span>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+        <div id="sCont" class="s-grid"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
