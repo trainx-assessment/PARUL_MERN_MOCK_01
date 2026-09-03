@@ -217,3 +217,46 @@ function updateStats() {
         statsContainer.appendChild(div);
     });
 }
+
+// --- Event Delegation (Task 8 & 9) ---
+function handleCardActions(e) {
+    const card = e.target.closest('.student-card');
+    if (!card) return;
+    const id = parseInt(card.getAttribute('data-id'));
+
+    if (e.target.classList.contains('delete-btn')) {
+        if (confirm('Are you sure you want to delete this student?')) {
+            students = students.filter(s => s.id !== id);
+            saveData();
+            renderCards();
+            updateStats();
+        }
+    }
+
+    if (e.target.classList.contains('edit-btn')) {
+        const student = students.find(s => s.id === id);
+        if (student) {
+            document.getElementById('studentName').value = student.name;
+            document.getElementById('studentEmail').value = student.email;
+            document.getElementById('studentPhone').value = student.phone;
+            document.getElementById('studentDob').value = student.dob;
+            document.querySelector(`input[name="gender"][value="${student.gender}"]`).checked = true;
+            document.getElementById('studentCourse').value = student.course;
+            
+            document.querySelectorAll('input[name="skills"]').forEach(cb => {
+                cb.checked = student.skills.includes(cb.value);
+            });
+            
+            document.getElementById('studentAbout').value = student.about;
+            charCount.textContent = student.about.length;
+            
+            // Note: Cannot programmatically set file input value for security reasons.
+            // Photo state is handled by keeping the old base64 if unchanged.
+            currentPhotoBase64 = null; 
+            
+            editingId = id;
+            submitBtn.textContent = 'Update Student';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
+}
