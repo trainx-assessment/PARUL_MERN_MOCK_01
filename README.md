@@ -267,5 +267,3 @@ The instructor will review your submission and the automated assessment checks w
 ---
 
 ## Good Luck! 🚀
-
-````
