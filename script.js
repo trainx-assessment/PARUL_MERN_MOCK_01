@@ -152,3 +152,7 @@ function handleFormSubmit(e) {
     updateStats();
 }
 
+function showError(id, msg) {
+    document.getElementById(id).textContent = msg;
+}
+
