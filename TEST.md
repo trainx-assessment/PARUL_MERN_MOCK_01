@@ -753,7 +753,7 @@ All Courses
 Web Development
 UI/UX
 Python
-Data Analytics
+Data Analytics5
 MERN Stack
 Cloud Computing
 ```
