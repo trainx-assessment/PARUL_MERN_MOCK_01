@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Application Management System</h1>
+        <p>Register students and keep track of their applications</p>
+    </header>
+
+    <main>
+
+        <section id="registration">
+            <h2>Student Registration</h2>
+
+            <form id="student-form" novalidate>
+
+                <div class="form-group">
+                    <label for="student-name">Student Name:</label>
+                    <input type="text" id="student-name" name="studentName">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+
+                <fieldset class="form-group" id="gender-fieldset">
+                    <legend>Gender:</legend>
+
+                    <label>
+                        <input type="radio" name="gender" value="Male">
+                        Male
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender" value="Female">
+                        Female
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender" value="Other">
+                        Other
+                    </label>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="course">Course:</label>
+
+                    <select id="course" name="course">
+                        <option value="" disabled selected>Select Course</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="UI/UX">UI/UX</option>
+                        <option value="Python">Python</option>
+                        <option value="Data Analytics">Data Analytics</option>
+                        <option value="MERN Stack">MERN Stack</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                    </select>
+                </div>
+
+                <fieldset class="form-group" id="skills-fieldset">
+                    <legend>Skills:</legend>
+
+                    <label>
+                        <input type="checkbox" name="skills" value="HTML">
+                        HTML
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="skills" value="CSS">
+                        CSS
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="skills" value="JavaScript">
+                        JavaScript
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="skills" value="Git">
+                        Git
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="skills" value="React">
+                        React
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="skills" value="Node.js">
+                        Node.js
+                    </label>
+                </fieldset>
+
+                <div class="form-group full-row">
+                    <label for="about">
+                        About Student (max 200 characters):
+                    </label>
+
+                    <textarea
+                        id="about"
+                        name="about"
+                        maxlength="200"
+                        rows="4"
+                        placeholder="Brief summary about the student..."
+                    ></textarea>
+
+                    <div class="char-counter" id="char-counter">
+                        0 / 200
+                    </div>
+                </div>
+
+                <div class="form-group full-row">
+                    <label for="profile-photo">Profile Photo:</label>
+
+                    <input
+                        type="file"
+                        id="profile-photo"
+                        name="profilePhoto"
+                        accept="image/png, image/jpeg, image/jpg"
+                    >
+                </div>
+
+                <div class="form-actions full-row">
+                    <button type="submit" id="submit-btn">
+                        Register Student
+                    </button>
+
+                    <button type="reset" id="reset-btn">
+                        Reset Form
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+
+        <!-- Statistics -->
+        <section id="statistics">
+            <h2>Student Statistics</h2>
+
+            <div id="stats-display">
+
+                <div class="stat-box highlight">
+                    <span class="stat-label">Total Students</span>
+                    <span class="stat-count" id="stat-total">0</span>
+                </div>
+
+                <div class="stat-box">
+                    <span class="stat-label">Web Development</span>
+                    <span class="stat-count" id="stat-web-dev">0</span>
+                </div>
+
+                <div class="stat-box">
+                    <span class="stat-label">UI/UX</span>
+                    <span class="stat-count" id="stat-uiux">0</span>
+                </div>
+
+                <div class="stat-box">
+                    <span class="stat-label">Python</span>
+                    <span class="stat-count" id="stat-python">0</span>
+                </div>
+
+                <div class="stat-box">
+                    <span class="stat-label">Data Analytics</span>
+                    <span class="stat-count" id="stat-data-analytics">0</span>
+                </div>
+
+                <div class="stat-box">
+                    <span class="stat-label">MERN Stack</span>
+                    <span class="stat-count" id="stat-mern">0</span>
+                </div>
+
+                <div class="stat-box">
+                    <span class="stat-label">Cloud Computing</span>
+                    <span class="stat-count" id="stat-cloud">0</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="search-filter">
+            <h2>Search and Filter</h2>
+
+            <div class="filter-controls">
+
+                <input
+                    type="search"
+                    id="search-input"
+                    placeholder="Search student by name..."
+                >
+
+                <select id="filter-course">
+                    <option value="ALL">All Courses</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Python">Python</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="MERN Stack">MERN Stack</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                </select>
+
+            </div>
+        </section>
+
+        <section id="applications">
+            <h2>Applications</h2>
+
+            <div id="student-cards-container"></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
