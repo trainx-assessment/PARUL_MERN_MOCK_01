@@ -1,0 +1,77 @@
+* {
+    margin:0;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f2f2f2;
+}
+header {
+    background: navy;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+main {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+form {
+    display: grid;
+    gap: 10px;
+}
+
+input{
+    padding: 10px;
+    font-size: 16px;
+}
+select{
+    padding:10px;
+    font-size:16px;
+}
+textarea{
+    padding:10px;
+    font-size:16px;
+    display:flex;
+}
+button {
+    padding: 10px;
+    font-size: 16px;
+}
+textarea {
+    height: 100px;
+}
+button {
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.card {
+    background: #eee;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+.delete {
+    background: red;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+}
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+}
