@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Application Management System</title>
+</head>
+
+<body>
+    <header>
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+    </header>
+
+    <section id="registration form">
+        <div class="form">
+            <h2>Student Registration Form</h2>
+            <form id="studentForm">
+                <div class="box">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="box">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="box">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="box">
+                    <label for="date of birth">Date of Birth:</label>
+                    <input type="date" id="date of birth" name="date of birth" required>
+                </div>
+
+                <div class="box">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="box">
+                    <label for="course">Select Course:</label>
+                    <input list="courses" type="text" id="course" name="course" required>
+                    <datalist id="courses">
+                        <option value="Web Development">
+                        <option value="UI/UX">
+                        <option value="Python">
+                        <option value="Data Analytics">
+                        <option value="MERN Stack">
+                        <option value="Cloud Computing">
+                    </datalist>
+                </div>
+
+                <div class="box">
+                    <label for="Skills">Skills:</label>
+                    <input list="skills" type="text" id="Skills" name="Skills" required>
+                    <datalist id="skills">
+                        <option value="HTML">
+                        <option value="CSS">
+                        <option value="Javascript">
+                        <option value="Git">
+                        <option value="React">
+                        <option value="Node.js">
+                    </datalist>
+                </div>
+
+                <!-- <textarea name="About Student" id="About">Maximum 200 characters</textarea> -->
+                <!-- <placeholder input="text">Maximum 200 characters</placeholder> -->
+
+                <div class="box">
+                    <label for="Profile Photo">Profile Photo:</label>
+                    <input type="file" id="Profile Photo" name="Profile Photo" required>
+                </div>
+
+
+                <div class="div">
+                    <button type="submit">Register Student</button>
+                    <button type="submit">Reset</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="Student Statistics">
+        <!-- <h2>Student Statistics</h2> -->
+
+    </section>
+
+    <section id="Search and Filter Section">
+        <!-- <h2>Search and Filter Students</h2> -->
+
+    </section>
+
+    <section id="Student Cards Container">
+        <!-- <h2>Search and Filter Students</h2> -->
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
