@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+    <header>
+    <h1>Student Application Management System</h1>
+    <p>Register and manage student applications</p>
+
+    </header>
+
+  <main>
+    <section>
+     <h2 id="registration">Student Registration</h2>
+      <form id="student-form" novalidate>
+        <label for="student-name">Student Name</label>
+        <input type="text" id="student-name" name="studentName" required>
+        <small id="student-name-error"></small>
+
+      <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <small id="email-error"></small>
+
+        <label for="phone">Phone Number</label>
+     <input type="text" id="phone" name="phone" required>
+        <small id="phone-error"></small>
+
+        <label for="date-of-birth">Date of Birth</label>
+        <input type="date" id="date-of-birth" name="dateOfBirth" required>
+        <small id="date-of-birth-error"></small>
+
+        <field>
+          <legend>Gender</legend>
+   <label><input type="radio" name="gender" value="Male" required> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+          <label><input type="radio" name="gender" value="Other"> Other</label>
+          <small id="gender-error"></small>
+        </field>
+
+        <label for="course">Course</label>
+        <select id="course" name="course" required>
+      <option value="" selected disabled>Select Course</option>
+          <option value="Web Development">Web Development</option>
+      <option value="UI/UX">UI/UX</option>
+      <option value="Python">Python</option>
+      <option value="Data Analytics">Data Analytics</option>
+          <option value="MERN Stack">MERN Stack</option>
+      <option value="Cloud Computing">Cloud Computing</option>
+        </select>
+        <small id="course-error"></small>
+
+        <field>
+          <legend>Skills</legend>
+         <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+         <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+        <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+        <label><input type="checkbox" name="skills" value="Git"> Git</label>
+          <label><input type="checkbox" name="skills" value="React"> React</label>
+          <label><input type="checkbox" name="skills" value="Node.js"> Node.js</label>
+          <small id="skills-error"></small>
+        </field>
+
+        <label for="about-student">About Student</label>
+        <textarea id="about-student" name="aboutStudent" maxlength="200" required></textarea>
+        <small id="about-counter">0 / 200</small>
+        <small id="about-student-error"></small>
+
+        <label for="profile-photo">Profile Photo</label>
+        <input type="file" id="profile-photo" name="profilePhoto" accept="image/*" required>
+        <small id="profile-photo-error"></small>
+
+    <button type="submit">Register Student</button>
+     <button type="reset">Reset Form</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+       @PARUL UNIVERSITY
+  </footer>
+
+    <script src = "script.js"></script>
+</body>
+</html>
