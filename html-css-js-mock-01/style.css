@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #9c5b5b;
+  color: #222;
+}
+
+.site-header {
+  background: #ded6d6;
+  color: #3c2323;
+  padding: 20px;
+  text-align: center;
+}
+
+.site-header button {
+  margin-top: 10px;
+}
+
+main {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+section {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0 0 5px 0;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-row {
+  grid-column: 1 / -1;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+fieldset label {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input,
+select,
+textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.error-msg {
+  color: #c0392b;
+  font-size: 12px;
+  min-height: 14px;
+}
+
+.form-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #555;
+}
+
+#searchSection {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+#searchSection input,
+#searchSection select {
+  flex: 1;
+  min-width: 200px;
+}
+
+#courseStats {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+#studentContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.student-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.student-card img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.student-card h3 {
+  margin: 5px 0;
+}
+
+.card-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #777;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 15px;
+  color: #777;
+  font-size: 13px;
+}
+
+body.dark-mode {
+  background: #1e1e1e;
+  color: #1f1a1a;
+}
+
+body.dark-mode section {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+body.dark-mode .site-header {
+  background: #111;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background: #333;
+  color: #eee;
+  border-color: #555;
+}
+
+body.dark-mode .student-card {
+  border-color: #444;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #studentContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  #studentContainer {
+    grid-template-columns: 1fr;
+  }
+
+  #searchSection {
+    flex-direction: column;
+  }
+}
