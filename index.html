@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- task-1 -->
+    <header>
+        <div class="left-header">
+            <h1>Student Application Management System</h1>
+        </div>
+        <br>
+        <div class="right-header">
+            <div>Register</div>
+            <div>Manage student Application</div>
+        </div>
+    </header>
+
+    <!-- task-2 -->
+     <div class="hero">
+     <div class="task2">
+        <h2>Student Registration From</h2>
+        <br><br>
+        <div>
+            <form id="student-form">
+                <div class="first">
+                    <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+                <label for="Email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                </div>
+                <br>
+                <div class="first">
+                    <label for="phone no">Phone No:</label>
+                <input type="number" id="number" name="number" required>
+                <br><br>
+                <label for="dob">Date of birth:</label>
+                <input type="date" id="dob" name="dob" required>
+                <br><br>
+                </div>
+                
+                <br>
+                <label for="gender">Gender:</label>
+                <input type="radio" id="gen" name="gen" value="male">Male
+                <input type="radio" id="gen" name="gen" value="female">Female
+                <input type="radio" id="gen" name="gen" value="other">Other
+                <br><br><br>
+                <lebel for="course">Course:</lebel>
+                <select>
+                    <option value="select">Select Course</option>
+                    <option value="select">Web Development</option>
+                    <option value="select">UI/UX</option>
+                    <option value="select">Python</option>
+                    <option value="select">Data Analysis</option>
+                    <option value="select">MERN Stack</option>
+                    <option value="select">Cloud Computing</option>
+                </select>
+                <br><br><br>
+                <label for="skills">Skills:</label>
+                <input type="checkbox" id="check" name="course" value="HTML">HTML  
+                <input type="checkbox" id="check" name="course" value="CSS">CSS
+                <input type="checkbox" id="check" name="course" value="Java Script">Java Script
+                <input type="checkbox" id="check" name="course" value="git">Git
+                <input type="checkbox" id="check" name="course" value="react">React
+                <input type="checkbox" id="check" name="course" value="node.js">Node.js
+                <br><br><br>
+                <label for="about">About Student:</label>
+                <input type="text" id="name" name="name" required>
+                <br><br><br>
+                <div class="first">
+                    <button>Register Student</button>
+                    <button>Reset From</button>
+                </div>
+            </form>
+        </div>
+     </div>
+    </div>
+
+    <div class="cards">
+        <div class="parent">
+            <div class="child"><h1>student-1</h1></div>
+            <div class="child"><h1>student-2</h1></div>
+            <div class="child"><h1>student-3</h1></div>
+        </div>
+    </div>
+   <script src="script.js"></script> 
+</body>
+</html>
