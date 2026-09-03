@@ -1,0 +1,193 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F3E9DC;
+  color: #5E3023;
+}
+
+.header {
+  padding: 24px;
+  background-color: #C08552;
+  color: #F3E9DC;
+  text-align: center;
+}
+
+.student-form {
+  width: 90%;
+  margin-top: 20px;
+  margin-left: 5%;
+  padding: 20px;
+  background-color: #F3E9DC;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  border: 1px solid #895737;
+}
+
+.student-form div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.student-form .full-width,
+.student-form .form-actions {
+  grid-column: 1 / -1; 
+  /* full page hoga yeh toh! */
+}
+
+.student-form .choice-group {
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+/* to get in rows i need */
+
+
+.choice-group label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px; 
+  border: 1px ;
+}
+
+.character-counter {
+  color: #555;
+}
+
+.error-message {
+  color: #5E3023;
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /* background-color: blu?e; */
+}
+
+button {
+    width:80%;
+    background-color: #5E3023;
+  color: #F3E9DC;
+
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.statistics {
+  width: 90%;
+  margin: 20px 5%;
+  padding: 20px;
+  background-color: #F3E9DC;
+  border: 1px solid #895737;
+  border-radius: 8px;
+}
+
+.statistics h2 {
+  margin-bottom: 12px;
+}
+
+.statistics p {
+  margin: 6px 0;
+}
+
+.register-card
+{
+    width:100%;
+    height:auto;
+    margin-top:40px;
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    
+}
+
+.register-card h1
+{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* main-div */
+#student-cards {
+  width: 90%;
+  margin: 20px 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+/* particular-div */
+.student-card {
+  padding: 16px;
+  background-color: #F3E9DC;
+  border: 1px solid #895737;
+  border-radius: 8px;
+  
+}
+
+.student-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.student-card h3 {
+  margin: 12px 0;
+}
+
+.student-card p {
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+.student-card button {
+  width: 48%;
+  margin-right: 4%;
+  margin-top: 12px;
+}
+
+
+/* tablet! */
+@media (max-width: 900px) {
+  #student-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* phone */
+@media (max-width: 650px) {
+  .student-form {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .student-form .choice-group,
+  .student-form .full-width,
+  .student-form .form-actions {
+    grid-column: 1;
+  }
+
+  #student-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
