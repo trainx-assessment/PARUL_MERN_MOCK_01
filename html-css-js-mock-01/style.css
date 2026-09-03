@@ -1,0 +1,67 @@
+body {
+    background-color:rgb(210, 251, 121);
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+.container {
+    background-color: #bcfbb0;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+select,
+textarea {
+    padding: 8px;
+    font-size: 15px;
+}
+
+textarea {
+    height: 80px;
+}
+
+button {
+    padding: 10px;
+    background-color: #fd5b5b;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: #858484;
+}
+
+#students {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.student-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 250px;
+    background-color: #fafafa;
+}
+
+.student-card img {
+    width: 100px;
+    height: 100px;
+}
