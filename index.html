@@ -15,34 +15,41 @@
     <main>
         <section id="registration">
             <h2>Student Registration Form</h2>
+            
             <form id="student-form">
-                <label for="student-name">Student Name</label>
-                <input type="text" id="student-name" name="studentName" required>
+                <div id="name">
+                    <label for="student-name">Student Name</label>
+                    <input type="text" id="student-name" name="studentName" required>
+                </div>
 
-               <br> 
 
+                <div id="email">
                 <label for="student-email">Email Address</label>
-                <input type="email" id="student-email" name="studentEmail" required>
+                <input type="email" id="student-email" name="studentEmail" required>                    
+                </div>
 
-                <br>
                 
+                <div id="phone">
                 <label for="student-phone">Phone Number</label>
-                <input type="text" id="student-phone" name="studentPhone" required>
-                <br>
+                <input type="text" id="student-phone" name="studentPhone" required>                    
+                </div>
                 
+                <div id="dob">
                 <label for="student-dob">Date of Birth</label>
-                <input type="text" id="student-dob" name="studentDob" required>
-                <br>
+                <input type="text" id="student-dob" name="studentDob" required>                        
+                </div>
                 
-                <label for="student-gender">Gender</label>
-                <input type="radio" id="student-male" name="studentGender" value="male" required>
-                <label for="student-male">Male</label>
-                <input type="radio" id="student-female" name="studentGender" value="female" required>
-                <label for="student-female">Female</label>
-                <br>
+                <div id="gender">
+                    <label for="student-gender">Gender</label>
+                    <input type="radio" id="student-male" name="studentGender" value="male" required>
+                    <label for="student-male">Male</label>
+                    <input type="radio" id="student-female" name="studentGender" value="female" required>
+                    <label for="student-female">Female</label>
+                </div>
                 
-                <label for="student-course">Course</label>
-                <select id="student-course" name="studentCourse" required>
+                <div id="course">
+                    <label for="student-course">Course</label>
+                    <select id="student-course" name="studentCourse" required>
                     <option value="">Select Course</option>
                     <option value="Web Development">Web Development</option>
                     <option value="UI/UX">UI/UX</option>
@@ -51,34 +58,42 @@
                     <option value="MERN Stack">MERN Stack</option>
                     <option value="Cloud Computing">Cloud Computing</option>
                 </select>
-                <br>
+                </div>
+                
 
-                <label for="student-skills">Skills</label>
-                <select id="student-skills" name="studentSkills" required>
-                    <option value="">Select Skills</option>
-                    <option value="HTML">HTML</option>
-                    <option value="CSS">CSS</option>
-                    <option value="JavaScript">JavaScript</option>
-                    <option value="Git">Git</option>
-                    <option value="React">React</option>
-                    <option value="Node.js">Node.js</option>
-                </select>
+                <div id="skills">
+                    <label for="student-skills">Skills</label>
+                    <select id="student-skills" name="studentSkills" required>
+                        <option value="">Select Skills</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Git">Git</option>
+                        <option value="React">React</option>
+                        <option value="Node.js">Node.js</option>
+                    </select>
+                </div>
 
-                <br>
 
-                <label for="student-about">About Student</label>
-                <br>
-                <textarea name="studentAbout" id="student-about" maxlength="200"></textarea>
+                <div id="about-photo">
+                    <label for="student-about">About Student</label>
+                    <br>
+                    <textarea name="studentAbout" id="student-about" maxlength="200"></textarea>
 
-                <br>
-                <label for="student-photo">Profile Photo</label>
-                <input type="file" name="studentPhoto" id="student-photo" accept="image/*"></input>
-                <br>
+                    <br>
+                    <label for="student-photo">Profile Photo</label>
+                    <input type="file" name="studentPhoto" id="student-photo" accept="image/*"></input>
+                    <br>
+                </div>
 
-                <button type="submit">Register Student</button>
-                <button type="reset">Reset Form</button>
+                <div id="form-buttons">
+                    <button type="submit">Register Student</button>
+                    <button type="reset">Reset Form</button>
+                </div>
+                
                 
             </form>
+            
         </section>
 
         <section id="statistics">
@@ -98,7 +113,23 @@
 
         <section id="student-cards">
             <h2>Student Applications</h2>
-            <div id="student-cards-container"></div>
+            <div id="student-cards-container">
+                <div class="student-card">
+                    
+                </div>
+                <div class="student-card">
+
+                </div>
+                <div class="student-card">
+
+                </div>
+                <div class="student-card">
+
+                </div>
+                <div class="student-card">
+
+                </div>
+            </div>
         </section>
     </main>
 
