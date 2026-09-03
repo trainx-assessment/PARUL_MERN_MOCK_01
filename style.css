@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background-color: #f3e8ff;
+    color: #1f1235;
+}
+
+header {
+    background-color: #7e22ce;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 3px solid #4c1d95;
+}
+
+header h1 {
+    font-size: 25px;
+    color: white;
+}
+
+header p {
+    margin-top: 5px;
+    color: #f3e8ff;
+}
+
+main {
+    width: 90%;
+    max-width: 850px;
+    margin: 20px auto;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #9333ea;
+}
+
+h2 {
+    color: #7e22ce;
+    margin-bottom: 15px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+form div {
+    margin-bottom: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #7e22ce;
+    background-color: #faf5ff;
+    color: #1f1235;
+}
+
+fieldset {
+    padding: 10px;
+    grid-column: span 2;
+    border: 1px solid #9333ea;
+}
+fieldset div {
+    margin: 5px 0;
+}
+fieldset input {
+    width: auto;
+}
+fieldset label {
+    display: inline;
+}
+#charCount {
+    font-size: 13px;
+    color: #6b21a8;
+}
+form div:last-child {
+    grid-column: span 2;
+}
+button {
+    padding: 9px 15px;
+    border: 1px solid #4c1d95;
+    cursor: pointer;
+}
+button[type="submit"] {
+    background-color: #a855f7;
+    color: white;
+}
+button[type="reset"] {
+    background-color: #6b21a8;
+    color: white;
+}
+button:hover {
+    background-color: #c084fc;
+}
+.error {
+    color: #7e22ce;
+    font-size: 13px;
+}
+.input-error {
+    border: 2px solid #7e22ce;
+}
+#studentList {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.student-card {
+    background-color: white;
+    border: 2px solid #9333ea;
+    padding: 15px;
+}
+.student-card img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: auto;
+}
+.student-card h3 {
+    text-align: center;
+    margin: 10px 0;
+    color: #7e22ce;
+}
+@media (max-width: 768px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+    fieldset {
+        grid-column: span 1;
+    }
+    form div:last-child {
+        grid-column: span 1;
+    }
+    #studentList {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+    main {
+        width: 95%;
+    }
+    #studentList {
+        grid-template-columns: 1fr;
+    }
+    button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+#searchInput {
+    margin-bottom: 15px;
+}
+
+.student-card button {
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.student-card .edit-button {
+    background-color: #a855f7;
+    color: white;
+}
+
+.student-card .delete-button {
+    background-color: #6b21a8;
+    color: white;
+}
