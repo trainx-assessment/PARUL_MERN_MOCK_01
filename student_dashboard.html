@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Student Dashboard</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+	<header class="dashboard-header">
+		<div>
+			<p class="eyebrow">Student workspace</p>
+			<h1>Student Dashboard</h1>
+			<p class="hero-subtitle">View and manage registered students.</p>
+		</div>
+		<div class="dashboard-actions">
+			<a class="button button-primary" href="student_register.html">Add Student</a>
+			<a class="button button-secondary" href="index.html">Home</a>
+		</div>
+	</header>
+	<main>
+		<section class="student-section" aria-labelledby="dashboard-title">
+			<div class="section-heading dashboard-heading">
+				<div>
+					<p class="eyebrow">Applications</p>
+					<h2 id="dashboard-title">All students</h2>
+				</div>
+				<p id="studentCount">Total Students: 0</p>
+			</div>
+			<div class="student-filters">
+				<label for="searchStudent">Search student</label>
+				<input type="search" id="searchStudent" placeholder="Search student by name...">
+				<label for="courseFilter">Filter by course</label>
+				<select id="courseFilter">
+					<option value="All Courses">All Courses</option>
+					<option value="Web Development">Web Development</option>
+					<option value="UI/UX">UI/UX</option>
+					<option value="Python">Python</option>
+					<option value="Data Analytics">Data Analytics</option>
+					<option value="MERN Stack">MERN Stack</option>
+					<option value="Cloud Computing">Cloud Computing</option>
+				</select>
+			</div>
+			<div id="studentList" class="student-grid"></div>
+		</section>
+	</main>
+    <footer>Student Management System
+        <h6>@2026 Student Management System. All rights reserved.</h6>
+        <h5>Created by: Saavi</h5>
+	<script src="script.js"></script>
+</body>
+</html>
