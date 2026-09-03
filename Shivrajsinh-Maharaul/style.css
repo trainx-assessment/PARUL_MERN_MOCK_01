@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: rgb(42, 42, 73);
+    color: white;
+    height: 90px;
+}
+
+
+#form1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110vh;
+    width: 98vw;
+}
+
+#registerForm{
+    padding: 20px 10px 20px 10px;
+    height: 90%;
+    width: 80%;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: whitesmoke;
+    h2 {
+        font-size:xx-large;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgb(42, 42, 73);
+        text-decoration: underline;
+    }
+    label {
+        font-size:x-large;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgb(42, 42, 73);
+    }
+}
+
+.formUpper{
+    height: 34%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-content: space-between;
+}
+.formMid {
+    text-align: start;
+    height: 33%;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.formLower {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.formLower button{
+    height: 50px;
+    width: 80px;
+    border:2px rgb(42, 42, 73) solid;
+    border-radius: 20px;
+}
+
+.formLower button:hover{
+    cursor: pointer;
+}
+
+#deleteStudent, #editStudent {
+    height: 50px;
+    width: 80px;
+    border:2px rgb(42, 42, 73) solid;
+    border-radius: 20px;
+}
+
+#deleteStudent:hover {
+    cursor: pointer;
+}
+#editStudent:hover {
+    cursor: pointer;
+}
+
+.students{
+    height: 100vh;
+    width: 95vw;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 30px;
+    background-color: whitesmoke;
+    p {
+        font-size:large;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgb(42, 42, 73);
+    }
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+@media (max-width:480px) {
+    .students{
+        height: 140vh;
+        width: 95vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 30px;
+        flex-direction: column;
+    }
+}
+
+@media (min-width:481px) and (max-width:720px) {
+    .students{
+        height: 120vh;
+        width: 95vw;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 30px;
+    }
+}
+
+
+main{
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+    height: 32px;
+}
