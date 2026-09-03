@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Student Application Management System</h1>
+    <p>Register and manage a student application</p>
+</header>
+
+<main>
+
+    <!-- Registration Form -->
+    <form id="studentForm">
+
+        <!-- Student Details -->
+        <label for="name">Name:</label>
+        <input id="name" type="text" placeholder="Your Name">
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input id="email" type="email" placeholder="Your Email">
+
+        <br><br>
+
+        <label for="Phonenumber">Phone Number:</label>
+        <input id="Phonenumber" type="number" placeholder="Your phone number">
+
+        <br><br>
+
+        <label for="date">DOB:</label>
+        <input id="date" type="date">
+
+        <br><br>
+
+        <!-- Gender -->
+        <label>Gender:</label>
+
+        <label for="Male">Male</label>
+        <input type="radio" name="gender" id="Male" value="Male">
+
+        <label for="Female">Female</label>
+        <input type="radio" name="gender" id="Female" value="Female">
+
+        <label for="Other">Other</label>
+        <input type="radio" name="gender" id="Other" value="Other">
+
+        <br><br>
+
+        <!-- Course -->
+        <fieldset>
+            <legend>Course Information</legend>
+
+            <label for="course">Course:</label>
+
+            <select name="course" id="course">
+                <option value="">Select Course</option>
+                <option value="Web Development">Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Python">Python</option>
+                <option value="MERN Stack">MERN Stack</option>
+                <option value="Data Analytics">Data Analytics</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <!-- Skills -->
+        <fieldset>
+            <legend>Skills</legend>
+
+            <label for="html">HTML</label>
+            <input type="checkbox" name="skill" id="html" value="HTML">
+
+            <label for="css">CSS</label>
+            <input type="checkbox" name="skill" id="css" value="CSS">
+
+            <label for="js">JavaScript</label>
+            <input type="checkbox" name="skill" id="js" value="JavaScript">
+
+            <label for="react">React</label>
+            <input type="checkbox" name="skill" id="react" value="React">
+
+            <label for="node">Node.js</label>
+            <input type="checkbox" name="skill" id="node" value="Node.js">
+
+            <label for="git">Git</label>
+            <input type="checkbox" name="skill" id="git" value="Git">
+
+        </fieldset>
+
+        <br>
+
+        <!-- About -->
+        <label for="yourself">About you:</label>
+        <textarea
+            id="yourself"
+            maxlength="200"
+            placeholder="Maximum 200 characters">
+        </textarea>
+
+        <br><br>
+
+        <!-- Photo -->
+        <label for="photo">Profile Picture:</label>
+        <input id="photo" type="file" accept="image/*">
+
+        <br><br>
+
+        <!-- Buttons -->
+        <button type="submit">Register Student</button>
+        <button type="reset">Reset Form</button>
+
+    </form>
+
+
+    <section id="statistics">
+
+        <h2>Student Statistics</h2>
+
+        <p>
+            Total Students:
+            <span id="totalStudents">0</span>
+        </p>
+
+        <p>
+            Web Development:
+            <span id="webDevelopmentCount">0</span>
+        </p>
+
+        <p>
+            UI/UX:
+            <span id="uiuxCount">0</span>
+        </p>
+
+        <p>
+            Python:
+            <span id="pythonCount">0</span>
+        </p>
+
+        <p>
+            Data Analytics:
+            <span id="dataAnalyticsCount">0</span>
+        </p>
+
+        <p>
+            MERN Stack:
+            <span id="mernCount">0</span>
+        </p>
+
+        <p>
+            Cloud Computing:
+            <span id="cloudCount">0</span>
+        </p>
+
+    </section>
+
+
+    <section id="studentList">
+
+        <h2>Registered Students</h2>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>Student Management System</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
