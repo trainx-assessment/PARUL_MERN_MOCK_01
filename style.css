@@ -1,0 +1,73 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+header{
+    text-align: center;
+    background-color: rgb(57, 237, 171);
+    color: wheat;
+    padding: 1rem;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding:1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: cadetblue;
+}
+form textarea, form input[type="file"]{
+    grid-column: span 2;
+}
+button{
+    padding:0px;
+    grid-template-columns: repeat(auto-fit,minmax(300, 1fr));
+    gap: 1rem;
+    margin: 2rem;
+}   
+button:hover{
+    background-color: rgb(76, 232, 91);
+}
+#student-Card-cont{
+    border: 1px solid #ccc;
+    grid-template-columns: repeat(auto-fit,minmxa(300px,1fr));
+    padding: 1rem;
+    gap:1rem;
+    margin: 2rem;
+}
+.student-card{
+    border:1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fff;
+}
+.student-card button{
+    margin-right: 0.5rem;
+    background-color: aquamarine;
+    color:wheat;
+}
+.student-card button:hover{
+    background-color: brown;
+}
+
+@media(max-width:768px){
+    form{
+        grid-template-columns: 1fr;
+    }
+    #student-card-cont{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:480px){
+    #student-card-cont{
+        grid-template-columns: 1fr;
+    }
+}

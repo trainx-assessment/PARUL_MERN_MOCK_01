@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+        <!-- <button id="toogle">Toggle</button> -->
+    </header>
+    
+    <form id="StudentForm">
+        <label for="Student name">Student name</label>
+        <input type="text" id="StudentName" placeholder="Student Name" required>
+        <label for="Email">Email</label>
+        <input type="email" id="Email" placeholder="Email" required>
+        <label for="Phone Number">Phone Number</label>
+        <input type="text" id="PhoneNumber" placeholder="Phone Number" required>
+        <label for="DOB">DOB</label>
+        <input type="date" id="DOB" placeholder="Date of Birth" required>
+        
+        <label for="Gender">Gender</label>
+        <input type="radio" name="gender" value="Male" required>Male
+        <input type="radio" name="gender" value="Male" required>Female
+        <input type="radio" name="gender" value="Male" required>Other
+        
+        <label for="course">Select Course</label>
+        <select name="course" id="course">
+            <option value="">Select Course</option>
+            <option value="web-development">Web Development</option>
+            <option value="ui-ux">UI/UX</option>
+            <option value="python">Python</option>
+            <option value="data-analytics">Data Analytics</option>
+            <option value="mern-stack">MERN Stack</option>
+            <option value="cloud-computing">Cloud Computing</option>
+        </select>
+        <input type="checkbox" name="skills" value="html"> HTML
+        
+        <input type="checkbox" name="skills" value="css"> CSS
+        
+        <input type="checkbox" name="skills" value="javascript"> JavaScript
+        
+        <input type="checkbox" name="skills" value="git"> Git
+        
+        <input type="checkbox" name="skills" value="react"> React
+        
+        <input type="checkbox" name="skills" value="node.js"> Node.js
+        
+        <textarea name="about" id="about" cols="30" rows="10" maxlength="200" placeholder="Maximum 200 characters"></textarea>
+        
+        <input type="file" id="photo" accept="image/*">
+        
+        <button type="submit" id="RegisterBtn">Register Student</button>
+        <button type="reset">Reset Form</button>
+    </form>
+
+    <div id="student-card-cont"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
