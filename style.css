@@ -1,0 +1,155 @@
+
+body {
+    background-color: #e6f0fa;
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and Footer Centered Styling */
+header, footer {
+    background-color: #2b5797;
+    color: white;
+    padding: 30px;
+    text-align: center; /* Aligns text to center */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Layout container */
+.main-container {
+    width: 850px;
+    margin: 30px auto;
+}
+
+/* Distinct Box Styles for each section */
+.form-box {
+    background-color: white;
+    border: 2px solid #b3cce6; /* Blue border */
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.stats-box {
+    background-color: #fdfdfd;
+    border: 2px solid #4CAF50; /* Green border */
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.search-box {
+    background-color: #fffaf0;
+    border: 2px solid #f4b400; /* Yellow border */
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.list-box {
+    background-color: white;
+    border: 2px solid #d9534f; /* Red border */
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #2b5797;
+    border-bottom: 1px dashed #2b5797;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], input[type="date"], select, textarea {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.radio-group, .checkbox-group {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+/* Buttons */
+.button-group {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-save {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-clear {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-save:hover { background-color: #45a049; }
+.btn-clear:hover { background-color: #da190b; }
+
+/* Student Cards Layout */
+.student-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Adds space between cards */
+}
+
+.student-card {
+    border: 2px solid #2b5797;
+    width: 220px;
+    padding: 15px;
+    background-color: #f0f8ff;
+    border-radius: 5px;
+}
+
+.student-card h3 {
+    margin-top: 0;
+    color: #d9534f;
+}
