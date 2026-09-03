@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f7eaea;
+}
+
+header {
+    background-color: #5941b2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input,
+select,
+button,
+textarea {
+    padding: 10px;
+    font-size: 16px;
+}
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.gender-option {
+    display: flex;
+    gap: 25px;
+}
+.gender-option label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.skills-option {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.skills-option label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.form-button {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #5941b2;
+    color: white;
+}
+button:hover {
+    opacity: 0.85;
+}
+
+#searchInput {
+    width: 60%;
+    margin-right: 10px;
+}
+
+#studentContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.student-card {
+    border: 2px solid #5941b2;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+.student-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.student-card h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.student-card p {
+    margin: 8px 0;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.card-buttons button {
+    padding: 8px 20px;
+}
+
+.statistics p {
+    margin: 8px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+}
