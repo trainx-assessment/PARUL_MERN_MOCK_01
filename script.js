@@ -1,14 +1,17 @@
+const students = [];
+
 const form = document.getElementById("student-form");
 
 const studentName = document.getElementById("student-name");
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
 const dob = document.getElementById("dob");
+const course = document.getElementById("course");
 const about = document.getElementById("about");
 const profilePhoto = document.getElementById("profile-photo");
 
 
-// Create error message
+// Show error message
 function showError(input, message) {
     removeError(input);
 
@@ -21,7 +24,7 @@ function showError(input, message) {
 }
 
 
-// Remove old error message
+// Remove error message
 function removeError(input) {
     const oldError = input.parentElement.querySelector(".error-message");
 
@@ -31,7 +34,7 @@ function removeError(input) {
 }
 
 
-// Remove all old errors
+// Remove all errors
 function clearErrors() {
     document.querySelectorAll(".error-message").forEach(error => {
         error.remove();
@@ -39,10 +42,11 @@ function clearErrors() {
 }
 
 
-// About character counter
+// Character counter
 const counter = document.createElement("small");
 counter.id = "character-counter";
 counter.textContent = "0 / 200";
+
 about.parentElement.appendChild(counter);
 
 about.addEventListener("input", function () {
@@ -60,52 +64,63 @@ form.addEventListener("submit", function (event) {
     let isValid = true;
 
 
-    // Student Name
+    // Student Name Validation
     const nameValue = studentName.value.trim();
     const nameRegex = /^[A-Za-z ]+$/;
 
     if (nameValue === "") {
         showError(studentName, "Student name is required.");
         isValid = false;
-    } else if (nameValue.length < 3) {
+    } 
+    else if (nameValue.length < 3) {
         showError(studentName, "Name must be at least 3 characters.");
         isValid = false;
-    } else if (nameValue.length > 40) {
+    } 
+    else if (nameValue.length > 40) {
         showError(studentName, "Name cannot exceed 40 characters.");
         isValid = false;
-    } else if (!nameRegex.test(nameValue)) {
-        showError(studentName, "Name can contain only letters and spaces.");
+    } 
+    else if (!nameRegex.test(nameValue)) {
+        showError(
+            studentName,
+            "Name can contain only letters and spaces."
+        );
         isValid = false;
     }
 
 
-    // Email
+    // Email Validation
     const emailValue = email.value.trim();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (emailValue === "") {
         showError(email, "Email is required.");
         isValid = false;
-    } else if (!emailRegex.test(emailValue)) {
+    } 
+    else if (!emailRegex.test(emailValue)) {
         showError(email, "Please enter a valid email address.");
         isValid = false;
     }
 
 
-    // Phone
+    // Phone Validation
     const phoneValue = phone.value.trim();
     const phoneRegex = /^\d{10}$/;
 
     if (phoneValue === "") {
         showError(phone, "Phone number is required.");
         isValid = false;
-    } else if (!phoneRegex.test(phoneValue)) {
-        showError(phone, "Phone number must contain exactly 10 digits.");
+    } 
+    else if (!phoneRegex.test(phoneValue)) {
+        showError(
+            phone,
+            "Phone number must contain exactly 10 digits."
+        );
         isValid = false;
     }
 
 
-    // Date of Birth
+    // DOB Validation
     if (dob.value === "") {
 
         showError(dob, "Date of birth is required.");
@@ -125,19 +140,27 @@ form.addEventListener("submit", function (event) {
 
         } else {
 
-            // Bonus: minimum age 15
-            const ageDate = new Date(selectedDate);
-            ageDate.setFullYear(ageDate.getFullYear() + 15);
+            // Minimum age 15 years
+            const minimumAgeDate = new Date(selectedDate);
 
-            if (ageDate > today) {
-                showError(dob, "Student must be at least 15 years old.");
+            minimumAgeDate.setFullYear(
+                minimumAgeDate.getFullYear() + 15
+            );
+
+            if (minimumAgeDate > today) {
+
+                showError(
+                    dob,
+                    "Student must be at least 15 years old."
+                );
+
                 isValid = false;
             }
         }
     }
 
 
-    // Gender
+    // Gender Validation
     const gender = document.querySelector(
         'input[name="gender"]:checked'
     );
@@ -160,22 +183,23 @@ form.addEventListener("submit", function (event) {
     }
 
 
-    // Course
-    const course = document.getElementById("course");
-
+    // Course Validation
     if (course.value === "") {
 
         showError(course, "Please select a course.");
+
         isValid = false;
     }
 
 
-    // Skills
-    const skills = document.querySelectorAll(
-        'input[name="skills"]:checked'
-    );
+    // Skills Validation
+    const selectedSkills = Array.from(
+        document.querySelectorAll(
+            'input[name="skills"]:checked'
+        )
+    ).map(skill => skill.value);
 
-    if (skills.length === 0) {
+    if (selectedSkills.length === 0) {
 
         const skillInput = document.querySelector(
             'input[name="skills"]'
@@ -195,15 +219,20 @@ form.addEventListener("submit", function (event) {
     }
 
 
-    // About Student
+    // About Student Validation
     const aboutValue = about.value.trim();
 
     if (aboutValue === "") {
 
-        showError(about, "About student is required.");
+        showError(
+            about,
+            "About student is required."
+        );
+
         isValid = false;
 
-    } else if (aboutValue.length < 20) {
+    } 
+    else if (aboutValue.length < 20) {
 
         showError(
             about,
@@ -212,7 +241,8 @@ form.addEventListener("submit", function (event) {
 
         isValid = false;
 
-    } else if (aboutValue.length > 200) {
+    } 
+    else if (aboutValue.length > 200) {
 
         showError(
             about,
@@ -223,10 +253,14 @@ form.addEventListener("submit", function (event) {
     }
 
 
-    // Profile Photo
+    // Profile Photo Validation
     if (profilePhoto.files.length === 0) {
 
-        showError(profilePhoto, "Profile photo is required.");
+        showError(
+            profilePhoto,
+            "Profile photo is required."
+        );
+
         isValid = false;
 
     } else {
@@ -245,11 +279,48 @@ form.addEventListener("submit", function (event) {
     }
 
 
-    // Final result
+    // If everything is valid
     if (isValid) {
+
+        // Create student object
+        const student = {
+
+            id: students.length + 1,
+
+            name: studentName.value.trim(),
+
+            email: email.value.trim(),
+
+            phone: phone.value.trim(),
+
+            dob: dob.value,
+
+            gender: gender.value,
+
+            course: course.value,
+
+            skills: selectedSkills,
+
+            about: about.value.trim(),
+
+            photo: profilePhoto.files[0].name
+        };
+
+
+        // Add student to array
+        students.push(student);
+
+
+        // Check data in console
+        console.log("Student added:", student);
+
+        console.log("All students:", students);
+
 
         alert("Student registration successful!");
 
+
+        // Reset form
         form.reset();
 
         counter.textContent = "0 / 200";
@@ -259,27 +330,49 @@ form.addEventListener("submit", function (event) {
 });
 
 
-// Remove errors while user fixes input
-studentName.addEventListener("input", () => removeError(studentName));
-email.addEventListener("input", () => removeError(email));
-phone.addEventListener("input", () => removeError(phone));
-dob.addEventListener("change", () => removeError(dob));
-about.addEventListener("input", () => removeError(about));
-profilePhoto.addEventListener("change", () => removeError(profilePhoto));
+// Remove errors when user fixes input
 
-document.getElementById("course").addEventListener("change", function () {
-    removeError(this);
+studentName.addEventListener("input", function () {
+    removeError(studentName);
+});
+
+email.addEventListener("input", function () {
+    removeError(email);
+});
+
+phone.addEventListener("input", function () {
+    removeError(phone);
+});
+
+dob.addEventListener("change", function () {
+    removeError(dob);
+});
+
+course.addEventListener("change", function () {
+    removeError(course);
+});
+
+about.addEventListener("input", function () {
+    removeError(about);
+});
+
+profilePhoto.addEventListener("change", function () {
+    removeError(profilePhoto);
 });
 
 
 // Gender error remove
-document.querySelectorAll('input[name="gender"]').forEach(input => {
+document.querySelectorAll(
+    'input[name="gender"]'
+).forEach(input => {
+
     input.addEventListener("change", function () {
-        const error = document
-            .querySelector('input[name="gender"]')
-            .parentElement
-            .parentElement
-            .querySelector(".error-message");
+
+        const genderGroup =
+            input.parentElement.parentElement;
+
+        const error =
+            genderGroup.querySelector(".error-message");
 
         if (error) {
             error.remove();
@@ -289,17 +382,24 @@ document.querySelectorAll('input[name="gender"]').forEach(input => {
 
 
 // Skills error remove
-document.querySelectorAll('input[name="skills"]').forEach(input => {
+document.querySelectorAll(
+    'input[name="skills"]'
+).forEach(input => {
+
     input.addEventListener("change", function () {
 
-        const checkedSkills = document.querySelectorAll(
-            'input[name="skills"]:checked'
-        );
+        const selected =
+            document.querySelectorAll(
+                'input[name="skills"]:checked'
+            );
 
-        if (checkedSkills.length > 0) {
+        if (selected.length > 0) {
 
-            const skillGroup = input.parentElement.parentElement;
-            const error = skillGroup.querySelector(".error-message");
+            const skillGroup =
+                input.parentElement.parentElement;
+
+            const error =
+                skillGroup.querySelector(".error-message");
 
             if (error) {
                 error.remove();
@@ -309,4 +409,6 @@ document.querySelectorAll('input[name="skills"]').forEach(input => {
 });
 
 
-console.log("Student Application Management System loaded successfully.");
+console.log(
+    "Student Application Management System loaded successfully."
+);
