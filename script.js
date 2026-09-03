@@ -260,3 +260,18 @@ function handleCardActions(e) {
         }
     }
 }
+
+// --- Form Reset (Task 12) ---
+function resetForm() {
+    form.reset();
+    clearErrors();
+    charCount.textContent = '0';
+    currentPhotoBase64 = null;
+    editingId = null;
+    submitBtn.textContent = 'Register Student';
+}
+
+// --- Local Storage (Assessment Requirement) ---
+function saveData() {
+    localStorage.setItem('students', JSON.stringify(students));
+}
