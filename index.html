@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+    </header>
+
+    <main>
+
+        <section class="form-section">
+            <h2>Student Registration Form</h2>
+
+            <form id="studentForm">
+
+                <div class="form-group">
+                    <label for="name">Student Name</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="gender" value="Male" required>
+                            Male
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender" value="Female">
+                            Female
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender" value="Other">
+                            Other
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course</label>
+
+                    <select id="course" required>
+                        <option value="">Select Course</option>
+                        <option>Web Development</option>
+                        <option>UI/UX</option>
+                        <option>Python</option>
+                        <option>Data Analytics</option>
+                        <option>MERN Stack</option>
+                        <option>Cloud Computing</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Skills</label>
+
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" value="HTML">
+                            HTML
+                        </label>
+
+                        <label>
+                            <input type="checkbox" value="CSS">
+                            CSS
+                        </label>
+
+                        <label>
+                            <input type="checkbox" value="JavaScript">
+                            JavaScript
+                        </label>
+
+                        <label>
+                            <input type="checkbox" value="Git">
+                            Git
+                        </label>
+
+                        <label>
+                            <input type="checkbox" value="React">
+                            React
+                        </label>
+
+                        <label>
+                            <input type="checkbox" value="Node.js">
+                            Node.js
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="about">About Student</label>
+                    <textarea id="about" maxlength="200" placeholder="Maximum 200 characters"></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="photo">Profile Photo</label>
+                    <input type="file" id="photo" accept="image/*">
+                </div>
+
+                <div class="button-group full-width">
+                    <button type="submit">Register Student</button>
+                    <button type="reset" class="reset-btn">Reset Form</button>
+                </div>
+
+            </form>
+    </main>
+
+
+    <footer>
+     
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

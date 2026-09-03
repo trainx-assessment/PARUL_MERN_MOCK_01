@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+header h1 {
+    margin:  0 10px;
+}
+
+header p {
+    margin: 0;
+}
+
+main {
+    padding: 10px;
+}
+
+.form-section {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+    padding: 8px;
+    margin-bottom: 5px;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    gap: 15px;
+}
+
+.button-group {
+    margin-top: 20px;
+}
+
