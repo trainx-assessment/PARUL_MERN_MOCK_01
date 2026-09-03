@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration Form</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Student Registration Form</h1>
+        <h2>Register and manage student applications</h2>
+
+        <button id="mode">Click ME!</button>
+        
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="registration-section">
+
+            <h2 class="section-title">Register Student</h2>
+
+            <form id="studentForm" class="student-form">
+
+                <!-- Student Name -->
+                <div class="form-group">
+                    <label for="studentName">Student Name:</label>
+
+                    <input type="text" id="studentName" name="studentName" required>
+                </div>
+
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email:</label>
+
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+
+                    <input type="text" id="phone" name="phone" required>
+                </div>
+
+
+                <!-- Date of Birth -->
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+
+
+                <!-- Gender -->
+                <div class="form-group">
+                    <label>Gender:</label>
+
+                    <div class="radio-group">
+
+                        <label class="option">
+                            <input type="radio" name="gender" value="Male">
+                            Male
+                        </label>
+
+                        <label class="option">
+                            <input type="radio" name="gender" value="Female">
+                            Female
+                        </label>
+
+                        <label class="option">
+                            <input type="radio" name="gender" value="Other">
+                            Other
+                        </label>
+
+                    </div>
+                </div>
+
+
+                <!-- Course -->
+                <div class="form-group">
+                    <label for="course">Course:</label>
+
+                    <select id="course" name="course">
+
+                        <option value="">Select Course</option>
+                        <option value="web">Web Development</option>
+                        <option value="uiux">UI/UX</option>
+                        <option value="python">Python</option>
+                        <option value="data">Data Analytics</option>
+                        <option value="mern">MERN Stack</option>
+                        <option value="cloud">Cloud Computing</option>
+
+                    </select>
+                </div>
+
+
+                <!-- Skills -->
+                <div class="form-group full-width">
+
+                    <label>Skills:</label>
+
+                    <div class="skills">
+
+                        <label class="skill">
+                            <input type="checkbox" name="skills" value="HTML">
+                            HTML
+                        </label>
+
+                        <label class="skill">
+                            <input type="checkbox" name="skills" value="CSS">
+                            CSS
+                        </label>
+
+                        <label class="skill">
+                            <input type="checkbox" name="skills" value="JavaScript">
+                            JavaScript
+                        </label>
+
+                        <label class="skill">
+                            <input type="checkbox" name="skills" value="Git">
+                            Git
+                        </label>
+
+                        <label class="skill">
+                            <input type="checkbox" name="skills" value="React">
+                            React
+                        </label>
+
+                        <label class="skill">
+                            <input type="checkbox" name="skills" value="Node.js">
+                            Node.js
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- About Student -->
+                <div class="form-group full-width">
+
+                    <label for="about">About Student:</label>
+
+                    <textarea id="about" name="about" rows="5" maxlength="200"
+                        placeholder="Write about the student..."></textarea>
+
+                    <span class="help-text">
+                        Maximum 200 characters
+                    </span>
+
+                </div>
+
+
+                <!-- Profile Photo -->
+                <div class="form-group full-width">
+
+                    <label for="photo">Profile Photo:</label>
+
+                    <input type="file" id="photo" name="photo" accept="image/*">
+
+                </div>
+
+
+                <!-- Buttons -->
+                <div class="button-group full-width">
+
+                    <button type="submit" class="btn btn-primary">
+                        Register Student
+                    </button>
+
+                    <button type="reset" class="btn btn-secondary">
+                        Reset Form
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <p>Student Registration System</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
