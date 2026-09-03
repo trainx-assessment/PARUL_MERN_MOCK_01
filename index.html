@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Application Management</h1>
+        <p>Register and manage students</p>
+    </header>
+
+    <main>
+        <section id="registration-section">
+            <h2>Register Student</h2>
+    <form id="studentForm">
+        <div class="form-group">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="studentEmail">Email:</label>
+            <input type="email" id="studentEmail" required>
+        </div>
+
+        <div class="form-group">
+            <label for="studentPhone">Phone Number:</label>
+            <input type="text" id="studentPhone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="studentDob">Date of Birth:</label>
+            <input type="date" id="studentDob" required>
+        </div>
+
+        <div class="form-group gender-group">
+            <label>
+                <b>Gender:</b>
+            </label>
+            <div>
+                <input type="radio" id="genderMale" name="gender" value="Male" required>
+                <label for="genderMale">Male</label>
+            </div>
+            <div>
+                <input type="radio" id="genderFemale" name="gender" value="Female">
+                <label for="genderFemale">Female</label>
+            </div>
+            <div>
+                <input type="radio" id="genderOther" name="gender" value="Other">
+                <label for="genderOther">Other</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="studentCourse">Course:</label>
+            <select id="studentCourse" required>
+                <option value="">Select Course</option>
+                <option value="Web Development">Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Python">Python</option>
+                <option value="Data Analytics">Data Analytics</option>
+                <option value="MERN Stack">MERN Stack</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+        </div>
+
+        <div class="form-group skills-group">
+            <label><b>Skills:</b></label>
+            <div>
+                <input type="checkbox" id="skillHtml" name="skills" value="HTML">
+                <label for="skillHtml">HTML</label>
+            </div>
+            <div>
+                <input type="checkbox" id="skillCss" name="skills" value="CSS">
+                <label for="skillCss">CSS</label>
+            </div>
+            <div>
+                <input type="checkbox" id="skillJs" name="skills" value="JavaScript">
+                <label for="skillJs">JavaScript</label>
+            </div>
+            <div>
+                <input type="checkbox" id="skillGit" name="skills" value="Git">
+                <label for="skillGit">Git</label>
+            </div>
+            <div>
+                <input type="checkbox" id="skillReact" name="skills" value="React">
+                <label for="skillReact">React</label>
+            </div>
+            <div>
+                <input type="checkbox" id="skillNode" name="skills" value="Node.js">
+                <label for="skillNode">Node.js</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="studentAbout">About Student:</label>
+            <textarea id="studentAbout" rows="3" maxlength="200" required></textarea>
+            <div id="charCounter">0 / 200</div>
+        </div>
+
+        <div class="form-group">
+            <label for="studentPhoto">Profile Photo:</label>
+            <input type="file" id="studentPhoto" accept="image/*" required>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" id="registerBtn">Register Student</button>
+            <button type="button" id="resetBtn">Reset Form</button>
+        </div>
+    </form>
+
+        </section>
+
+        <section id="statistics-section">
+            <h2>Statistics</h2>
+            <div id="stats-content">
+                <p>Total Students: <span id="totalStudents">0</span></p>
+            </div>
+        </section>
+
+        <section id="search-filter-section">
+            <h2>Search & Filter</h2>
+        </section>
+
+        <section id="students-container-section">
+            <h2>Student List</h2>
+            <div id="students-list">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Student App</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

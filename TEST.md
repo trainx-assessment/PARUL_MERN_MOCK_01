@@ -223,6 +223,7 @@ Use either:
 
 ```css
 display: grid;
+
 ```
 
 or
