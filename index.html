@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            
+        }
+        .header-container{
+            background-color: cadetblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            background-color: bisque;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            margin-left: 450px;
+            flex-direction: column;
+            flex: wrap;
+
+            border: 2px solid black;
+            height: 700px;
+            width: 600px;
+        }
+        .label-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .submitBtn{
+            padding: 20px;
+            background-color: cadetblue;
+            border: none;
+            cursor: pointer;
+        }
+        .resetBtn{
+            padding: 20px;
+            background-color: cadetblue;
+            border: none;
+            cursor: pointer;
+        }
+        .name{
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #text-field{
+            height: 80px;
+            width: 290px;
+        }
+        .name:first-child{
+            margin: 10px;
+        }
+        .pchar{
+            
+            opacity: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <h1>Student Management System</h1>
+    </div>
+    <div class="container">
+        <label>
+            <span class="name">* Student Name: </span>
+            <input type="text" placeholder="Enter Student Name:" >
+        </label>
+    
+        <label>
+            <span class="name">* Email:</span>
+            <input type="text" placeholder="Enter Your Email">
+        </label>
+    
+        <label>
+            <span class="name">* Phone number:</span>
+            <input type="text" placeholder="Enter your Phone Number">
+        </label>
+
+        <label>
+            <span class="name">* Date-of-Birth</span>
+            <input type="date" placeholder="DOB">
+        </label>
+        <div class="label-container">
+            <label>
+            <span class="name">* Course:</span>
+            <p ></p>
+            <p> <input type="checkbox">Web Development</p> 
+            <p> <input type="checkbox">UI/UX</p> 
+            <p> <input type="checkbox">Python</p> 
+            <p> <input type="checkbox">MERN Stack</p> 
+            <p> <input type="checkbox">Cloud Computing</p> 
+        </label>
+        <label>
+            <span class="name">* Skills:</span>
+            <p><input type="checkbox">  HTML</p>
+            <p><input type="checkbox">CSS</p>
+            <p><input type="checkbox">JavaScript</p>
+            <p><input type="checkbox">GIT</p>
+            <p><input type="checkbox">REACT</p>
+            <p><input type="checkbox"> NODE.JS</p>
+        </label>
+        </div>
+        <label>
+            <p>* Tell me about yourself: </p>
+            <input type="text" id="text-field">
+            <p class="pchar">Minimum 200 characters</p>
+        </label>
+        <br>
+        <label>
+            <span>* Upload Profile photo:</span>
+            <input type="file" id="photo">
+        </label>
+        <br>
+
+        <div class="buttoncontainer">
+            <button class="submitBtn">Register Student</button>
+            <button class="resetBtn">Reset form</button>
+        </div>
+    </div>
+    
+    <script src="script1.js"></script>    
+</body>
+</html>
