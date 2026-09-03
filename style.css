@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+.form-section {
+    border: 1px solid black;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 8px;
+}
+
+.form-group textarea {
+    height: 100px;
+}
+
+
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+}
+
+.statistics {
+    margin: 30px auto;
+    max-width: 900px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.statistics h2 {
+    margin-bottom: 15px;
+}
+
+.search-section {
+    max-width: 900px;
+    margin: 30px auto;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.search-section input,
+.search-section select {
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.students {
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+#studentContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
