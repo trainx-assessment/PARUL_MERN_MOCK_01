@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+.wrap{
+    height:100vh;
+    width:100%;
+    background-color: bisque;
+
+    
+}
+.header{
+    height:10vh;
+    width:100%;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero{
+    height:90vh;
+    width:100%;
+    background-color: rgba(0, 0, 255, 0.179);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+
+.form{
+    
+    height:70vh;
+    width:50%;
+    background-color: rgba(0, 0, 0, 0.237);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    font-size: 17px;
+    border-width: 10;
+    border-radius: 30px;
+    gap:5px;
+   
+    
+    
+}
+.student{
+    padding: 10px;
+    width:100%;
+    height:50px;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    align-items: center;
+    justify-content: start;
+    background-color: rgba(72, 55, 55, 0.256);
+    border-radius: 5px;
+
+}
+
+
+
+.footer{
+    height:10vh;
+    width:100%;
+    background-color: rgb(213, 189, 158);
+
+}
+

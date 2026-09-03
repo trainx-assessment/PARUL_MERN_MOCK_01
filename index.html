@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="wrap">
+        <header class="header">
+            <h1>Student Application Management System</h1>
+        </header>
+
+
+       <main class="hero">
+        <h2>Register and manage student applications</h2>
+        
+            
+        <form class="form">
+
+            <section class="student name">
+            <h3>student name</h3>
+             <input type="text"  placeholder="Name" required>
+        </section>
+           
+            <section class="student email">
+                <h3>email</h3>
+            <input type="email"  placeholder="enter ur email" required>
+        </section> 
+
+        <section class="student phone number">
+            <h3>phone number</h3>
+            <input type="text"  placeholder="Phone Number" required>
+        </section>
+
+        <section class="student  dob">
+            <h3>date of birth</h3>
+            <input type="date" required>
+        </section>
+        <section class="student gender">
+            <h3>gender</h3>
+           
+                <label for="male">Male</label>
+                <input type="radio" name="gender" value="male" required>
+                <label for="female">Female</label>
+                <input type="radio"  value="female" required>
+                <label for="other">Other</label>
+                <input type="radio" name="gender" value="other" required>
+        </section>
+
+        <section class="student">
+            <h3>courses</h3>
+            <select  name="course" required>
+                    <option value="">Select Course</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Python">Python</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="MERN Stack">MERN Stack</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                </select>
+
+        </section>
+
+
+        <section class="student skills ">
+            <h3>skills</h3>
+            <label for="terms">
+                    <input type="checkbox" id="terms" name="terms" value="yes" required>
+                    HTML
+                </label>
+                <label for="show-password">
+                    <input type="checkbox" id="show-password" name="show-password" value="yes">
+                    CSS
+                </label>
+                <label for="show-password">
+                    <input type="checkbox" id="show-password" name="show-password" value="yes">
+                    JavaScript
+                </label>
+        </section>
+
+    <section class="student about">
+        <h3>about</h3>
+        <input type="text" maxlength="200 " placeholder="write about yourself">
+    </section>
+
+    <section class="student pfp">
+        <h3>upload your profile photo</h3>
+        <input type="file">
+    </section>
+
+    <section class="student submit">
+        <br>
+        <input type="submit">
+        <input type="reset">
+    </section>
+
+
+
+      
+        
+      
+                
+               
+            
+
+
+
+  
+       </main>
+         <footer class="footer"></footer>
+    </section>
+
+
+
+ 
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
