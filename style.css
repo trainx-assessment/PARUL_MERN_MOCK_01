@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+main {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+section {
+    padding: 25px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    background-color: white;
+}
+
+h2 {
+    margin-top: 0;
+    color: blue;
+}
+
+#student-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid  black
+    border-radius : 4px;
+    font: inherit;
+}
+
+textarea,
+input[type="file"],
+button,
+small,
+field {
+    grid-column: 1 / 3;
+}
+
+field {
+    padding: 10px;
+    border: 1px solid  grey;
+}
+
+field label {
+    display: inline-block;
+    margin: 8px 15px 0 0;
+    font-weight: normal;
+}
+
+field input {
+    width: auto;
+}
+
+small {
+    color: grey;
+}
+
+button {
+    padding: 10px;
+    border: 0;
+    border-radius: 4px;
+    background-color:  blue;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:  darkblue;
+}
+
+
+
