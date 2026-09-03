@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 style="align-items: center ; justify-content: center; display: flex;">Student Application Management System</h1>
+        <h3 style="align-items: center ; justify-content: center; display: flex;">Register and manage student applications</h3>
+    </header>
+    <form id="studentform" class="form">
+        <div class="basic-details">
+     <strong> Name:</strong><input style="width:80%; margin-top:20px;" type="text" name="name" id="name" placeholder="Enter Name" required>
+      <strong> Email:</strong> <input style="width:80%;" type="email" name="email" id="email" placeholder="Enter Email" required>
+      <strong> DOB:</strong> <input style="width:80%;" type="date" name="dob" id="dob" placeholder="Enter Date of Birth" required>
+        </div>
+        <div class="gender-details">
+        <label for="male"><strong>Gender:</strong></label>
+        <input  type="radio" name="gender" id="male" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female" required>
+        <label for="female">Female</label>
+           <input type="radio" name="gender" id="other" value="other" required>
+        <label for="other">Other</label>
+        </div>
+        <div class="course">
+        <label for="course"><strong>Course:</strong></label>
+        <select style="width:80%; margin-top:20px; name="course" id="course" required>
+            <option value="">Select Course</option>
+            <option value="Web Development">Web Development</option>
+            <option value="UI/UX">UI/UX</option>
+            <option value="Python">Python</option>
+            <option value="Data Analytics">Data Analytics</option>
+            <option value="Mern Stack">Mern Stack</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+        </select>
+        </div>
+        <div class="skills">
+        <label for="skills"><strong>Skills:</strong></label>
+        <input type="checkbox" name="Skills" id="skills" value="HTML">
+        <label for="skills">HTML</label>
+        <input type="checkbox" name="Skills" id="skills" value="CSS">
+        <label for="skills">CSS</label>
+        <input type="checkbox" name="Skills" id="skills" value="JavaScript">
+        <label for="skills">JavaScript</label>
+          <input type="checkbox" name="Skills" id="skills" value="Git">
+        <label for="skills">Git</label>
+          <input type="checkbox" name="Skills" id="skills" value="React">
+        <label for="skills">React</label>
+          <input type="checkbox" name="Skills" id="skills" value="Node.js">
+        <label for="skills">Node.js</label>
+        </div>
+        <div class="about">
+        <label for="bio"><strong>About:</strong></label>
+        <textarea style="width:80%; margin-top:20px;" name="bio" id="bio" placeholder="Maximum 200 characters"></textarea>
+        <label for="profile-photo"><strong>Profile Photo:</strong></label>
+        <input type="file" name="profile-photo" id="profile-photo" accept="image/*">
+      </div>
+        <button type="submit"  class ="button" name="register">Register Student</button> 
+       <br>
+        <button type="reset" class ="button" name="reset">Reset Form</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
