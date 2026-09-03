@@ -89,19 +89,37 @@ function displayStudents() {
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
         deleteButton.classList.add("delete-student");
-        deleteButton.addEventListener("click", () => {
-            const studentIndex = students.findIndex((currentStudent) => currentStudent.id === student.id);
-
-            if (studentIndex !== -1) {
-                students.splice(studentIndex, 1);
-                displayStudents();
-            }
-        });
 
         card.append(photo, name, email, phone, dob, gender, course, skillsTitle, skills, aboutTitle, about, editButton, deleteButton);
         studentCardsContainer.appendChild(card);
     });
 }
+
+studentCardsContainer.addEventListener("click", (event) => {
+    const deleteButton = event.target.closest(".delete-student");
+
+    if (deleteButton === null) {
+        return;
+    }
+
+    const studentCard = event.target.closest(".student-card");
+    const studentId = Number(studentCard.getAttribute("data-id"));
+    const studentIndex = students.findIndex((student) => student.id === studentId);
+
+    if (studentIndex === -1) {
+        return;
+    }
+
+    const shouldDelete = confirm("Are you sure you want to delete this student?");
+
+    if (!shouldDelete) {
+        return;
+    }
+
+    students.splice(studentIndex, 1);
+    studentCard.remove();
+    updateStatistics();
+});
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
