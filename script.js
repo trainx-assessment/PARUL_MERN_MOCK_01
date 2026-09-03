@@ -2,6 +2,8 @@ const students = [];
 const form = document.getElementById("student-form");
 const submitButton = form.querySelector('button[type="submit"]');
 const studentCardsContainer = document.getElementById("student-cards-container");
+const studentSearch = document.getElementById("student-search");
+const courseFilter = document.getElementById("course-filter");
 let editingStudentId = null;
 
 function updateStatistics() {
@@ -45,8 +47,21 @@ function getNextStudentId() {
 function displayStudents() {
     studentCardsContainer.innerHTML = "";
     updateStatistics();
+    const searchText = studentSearch.value.toLowerCase();
+    const selectedCourse = courseFilter.value;
+    const matchingStudents = students.filter((student) => {
+        const nameMatches = student.name.toLowerCase().includes(searchText);
+        const courseMatches = selectedCourse === "" || student.course === selectedCourse;
 
-    students.forEach((student) => {
+        return nameMatches && courseMatches;
+    });
+
+    if (matchingStudents.length === 0 && students.length > 0) {
+        studentCardsContainer.innerText = "No students found";
+        return;
+    }
+
+    matchingStudents.forEach((student) => {
         const card = document.createElement("div");
         card.classList.add("student-card");
         card.setAttribute("data-id", student.id);
@@ -142,8 +157,7 @@ studentCardsContainer.addEventListener("click", (event) => {
     }
 
     students.splice(studentIndex, 1);
-    studentCard.remove();
-    updateStatistics();
+    displayStudents();
 });
 
 form.addEventListener("submit", (event) => {
@@ -319,6 +333,8 @@ form.addEventListener("submit", (event) => {
 });
 
 document.getElementById("student-name").addEventListener("input", () => document.getElementById("name-error").innerText = "");
+studentSearch.addEventListener("input", displayStudents);
+courseFilter.addEventListener("change", displayStudents);
 document.getElementById("student-email").addEventListener("input", () => document.getElementById("email-error").innerText = "");
 document.getElementById("student-phone").addEventListener("input", () => document.getElementById("phone-error").innerText = "");
 document.getElementById("student-dob").addEventListener("change", () => document.getElementById("dob-error").innerText = "");
