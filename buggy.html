@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 13 - Debugging Challenge</title>
+</head>
+<body>
+
+    <form id="studentForm">
+        <input
+            type="text"
+            id="studentName"
+            placeholder="Student Name"
+        >
+        <button type="submit">
+            Add Student
+        </button>
+    </form>
+
+    <div id="studentContainer"></div>
+
+    <script>
+        const form = document.querySelector("#studentForm");
+        const studentName = document.querySelector("#studentName");
+        const studentContainer = document.querySelector("#studentContainer");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = studentName.value;
+
+            if (name.trim() === "") {
+                alert("Name is required");
+                return;
+            }
+
+            const card = document.createElement("div");
+            card.classList.add("student-card");
+
+            const heading = document.createElement("h3");
+            heading.textContent = name.trim();
+
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+            deleteButton.classList.add("delete-btn");
+
+            card.appendChild(heading);
+            card.appendChild(deleteButton);
+
+            studentContainer.appendChild(card);
+
+            studentName.value = "";
+        });
+
+        studentContainer.addEventListener("click", function (event) {
+            if (event.target.classList.contains("delete-btn")) {
+                const card = event.target.closest(".student-card");
+                if (card) {
+                    card.remove();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
