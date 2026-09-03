@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <h1>Student Management System</h1>
+        <p>Register and manage students</p>
+      </div>
+    </header>
+
+    <main class="container app-shell">
+      <section class="card form-section" aria-labelledby="form-title">
+        <h2 id="form-title">Student Registration</h2>
+        <form id="studentForm" novalidate>
+          <div class="field-grid">
+            <div class="form-field">
+              <label for="studentName">Student Name</label>
+              <input type="text" id="studentName" name="studentName" />
+              <div class="error-message" data-error-for="studentName"></div>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" />
+              <div class="error-message" data-error-for="email"></div>
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Phone Number</label>
+              <input type="text" id="phone" name="phone" />
+              <div class="error-message" data-error-for="phone"></div>
+            </div>
+
+            <div class="form-field">
+              <label for="dob">Date of Birth</label>
+              <input type="date" id="dob" name="dob" />
+              <div class="error-message" data-error-for="dob"></div>
+            </div>
+
+            <div class="form-field">
+              <label>Gender</label>
+              <div class="radio-row" role="radiogroup" aria-label="Select gender">
+                <label class="option-item"><input type="radio" name="gender" value="Male" /> Male</label>
+                <label class="option-item"><input type="radio" name="gender" value="Female" /> Female</label>
+                <label class="option-item"><input type="radio" name="gender" value="Other" /> Other</label>
+              </div>
+              <div class="error-message" data-error-for="gender"></div>
+            </div>
+
+            <div class="form-field">
+              <label for="course">Course</label>
+              <select id="course" name="course">
+                <option value="Select Course">Select Course</option>
+                <option value="Web Development">Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Python">Python</option>
+                <option value="Data Analytics">Data Analytics</option>
+                <option value="MERN Stack">MERN Stack</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+              </select>
+              <div class="error-message" data-error-for="course"></div>
+            </div>
+
+            <div class="form-field full-width">
+              <label>Skills</label>
+              <div class="skill-list">
+                <label class="option-item"><input type="checkbox" name="skills" value="HTML" /> HTML</label>
+                <label class="option-item"><input type="checkbox" name="skills" value="CSS" /> CSS</label>
+                <label class="option-item"><input type="checkbox" name="skills" value="JavaScript" /> JavaScript</label>
+                <label class="option-item"><input type="checkbox" name="skills" value="Git" /> Git</label>
+                <label class="option-item"><input type="checkbox" name="skills" value="React" /> React</label>
+                <label class="option-item"><input type="checkbox" name="skills" value="Node.js" /> Node.js</label>
+              </div>
+              <div class="error-message" data-error-for="skills"></div>
+            </div>
+
+            <div class="form-field full-width">
+              <label for="about">About Student</label>
+              <textarea id="about" name="about" rows="5" maxlength="200"></textarea>
+              <div class="counter-row">
+                <span id="charCounter">0 / 200</span>
+              </div>
+              <div class="error-message" data-error-for="about"></div>
+            </div>
+
+            <div class="form-field full-width">
+              <label for="profilePhoto">Profile Photo</label>
+              <input type="file" id="profilePhoto" name="profilePhoto" accept=".jpg,.jpeg,.png,image/jpeg,image/png" />
+              <div class="error-message" data-error-for="profilePhoto"></div>
+            </div>
+          </div>
+
+          <div class="button-row">
+            <button type="submit" id="submitButton">Register Student</button>
+            <button type="button" id="resetButton" class="secondary-btn">Reset Form</button>
+          </div>
+        </form>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 Student Management System</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
