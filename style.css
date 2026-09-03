@@ -1,0 +1,222 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff3e0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
+}
+
+header {
+    width: 600px;
+    max-width: 100%;
+    padding: 16px 36px;
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+#title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #e65100;
+    text-align: center;
+}
+
+form {
+    background: #fff;
+    width: 600px;
+    max-width: 100%;
+    border-radius: 12px;
+    padding: 32px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #333;
+    background: #f9f9f9;
+    transition: border-color 0.2s;
+    outline: none;
+}
+
+
+
+textarea {
+    min-height: 100px;
+}
+
+section p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #444;
+}
+
+section:has(input[type="radio"]) label,
+section:has(input[type="checkbox"]) label {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    color: #555;
+    cursor: pointer;
+}
+
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #fb8c00;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    padding: 8px 0;
+    font-size: 0.9rem;
+    color: #555;
+    border: none;
+    background: transparent;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #fb8c00;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    animation-name: hoverEffect;
+    animation-duration: 2s;
+}
+
+button[type="submit"]:hover {
+    background: #e65100;
+}
+
+@keyframes hoverEffect {
+    0% {
+        color: rgb(223, 125, 125);
+    }
+
+    100% {
+        color: rgb(156, 252, 156);
+    }
+}
+
+.cards {
+    width: 600px;
+    max-width: 100%;
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+
+.card h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.card p {
+    font-size: 0.78rem;
+    color: #666;
+    margin-bottom: 2px;
+}
+
+.card .about {
+    margin-top: 6px;
+    color: #888;
+    font-style: italic;
+}
+
+.count-bar {
+    width: 600px;
+    max-width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.88rem;
+    color: #555;
+}
+
+.count-bar strong { color: #e65100; font-size: 1rem; }
+
+.error {
+    font-size: 0.78rem;
+    color: #e53e3e;
+}
+
+.student-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px 20px;
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.student-card img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.student-card h3 { font-size: 0.9rem; font-weight: 700; color: #333; margin-bottom: 6px; }
+.student-card p { font-size: 0.78rem; color: #666; margin-bottom: 2px; }
+.student-card .about { margin-top: 6px; color: #888; font-style: italic; }
+
+.delete-btn {
+    margin-top: 10px;
+    padding: 6px 14px;
+    background: #fff3e0;
+    color: #e65100;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.delete-btn:hover { background: #ffe0b2; }
