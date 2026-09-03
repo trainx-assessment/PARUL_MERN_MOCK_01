@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT MS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1><u>STUDENT APPLICATION MANAGEMENT SYSTEM</u></h1>
+        <br>
+        <h3><i>Register and manage student applications</i></h3>
+        <br>
+    </header>
+    <section class="display-block">
+        <form>
+            <div class="column">
+                <div class="one">
+                    <label>Student Name :</label>
+                        <input
+                            type="text"
+                            name="studentName"
+                            placeholder="type your name"
+                            required
+                        >
+                    <br>
+                    <label>Student phone no. :</label>
+                        <input
+                            type="text"
+                            name="phone"
+                            placeholder="enter your phone"
+                            required
+                        >
+                    <br>
+                    <label>Gender :</label>
+                    <select name="gender">
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <br>
+                    <br>
+                </div>
+            <div class="two">
+                <label>Student Email :</label>
+                    <input
+                            type="email"
+                            name="studentEmail"
+                            placeholder="enter your email"
+                            required
+                    >
+                <br>
+                <label>Date of Birth :</label>
+                    <input
+                        type="date"
+                        name="dob"
+                        required
+                    >
+                <br>
+                <label>Select Course :</label>
+                    <select name="course">
+                        <option value="">Select Status</option>
+                        <option value="1">Web Development</option>
+                        <option value="2">UI/UX</option>
+                        <option value="3">Python</option>
+                        <option value="4">Data Analytics</option>
+                        <option value="5">MERN Stack</option>
+                        <option value="6">Cloud computing</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="three">
+                <label>Skills :</label>
+                <select name="Skills">
+                    <option value="">Select Skills</option>
+                    <option value="1">HTML</option>
+                    <option value="2">CSS</option>
+                    <option value="3">JavaScript</option>
+                    <option value="4">Node.js</option>
+                    <option value="5">Git</option>
+                    <option value="6">React</option>
+                </select>
+                <br>
+                <label>About :</label>
+                <textarea maxlength="200"> </textarea>
+                <br>
+                <label>Upload Photo :</label>
+                    <input
+                    type="file"
+                    >
+                <br>
+            </div>
+            
+        <section class="form-buttons">
+            <button class="register-button">Register Student</button>
+            <button class="reset-button">Reset Form</button>
+        </section>
+
+        <br>
+        <br>
+    </form>
+    </section>
+    
+    <section class="studentStats"></section>
+    <main></main>
+    <br>
+
+    <footer>
+        <h6>Contact Us : <u>LinkedIn</u> <u>GitHub</u> <u>Twitter</u>     </h6>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
