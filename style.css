@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Trebuchet MS", sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+.header{
+    background-color: #374151;
+    color: white;
+    text-align: left;
+    padding: 35px 20px;
+}
+.header .container {
+    max-width: 1000px;
+}
+.header h1 {
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+.header p {
+    color: #d1d5db;
+}
+section {
+    padding: 30px 0;
+}
+section h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #374151;
+}
+#studentForm {
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 6px;
+    border-top: 4px solid #16a085;
+   display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group label,
+.field-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.full-width {
+    grid-column: 1 / -1;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 15px;
+}
+.form-group input[type="file"] {
+    padding: 10px;
+    border: 1px dashed #94a3b8;
+    border-radius: 4px;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #16a085;
+    box-shadow: 0 0 4px rgba(22, 160, 133, 0.3);
+}
+.form-group textarea {
+    resize: vertical;
+}
+.form-group small {
+    margin-top: 5px;
+}
+#characterCounter {
+    color: #64748b;
+    font-size: 13px;
+}
+.error-message {
+    color: #dc2626;
+    font-size: 13px;
+    min-height: 16px;
+}
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+.radio-group label,
+.checkbox-group label {
+    font-weight: normal;
+}
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+.button-group {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+}
+.button-group button {
+    padding: 11px 22px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.register-btn {
+    background-color: #16a085;
+    color: white;
+}
+.register-btn:hover {
+    background-color: #12806b;
+}
+.reset-btn {
+    background-color: #64748b;
+    color: white;
+}
+.reset-btn:hover {
+    background-color: #475569;
+}
+.statistics-section {
+    background-color: #f0f0f0;
+}
+#statisticsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.stat-card {
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+#searchFilterContainer {
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+#studentCardsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.student-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+}
+.student-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.footer {
+    background-color: #374151;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+@media (max-width: 768px) {
+    #studentForm {
+        grid-template-columns: 1fr;
+        }
+    .full-width {
+        grid-column: auto;
+    }
+    #statisticsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #studentCardsContainer {
+        grid-template-columns: repeat(2, 1fr);   }
+}
+@media (max-width: 480px) {
+.header {
+        text-align: center;
+    }
+    .header h1 {
+        font-size: 24px;
+    }
+    section h2 {
+        text-align: center;
+    }
+    #studentForm {
+        padding: 18px;
+    }
+    .radio-group {
+        flex-direction: column;
+                gap: 10px; }
+    .checkbox-group {
+   flex-direction: column;
+        gap: 10px;}
+    .button-group {
+        flex-direction: column;
+}
+    .button-group button {
+        width: 100%;    }
+    #statisticsContainer {
+        grid-template-columns: 1fr;}
+#studentCardsContainer {
+              grid-template-columns: 1fr;
+    }
+}
+#searchStudent {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 15px;
+}
+#searchStudent:focus {
+    outline: none;
+    border-color: #555;
+}
+
+
+

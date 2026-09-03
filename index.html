@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <h1>Student Management System</h1>
+        <p>Register and manage student applications</p>
+    </div>
+</header>
+
+<main>
+    <section class="register-section">
+        <div class="container">
+                  <h2>Student Registration</h2>
+<form id="studentForm" novalidate>
+
+                <div class="form-group">
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName" name="studentName" placeholder="Enter student name">
+                    <small class="error-message" id="nameError"></small>
+                </div>
+                <div class="form-group">
+                    <label for="studentEmail">Email Address</label>
+                    <input type="email" id="studentEmail" name="studentEmail" placeholder="Enter email address">
+                    <small class="error-message" id="emailError"></small>
+                </div>
+                <div class="form-group">
+                    <label for="studentPhone">Phone Number</label>
+                    <input type="text" id="studentPhone" name="studentPhone" placeholder="Enter phone number">
+                    <small class="error-message" id="phoneError"></small>
+                </div>
+                <div class="form-group">
+                    <label for="dateOfBirth">Date of Birth</label>
+                    <input type="date" id="dateOfBirth" name="dateOfBirth">
+                    <small class="error-message" id="dobError"></small>
+                </div>
+                <div class="form-group">
+                    <p class="field-label">Gender</p>
+
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="gender" value="Male"> Male
+                        </label>
+           <label>
+                            <input type="radio" name="gender" value="Female"> Female
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender" value="Other"> Other
+                        </label>
+                    </div>
+                    <small class="error-message" id="genderError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course</label>
+
+                    <select id="course" name="course">
+                        <option value="">Select Course</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="UI/UX">UI/UX</option>
+                        <option value="Python">Python</option>
+                        <option value="Data Analytics">Data Analytics</option>
+                        <option value="MERN Stack">MERN Stack</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                    </select>
+
+                    <small class="error-message" id="courseError"></small>
+                </div>
+
+                <div class="form-group full-width">
+                    <p class="field-label">Skills</p>
+
+                    <div class="checkbox-group">
+                        <label>
+                                  <input type="checkbox" name="skills" value="HTML"> HTML
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="skills" value="CSS"> CSS
+                        </label>
+                        <label>
+                            <input type="checkbox" name="skills" value="JavaScript"> JavaScript
+                        </label>
+                        <label>
+                            <input type="checkbox" name="skills" value="Git"> Git
+                        </label>
+                        <label>
+                            <input type="checkbox" name="skills" value="React"> React
+                        </label>
+                          <label>
+                            <input type="checkbox" name="skills" value="Node.js"> Node.js
+                        </label>
+                    </div>
+                    <small class="error-message" id="skillsError"></small>
+                </div>
+                <div class="form-group full-width">
+                    <label for="aboutStudent">About Student</label>
+                    <textarea id="aboutStudent" name="aboutStudent" placeholder="Write something about the student..." maxlength="200" rows="5"></textarea>
+<small id="characterCounter">0 / 200</small>
+                    <small class="error-message" id="aboutError"></small>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="profilePhoto">Profile Photo</label>
+                    <input type="file" id="profilePhoto" name="profilePhoto" accept=".jpg,.jpeg,.png">
+                    <small class="error-message" id="photoError"></small>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="register-btn">Register Student</button>
+                    <button type="reset" class="reset-btn">Reset Form</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="statistics-section">
+        <div class="container">
+            <h2>Student Statistics</h2>
+
+            <div id="statisticsContainer"></div>
+        </div>
+    </section>
+    <section class="search-filter">
+        <div class="container">
+            <h2>Search and Filter Students</h2>
+            <div id="searchFilterContainer"></div>
+        </div>
+    </section>
+    <section class="students-section">
+        <div class="container">
+            <h2>Student Applications</h2>
+            <div id="studentCardsContainer">
+                 <input type="text" id="searchStudent" placeholder="Search student by name...">
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2026 Student Management System. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
