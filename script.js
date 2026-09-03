@@ -10,13 +10,14 @@ const course = document.getElementById("course");
 const about = document.getElementById("about");
 const profilePhoto = document.getElementById("profile-photo");
 
-const studentCardsContainer = document.getElementById(
-    "student-cards-container"
-);
+const studentCardsContainer =
+    document.getElementById("student-cards-container");
 
-const statisticsContainer = document.getElementById(
-    "student-statistics"
-);
+const statisticsContainer =
+    document.getElementById("student-statistics");
+
+const searchInput =
+    document.getElementById("search-input");
 
 let editingStudentId = null;
 
@@ -24,16 +25,21 @@ let editingStudentId = null;
 // ==================== ERROR FUNCTIONS ====================
 
 function showError(element, message) {
+
     removeError(element);
 
     const error = document.createElement("small");
+
     error.classList.add("error-message");
+
     error.textContent = message;
 
     element.parentElement.appendChild(error);
 }
 
+
 function removeError(element) {
+
     const oldError =
         element.parentElement.querySelector(".error-message");
 
@@ -42,8 +48,11 @@ function removeError(element) {
     }
 }
 
+
 function clearErrors() {
-    const errors = document.querySelectorAll(".error-message");
+
+    const errors =
+        document.querySelectorAll(".error-message");
 
     errors.forEach(function (error) {
         error.remove();
@@ -51,70 +60,140 @@ function clearErrors() {
 }
 
 
-// ==================== ABOUT COUNTER ====================
+// ==================== ABOUT CHARACTER COUNTER ====================
 
 about.addEventListener("input", function () {
-    let counter = document.getElementById("about-counter");
+
+    let counter =
+        document.getElementById("about-counter");
 
     if (!counter) {
+
         counter = document.createElement("small");
+
         counter.id = "about-counter";
+
         about.parentElement.appendChild(counter);
     }
 
-    counter.textContent = `${about.value.length} / 200`;
+    counter.textContent =
+        `${about.value.length} / 200`;
 });
 
 
 // ==================== DISPLAY STUDENTS ====================
 
-function displayStudents() {
+function displayStudents(studentList = students) {
 
     studentCardsContainer.innerHTML = "";
 
-    students.forEach(function (student) {
+    if (studentList.length === 0) {
 
-        const card = document.createElement("div");
+        const message =
+            document.createElement("p");
+
+        message.textContent = "No students found";
+
+        studentCardsContainer.appendChild(message);
+
+        return;
+    }
+
+
+    studentList.forEach(function (student) {
+
+        const card =
+            document.createElement("div");
+
         card.classList.add("student-card");
-        card.setAttribute("data-id", student.id);
 
-        const photo = document.createElement("img");
+        card.setAttribute(
+            "data-id",
+            student.id
+        );
+
+
+        const photo =
+            document.createElement("img");
+
         photo.src = student.photo;
-        photo.alt = student.name + " profile photo";
 
-        const name = document.createElement("h3");
-        name.textContent = student.name;
+        photo.alt =
+            student.name + " profile photo";
 
-        const emailText = document.createElement("p");
-        emailText.textContent = "Email: " + student.email;
 
-        const phoneText = document.createElement("p");
-        phoneText.textContent = "Phone: " + student.phone;
+        const name =
+            document.createElement("h3");
 
-        const dobText = document.createElement("p");
-        dobText.textContent = "DOB: " + student.dob;
+        name.textContent =
+            student.name;
 
-        const genderText = document.createElement("p");
-        genderText.textContent = "Gender: " + student.gender;
 
-        const courseText = document.createElement("p");
-        courseText.textContent = "Course: " + student.course;
+        const emailText =
+            document.createElement("p");
 
-        const skillsText = document.createElement("p");
+        emailText.textContent =
+            "Email: " + student.email;
+
+
+        const phoneText =
+            document.createElement("p");
+
+        phoneText.textContent =
+            "Phone: " + student.phone;
+
+
+        const dobText =
+            document.createElement("p");
+
+        dobText.textContent =
+            "DOB: " + student.dob;
+
+
+        const genderText =
+            document.createElement("p");
+
+        genderText.textContent =
+            "Gender: " + student.gender;
+
+
+        const courseText =
+            document.createElement("p");
+
+        courseText.textContent =
+            "Course: " + student.course;
+
+
+        const skillsText =
+            document.createElement("p");
+
         skillsText.textContent =
-            "Skills: " + student.skills.join(", ");
+            "Skills: " +
+            student.skills.join(", ");
 
-        const aboutText = document.createElement("p");
+
+        const aboutText =
+            document.createElement("p");
+
         aboutText.textContent =
             "About: " + student.about;
 
-        const editButton = document.createElement("button");
+
+        const editButton =
+            document.createElement("button");
+
         editButton.textContent = "Edit";
+
         editButton.classList.add("edit-btn");
 
-        const deleteButton = document.createElement("button");
+
+        const deleteButton =
+            document.createElement("button");
+
         deleteButton.textContent = "Delete";
+
         deleteButton.classList.add("delete-btn");
+
 
         card.appendChild(photo);
         card.appendChild(name);
@@ -128,6 +207,7 @@ function displayStudents() {
         card.appendChild(editButton);
         card.appendChild(deleteButton);
 
+
         studentCardsContainer.appendChild(card);
     });
 }
@@ -139,11 +219,15 @@ function updateStatistics() {
 
     statisticsContainer.innerHTML = "";
 
-    const total = document.createElement("p");
+
+    const total =
+        document.createElement("p");
+
     total.textContent =
         "Total Students: " + students.length;
 
     statisticsContainer.appendChild(total);
+
 
     const courses = [
         "Web Development",
@@ -154,18 +238,27 @@ function updateStatistics() {
         "Cloud Computing"
     ];
 
+
     courses.forEach(function (courseName) {
 
-        const count = students.filter(function (student) {
-            return student.course === courseName;
-        }).length;
+        const count =
+            students.filter(function (student) {
 
-        const courseStat = document.createElement("p");
+                return student.course === courseName;
+
+            }).length;
+
+
+        const courseStat =
+            document.createElement("p");
 
         courseStat.textContent =
             courseName + ": " + count;
 
-        statisticsContainer.appendChild(courseStat);
+
+        statisticsContainer.appendChild(
+            courseStat
+        );
     });
 }
 
@@ -182,77 +275,106 @@ form.addEventListener("submit", function (event) {
 
 
     // Student Name
-    const nameValue = studentName.value.trim();
+    const nameValue =
+        studentName.value.trim();
+
 
     if (nameValue === "") {
+
         showError(
             studentName,
             "Student name is required."
         );
+
         isValid = false;
+
     }
     else if (
         nameValue.length < 3 ||
         nameValue.length > 40
     ) {
+
         showError(
             studentName,
             "Name must be between 3 and 40 characters."
         );
+
         isValid = false;
+
     }
-    else if (!/^[A-Za-z ]+$/.test(nameValue)) {
+    else if (
+        !/^[A-Za-z ]+$/.test(nameValue)
+    ) {
+
         showError(
             studentName,
             "Name can contain only letters and spaces."
         );
+
         isValid = false;
     }
 
 
     // Email
-    const emailValue = email.value.trim();
+    const emailValue =
+        email.value.trim();
+
 
     const emailRegex =
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+
     if (emailValue === "") {
+
         showError(
             email,
             "Email is required."
         );
+
         isValid = false;
+
     }
     else if (!emailRegex.test(emailValue)) {
+
         showError(
             email,
             "Enter a valid email address."
         );
+
         isValid = false;
     }
 
 
     // Phone
-    const phoneValue = phone.value.trim();
+    const phoneValue =
+        phone.value.trim();
+
 
     if (phoneValue === "") {
+
         showError(
             phone,
             "Phone number is required."
         );
+
         isValid = false;
+
     }
     else if (!/^\d{10}$/.test(phoneValue)) {
+
         showError(
             phone,
             "Phone number must contain exactly 10 digits."
         );
+
         isValid = false;
     }
 
 
     // DOB
-    const dobValue = dob.value;
+    const dobValue =
+        dob.value;
+
 
     if (dobValue === "") {
 
@@ -266,8 +388,12 @@ form.addEventListener("submit", function (event) {
     }
     else {
 
-        const selectedDate = new Date(dobValue);
-        const today = new Date();
+        const selectedDate =
+            new Date(dobValue);
+
+        const today =
+            new Date();
+
 
         if (selectedDate > today) {
 
@@ -285,19 +411,23 @@ form.addEventListener("submit", function (event) {
                 today.getFullYear() -
                 selectedDate.getFullYear();
 
+
             const monthDifference =
                 today.getMonth() -
                 selectedDate.getMonth();
+
 
             if (
                 monthDifference < 0 ||
                 (
                     monthDifference === 0 &&
-                    today.getDate() < selectedDate.getDate()
+                    today.getDate() <
+                    selectedDate.getDate()
                 )
             ) {
                 age--;
             }
+
 
             if (age < 15) {
 
@@ -318,12 +448,14 @@ form.addEventListener("submit", function (event) {
             'input[name="gender"]:checked'
         );
 
+
     if (!selectedGender) {
 
         const genderGroup =
             document.querySelector(
                 'input[name="gender"]'
             ).parentElement.parentElement;
+
 
         showError(
             genderGroup.querySelector("p"),
@@ -335,7 +467,9 @@ form.addEventListener("submit", function (event) {
 
 
     // Course
-    const courseValue = course.value;
+    const courseValue =
+        course.value;
+
 
     if (courseValue === "") {
 
@@ -354,12 +488,14 @@ form.addEventListener("submit", function (event) {
             'input[name="skills"]:checked'
         );
 
+
     if (selectedSkills.length === 0) {
 
         const skillsGroup =
             document.querySelector(
                 'input[name="skills"]'
             ).parentElement.parentElement;
+
 
         showError(
             skillsGroup.querySelector("p"),
@@ -371,7 +507,9 @@ form.addEventListener("submit", function (event) {
 
 
     // About
-    const aboutValue = about.value.trim();
+    const aboutValue =
+        about.value.trim();
+
 
     if (aboutValue === "") {
 
@@ -419,7 +557,9 @@ form.addEventListener("submit", function (event) {
         }
         else {
 
-            const file = profilePhoto.files[0];
+            const file =
+                profilePhoto.files[0];
+
 
             if (!file.type.startsWith("image/")) {
 
@@ -431,12 +571,15 @@ form.addEventListener("submit", function (event) {
                 isValid = false;
             }
         }
+
     }
     else {
 
         if (profilePhoto.files.length > 0) {
 
-            const file = profilePhoto.files[0];
+            const file =
+                profilePhoto.files[0];
+
 
             if (!file.type.startsWith("image/")) {
 
@@ -457,37 +600,58 @@ form.addEventListener("submit", function (event) {
     }
 
 
-    // ==================== SKILLS ====================
+    // ==================== GET SKILLS ====================
 
     const skills = [];
 
+
     selectedSkills.forEach(function (skill) {
+
         skills.push(skill.value);
+
     });
 
 
-    // ==================== EDIT STUDENT ====================
+    // ==================== UPDATE EXISTING STUDENT ====================
 
     if (editingStudentId !== null) {
 
         const student =
             students.find(function (student) {
+
                 return student.id === editingStudentId;
+
             });
+
 
         if (student) {
 
-            student.name = nameValue;
-            student.email = emailValue;
-            student.phone = phoneValue;
-            student.dob = dobValue;
-            student.gender = selectedGender.value;
-            student.course = courseValue;
-            student.skills = skills;
-            student.about = aboutValue;
+            student.name =
+                nameValue;
+
+            student.email =
+                emailValue;
+
+            student.phone =
+                phoneValue;
+
+            student.dob =
+                dobValue;
+
+            student.gender =
+                selectedGender.value;
+
+            student.course =
+                courseValue;
+
+            student.skills =
+                skills;
+
+            student.about =
+                aboutValue;
 
 
-            // Change photo only if new photo selected
+            // Update photo only if new photo selected
             if (profilePhoto.files.length > 0) {
 
                 student.photo =
@@ -497,33 +661,40 @@ form.addEventListener("submit", function (event) {
             }
 
 
-            // Display updated student
             displayStudents();
 
-
-            // Update statistics
             updateStatistics();
 
 
-            alert("Student updated successfully!");
+            alert(
+                "Student updated successfully!"
+            );
 
 
-            // Reset editing mode
             editingStudentId = null;
+
 
             form.reset();
 
+
             document.querySelector(
                 'button[type="submit"]'
-            ).textContent = "Register Student";
+            ).textContent =
+                "Register Student";
 
 
             const counter =
-                document.getElementById("about-counter");
+                document.getElementById(
+                    "about-counter"
+                );
+
 
             if (counter) {
-                counter.textContent = "0 / 200";
+
+                counter.textContent =
+                    "0 / 200";
             }
+
 
             clearErrors();
 
@@ -536,49 +707,72 @@ form.addEventListener("submit", function (event) {
 
     const student = {
 
-        id: students.length > 0
-            ? students[students.length - 1].id + 1
-            : 1,
+        id:
+            students.length > 0
+                ? students[
+                    students.length - 1
+                ].id + 1
+                : 1,
 
-        name: nameValue,
+        name:
+            nameValue,
 
-        email: emailValue,
+        email:
+            emailValue,
 
-        phone: phoneValue,
+        phone:
+            phoneValue,
 
-        dob: dobValue,
+        dob:
+            dobValue,
 
-        gender: selectedGender.value,
+        gender:
+            selectedGender.value,
 
-        course: courseValue,
+        course:
+            courseValue,
 
-        skills: skills,
+        skills:
+            skills,
 
-        about: aboutValue,
+        about:
+            aboutValue,
 
-        photo: URL.createObjectURL(
-            profilePhoto.files[0]
-        )
+        photo:
+            URL.createObjectURL(
+                profilePhoto.files[0]
+            )
     };
 
 
     students.push(student);
 
+
     displayStudents();
 
     updateStatistics();
 
-    alert("Student registered successfully!");
+
+    alert(
+        "Student registered successfully!"
+    );
 
 
     form.reset();
 
+
     const counter =
-        document.getElementById("about-counter");
+        document.getElementById(
+            "about-counter"
+        );
+
 
     if (counter) {
-        counter.textContent = "0 / 200";
+
+        counter.textContent =
+            "0 / 200";
     }
+
 
     clearErrors();
 });
@@ -586,7 +780,8 @@ form.addEventListener("submit", function (event) {
 
 // ==================== TASK 8 + TASK 9 ====================
 
-// One click listener on student card container
+// ONE click listener on student card container
+
 studentCardsContainer.addEventListener(
     "click",
     function (event) {
@@ -595,37 +790,64 @@ studentCardsContainer.addEventListener(
         // ==================== DELETE ====================
 
         if (
-            event.target.classList.contains("delete-btn")
+            event.target.classList.contains(
+                "delete-btn"
+            )
         ) {
 
             const card =
-                event.target.closest(".student-card");
+                event.target.closest(
+                    ".student-card"
+                );
+
 
             const studentId =
                 Number(card.dataset.id);
+
 
             const confirmDelete =
                 confirm(
                     "Are you sure you want to delete this student?"
                 );
 
+
             if (!confirmDelete) {
                 return;
             }
 
+
             const studentIndex =
-                students.findIndex(function (student) {
-                    return student.id === studentId;
-                });
+                students.findIndex(
+                    function (student) {
+
+                        return (
+                            student.id ===
+                            studentId
+                        );
+
+                    }
+                );
+
 
             if (studentIndex !== -1) {
 
-                students.splice(studentIndex, 1);
+                students.splice(
+                    studentIndex,
+                    1
+                );
+
 
                 card.remove();
 
+
                 updateStatistics();
+
+
+                // If search is active,
+                // refresh search results
+                performSearch();
             }
+
 
             return;
         }
@@ -634,21 +856,32 @@ studentCardsContainer.addEventListener(
         // ==================== EDIT ====================
 
         if (
-            event.target.classList.contains("edit-btn")
+            event.target.classList.contains(
+                "edit-btn"
+            )
         ) {
 
             const card =
-                event.target.closest(".student-card");
+                event.target.closest(
+                    ".student-card"
+                );
+
 
             const studentId =
                 Number(card.dataset.id);
 
 
-            // Find student
             const student =
-                students.find(function (student) {
-                    return student.id === studentId;
-                });
+                students.find(
+                    function (student) {
+
+                        return (
+                            student.id ===
+                            studentId
+                        );
+
+                    }
+                );
 
 
             if (!student) {
@@ -657,12 +890,23 @@ studentCardsContainer.addEventListener(
 
 
             // Fill form
-            studentName.value = student.name;
-            email.value = student.email;
-            phone.value = student.phone;
-            dob.value = student.dob;
-            course.value = student.course;
-            about.value = student.about;
+            studentName.value =
+                student.name;
+
+            email.value =
+                student.email;
+
+            phone.value =
+                student.phone;
+
+            dob.value =
+                student.dob;
+
+            course.value =
+                student.course;
+
+            about.value =
+                student.about;
 
 
             // Gender
@@ -671,11 +915,13 @@ studentCardsContainer.addEventListener(
                     'input[name="gender"]'
                 );
 
+
             genderRadioButtons.forEach(
                 function (radio) {
 
                     radio.checked =
-                        radio.value === student.gender;
+                        radio.value ===
+                        student.gender;
                 }
             );
 
@@ -685,6 +931,7 @@ studentCardsContainer.addEventListener(
                 document.querySelectorAll(
                     'input[name="skills"]'
                 );
+
 
             skillCheckboxes.forEach(
                 function (checkbox) {
@@ -697,32 +944,44 @@ studentCardsContainer.addEventListener(
             );
 
 
-            // Save editing student ID
-            editingStudentId = student.id;
+            // Store editing ID
+            editingStudentId =
+                student.id;
 
 
-            // Change button text
+            // Change submit button
             const submitButton =
                 document.querySelector(
                     'button[type="submit"]'
                 );
 
+
             submitButton.textContent =
                 "Update Student";
 
 
-            // Update character counter
+            // Character counter
             let counter =
-                document.getElementById("about-counter");
+                document.getElementById(
+                    "about-counter"
+                );
+
 
             if (!counter) {
 
-                counter = document.createElement("small");
+                counter =
+                    document.createElement(
+                        "small"
+                    );
 
-                counter.id = "about-counter";
+                counter.id =
+                    "about-counter";
 
-                about.parentElement.appendChild(counter);
+                about.parentElement.appendChild(
+                    counter
+                );
             }
+
 
             counter.textContent =
                 `${about.value.length} / 200`;
@@ -737,35 +996,121 @@ studentCardsContainer.addEventListener(
 );
 
 
+// ==================== TASK 10: SEARCH ====================
+
+function performSearch() {
+
+    const searchText =
+        searchInput.value
+            .trim()
+            .toLowerCase();
+
+
+    if (searchText === "") {
+
+        displayStudents(students);
+
+        return;
+    }
+
+
+    const filteredStudents =
+        students.filter(
+            function (student) {
+
+                return student.name
+                    .toLowerCase()
+                    .includes(searchText);
+
+            }
+        );
+
+
+    displayStudents(filteredStudents);
+}
+
+
+// Search while typing
+searchInput.addEventListener(
+    "input",
+    function () {
+
+        performSearch();
+
+    }
+);
+
+
 // ==================== REMOVE ERRORS ====================
 
-studentName.addEventListener("input", function () {
-    removeError(studentName);
-});
+studentName.addEventListener(
+    "input",
+    function () {
 
-email.addEventListener("input", function () {
-    removeError(email);
-});
+        removeError(studentName);
 
-phone.addEventListener("input", function () {
-    removeError(phone);
-});
+    }
+);
 
-dob.addEventListener("change", function () {
-    removeError(dob);
-});
 
-course.addEventListener("change", function () {
-    removeError(course);
-});
+email.addEventListener(
+    "input",
+    function () {
 
-about.addEventListener("input", function () {
-    removeError(about);
-});
+        removeError(email);
 
-profilePhoto.addEventListener("change", function () {
-    removeError(profilePhoto);
-});
+    }
+);
+
+
+phone.addEventListener(
+    "input",
+    function () {
+
+        removeError(phone);
+
+    }
+);
+
+
+dob.addEventListener(
+    "change",
+    function () {
+
+        removeError(dob);
+
+    }
+);
+
+
+course.addEventListener(
+    "change",
+    function () {
+
+        removeError(course);
+
+    }
+);
+
+
+about.addEventListener(
+    "input",
+    function () {
+
+        removeError(about);
+
+    }
+);
+
+
+profilePhoto.addEventListener(
+    "change",
+    function () {
+
+        removeError(profilePhoto);
+
+    }
+);
 
 
 // ==================== INITIAL STATISTICS ====================
