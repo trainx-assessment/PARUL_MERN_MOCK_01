@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NavBar / header -->
+     <header>
+        <nav class="navbar">
+            <h3>Student Application Management System</h3>
+            <p>Register and manage student applications</p>
+        </nav>
+     </header>
+
+     <!-- Student Registration Form -->
+     <main class="Register">
+        <form class="studentdetails">
+           <div class="col1">
+             <div class="forminfo1">
+                <label for="Name">Name</label>
+                <input type="title" placeholder="Enter Student Name" class="name" required>
+            </div>
+            <div class="forminfo2">
+                <label for="Email">Email</label>
+                <input type="Email" placeholder="Enter Student Email" class="email" required>
+            </div>
+           </div>
+            <div class="col2">
+                <div class="forminfo3">
+                <label for="PhoneNumber">Phone Number</label>
+                <input type="number" placeholder="Enter Phone Number" class="phone" required>
+            </div>
+            <div class="forminfo4">
+                <label for="birthdate">Date of Birth</label>
+                <input type="date" placeholder="Enter birthdate" class="dob" required>
+            </div>
+            </div>
+            <div class="col3">
+                <div class="forminfo5">
+                 <label for="Gender">Gender</label>
+                 <div class="genderoption" class="gender">
+                    <input type="radio">Male</input>
+                 <input type="radio">Female</input>
+                 <input type="radio">Other</input>
+                 </div>
+            </div>
+            <div class="forminfo6">
+                <label for="Course">Course</label>
+                <select class="course">
+                    <option>Select Course</option>
+                    <option>Web Development</option>
+                    <option>UI/UX</option>
+                    <option>Python</option>
+                    <option>Data Analytics</option>
+                    <option>MERN Stack</option>
+                    <option>Cloud Computing</option>
+                </select>
+            </div>
+            </div>
+            <div class="forminfo7">
+                <label for="Skills">Skills</label>
+                    <div class="skillsection">
+                        <input type="checkbox"><p>html</p>
+                    <input type="checkbox"><p>CSS</p>
+                    <input type="checkbox"><p></p>JavaScrip</p>
+                    <input type="checkbox"><p>Git</p>
+                    <input type="checkbox"><p>React</p>
+                    <input type="checkbox"><p>Node.js</p>
+               
+                    </div>
+            </div>
+            <div class="forminfo8">
+                <label for="About">About Student</label>
+                <input type="text" placeholder="About Student(Use Max 200 characters)" class="about">
+            </div>
+            <div class="forminfo9">
+                <label for="photo">Profile Photo</label>
+                <input type="file">
+            </div>
+
+            <div class="btn">
+            <button type="submit" class="submit-btn">Submit</button>
+            <button type="reset" class="reset-btn">reset</button>
+            </div>
+        </form>
+
+        <div class="saveinfo">
+            <h3>Student Details</h3>
+            <div class="container1">
+                <h3 class="in1"></h3>
+                <h3 class="in2"></h3>
+                <h3 class="in2"></h3>
+                <h3 class="in3"></h3>
+                <h3 class="in4"></h3>
+                <h3 class="in5"></h3>
+                <h3 class="in6"></h3>
+                <h3></h3>
+            </div>
+        </div>
+     </main>
+
+
+    <script src="scrpit.js"></script>
+</body>
+</html>
