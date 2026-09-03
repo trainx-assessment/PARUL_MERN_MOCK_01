@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div>
+        <h1>Student Application Management System</h1>
+        <p class="subtitle">Register and manage student applications</p>
+      </div>
+      <button id="themeToggleBtn" type="button" class="btn btn-secondary">Dark Mode</button>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <section class="card-section">
+      <h2 id="formHeaderTitle">Register Student</h2>
+      <form id="studentForm" novalidate>
+        
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="studentName">Student Name </label>
+            <input type="text" id="studentName" placeholder="Name">
+            <span class="error-msg" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="studentEmail">Email </label>
+            <input type="email" id="studentEmail" placeholder="email">
+            <span class="error-msg" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="studentPhone number">Phone number</label>
+            <input type="text" id="studentPhone" placeholder="Phone number">
+            <span class="error-msg" id="number Error"></span>
+          </div>
+          <div class="form-group">
+            <label for="Student-Date-of-birth">DOB</label>
+            <input type="Date" id="studentDob" placeholder="DOB">
+            <span class="error-msg" id="DOBError"></span>
+          </div>
+          <div class="form-group">
+            <label>Gender </label>
+            <div class="radio-group">
+              <label><input type="radio" name="gender" value="Male"> Male</label>
+              <label><input type="radio" name="gender" value="Female"> Female</label>
+              <label><input type="radio" name="gender" value="Other"> Other</label>
+            </div>
+            <span class="error-msg" id="genderError"></span>
+          </div>
+          <div class="form-group">
+            <label for="studentCourse">Course</label>
+            <select id="studentCourse">
+              <option value="">Select Course</option>
+              <option value="Web Development">Web Development</option>
+              <option value="UI/UX">UI/UX</option>
+              <option value="Python">Python</option>
+              <option value="Data Analytics">Data Analytics</option>
+              <option value="MERN Stack">MERN Stack</option>
+              <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+            <span class="error-msg" id="courseError"></span>
+          </div>
+          <div class="form-group full-width">
+            <label>Skills </label>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+              <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+              <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+              <label><input type="checkbox" name="skills" value="Git"> Git</label>
+              <label><input type="checkbox" name="skills" value="React"> React</label>
+              <label><input type="checkbox" name="skills" value="Node.js"> Node.js</label>
+            </div>
+            <span class="error-msg" id="skillsError"></span>
+          </div>
+          <div class="form-group full-width">
+            <div class="label-counter-row">
+              <label for="studentAbout">About Student </label>
+              <span id="charCounter" class="char-counter">50 / 200</span>
+            </div>
+            <textarea id="studentAbout" maxlength="200" rows="3" placeholder="Tell us about yourself (min 20, max 200 character)..."></textarea>
+            <span class="error-msg" id="aboutError"></span>
+          </div>
+          <div class="form-group full-width">
+            <label for="studentPhoto">Profile Photo (.jpg, .jpeg, .png)</label>
+            <input type="file" id="studentPhoto" accept="image/png, image/jpeg, image/jpg">
+            <span class="error-msg" id="photoError"></span>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" id="submitBtn" class="btn btn-primary">Register Student</button>
+          <button type="button" id="resetBtn" class="btn btn-secondary">Reset Form</button>
+        </div>
+  </section>
+  </main>
+    <section class="card-section">
+      <h2>Student Statistics</h2>
+      <div class="stats-container">
+        <div class="stat-card total-stat">
+          <span class="stat-title">Total Students</span>
+          <span class="stat-value" id="statTotal">0</span>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-item">Web Development: <strong id="statWebDev">0</strong></div>
+          <div class="stat-item">UI/UX: <strong id="statUIUX">0</strong></div>
+          <div class="stat-item">Python: <strong id="statPython">0</strong></div>
+          <div class="stat-item">Data Analytics: <strong id="statDataAnalytics">0</strong></div>
+          <div class="stat-item">MERN Stack: <strong id="statMERN">0</strong></div>
+          <div class="stat-item">Cloud Computing: <strong id="statCloud">0</strong></div>
+        </div>
+      </div>
+    </section>
+  <footer>
+    <p>&copy; 2026 Student Application Management System. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
