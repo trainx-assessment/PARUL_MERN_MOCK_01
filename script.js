@@ -161,3 +161,45 @@ function showError(id, msg) {
 function clearErrors() {
     document.querySelectorAll('.error-msg').forEach(el => el.textContent = '');
 }
+
+
+// --- Dynamic Cards & Search/Filter (Task 6, 10, 11) ---
+function renderCards() {
+    cardsContainer.innerHTML = '';
+    const searchText = searchInput.value.toLowerCase();
+    const filterText = filterCourse.value;
+
+    const filtered = students.filter(student => {
+        const matchName = student.name.toLowerCase().includes(searchText);
+        const matchCourse = filterText === 'All' || student.course === filterText;
+        return matchName && matchCourse;
+    });
+
+    if (filtered.length === 0) {
+        noResultsMsg.style.display = 'block';
+    } else {
+        noResultsMsg.style.display = 'none';
+        filtered.forEach(student => {
+            const card = document.createElement('div');
+            card.classList.add('student-card');
+            card.setAttribute('data-id', student.id);
+
+            card.innerHTML = `
+                <img src="${student.photo}" alt="Profile Photo">
+                <h3>${student.name}</h3>
+                <p><strong>Email:</strong> ${student.email}</p>
+                <p><strong>Phone:</strong> ${student.phone}</p>
+                <p><strong>DOB:</strong> ${student.dob}</p>
+                <p><strong>Gender:</strong> ${student.gender}</p>
+                <p><strong>Course:</strong> ${student.course}</p>
+                <p><strong>Skills:</strong> ${student.skills.join(', ')}</p>
+                <p><strong>About:</strong> ${student.about}</p>
+                <div class="card-actions">
+                    <button class="edit-btn">Edit</button>
+                    <button class="danger-btn delete-btn">Delete</button>
+                </div>
+            `;
+            cardsContainer.appendChild(card);
+        });
+    }
+}
