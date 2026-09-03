@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background:white;
+    color:black;
+}
+
+header {
+    background:lightpink;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    font-family: cursive;
+    font-size:22px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 102px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.full {
+    grid-column: 1 / -1;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid yellowgreen;
+    border-radius: 10px;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+
+.choices {
+    gap: 15px;
+}
+
+.choices label {
+    font-weight: normal;
+}
+
+.choices input {
+    width: auto;
+}
+
+
+.error {
+    display: block;
+    color:blanchedalmond;
+    font-size: 14px;
+    min-height: 18px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    border: none;
+    border-radius: 7px;
+    padding: 10px 16px;
+    background: pink;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background:skyblue;
+}
+
+.secondary {
+    background:grey;
+}
+
+.secondary:hover {
+    background:aquamarine;
+}
+
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.stat {
+    background:white;
+    padding: 12px 15px;
+    border-radius: 8px;
+}
+
+
+.toolbar {
+    display: flex;
+    gap: 15px;
+}
+
+.toolbar input,
+.toolbar select {
+    flex: 1;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.student-card {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.student-card h3 {
+    margin: 10px 0;
+}
+
+.student-card p {
+    margin: 6px 0;
+}
+
+
+footer {
+    text-align: center;
+    padding: 25px;
+}
