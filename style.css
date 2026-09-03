@@ -59,8 +59,14 @@ fieldset {
 .full-row {
     width: 650px;
     margin-top: 15px;
+    
 }
 
+#form-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 .full-row textarea {
     display: block;
     width: 100%;
@@ -73,19 +79,53 @@ button {
     padding: 5px 10px;
     margin-right: 5px;
 }
-
 fieldset {
-    background-color: black;
-    color: white;
+    background-color: beige;
+    color: black;
 }
 
 fieldset button {
     border-radius: 20px;
     border: 2px solid;
+    
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #reset-button { 
     color: red;
     border-color: red;
+    
+}
+
+#submit-button {
+    border-color: green;
+}
+
+#student_cards {
+    width: 650px;
+    margin-top: 25px;
+}
+
+.student-card {
+    border: 1px solid black;
+    padding: 15px;
+
+
+    margin-bottom: 15px;
+}
+.student-card p {
+    margin-top: 6px;
+}
+
+.student-photo {
+    border: 1px solid black;
+
+    
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+
     
 }

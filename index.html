@@ -119,6 +119,7 @@
               name="aboutstudent"
               id="about_student"
               maxlength="200"
+              required
             ></textarea>
           </div>
 
@@ -128,13 +129,14 @@
               type="file"
               name="profilephoto"
               id="profile_photo"
-              accept="image/*"
+              accept="image/jpeg, image/png, image/jpg"
+              required
             />
           </div>
 
           <div class="full-row">
-            <button type="submit">Submit</button>
-            <button type="reset" id="reset-button">Reset Form</button>
+            <div id="form-buttons"><button type="submit" id="submit-button">Submit</button>
+            <button type="reset" id="reset-button">Reset Form</button></div>
           </div>
         </form>
       </fieldset>
@@ -146,7 +148,7 @@
       <section></section>
 
       <!-- STUDENT CARDS CONTAINER  -->
-      <section></section>
+      <section id="student_cards"></section>
     </main>
     <!-- FOOTER  -->
     <footer></footer>
