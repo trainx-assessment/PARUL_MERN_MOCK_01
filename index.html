@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register, manage, search, and filter student applications.">
+  <title>StudentManagement System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+
+  <section class="hero container" aria-labelledby="pageTitle">
+
+    <h1 id="pageTitle">Student Application<br><em>Management System</em></h1>
+    <p>Register and manage student applications with ease.</p>
+  </section>
+
+  <section class="container form-section" aria-labelledby="formHeading">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">NEW APPLICATION</p>
+        <h2 id="formHeading">Register a student</h2>
+      </div>
+      <p class="required-note"><span>*</span> Required fields</p>
+    </div>
+
+    <form id="studentForm" novalidate>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="studentName">Student name <span>*</span></label>
+          <input id="studentName" name="studentName" type="text" placeholder="e.g. Harsh Gupta " autocomplete="name">
+          <span class="error-message" id="studentNameError"></span>
+        </div>
+        <div class="form-field">
+          <label for="email">Email address <span>*</span></label>
+          <input id="email" name="email" type="email" placeholder="e.g. harshgupta@gmail.com" autocomplete="email">
+          <span class="error-message" id="emailError"></span>
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone number <span>*</span></label>
+          <input id="phone" name="phone" type="text" inputmode="numeric" maxlength="10"
+            placeholder="10-digit mobile number" autocomplete="tel">
+          <span class="error-message" id="phoneError"></span>
+        </div>
+        <div class="form-field">
+          <label for="dob">Date of birth <span>*</span></label>
+          <input id="dob" name="dob" type="date">
+          <span class="error-message" id="dobError"></span>
+        </div>
+        <fieldset class="form-field radio-field">
+          <legend>Gender <span>*</span></legend>
+          <div class="choice-row">
+            <label><input name="gender" value="Male" type="radio"> <span>Male</span></label>
+            <label><input name="gender" value="Female" type="radio"> <span>Female</span></label>
+            <label><input name="gender" value="Other" type="radio"> <span>Other</span></label>
+          </div>
+          <span class="error-message" id="genderError"></span>
+        </fieldset>
+        <div class="form-field">
+          <label for="course">Course <span>*</span></label>
+          <select id="course" name="course">
+            <option value="">Select Course</option>
+            <option>Web Development</option>
+            <option>UI/UX</option>
+            <option>Python</option>
+            <option>Data Analytics</option>
+            <option>MERN Stack</option>
+            <option>Cloud Computing</option>
+          </select>
+          <span class="error-message" id="courseError"></span>
+        </div>
+        <fieldset class="form-field full-width skills-field">
+          <legend>Skills <span>*</span></legend>
+          <div class="choice-row skills-list">
+            <label><input name="skills" value="HTML" type="checkbox"> <span>HTML</span></label>
+            <label><input name="skills" value="CSS" type="checkbox"> <span>CSS</span></label>
+            <label><input name="skills" value="JavaScript" type="checkbox"> <span>JavaScript</span></label>
+            <label><input name="skills" value="Git" type="checkbox"> <span>Git</span></label>
+            <label><input name="skills" value="React" type="checkbox"> <span>React</span></label>
+            <label><input name="skills" value="Node.js" type="checkbox"> <span>Node.js</span></label>
+          </div>
+          <span class="error-message" id="skillsError"></span>
+        </fieldset>
+        <div class="form-field full-width">
+          <div class="label-row"><label for="about">About student <span>*</span></label><span id="characterCount">0 /
+              200</span></div>
+          <textarea id="about" name="about" maxlength="200"
+            placeholder="Tell us about the student's background, interests, and goals."></textarea>
+          <small class="hint">Maximum 200 characters</small>
+          <span class="error-message" id="aboutError"></span>
+        </div>
+        <div class="form-field full-width">
+          <label for="photo">Profile photo <span>*</span></label>
+          <input id="photo" name="photo" type="file" accept="image/jpeg,image/png,.jpg,.jpeg,.png">
+          <small class="hint">JPG, JPEG or PNG only</small>
+          <span class="error-message" id="photoError"></span>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button id="submitButton" class="button primary-button" type="submit">Register Student <span
+            aria-hidden="true">&rarr;</span></button>
+        <button id="resetButton" class="button secondary-button" type="reset">Reset Form</button>
+      </div>
+    </form>
+  </section>
+
+
+  <section class="container applications-section" aria-labelledby="applicationsHeading">
+    <div class="section-heading applications-heading">
+      <div>
+        <p class="eyebrow">APPLICATIONS</p>
+        <h2 id="applicationsHeading">Registered students</h2>
+      </div>
+      <p id="resultCount" class="result-count">0 applications</p>
+    </div>
+    <div class="toolbar">
+      <label class="search-box" for="searchInput"><span aria-hidden="true">&#8981;</span><span
+          class="visually-hidden">Search students</span><input id="searchInput" type="search"
+          placeholder="Search student by name..."></label>
+      <label class="filter-box" for="courseFilter"><span class="visually-hidden">Filter by course</span><select
+          id="courseFilter">
+          <option value="">All Courses</option>
+          <option>Web Development</option>
+          <option>UI/UX</option>
+          <option>Python</option>
+          <option>Data Analytics</option>
+          <option>MERN Stack</option>
+          <option>Cloud Computing</option>
+        </select></label>
+    </div>
+    <div id="studentContainer" class="student-grid" aria-live="polite"></div>
+  </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><span class="brand-mark small" aria-hidden="true">S</span> <span class="footer-copy">&copy;
+        <span id="year"></span> Student Application Management System</span></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
