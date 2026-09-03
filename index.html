@@ -13,109 +13,129 @@
       <p>Register and manage student applications</p>
     </header>
 
+    <hr />
+    <hr />
+
     <main>
       <!-- FORM  -->
       <fieldset>
         <form action="">
-          <label for="name_field">Student Name : </label>
-          <input
-            type="text"
-            name="name"
-            id="name_field"
-            required
-            placeholder="John Doe"
-          />
+          <div id="twocol">
+            <div class="form-field">
+              <label for="name_field">Student Name : </label>
+              <input
+                type="text"
+                name="name"
+                id="name_field"
+                required
+                placeholder="John Doe"
+              />
+            </div>
 
-          <br />
+            <div class="form-field">
+              <label for="email_field">Email : </label>
+              <input
+                type="email"
+                name="email"
+                id="email_field"
+                required
+                placeholder="abc@example.com"
+              />
+            </div>
 
-          <label for="email_field">Email : </label>
-          <input
-            type="email"
-            name="email"
-            id="email_field"
-            required
-            placeholder="abc@example.com"
-          />
+            <div class="form-field">
+              <label for="phonenumber_field">Phone Number : </label>
+              <input
+                type="text"
+                required
+                name="phonenumber"
+                id="phonenumber_field"
+                placeholder="1234567890"
+              />
+            </div>
 
-          <br />
+            <div class="form-field">
+              <label for="dob_field">Date of Birth : </label>
+              <input type="date" required name="dateofbirth" id="dob_field" />
+            </div>
 
-          <label for="phonenumber_field">Phone Number : </label>
-          <input
-            type="text"
-            required
-            name="phonenumber"
-            id="phonenumber_field"
-            placeholder="1234567890"
-          />
+            <div class="form-field">
+              <span>Gender : </span>
+              <div>
+                <input type="radio" name="gender" id="male" value="Male" />
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="Female" />
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="other" value="Other" />
+                <label for="other">Other</label>
+              </div>
+            </div>
 
-          <br />
+            <div class="form-field">
+              <label for="course">Course : </label>
+              <select name="course" id="course">
+                <option value="">Select Course</option>
+                <option value="Web Development">Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Python">Python</option>
+                <option value="Data Analytics">Data Analytics</option>
+                <option value="MERN Stack">MERN Stack</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+              </select>
+            </div>
 
-          <label for="dob_field">Date of Birth : </label>
-          <input type="date" required name="dateofbirth" id="dob_field" />
+            <div class="form-field skills">
+              <span>Skills : </span>
+              <div>
+                <input type="checkbox" name="skills" id="html" value="HTML" />
+                <label for="html">HTML</label>
+                <input type="checkbox" name="skills" id="css" value="CSS" />
+                <label for="css">CSS</label>
+                <input
+                  type="checkbox"
+                  name="skills"
+                  id="javascript"
+                  value="JavaScript"
+                />
+                <label for="javascript">Javascript</label>
+                <input type="checkbox" name="skills" id="git" value="Git" />
+                <label for="git">git</label>
+                <input type="checkbox" name="skills" id="react" value="React" />
+                <label for="react">React</label>
+                <input
+                  type="checkbox"
+                  name="skills"
+                  id="nodejs"
+                  value="Node.js"
+                />
+                <label for="nodejs">Node.js</label>
+              </div>
+            </div>
+          </div>
 
-          <br />
-          <span>Gender : </span>
-          <input type="radio" name="gender" id="male" value="Male" />
-          <label for="male">Male</label>
-          <input type="radio" name="gender" id="female" value="Female" />
-          <label for="female">Female</label>
-          <input type="radio" name="gender" id="other" value="Other" />
-          <label for="other">Other</label>
+          <div class="full-row">
+            <label for="about_student">About Student : </label>
+            <textarea
+              name="aboutstudent"
+              id="about_student"
+              maxlength="200"
+            ></textarea>
+          </div>
 
-          <br />
-          <label for="course">Course : </label>
-          <select name="course" id="course">
-            <option value="">Select Course</option>
-            <option value="Web Development">Web Development</option>
-            <option value="UI/UX">UI/UX</option>
-            <option value="Python">Python</option>
-            <option value="Data Analytics">Data Analytics</option>
-            <option value="MERN Stack">MERN Stack</option>
-            <option value="Cloud Computing">Cloud Computing</option>
-          </select>
-          <br />
+          <div class="full-row">
+            <label for="profile_photo">Profile Photo : </label>
+            <input
+              type="file"
+              name="profilephoto"
+              id="profile_photo"
+              accept="image/*"
+            />
+          </div>
 
-          <span>Skills : </span>
-          <input type="checkbox" name="skills" id="html" value="HTML" />
-          <label for="html">HTML</label>
-          <input type="checkbox" name="skills" id="css" value="CSS" />
-          <label for="css">CSS</label>
-          <input
-            type="checkbox"
-            name="skills"
-            id="javascript"
-            value="JavaScript"
-          />
-          <label for="javascript">Javascript</label>
-          <input type="checkbox" name="skills" id="git" value="Git" />
-          <label for="git">git</label>
-          <input type="checkbox" name="skills" id="react" value="React" />
-          <label for="react">React</label>
-          <input type="checkbox" name="skills" id="nodejs" value="Node.js" />
-          <label for="nodejs">Node.js</label>
-
-          <br />
-          <label for="about_student">About Student : </label>
-          <textarea
-            name="aboutstudent"
-            id="about_student"
-            maxlength="200"
-          ></textarea>
-
-          <br />
-
-          <label for="profile_photo">Profile Photo : </label>
-          <input
-            type="file"
-            name="profilephoto"
-            id="profile_photo"
-            accept="image/*"
-          />
-
-          <br />
-
-          <button type="submit">Register Student</button>
-          <button type="reset">Reset Form</button>
+          <div class="full-row">
+            <button type="submit">Submit</button>
+            <button type="reset" id="reset-button">Reset Form</button>
+          </div>
         </form>
       </fieldset>
 
