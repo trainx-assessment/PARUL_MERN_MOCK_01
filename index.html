@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <h1>Student Application Manager</h1>
+        <button id="darkModeBtn" class="btn btn-outline">🌙 Dark Mode</button>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="card">
+        <h2>Register Student</h2>
+        <form id="studentForm">
+
+            <div class="form-group">
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" placeholder="Enter full name">
+                <small class="error-message" id="studentNameError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="student@example.com">
+                <small class="error-message" id="emailError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" placeholder="9876543210" maxlength="10">
+                <small class="error-message" id="phoneError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Course</label>
+                <select id="course">
+                    <option value="">Select Course</option>
+                    <option>Web Development</option>
+                    <option>UI/UX</option>
+                    <option>Python</option>
+                    <option>Data Analytics</option>
+                    <option>MERN Stack</option>
+                    <option>Cloud Computing</option>
+                </select>
+                <small class="error-message" id="courseError"></small>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="about">About Student</label>
+                <textarea id="about" rows="3" maxlength="200" placeholder="A short note..."></textarea>
+                <div class="char-count"><span id="characterCount">0</span> / 200</div>
+            </div>
+
+            <div class="form-buttons full-width">
+                <button type="submit" id="submitBtn" class="btn btn-primary">Register Student</button>
+                <button type="button" id="resetBtn" class="btn btn-outline">Reset</button>
+            </div>
+
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>Statistics</h2>
+        <div class="stats" id="statsContainer"></div>
+    </section>
+
+    <section class="card">
+        <h2>Search & Filter</h2>
+        <div class="search-filter">
+            <input type="text" id="searchInput" placeholder="Search by name...">
+            <select id="courseFilter">
+                <option value="All Courses">All Courses</option>
+                <option>Web Development</option>
+                <option>UI/UX</option>
+                <option>Python</option>
+                <option>Data Analytics</option>
+                <option>MERN Stack</option>
+                <option>Cloud Computing</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Registered Students</h2>
+        <div id="studentContainer" class="student-container"></div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>Student Application Manager</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

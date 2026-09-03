@@ -1,0 +1,262 @@
+:root {
+  --bg: #f4f6f8;
+  --card-bg: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --border: #e5e7eb;
+  --error: #dc2626;
+}
+
+body.dark-mode {
+  --bg: #111827;
+  --card-bg: #1f2937;
+  --text: #f3f4f6;
+  --muted: #9ca3af;
+  --border: #374151;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.2s, color 0.2s;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.site-header {
+  background: var(--primary);
+  color: #fff;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header h1 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+/* Form */
+#studentForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+input.input-error, select.input-error, textarea.input-error {
+  border-color: var(--error);
+}
+
+.error-message {
+  color: var(--error);
+  font-size: 0.8rem;
+  min-height: 16px;
+}
+
+.char-count {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: right;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.site-header .btn-outline {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Statistics */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.stat-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+.stat-card h3 {
+  margin: 0 0 6px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Search & Filter */
+.search-filter {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.search-filter input,
+.search-filter select {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Student Cards */
+.student-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.student-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  background: var(--bg);
+}
+
+.student-card h3 {
+  margin: 8px 0 4px;
+}
+
+.student-card p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.card-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.card-buttons button {
+  flex: 1;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.edit-btn {
+  background: #fbbf24;
+  color: #1f2937;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: #fff;
+}
+
+.no-students {
+  color: var(--muted);
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 16px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  #studentForm {
+    grid-template-columns: 1fr;
+  }
+}
