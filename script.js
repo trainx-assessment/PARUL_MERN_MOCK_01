@@ -58,8 +58,6 @@ const aboutCounter = document.createElement("small");
 
 aboutCounter.textContent = "0 / 200";
 
-about.appendChild ? null : null;
-
 about.parentElement.appendChild(aboutCounter);
 
 about.addEventListener("input", function () {
@@ -97,8 +95,6 @@ function displayStudents(studentList = students) {
         card.setAttribute("data-id", student.id);
 
 
-        // Photo
-
         const photo = document.createElement("img");
 
         photo.src = student.photo;
@@ -107,16 +103,12 @@ function displayStudents(studentList = students) {
         card.appendChild(photo);
 
 
-        // Name
-
         const name = document.createElement("h3");
 
         name.textContent = student.name;
 
         card.appendChild(name);
 
-
-        // Email
 
         const emailText = document.createElement("p");
 
@@ -126,8 +118,6 @@ function displayStudents(studentList = students) {
         card.appendChild(emailText);
 
 
-        // Phone
-
         const phoneText = document.createElement("p");
 
         phoneText.textContent =
@@ -135,8 +125,6 @@ function displayStudents(studentList = students) {
 
         card.appendChild(phoneText);
 
-
-        // DOB
 
         const dobText = document.createElement("p");
 
@@ -146,8 +134,6 @@ function displayStudents(studentList = students) {
         card.appendChild(dobText);
 
 
-        // Gender
-
         const genderText = document.createElement("p");
 
         genderText.textContent =
@@ -155,8 +141,6 @@ function displayStudents(studentList = students) {
 
         card.appendChild(genderText);
 
-
-        // Course
 
         const courseText = document.createElement("p");
 
@@ -166,8 +150,6 @@ function displayStudents(studentList = students) {
         card.appendChild(courseText);
 
 
-        // Skills
-
         const skillsText = document.createElement("p");
 
         skillsText.textContent =
@@ -175,8 +157,6 @@ function displayStudents(studentList = students) {
 
         card.appendChild(skillsText);
 
-
-        // About
 
         const aboutText = document.createElement("p");
 
@@ -186,8 +166,6 @@ function displayStudents(studentList = students) {
         card.appendChild(aboutText);
 
 
-        // Edit Button
-
         const editButton = document.createElement("button");
 
         editButton.textContent = "Edit";
@@ -195,8 +173,6 @@ function displayStudents(studentList = students) {
 
         card.appendChild(editButton);
 
-
-        // Delete Button
 
         const deleteButton = document.createElement("button");
 
@@ -264,8 +240,6 @@ studentForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
 
-    // Remove old errors
-
     removeError(studentName);
     removeError(email);
     removeError(phone);
@@ -278,7 +252,7 @@ studentForm.addEventListener("submit", function (event) {
     let isValid = true;
 
 
-    // Name Validation
+    // Name
 
     const nameValue = studentName.value.trim();
 
@@ -311,7 +285,7 @@ studentForm.addEventListener("submit", function (event) {
     }
 
 
-    // Email Validation
+    // Email
 
     const emailValue = email.value.trim();
 
@@ -331,7 +305,7 @@ studentForm.addEventListener("submit", function (event) {
     }
 
 
-    // Phone Validation
+    // Phone
 
     const phoneValue = phone.value.trim();
 
@@ -352,7 +326,7 @@ studentForm.addEventListener("submit", function (event) {
     }
 
 
-    // DOB Validation
+    // DOB
 
     const dobValue = dob.value;
 
@@ -364,9 +338,8 @@ studentForm.addEventListener("submit", function (event) {
 
     } else {
 
-        const today = new Date()
-            .toISOString()
-            .split("T")[0];
+        const today =
+            new Date().toISOString().split("T")[0];
 
         if (dobValue > today) {
 
@@ -380,7 +353,7 @@ studentForm.addEventListener("submit", function (event) {
     }
 
 
-    // Gender Validation
+    // Gender
 
     const selectedGender =
         document.querySelector(
@@ -403,7 +376,7 @@ studentForm.addEventListener("submit", function (event) {
     }
 
 
-    // Course Validation
+    // Course
 
     const courseValue = course.value;
 
@@ -418,7 +391,7 @@ studentForm.addEventListener("submit", function (event) {
     }
 
 
-    // Skills Validation
+    // Skills
 
     const selectedSkills =
         document.querySelectorAll(
@@ -441,7 +414,7 @@ studentForm.addEventListener("submit", function (event) {
     }
 
 
-    // About Validation
+    // About
 
     const aboutValue = about.value.trim();
 
@@ -474,7 +447,7 @@ studentForm.addEventListener("submit", function (event) {
     }
 
 
-    // Photo Validation
+    // Photo
 
     if (
         editingStudentId === null &&
@@ -490,14 +463,12 @@ studentForm.addEventListener("submit", function (event) {
     }
 
 
-    // Stop if invalid
-
     if (!isValid) {
         return;
     }
 
 
-    // Get Skills
+    // Skills
 
     const skills = [];
 
@@ -507,14 +478,14 @@ studentForm.addEventListener("submit", function (event) {
     });
 
 
-    // Get Gender
+    // Gender
 
     const genderValue =
         selectedGender.value;
 
 
     // --------------------
-    // Edit Existing Student
+    // Update Existing Student
     // --------------------
 
     if (editingStudentId !== null) {
@@ -547,20 +518,11 @@ studentForm.addEventListener("submit", function (event) {
             }
         }
 
+    } else {
 
-        editingStudentId = null;
-
-        studentForm.querySelector(
-            'button[type="submit"]'
-        ).textContent = "Register Student";
-
-    }
-
-    // --------------------
-    // Add New Student
-    // --------------------
-
-    else {
+        // --------------------
+        // Add New Student
+        // --------------------
 
         let photoURL = "";
 
@@ -603,26 +565,12 @@ studentForm.addEventListener("submit", function (event) {
     }
 
 
-    // Reset form
+    // --------------------
+    // Task 12 Reset
+    // After Successful Registration
+    // --------------------
 
     studentForm.reset();
-
-    aboutCounter.textContent = "0 / 200";
-
-
-    // Update UI
-
-    updateStatistics();
-
-    performSearch();
-});
-
-
-// --------------------
-// Reset Form
-// --------------------
-
-studentForm.addEventListener("reset", function () {
 
     editingStudentId = null;
 
@@ -630,11 +578,52 @@ studentForm.addEventListener("reset", function () {
         'button[type="submit"]'
     ).textContent = "Register Student";
 
-    setTimeout(function () {
+    aboutCounter.textContent = "0 / 200";
 
-        aboutCounter.textContent = "0 / 200";
 
-    }, 0);
+    const errors =
+        studentForm.querySelectorAll(".error-message");
+
+    errors.forEach(function (error) {
+        error.remove();
+    });
+
+
+    updateStatistics();
+
+    performSearch();
+
+});
+
+
+// --------------------
+// Task 12 Reset Button
+// --------------------
+
+studentForm.addEventListener("reset", function () {
+
+    // Cancel edit mode
+    editingStudentId = null;
+
+
+    // Change button back
+    studentForm.querySelector(
+        'button[type="submit"]'
+    ).textContent = "Register Student";
+
+
+    // Remove validation messages
+    const errors =
+        studentForm.querySelectorAll(".error-message");
+
+    errors.forEach(function (error) {
+        error.remove();
+    });
+
+
+    // Reset counter
+    aboutCounter.textContent = "0 / 200";
+
 });
 
 
@@ -773,7 +762,6 @@ studentCardsContainer.addEventListener(
 
 
 // --------------------
-// Task 10 + Task 11
 // Search + Course Filter
 // --------------------
 
@@ -808,7 +796,7 @@ function performSearch() {
 }
 
 
-// Search while typing
+// Search
 
 searchInput.addEventListener(
     "input",
@@ -819,7 +807,7 @@ searchInput.addEventListener(
 );
 
 
-// Course filter
+// Course Filter
 
 courseFilter.addEventListener(
     "change",
