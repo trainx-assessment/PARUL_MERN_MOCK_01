@@ -1,29 +1,178 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <header>
-        <h1>Student Application Management System</h1>
-        <p>Register and manage student applications</p>
+      <h1>Student Application Management System</h1>
+      <p>Register and manage student applications</p>
     </header>
 
     <main>
-        <section class="registration-sec" >
-            <form action="">
-                <h2>Register</h2>
-                <p>Hello There, please register to continue!</p>
-            </form>
-        </section>
+      <section class="registration-sec">
+        <form id="registration-form">
+          <h2>Register Now</h2>
+          <p>Hello There, please register to continue!</p>
+
+          <div class="field-group">
+            <div class="field">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Name"
+              />
+            </div>
+
+            <div class="field">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Email"
+              />
+            </div>
+
+            <div class="field">
+              <input
+                type="number"
+                id="number"
+                name="number"
+                id="dob"
+                minlength="10"
+                required
+                placeholder="Phone Number"
+              />
+            </div>
+
+            <div class="field">
+              <input
+                type="date"
+                name="dob"
+                required
+                placeholder="Phone Number"
+              />
+            </div>
+
+            <div class="radio-group">
+              <p>Gender</p>
+              <div class="group">
+                <label for="male">
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="male"
+                    value="male"
+                    checked
+                    required
+                  />
+                  <span>Male</span>
+                </label>
+                <label for="female">
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="female"
+                    value="female"
+                    required
+                  />
+                  <span>Female</span>
+                </label>
+                <label for="other">
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="other"
+                    value="other"
+                    required
+                  />
+                  <span>Other</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field">
+              <select name="course" required id="course">
+                <option value="" selected>-- Select Course --</option>
+                <option value="Web Development">Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Python">Python</option>
+                <option value="Data Analytics">Data Analytics</option>
+                <option value="MERN Stack">MERN Stack</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+              </select>
+            </div>
+
+            <div class="skill-group">
+              <p>Skills</p>
+              <div class="group">
+                <label for="html">
+                  <input type="checkbox" name="html" id="html" />
+                  <span>HTML</span>
+                </label>
+                <label for="css">
+                  <input type="checkbox" name="css" id="css" />
+                  <span>CSS</span>
+                </label>
+                <label for="javascript">
+                  <input type="checkbox" name="javascript" id="javascript" />
+                  <span>Javascript</span>
+                </label>
+                <label for="git">
+                  <input type="checkbox" name="git" id="git" />
+                  <span>Git</span>
+                </label>
+                <label for="react">
+                  <input type="checkbox" name="react" id="react" />
+                  <span>React</span>
+                </label>
+                <label for="nodejs">
+                  <input type="checkbox" name="nodejs" id="nodejs" />
+                  <span>Node.js</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="about-field">
+              <p>About</p>
+              <div class="field">
+                <textarea cols="5" name="about" id="about" maxlength="200"> </textarea>
+              </div>
+            </div>
+
+            <div class="profile-group">
+              <p>Profile Picture</p>
+              <div class="group">
+                <input
+                  type="file"
+                  id="profile-picture"
+                  name="profile-picture"
+                  accept="image/*"
+                  required
+                  placeholder="Select a Profile Picture"
+                />
+              </div>
+            </div>
+
+            <button class="btn" type="submit">Register</button>
+            <button class="btn" type="reset">Reset From</button>
+          </div>
+        </form>
+      </section>
     </main>
 
     <footer>
-        <p>Copyright @ Student MS <sup>&copy;</sup> | Made with &hearts; by <a target="_blank" href="https://github.com/akryptic">Anil Kumar</a> </p>
+      <p>
+        Copyright @ Student MS <sup>&copy;</sup> | Made with &hearts; by
+        <a target="_blank" href="https://github.com/akryptic">Anil Kumar</a>
+      </p>
     </footer>
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
