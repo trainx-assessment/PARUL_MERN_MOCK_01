@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header id="Form">
+        <h1>Student Registration Form</h1>
+        <h4>Register and manage student applications</h4>
+    </header>
+
+    <div class="box">
+        <div class="app">
+
+        <form action="" method="" class="app1">
+
+        <div class="Name_Email">
+            <div class="Name">
+                <label for="StudentName">Student Name : </label>
+                <input type="text" name="StudentName" id="vname" required>
+            </div>
+
+            <div class="Email">
+                <label for="Email">Email : </label>
+                <input type="email" name="Email" id="vemail" required>
+            </div>
+
+        </div>
+
+        <div class="PhoneNumber_DOB">
+        
+            <div class="phoneNumber">
+            <label for="PhoneNumber">Phone Number : </label>
+            <input type="number" name="PhoneNumber" id="vphone" required>
+            </div>
+
+            <div class="DOB">
+                <label for="DOB">Date Of Birth</label>
+                <input type="date" name="" id="vdob" required>
+            </div>
+        </div>
+
+        <div class="Student_Details">
+
+            
+            
+            <div class="gender">
+            <label for="Gender">Gender</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            
+            <label for="female">Female</label>
+            <input type="radio" id="Other" name="gender" value="other" required>
+            <label for="Other">Other</label>
+
+            </div>
+
+            <div class="course">
+                <label for="course">Course : </label>
+                <input type="text" id="course" required>
+            </div>
+
+        </div>
+
+
+        <div class="SkillAbout">
+            
+        <div class="skills">
+            <label for="skills">Skills : </label>
+            <input type="text" id="vskills" required>
+        </div>
+
+        <div class="about">
+            <label for="about">About : </label>
+            <textarea name="about" id="vabout" required></textarea>
+        </div>
+
+        </div>
+
+        <div class="photo">
+            <label for="profil-photo">Profile Photo : </label>
+            <input type="file" name="vprofil-photo" id="profil-photo">
+        </div>
+        
+        <div class="button">
+            <button type="submit" id="submit">SUBMIT</button>
+            <button type="reset" id="reset">RESET</button>
+        </div>
+        
+    </form>
+
+    </div>
+
+    </div>
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
