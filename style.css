@@ -202,3 +202,18 @@ student-card {
     text-decoration: none;
     line-height: 1.5;
 }
+#light-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+

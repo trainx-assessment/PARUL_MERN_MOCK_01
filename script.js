@@ -364,3 +364,9 @@ form.addEventListener("reset", () => {
         resetStudentForm(false);
     }, 0);
 });
+
+
+const lightModeToggle = document.getElementById("light-mode-toggle");
+lightModeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+});
