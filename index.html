@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Manager System</title>
+</head>
+<body>
+    <header>
+        <h1>Student Manager System</h1>
+        <p>Add, Update or Delete Student data with ease ...!</p>
+    </header>
+    <main>
+        <div class="manage-buttons">
+            <div class="add">
+                <button>Add</button>
+            </div>
+            <div class="delete-all">
+                <button>Delete All</button>
+            </div>
+        </div>
+        <div class="student">
+            <div class="student-card"></div>
+            <div class="student-card"></div>
+            <div class="student-card"></div>
+        </div>
+        <div class="form-add">
+            <form action="">
+                <table>
+                    <tr>
+                        <td>
+                            Full Name :
+                        </td>
+                        <td>
+                            <input type="text" id="name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Email :
+                        </td>
+                        <td>
+                            <input type="email" id="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Phone Number :
+                        </td>
+                        <td>
+                            <input type="text" id="phone">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Date of Birth :
+                        </td>
+                        <td>
+                            <input type="date" id="date">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Gender :
+                        </td>
+                        <td>
+                            <input type="radio" name="r1" id="m1" > Male
+                            <input type="radio" name="r1" id="f2" > Female
+                            <input type="radio" name="r1" id="o3" > Others
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Course :
+                        </td>
+                        <td>
+                            <select name="" id="course">
+                                <option value="" selected disabled>Choose a course</option>
+                                <option value="">Web Development</option>
+                                <option value="">UI/UX</option>
+                                <option value="">Python</option>
+                                <option value="">Data Analytics</option>
+                                <option value="">MERN Stack</option>
+                                <option value="">Cloud Computing</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Skills :
+                        </td>
+                        <td>
+                            <input type="checkbox" name="c1" id="ch1">HTML
+                            <input type="checkbox" name="c1" id="ch2">CSS
+                            <input type="checkbox" name="c1" id="ch3">JavaScript
+                            <input type="checkbox" name="c1" id="ch4">Git
+                            <input type="checkbox" name="c1" id="ch5">React
+                            <input type="checkbox" name="c1" id="ch6">Node
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            About me :
+                        </td>
+                        <td>
+                            <textarea name="" id="" placeholder="Maximum 200 characters"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Profile Photo <br> (only jpeg / png) :
+                        </td>
+                        <td>
+                            <input type="file" name="" id="file-inp">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit">Add Student</button>
+                        </td>
+                        <td>
+                            <button type="reset">Reset Form</button>
+
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h2>Student Manager System</h2>
+        <h5> by Dhruval Kharshikar</h5>
+        <p>&copy; Dhruval Kharshikar</p>
+    </footer>
+</body>
+</html>
