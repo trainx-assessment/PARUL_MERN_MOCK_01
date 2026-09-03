@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ---------- Header ---------- */
+.title {
+    background-color: rebeccapurple;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 20px 10px;
+}
+
+.headerrr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.headerrr h2 {
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.dark-btn {
+    margin-top: 12px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.dark-btn:hover {
+    background-color: #555;
+}
+
+/* ---------- Registration Form ---------- */
+.registration {
+    background-color: rgb(253, 214, 84);
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.formsss {
+    font-size: 18px;
+    padding: 25px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 25px;
+}
+
+.formsss .field {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.formsss .full-row {
+    grid-column: 1 / -1;
+}
+
+.formsss label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.size,
+select,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="file"] {
+    width: 100%;
+    height: 34px;
+}
+
+input,
+select,
+textarea {
+    background-color: rgba(247, 246, 243, 0.7);
+    border: 1px solid rgb(223, 212, 184);
+    font-size: 1rem;
+    padding-left: 6px;
+    border-radius: 5px;
+}
+
+.about {
+    width: 100%;
+    height: 80px;
+    padding-top: 6px;
+    resize: vertical;
+}
+
+.char-counter {
+    font-size: 0.8rem;
+    color: #555;
+    text-align: right;
+    margin-top: 2px;
+}
+
+.gender,
+.skill,
+.skill-label {
+    width: auto;
+    height: auto;
+    display: inline;
+    margin-right: 4px;
+}
+
+.skill-label {
+    font-weight: normal;
+    margin-right: 15px;
+}
+
+.error {
+    color: #b00020;
+    font-size: 0.8rem;
+    min-height: 16px;
+    margin-top: 3px;
+}
+
+/* ---------- Buttons ---------- */
+.buttonss {
+    display: flex;
+    grid-column: 1 / -1;
+    margin-top: 10px;
+}
+
+.reg_button {
+    color: green;
+    font-weight: bold;
+    width: 200px;
+    height: 36px;
+    margin: 0 5px 0 0;
+    background-color: rgb(190, 240, 190);
+    border: 1px solid rgb(160, 210, 160);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.reg_button:hover {
+    background-color: #87bb57;
+}
+
+.reset_button {
+    color: #b00020;
+    font-weight: bold;
+    width: 200px;
+    height: 36px;
+    margin: 0 0 0 5px;
+    background-color: rgb(235, 183, 181);
+    border: 1px solid rgb(210, 150, 148);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.reset_button:hover {
+    background-color: rgb(209, 112, 112);
+}
+
+/* ---------- Statistics ---------- */
+.stats {
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.stats h2 {
+    margin-bottom: 15px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.stat-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.stat-box span {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: rebeccapurple;
+}
+
+.stat-box.total span {
+    color: #d97b00;
+}
+
+.stat-box p {
+    margin-top: 5px;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* ---------- Search & Filter ---------- */
+.search-filter {
+    width: 80%;
+    margin: 0 auto 20px auto;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.search-filter input,
+.search-filter select {
+    flex: 1;
+    min-width: 200px;
+    height: 38px;
+    padding-left: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* ---------- Student Cards ---------- */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 80%;
+    margin: 20px auto 40px auto;
+}
+
+.student-card {
+    width: 29%;
+    min-width: 260px;
+    flex-grow: 1;
+    background-color: #9bf0cf;
+    border-radius: 15px;
+    padding: 18px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s;
+}
+
+.student-card:hover {
+    transform: translateY(-4px);
+}
+
+.student-card img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px auto;
+    border: 2px solid white;
+}
+
+.student-card h3 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.student-card p {
+    font-size: 0.9rem;
+    margin: 3px 0;
+}
+
+.student-card .skills-line {
+    margin-top: 6px;
+    font-size: 0.85rem;
+}
+
+.student-card .about-line {
+    margin-top: 6px;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.edit-btn {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #357ab8;
+}
+
+.delete-btn {
+    background-color: #e24a4a;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #b83535;
+}
+
+.no-students {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #777;
+    padding: 30px 0;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rebeccapurple;
+    color: white;
+    margin-top: 20px;
+}
+
+/* ---------- Dark Mode ---------- */
+body.dark-mode {
+    background-color: #121212;
+    color: #eee;
+}
+
+body.dark-mode .registration {
+    background-color: #3a3418;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background-color: #2a2a2a;
+    color: #eee;
+    border-color: #555;
+}
+
+body.dark-mode .stat-box {
+    background-color: #1e1e1e;
+    border-color: #444;
+}
+
+body.dark-mode .student-card {
+    background-color: #1f4d3d;
+    color: #eee;
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 768px) {
+    .registration {
+        width: 90%;
+    }
+
+    .formsss {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .student-card {
+        width: 45%;
+    }
+
+    .search-filter {
+        width: 90%;
+    }
+
+    .cards {
+        width: 90%;
+    }
+
+    .stats {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .buttonss {
+        flex-direction: column;
+    }
+
+    .reg_button,
+    .reset_button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .student-card {
+        width: 100%;
+    }
+
+    .headerrr h1 {
+        font-size: 1.3rem;
+    }
+}
