@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 id="main-heading">Student Application Management System</h1>
+        <h2 id="sub-heading">Register and manage student applications</h2>
+    </header>
+
+    <main>
+        <form id="form">
+
+       
+
+            <div class="form-group">
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" name="studentName" placeholder="Enter student name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter mobile number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+
+                <div class="options">
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+
+                    <input type="radio" id="other" name="gender" value="Other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Course</label>
+
+                <select id="course" name="course" required>
+                    <option value="">Select Course</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Python">Python</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="MERN Stack">MERN Stack</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                </select>
+            </div>
+
+            <div class="form-group full-width">
+                <label>Skills</label>
+
+                <div class="options">
+                    <input type="checkbox" id="html" name="skills" value="HTML">
+                    <label for="html">HTML</label>
+
+                    <input type="checkbox" id="css" name="skills" value="CSS">
+                    <label for="css">CSS</label>
+
+                    <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+                    <label for="javascript">JavaScript</label>
+
+                    <input type="checkbox" id="git" name="skills" value="Git">
+                    <label for="git">Git</label>
+
+                    <input type="checkbox" id="react" name="skills" value="React">
+                    <label for="react">React</label>
+
+                    <input type="checkbox" id="nodejs" name="skills" value="Node.js">
+                    <label for="nodejs">Node.js</label>
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="aboutstudent">
+                    About Student <span id="charCount">0 / 200</span>
+                </label>
+
+
+                
+                <textarea id="aboutstudent" name="aboutstudent" minlength="5" maxlength="200"
+                    placeholder="Tell us about the student (20-200 chars)" required></textarea>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="profilephoto">Profile Photo</label>
+
+                <input type="file" id="profilephoto" name="profilephoto" accept="image/*">
+            </div>
+
+            <div class="buttons full-width">
+                <button type="submit">Register Student</button>
+                <button type="reset">Reset Form</button>
+            </div>
+
+        </form>
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

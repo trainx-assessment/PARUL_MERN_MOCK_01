@@ -463,7 +463,7 @@ Create a JavaScript array:
 ```javascript
 const students = [];
 ```
-
+ 
 After successful validation, create a student object.
 
 Example:
