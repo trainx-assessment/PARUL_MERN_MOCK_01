@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Applications</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header"><div><p class="eyebrow">Admissions desk</p><h1>Student Applications</h1><p>Register and manage student applications.</p></div><button id="themeToggle" class="theme-button" type="button">Dark Mode</button></header>
+  <main class="page-shell">
+    <section class="panel form-panel"><div class="section-heading"><div><p class="eyebrow">New record</p><h2>Register a student</h2></div><span id="formMode">Create</span></div>
+      <form id="studentForm" novalidate><div class="form-grid">
+        <div class="field"><label for="studentName">Student Name</label><input type="text" id="studentName" maxlength="40"><small class="error" data-error-for="studentName"></small></div>
+        <div class="field"><label for="email">Email</label><input type="email" id="email"><small class="error" data-error-for="email"></small></div>
+        <div class="field"><label for="phone">Phone Number</label><input type="text" id="phone" inputmode="numeric" maxlength="10"><small class="error" data-error-for="phone"></small></div>
+        <div class="field"><label for="dob">Date of Birth</label><input type="date" id="dob"><small class="error" data-error-for="dob"></small></div>
+        <fieldset class="field"><legend>Gender</legend><div class="options"><label><input type="radio" name="gender" value="Male"> Male</label><label><input type="radio" name="gender" value="Female"> Female</label><label><input type="radio" name="gender" value="Other"> Other</label></div><small class="error" data-error-for="gender"></small></fieldset>
+        <div class="field"><label for="course">Course</label><select id="course"><option value="">Select Course</option><option>Web Development</option><option>UI/UX</option><option>Python</option><option>Data Analytics</option><option>MERN Stack</option><option>Cloud Computing</option></select><small class="error" data-error-for="course"></small></div>
+        <fieldset class="field full-width"><legend>Skills</legend><div class="options skills"></div><small class="error" data-error-for="skills"></small></fieldset>
+        <div class="field full-width"><label for="about">About Student <span id="characterCount">0 / 200</span></label><textarea id="about" maxlength="200"></textarea><small class="error" data-error-for="about"></small></div>
+        <div class="field full-width"><label for="photo">Profile Photo</label><input type="file" id="photo" accept="image/*"><small class="error" data-error-for="photo"></small></div>
+      </div><div class="form-actions"><button class="primary" type="submit" id="submitButton">Register Student</button><button class="secondary" type="reset">Reset Form</button></div></form>
+    </section>
+    <section class="stats" aria-label="Student statistics"><div class="stat total"><span>Total Students</span><strong id="totalStudents">0</strong></div><div id="courseStats" class="course-stats"></div></section>
+    <section class="panel applications"><div class="section-heading"><div><p class="eyebrow">Directory</p><h2>Applications</h2></div><div class="filters"><input id="searchInput" type="search" placeholder="Search student by name..." aria-label="Search student by name"><select id="courseFilter" aria-label="Filter by course"><option>All Courses</option><option>Web Development</option><option>UI/UX</option><option>Python</option><option>Data Analytics</option><option>MERN Stack</option><option>Cloud Computing</option></select></div></div><div id="studentContainer" class="student-grid"></div></section>
+  </main>
+  <footer>Student Application Management System</footer>
+  <script src="script.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
