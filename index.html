@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Student Application Management System</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Student Application Management System</h1>
+
+      <section class="form-section">
+        <h2>Student Registration</h2>
+
+        <form id="studentForm" novalidate>
+          <div class="form-group">
+            <label for="studentName">Full Name</label>
+            <input type="text" id="studentName" />
+            <small class="error" id="nameError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Personal Email</label>
+            <input type="email" id="email" />
+            <small class="error" id="emailError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" />
+            <small class="error" id="phoneError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" />
+            <small class="error" id="dobError"></small>
+          </div>
+
+          <div class="form-group">
+            <label>Gender</label>
+
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="gender" value="Male" />
+                Male
+              </label>
+
+              <label>
+                <input type="radio" name="gender" value="Female" />
+                Female
+              </label>
+
+              <label>
+                <input type="radio" name="gender" value="Other" />
+                Other
+              </label>
+            </div>
+
+            <small class="error" id="genderError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="course">Course</label>
+
+            <select id="course">
+              <option value="">Select Course</option>
+              <option value="Web Development MERN">Web Development using MERNSTACK</option>
+              <option value="UI/UX">UI/UX</option>
+              <option value="Python">Python</option>
+              <option value="Data Analytics">Data Analytics and Visualization</option>
+              <option value="Machine Learning">Machine Learning</option>
+              <option value="Data Science">Data Science</option>
+              <option value="AR/VR">AR/VR</option>
+              <option value="Web Development FULL">Web Development using FULLSTACK</option>
+              <option value="Data Monitoring and Caching">Data Monitoring and Caching</option>
+              <option value="Data Analysis and Tracking">Data Analysis and Tracking</option>
+              <option value="Cyber Security">Cyber Security with Ethical Hacking</option>
+
+
+            </select>
+
+            <small class="error" id="courseError"></small>
+          </div>
+
+          <div class="form-group">
+            <label>Skills</label>
+
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="skills" value="HTML" />
+                HTML
+              </label> 
+              </div>    
+            <div class="checkbox-group">      
+              <label>
+                <input type="checkbox" name="skills" value="CSS" />
+                CSS
+              </label>
+              </div>
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="skills" value="JavaScript" />
+                JavaScript
+              </label>
+              </div>
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="skills" value="Git" />
+                Git
+              </label>
+              </div>
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="skills" value="Git" />
+                Git-Hub
+              </label>
+              </div>
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="skills" value="Git" />
+                Java
+              </label>
+              </div>
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="skills" value="Git" />
+                TypeScript
+              </label>
+                </div>
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="skills" value="Git" />
+                Python
+              </label>
+                </div>
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="skills" value="Git" />
+                C/C++
+              </label>
+                </div>
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="skills" value="Git" />
+                React js/ Node js
+              </label>
+                </div>
+            <div class="checkbox-group">
+                <label>
+              <input type="checkbox" name="skills" value="Git" />
+                Networking
+              </label>
+                </div>
+            <div class="checkbox-group">
+                <label>
+              <input type="checkbox" name="skills" value="Git" />
+                Database Rendering
+              </label>
+                </div>
+            <div class="checkbox-group">
+                <label>
+              <input type="checkbox" name="skills" value="Git" />
+                Tailwind / SpringBoot
+              </label>
+            </div>
+
+            <small class="error" id="skillsError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="about">About Student</label>
+
+            <textarea id="about" rows="5"></textarea>
+
+            <small class="error" id="aboutError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="photo">Profile Photo</label>
+
+            <input type="file" id="photo" accept="image/*" />
+
+            <small class="error" id="photoError"></small>
+          </div>
+
+          <button type="submit">Add Student</button>
+        </form>
+      </section>
+
+      <section class="count-section">
+        <h2 id="studentCount">Total Students: 0</h2>
+      </section>
+
+      <section>
+        <h2>Students</h2>
+
+        <div id="studentContainer"></div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
