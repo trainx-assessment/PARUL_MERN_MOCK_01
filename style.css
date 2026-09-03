@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f4f4;
+}
+
+header,
+footer {
+    background: #65d1bf;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+input,
+select,
+textarea,
+button {
+    padding: 10px;
+}
+
+textarea {
+    grid-column: 1 / 3;
+}
+
+small {
+    color: red;
+}
+
+#students {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.student-card {
+    border: 1px solid #73ffff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.student-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    textarea {
+        grid-column: auto;
+    }
+
+    #students {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    #students {
+        grid-template-columns: 1fr;
+    }
+}

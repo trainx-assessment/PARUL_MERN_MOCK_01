@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Register Student</h2>
+
+            <form id="form">
+
+                <input id="name" placeholder="Student Name">
+                <small id="nameError"></small>
+
+                <input id="email" type="email" placeholder="Email">
+                <small id="emailError"></small>
+
+                <input id="phone" placeholder="Phone Number">
+                <small id="phoneError"></small>
+
+                <input id="dob" type="date">
+                <small id="dobError"></small>
+
+                <div>
+                    <label>Gender</label>
+                    <input type="radio" name="gender" value="Male">Male
+                    <input type="radio" name="gender" value="Female">Female
+                    <input type="radio" name="gender" value="Other">Other
+                </div>
+                <small id="genderError"></small>
+
+                <select id="course">
+                    <option value="">Select Course</option>
+                    <option>Web Development</option>
+                    <option>UI/UX</option>
+                    <option>Python</option>
+                    <option>Data Analytics</option>
+                    <option>MERN Stack</option>
+                    <option>Cloud Computing</option>
+                </select>
+                <small id="courseError"></small>
+
+                <div>
+                    <label>Skills</label>
+                    <input type="checkbox" name="skill" value="HTML">HTML
+                    <input type="checkbox" name="skill" value="CSS">CSS
+                    <input type="checkbox" name="skill" value="JavaScript">JavaScript
+                    <input type="checkbox" name="skill" value="Git">Git
+                    <input type="checkbox" name="skill" value="React">React
+                    <input type="checkbox" name="skill" value="Node.js">Node.js
+                </div>
+                <small id="skillError"></small>
+
+                <textarea id="about" maxlength="200" placeholder="About Student"></textarea>
+                <span id="count">0 / 200</span>
+                <small id="aboutError"></small>
+
+                <input id="photo" type="file" accept=".jpg,.jpeg,.png">
+                <small id="photoError"></small>
+
+                <button>Register Student</button>
+                <button type="reset">Reset Form</button>
+
+            </form>
+        </section>
+
+        <section>
+            <h2>Student Statistics</h2>
+            <p>Total Students: <b id="total">0</b></p>
+        </section>
+
+        <section>
+            <input id="search" placeholder="Search Student">
+
+            <select id="filter">
+                <option value="">All Courses</option>
+                <option>Web Development</option>
+                <option>UI/UX</option>
+                <option>Python</option>
+                <option>Data Analytics</option>
+                <option>MERN Stack</option>
+                <option>Cloud Computing</option>
+            </select>
+        </section>
+
+        <section>
+            <h2>Students</h2>
+            <div id="students"></div>
+        </section>
+    </main>
+
+    <footer>Student Management System</footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
