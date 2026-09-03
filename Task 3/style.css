@@ -1,0 +1,32 @@
+h1{
+    background-color: aqua;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+h2{
+    background-color: yellow;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+card1, card2, card3{
+    display: grid;
+    border-radius: 10%;
+    width: 100px;
+    height: 80px;
+    margin: auto;
+    box-shadow: 5px 5px 10px;
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+body{background-color: lightblue;
+    margin: 0px;
+    padding: 0px;
+}
+card1:hover, card2:hover, card3:hover{
+    background-color: lightgreen;
+}
