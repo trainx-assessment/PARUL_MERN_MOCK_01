@@ -870,7 +870,8 @@ form.addEventListener(
         const name =
             studentName.value;
 
-        if (name.trim() === "") {
+        name = name.trim()
+        if (name.length === 0) {
             alert("Name is required");
         }
 
