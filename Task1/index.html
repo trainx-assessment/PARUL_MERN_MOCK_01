@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Application Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Student Application Manager</h1>
+  </header>
+
+  <main>
+
+    <!-- Student Registration Form -->
+    <section id="form-section">
+      <h2>Student Registration</h2>
+      <form id="student-form">
+
+        <div class="form-group">
+          <label for="name">Student Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter full name" />
+          <small class="error-message" id="name-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter email" />
+          <small class="error-message" id="email-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" name="phone" placeholder="Enter phone number" />
+          <small class="error-message" id="phone-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" />
+          <small class="error-message" id="dob-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label>Gender</label>
+          <div class="radio-group">
+            <label><input type="radio" name="gender" value="Male" /> Male</label>
+            <label><input type="radio" name="gender" value="Female" /> Female</label>
+            <label><input type="radio" name="gender" value="Other" /> Other</label>
+          </div>
+          <small class="error-message" id="gender-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="course">Course</label>
+          <select id="course" name="course">
+            <option value="">Select Course</option>
+            <option value="Web Development">Web Development</option>
+            <option value="UI/UX">UI/UX</option>
+            <option value="Python">Python</option>
+            <option value="Data Analytics">Data Analytics</option>
+          </select>
+          <small class="error-message" id="course-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label>Skills</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="skills" value="HTML" /> HTML</label>
+            <label><input type="checkbox" name="skills" value="CSS" /> CSS</label>
+            <label><input type="checkbox" name="skills" value="JavaScript" /> JavaScript</label>
+            <label><input type="checkbox" name="skills" value="Git" /> Git</label>
+          </div>
+          <small class="error-message" id="skills-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="about">About Student</label>
+          <textarea id="about" name="about" placeholder="Write about the student..."></textarea>
+          <small class="error-message" id="about-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="photo">Profile Photo</label>
+          <input type="file" id="photo" name="photo" accept="image/*" />
+          <small class="error-message" id="photo-error"></small>
+        </div>
+
+        <button type="submit" id="submit-btn">Submit</button>
+
+      </form>
+    </section>
+
+    <!-- Total Students -->
+    <section id="stats-section">
+      <h2>Total Students: <span id="total-students">0</span></h2>
+    </section>
+
+    <!-- Student Cards -->
+    <section id="cards-section">
+      <h2>Registered Students</h2>
+      <div id="student-cards-container">
+        <!-- Cards added by JavaScript -->
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Student Application Manager</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
