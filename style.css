@@ -1,0 +1,97 @@
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+#heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#heading h2 {
+    margin-bottom: 5px;
+}
+#heading h4 {
+    margin-top: 0;
+    font-weight: normal;
+}
+#form {
+    width: 700px;
+    max-width: 100%;
+    margin: auto;
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #ccc;
+}
+
+#form > div {
+    margin-bottom: 18px;
+}
+
+.name,
+.email,
+.phone-number,
+.birth-date,
+.course {
+    display: flex;
+    align-items: center;
+}
+
+.name > label,
+.email > label,
+.phone-number > label,
+.birth-date > label,
+.course > label,
+.details > label,
+.file > label {
+    width: 140px;
+    font-weight: bold;
+}
+select {
+    width: 300px;
+    padding: 8px;
+}
+.Gender,
+.skills {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.Gender > label:first-child,
+.skills > label:first-child {
+    width: 140px;
+    font-weight: bold;
+}
+.details {
+    display: flex;
+    align-items: flex-start;
+}
+textarea {
+    width: 300px;
+    height: 100px;
+    padding: 8px;
+}
+
+.file {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    text-align: center;
+}
+button {
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+    
+
+
+
+

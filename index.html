@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="heading">
+        <h2>STUDENT APPLICATION MANAGEMENT SYSTEM</h2>
+        <h4>Register and manage student application</h4>
+    </header>
+
+    <form id="form">
+
+        <div class="name">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+        </div>
+
+        <div class="email">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+        </div>
+
+        <div class="phone-number">
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" required>
+        </div>
+
+        <div class="birth-date">
+            <label for="dob">Date of birth:</label>
+            <input type="date" id="dob" required>
+        </div>
+
+        <div class="Gender">
+            <label>Gender:</label>
+
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other">Other</label>
+        </div>
+
+        <div class="course">
+            <label for="value">Select Course:</label>
+
+            <select name="course" id="value">
+                <option>Web development</option>
+                <option>UI/UX</option>
+                <option>Python</option>
+                <option>Data Analytics</option>
+                <option>Mern stack</option>
+                <option>Cloud computing</option>
+            </select>
+        </div>
+
+        <div class="skills">
+            <label>Skills:</label>
+
+            <input type="checkbox" id="html">
+            <label for="html">HTML</label>
+
+            <input type="checkbox" id="css">
+            <label for="css">CSS</label>
+
+            <input type="checkbox" id="javascript">
+            <label for="javascript">JavaScript</label>
+
+            <input type="checkbox" id="git">
+            <label for="git">Git</label>
+
+            <input type="checkbox" id="react">
+            <label for="react">React</label>
+
+            <input type="checkbox" id="nodejs">
+            <label for="nodejs">NodeJS</label>
+        </div>
+
+        <div class="details">
+            <label for="about">About student:</label>
+            <textarea id="about" placeholder="Write about the student..."></textarea>
+        </div></div>
+    </section>
+
+        <div class="file">
+            <label for="photo">Add photo:</label>
+            <input type="file" id="photo">
+        </div>
+
+        <div class="btn">
+            <button type="submit">Register student</button>
+            <button type="reset">Reset form</button>
+        </div>
+
+    </form>
+    
+
+    <script src="script.js"></script>
+
+</body>
+</html>
