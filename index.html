@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+        <h1 style="margin-left: 33%;">Student Management System</h1>
+      <nav id="nav">
+        <div class="nav-element">
+          <h3>Student Application Management System</h3>
+        </div>
+        <div class="nav-element">
+          <h3>Register and manage student applications</h3>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1 style="background-color:transparent; display: inline; margin-left: 33%;">Student Registration Form</h1>
+      <form action="" style="background-color: rgb(82, 62, 65)">
+        <h1></h1>
+        <div id="name" >
+          <label for="name">Name</label>
+          <input type="text" placeholder="Enter  your name" required/>
+        </div>
+        <div id="email">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email-input"
+            placeholder="sunny@gmail.com"
+            required
+          />
+        </div>
+        <div>
+          <label for="number">Phone no:</label>
+          <input
+            type="number"
+            name="phone"
+            id="number"
+            placeholder="6202200180"
+            required
+          />
+        </div>
+        <div>
+          <label for="dob">Date of Birth</label>
+          <input
+            type="date"
+            name="dob"
+            id="date"
+            placeholder="Enter you DOB"
+            required
+          />
+        </div>
+        <div>
+          <p>Gender</p>
+          <div class="gender">
+            <label for="Male">Male</label>
+            <input type="radio" name="" id="" />
+          </div>
+          <div class="gender">
+            <label for="Male">Female</label>
+            <input type="radio" name="" id="" />
+          </div>
+          <div class="gender">
+            <label for="Male">other</label>
+            <input type="radio" name="" id="" />
+          </div>
+        </div>
+        <div id="course">
+            <label for="">Select Course</label>
+            <select name="" id="course">
+                <option value="course">WebDevlopment</option>
+                <option value="course">UI/UX</option>
+                <option value="course">Python</option>
+                <option value="course">Data Analytics</option>
+                <option value="course">Mern Stack</option>
+                <option value="course">Cloud Computing</option>
+                
+            </select>
+           
+        </div>
+        <div id="skill">
+            <p>Skills</p>
+            <div>
+                <label for="">Html</label>
+                <input type="radio" name="" id="">
+            </div>
+             <div>
+                <label for="">CSS</label>
+                <input type="radio" name="" id="">
+            </div>
+             <div>
+                <label for="">JavaScript</label>
+                <input type="radio" name="" id="">
+            </div>
+             <div>
+                <label for="">Git</label>
+                <input type="radio" name="" id="">
+            </div>
+             <div>
+                <label for="">React</label>
+                <input type="radio" name="" id="">
+            </div>
+             <div>
+                <label for="">Node</label>
+                <input type="radio" name="" id="">
+            </div>
+        </div>
+        <div>
+            <input type="text" name="" id="" placeholder="Maximum 200 characters">
+        </div>
+        <div>
+            <input type="file" name="profile" id="profile-pic">
+        </div>
+        <div class="buttons">
+            <button>Register Student</button>
+            <button>Reset Form</button>
+        </div>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
