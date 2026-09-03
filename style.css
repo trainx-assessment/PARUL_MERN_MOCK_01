@@ -5,9 +5,9 @@
 }
 
 :root {
-    --bg: #f4f7fb;
-    --surface: #ffffff;
-    --text: #3166b2;
+    --bg: #0e65d7;
+    --surface: #090202;
+    --text: #1d63c4;
     --muted: #6b7280;
     --border: #dbe2ea;
     --primary: #2563eb;
@@ -27,7 +27,7 @@ body {
 
 .site-header {
     background: #f4f7fb;
-    color: white;
+    color: rgb(14, 2, 2);
     padding: 28px 5%;
     display: flex;
     justify-content: space-between;
