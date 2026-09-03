@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1 style="color: black; font-size: 50px; text-align: center; text-decoration: underline;">Student Application Management System</h1>
+    <h2 style="color: blue; text-align: center; text-decoration: underline;">Register And Manage Student Application</h2>
+<fieldset id="Form">
+    <form id="studentForm">
+        <label>Student Name : </label>
+        <input type="text" id="studentName" placeholder="Student Name" required minlength="3" maxlength="40"><br><br>
+
+        <label>Email : </label>
+        <input type="email" id="email" placeholder="Email" required><br><br>
+
+        <label>Phone Number </label>
+        <input type="number" id="number" placeholder="Number" required minlength="10" maxlength="10"><br><br>
+
+        <label>Date Of Birth</label>
+        <input type="date" id="dob" placeholder="Date Of Birth" required><br><br>
+
+        <label>Gender : </label>
+        <input type="radio" id="gender" name="gender" required>
+        <label>Male</label>
+        <input type="radio" id="gender" name="gender" required>
+        <label>Female</label>
+        <input type="radio" id="gender" name="gender" required>
+        <label>Others</label><br><br>
+
+        <label>Course</label>
+        <select name="" id="course" required>
+            <option value="">Select Course</option>
+            <option value="">WEB DEVELOPMENT</option>
+            <option value="">UI/UX</option>
+            <option value="">PYTHON</option>
+            <option value="">DATA ANALYTICS</option>
+            <option value="">MERN STACK</option>
+            <option value="">CLOUD COMPUTING</option>
+        </select><br><br>
+        
+        <label>Skills -: </label>
+        <input type="checkbox" required>
+        <label>HTML</label>
+        <input type="checkbox" required>
+        <label>CSS</label>
+        <input type="checkbox" required>
+        <label>JAVASCRIPT</label>
+        <input type="checkbox" required>
+        <label>GIT</label>
+        <input type="checkbox" required>
+        <label>REACT</label>
+        <input type="checkbox" required>
+        <label>NODE.JS</label> <br><br>
+
+        <label>About Students : </label>
+        <textarea maxlength="200" required></textarea><br><br>
+
+        <label>Image : </label>
+        <input type="file" required ><br><br>
+
+        <button id="submit" type="submit">Register</button>
+        <button id="reset" type="reset">Reset</button>
+    </form>
+</fieldset>
+</body>
+</html>

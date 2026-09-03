@@ -1,0 +1,18 @@
+
+
+body{
+    background-color: antiquewhite;
+}
+
+
+#Form{
+    background-color: rgb(220, 243, 235);
+}
+
+#submit{
+    background-color: greenyellow;
+}
+
+#reset{
+    background-color: rgb(243, 142, 142);
+}
