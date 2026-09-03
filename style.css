@@ -1,0 +1,140 @@
+body{
+    background-color:rgb(222, 222, 223);
+}
+.header {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    color:black;
+    font-size: 29px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+.form1 {
+    background-color:white;
+    width: auto;
+    /* border: 1px solid black; */
+    border-radius: 25px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 20px black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+form {
+    width: 100%;
+}
+.text {
+    padding: 8px;
+    margin: 8px;
+    border-radius: 8px;
+    border: 1px solid gray;
+    width:300px;
+}
+.dob {
+    padding: 7px;
+    border-radius: 8px;
+    margin: 8px;
+    border: 1px solid gray;
+}
+.gender {
+    margin: 10px;
+}
+.radio {
+    margin: 5px;
+}
+.skills,
+.courses,
+.about {
+    margin: 15px 5px;
+    
+}
+.skills label,
+.gender label,label {
+    margin: 5px;
+    
+}
+.checkbox {
+    margin: 5px;
+}
+.course {
+    padding: 7px;
+    border-radius: 8px;
+    margin-left:10px;
+}
+.about textarea {
+    height: 70px;
+    width: 95%;
+    padding: 8px;
+    border-radius: 8px;
+}
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 8px;
+    background-color:rgb(31, 100, 205);
+    color:white;
+    border: 1px solid black;
+}
+.about{
+    display:flex;
+    align-items: center;
+}
+.cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.cards .card {
+    height:300px;
+    width:700px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.cards .card p {
+    margin: 8px ;
+}
+.c{
+    display:flex;
+    justify-content: center;
+
+}
+.buttons{
+    display:flex;
+    justify-content: center;
+}
+.courselabel{
+    margin-left:100px;
+}
+.registr{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 8px;;
+    height:80px;
+    width:800px;
+    background-color:rgb(222, 222, 223); ;
+}

@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="main">
+
+    <div class="header">
+    <h1>Student Application Management System</h1>
+</div>
+
+    <div class="form">
+        <div class="form1">
+
+    <h3 class="registr">Register and manage student applications</h3>
+
+    <form>
+
+        <label>Name:</label>
+        <input type="text" id="name" class="text" placeholder="Enter your name">
+
+        <label>Email:</label>
+        <input type="email" id="email" class="text" placeholder="Enter your Email">
+        <br><br>
+
+        <label>Phone Number:</label>
+        <input type="text" id="phone" class="text" placeholder="Phone Number">
+
+        <label>Date of Birth:</label>
+        <input type="date" id="dob" class="dob">
+        <br><br>
+
+        <label>Gender:</label>
+        <label><input type="radio" name="gender" value="male">Male</label>
+        <label><input type="radio" name="gender" value="female">Female</label>
+        <label><input type="radio" name="gender" value="other">Other</label>
+
+        <label class="courselabel">Course:</label>
+        <select id="course" class="course" required>
+        <option value="">Select Course</option>
+        <option value="web">Web Development</option>
+    <option value="uiux">UI/UX</option>
+        <option value="python">Python</option>
+        <option value="data">Data Analytics</option>
+        <option value="mern">MERN Stack</option>
+        <option value="cloud">Cloud Computing</option>
+</select>
+
+<br><br>
+
+        Skills:
+        <label><input type="checkbox" name="skills">HTML</label>
+        <label><input type="checkbox" name="skills">CSS</label>
+        <label><input type="checkbox" name="skills">JAVASCRIPT</label>
+        <label><input type="checkbox" name="skills">NODE.JS</label>
+
+<br><br>
+        <div class="about">
+        <label>About Student:</label>
+        <textarea id="about" placeholder="Write about yourself"></textarea></div>
+
+<br><br>
+
+        <label>Profile Photo:</label>
+<input type="file" id="photo" accept="image">
+
+<br><br>
+<div class="buttons">
+<button type="submit">Register Student</button>
+<button type="reset">Reset Form</button>
+</div>
+
+</form>
+
+</div>
+</div>
+<h2 class="c">CARDS</h2>
+<div class="cards"></div>
+
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
