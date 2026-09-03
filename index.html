@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Application Management</h1>
+        <p>Register and manage students</p>
+    </header>
+    <main>
+        <section class="box">
+            <h2>Register Student</h2>
+            <form id="form">
+                <div class="grid">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name">
+                        <small id="nameErr"></small>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                        <small id="emailErr"></small>
+                    </div>
+                    <div class="field">
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone">
+                        <small id="phoneErr"></small>
+                    </div>
+                    <div class="field">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob">
+                        <small id="dobErr"></small>
+                    </div>
+                    <div class="field">
+                        <label>Gender</label>
+                        <div>
+                            <input type="radio" name="gender" value="Male"> Male
+                            <input type="radio" name="gender" value="Female"> Female
+                        </div>
+                        <small id="genderErr"></small>
+                    </div>
+                    <div class="field">
+                        <label for="course">Course</label>
+                        <select id="course">
+                            <option value="">Select Course</option>
+                            <option value="MERN">MERN</option>
+                            <option value="Java">Java</option>
+                            <option value="Python">Python</option>
+                            <option value="AI/ML">AI/ML</option>
+                            <option value="Data Science">Data Science</option>
+                            <option value="Cyber Security">Cyber Security</option>
+                        </select>
+                        <small id="courseErr"></small>
+                    </div>
+                    <div class="field">
+                        <label>Skills</label>
+                        <div>
+                            <input type="checkbox" name="skill" value="HTML"> HTML
+                            <input type="checkbox" name="skill" value="CSS"> CSS
+                            <input type="checkbox" name="skill" value="JavaScript"> JS
+                            <input type="checkbox" name="skill" value="Java"> Java
+                        </div>
+                        <small id="skillErr"></small>
+                    </div>
+                    <div class="field">
+                        <label for="photo">Profile Photo</label>
+                        <input type="file" id="photo" accept=".jpg,.jpeg,.png">
+                        <small id="photoErr"></small>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="about">About</label>
+                    <textarea id="about" maxlength="200"></textarea>
+                    <div id="count">0 / 200</div>
+                    <small id="aboutErr"></small>
+                </div>
+                <div class="btns">
+                    <button type="submit" id="save">Register Student</button>
+                    <button type="reset" id="reset">Reset</button>
+                </div>
+            </form>
+        </section>
+        <section class="box stats">
+            <h2>Statistics</h2>
+            <div class="stat">
+                <div>
+                    <b id="total">0</b>
+                    <span>Total</span>
+                </div>
+                <div>
+                    <b id="mern">0</b>
+                    <span>MERN</span>
+                </div>
+                <div>
+                    <b id="java">0</b>
+                    <span>Java</span>
+                </div>
+                <div>
+                    <b id="python">0</b>
+                    <span>Python</span>
+                </div>
+                <div>
+                    <b id="ai">0</b>
+                    <span>AI/ML</span>
+                </div>
+                <div>
+                    <b id="ds">0</b>
+                    <span>Data Science</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="box">
+            <div class="tools">
+                <input type="text" id="search" placeholder="Search by name">
+                <select id="filter">
+                    <option value="">All Courses</option>
+                    <option value="MERN">MERN</option>
+                    <option value="Java">Java</option>
+                    <option value="Python">Python</option>
+                    <option value="AI/ML">AI/ML</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="Cyber Security">Cyber Security</option>
+                </select>
+            </div>
+            <div id="cards"></div>
+        </section>
+    </main>
+    <footer>
+        <p>Student Management System</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
