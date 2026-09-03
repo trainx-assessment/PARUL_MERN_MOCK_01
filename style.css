@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f6f8;
+    background-color: #d0e1f2;
     color: #222;
     line-height: 1.6;
 }
@@ -24,7 +24,7 @@ section {
 section h2 {
     margin-bottom: 25px;
     font-size: 26px;
-    color: #1f2937;
+    color: #0f151f;
 }
 
 
@@ -33,7 +33,7 @@ section h2 {
 ================================ */
 
 .site-header {
-    background-color: #1f2937;
+    background-color: #3d4755;
     color: white;
     padding: 35px 0;
     text-align: center;
@@ -208,12 +208,12 @@ section h2 {
 }
 
 #submitButton {
-    background-color: #2563eb;
+    background-color: #5917de;
     color: white;
 }
 
 #submitButton:hover {
-    background-color: #1d4ed8;
+    background-color: #c18acc;
 }
 
 #resetButton {
@@ -449,7 +449,7 @@ section h2 {
 ================================ */
 
 .site-footer {
-    background-color: #1f2937;
+    background-color: #757779;
     color: white;
     text-align: center;
     padding: 22px 0;
