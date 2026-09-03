@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>
+                Student Application Management System
+            </h1>
+            <h3>Register and manage student applications</h3>
+        </header>
+    
+        <main>
+            <form id="form">
+                <div class="initial_detail">
+                    <label class="input_name" for="student_name">Name:</label>
+                    <input id="student_name" type="text" required>
+                </div>
+                <span class="error" id="name_error"></span>
+                <div class="initial_detail">
+                    <label class="input_name" for="email">Email:</label>
+                    <input id="email" type="email" required>
+                </div>
+                <span class="error" id="email_error"></span>
+                <div class="initial_detail">
+                    <label class="input_name" for="phone_number">Phone No.:</label>
+                    <input id="phone_number" required type="number" minlength="10" maxlength="10">
+                </div>
+                <span class="error" id="phone_number_error"></span>
+                <div class="initial_detail">
+                    <label class="input_name" for="dob">Date of birth:</label>
+                    <input id="dob" type="date" required>
+                </div>
+                <span class="error" id="dob_error"></span>
+                <div>
+                    <p class="input_name">Gender:</p>
+                    <div class="gender_fields">
+                        <div class="gender_field">
+                            <input type="radio" id="male" value="male" name="gender" required>
+                            <label for="male">Male</label><br>
+                        </div>
+                        <div class="gender_field">
+                            <input type="radio" id="female" value="female" name="gender" required>
+                            <label for="female">Female</label><br>
+                        </div>
+                        <div class="gender_field">
+                            <input type="radio" id="other" value="other" name="gender" required>
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label class="input_name" for="courses">Select Course:</label>
+                    <select name="course" id="courses">
+                        <option value="web_dev">Web Development</option>
+                        <option value="ui_ux">UI/UX</option>
+                        <option value="python">Python</option>
+                        <option value="data_analytics">Data Analytics</option>
+                        <option value="mern_stack">MERN Stack</option>
+                        <option value="cloud_computing">Cloud Computing</option>
+                    </select>
+                </div>
+                <div>
+                    <p class="input_name">Skills:</p>
+                    <div id="skills">
+                        <div>
+                            <input type="checkbox" id="html">
+                            <label for="html">HTML</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="css">
+                            <label for="css">CSS</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="js">
+                            <label for="js">JavaScript</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="git">
+                            <label for="git">Git</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="react">
+                            <label for="react">React</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="node">
+                            <label for="node">Node js</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="about_field">
+                    <label class="input_name" for="about_student">About</label>
+                    <textarea 
+                    id="about_student" 
+                    maxlength="200"
+                    placeholder="Write about yourself"
+                    ></textarea>
+                </div>
+                <div class="form_file_field">
+                    <label class="input_name" for="profile_photo">Profile Photo:</label>
+                    <input type="file" id="profile_photo">
+                </div>
+                <br>
+                <div class="form_btns">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </main>
+        <div class="student_data">
+
+        </div>
+        <div id="student_container">
+        </div>
+        <div id="student_aggregated_data">
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
