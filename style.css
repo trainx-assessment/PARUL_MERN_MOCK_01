@@ -1,0 +1,215 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: black;
+}
+.header {
+    background: red;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-bottom: 25px solid blue;
+}
+
+
+.header h1 {
+    margin-bottom: 5px;
+}
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    background: yellow;
+  border-radius: 20px;
+    border: 3px solid black;
+}
+
+.registration-section {
+    padding: 20px;
+}
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+
+
+.section-heading h2,
+.students-section h2 {
+    color: red;
+    margin-bottom: 10px;
+}
+
+
+.student-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form label,
+.form legend {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form input,
+.form select,
+.form textarea {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+    border-color: red;
+    outline: none;
+}
+
+
+.radio-group,
+.checkbox {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+
+
+.radio-group label,
+.checkbox label {
+    font-weight: normal;
+}
+
+.radio-group input,
+.checkbox input {
+    width: auto;
+}
+
+fieldset {
+    padding: 15px;
+    border: 1px solid black;
+}
+
+
+.form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: red;
+    color: white;
+}
+
+.btn-secondary {
+    background: white;
+    color: black;
+    border: 1px solid black;
+}
+
+
+.students-section {
+    margin-top: 30px;
+}
+
+.student-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.student-card {
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+
+
+
+.student-card h3 {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.student-card p {
+    margin-bottom: 5px;
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+.footer {
+    background: red;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+@media (max-width: 768px) {
+    .student-form {
+        grid-template-columns: 1fr;
+    }
+
+    .student-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form-actions {
+        grid-column: auto;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .student-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .radio-group,
+    .checkbox {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

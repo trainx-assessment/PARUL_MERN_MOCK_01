@@ -1,0 +1,155 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student Application Management System">
+    <title>Student Application Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   
+    <header class="header">
+        <div class="header-container">
+            <h1>Student Application Management System</h1>
+            <p>Register student</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+       
+        <section class="registration-section">
+            <div class="section-heading">
+                <h2>Student Registration</h2>
+                <p>Enter the students information.</p>
+            </div>
+
+            <form id="studentForm" class="student-form">
+
+                
+                <div class="form">
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName" name="studentName"placeholder="Enter student name" required >
+                </div>
+
+               
+                <div class="form">
+                    <label for="studentEmail">Email</label>
+                    <input type="email"id="studentEmail" name="studentEmail"   placeholder="Enter email"  required  >
+                </div>
+
+<div class= "form">
+    <label for="studentPhone">Phone Number</label>
+    <input  type = "text" id = "studentPhone" name= "studentPhone" placeholder = "enter phone no" required>
+</div>
+
+               
+
+              <div class = "form">
+                <label for="dateOfBirth">Date of Birth</label>
+<input type="date" id = "dateOfBirth"  name = "dateOfBirth" required>
+              </div>
+               
+<fieldset class = "form">
+    <legend>Gender</legend>
+    <div class = "radio-group">
+        <lable>
+            <input  type="radio" name = "gender" value = " male" required>
+        male</lable>
+         <lable>
+            <input  type="radio" name = "gender" value = " female">
+        female</lable>
+    </div>
+</fieldset>
+           
+                
+
+
+                        
+<div class = "form">
+<label for="course"> course</label>
+<select id = "course" name = " course" required>
+    <option value = "">Select course</option>
+    <option value ="web development">web development</option>
+    <option value = "ui/ux ">Ui/Ux</option>
+    <option value = "python ">python</option>
+    <option value = "data analytic ">data analytic</option>
+    <option value = "mern stack">Mern stack</option>
+    <option value = "cloud computing ">cloud computing</option>
+</select></div>
+                
+                
+<filtdset class = "form">
+    <legend>skill</legend>
+    <div class="checkbox">
+        <label><input type = "checkbox" name = "skills" value = "HTML">HTML</label>
+        <label><input type = "checkbox" name = "skills" value = "css">css</label>
+        <label><input type = "checkbox" name = "skills" value = "JS">JS</label>
+        <label><input type = "checkbox" name = "skills" value = "Git">Git</label>
+        <label><input type = "checkbox" name = "skills" value = "react">react</label>
+        <label><input type = "checkbox" name = "skills" value = "node.js">node.js</label>
+        
+    </div>
+</filtdset>
+
+
+<div class = "form">
+    <label for="aboutStudent">about Student</label>
+    <textarea id = "aboutStudetn" name = "aboutStudent" rows = "2" maxlength="200" placeholder="something about student"></textarea>
+</div>
+
+
+
+<div class = "form">
+    <label for="profilePhoto" >profile photo</label> 
+    <input type = "file" id = "profilePhoto" name = "profilePhoto" accept="image/*">
+</div>
+                
+              
+
+           
+
+
+              
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        Register Student
+                    </button>
+
+                    <button type="reset" class="btn btn-secondary">
+                        Reset Form
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <section class="students-section">
+
+    <h2>Registered Students</h2>
+
+    <div class="student-cards" id="studentCards">
+    
+</div>
+
+
+</section>
+
+
+    </main>
+
+   
+    <footer class="footer">
+        <div class="footer-container">
+            <p>Student registeration designed by the great GARWIT TIWARI</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
