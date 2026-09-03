@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple interface for registering and managing student applications.">
+    <title>Student Application Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="content-wrapper">
+            <p class="header-label">Admissions</p>
+            <h1>Student Application Manager</h1>
+            <p class="header-description">Register student details and manage submitted applications.</p>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="registration-section" aria-labelledby="registrationHeading">
+            <div class="section-title">
+                <div>
+                    <p class="section-label">New application</p>
+                    <h2 id="registrationHeading">Student Registration Form</h2>
+                </div>
+            </div>
+
+            <form id="studentForm" novalidate>
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="studentName">Student Name <span aria-hidden="true">*</span></label>
+                        <input id="studentName" type="text" name="studentName" placeholder="Enter full name" autocomplete="name">
+                        <p id="nameError" class="error-message" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email <span aria-hidden="true">*</span></label>
+                        <input id="email" type="email" name="email" placeholder="name@example.com" autocomplete="email">
+                        <p id="emailError" class="error-message" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+                        <input id="phone" type="text" name="phone" placeholder="10-digit phone number" inputmode="numeric" maxlength="10" autocomplete="tel">
+                        <p id="phoneError" class="error-message" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="dob">Date of Birth <span aria-hidden="true">*</span></label>
+                        <input id="dob" type="date" name="dob" autocomplete="bday">
+                        <p id="dobError" class="error-message" aria-live="polite"></p>
+                    </div>
+
+                    <fieldset id="genderField" class="form-field option-field">
+                        <legend>Gender <span aria-hidden="true">*</span></legend>
+                        <div class="option-list">
+                            <label><input type="radio" name="gender" value="Male"> Male</label>
+                            <label><input type="radio" name="gender" value="Female"> Female</label>
+                            <label><input type="radio" name="gender" value="Other"> Other</label>
+                        </div>
+                        <p id="genderError" class="error-message" aria-live="polite"></p>
+                    </fieldset>
+
+                    <div class="form-field">
+                        <label for="course">Course <span aria-hidden="true">*</span></label>
+                        <select id="course" name="course">
+                            <option value="">Select Course</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="UI/UX">UI/UX</option>
+                            <option value="Python">Python</option>
+                            <option value="Data Analytics">Data Analytics</option>
+                        </select>
+                        <p id="courseError" class="error-message" aria-live="polite"></p>
+                    </div>
+
+                    <fieldset id="skillsField" class="form-field option-field full-row">
+                        <legend>Skills <span aria-hidden="true">*</span></legend>
+                        <div class="option-list skills-options">
+                            <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+                            <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+                            <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+                            <label><input type="checkbox" name="skills" value="Git"> Git</label>
+                            <label><input type="checkbox" name="skills" value="Database"> Dataase</label>
+
+                        </div>
+                        <p id="skillsError" class="error-message" aria-live="polite"></p>
+                    </fieldset>
+
+                    <div class="form-field full-row">
+                        <label for="about">About Student <span aria-hidden="true">*</span></label>
+                        <textarea id="about" name="about" rows="5" placeholder="Write a short introduction about the student."></textarea>
+                        <p id="aboutError" class="error-message" aria-live="polite"></p>
+                    </div>
+                    <div class="form-field full-row">
+                        <label for="photo">Profile Photo <span aria-hidden="true">*</span></label>
+                        <input id="photo" type="file" name="photo" accept="image/*">
+                        <p class="field-help">Choose an image file for the student profile.</p>
+                        <p id="photoError" class="error-message" aria-live="polite"></p>
+                    </div>
+                </div>
+
+                <button class="submit-button" type="submit">Add Student</button>
+            </form>
+        </section>
+
+        <section class="student-summary" aria-labelledby="summaryHeading">
+            <div>
+                <p class="section-label">Live summary</p>
+                <h2 id="summaryHeading">Student Records</h2>
+            </div>
+            <p class="student-count">Total Students: <strong id="totalStudents">0</strong></p>
+        </section>
+
+        <section class="applications-section" aria-labelledby="applicationsHeading">
+            <div class="section-title">
+                <div>
+                    <p class="section-label">Submitted applications</p>
+                    <h2 id="applicationsHeading">Students</h2>
+                </div>
+            </div>
+            <div id="studentContainer" class="student-grid" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">Student Application Manager</footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>
