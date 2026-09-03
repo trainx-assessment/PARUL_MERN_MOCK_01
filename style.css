@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(167, 106, 106);
+}
+header{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: aliceblue;
+}
+.headersec p{
+    text-align: center;
+}
+.details{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    height: 90vh;
+    width: 100%;
+    gap: 20px;
+
+}
+.box1{
+    background-color: aqua;
+    height:35vh;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 30px;
+    box-shadow: 1px 1px 10px 2px;
+
+    
+}
+.box2{
+     height:35vh;
+    width: 30%;
+  
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 2px;
+}
+.box3{
+  height: 40vh;
+  width: 70%;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 2px;
+ 
+}
+.formbox3 input{
+    height: 100px;
+    width: 500px;
+    padding: 10px;
+}
+/* .box4{
+    height: 50px;
+    width: 500px;
+} */
+
+ button{
+    height: 40px;
+    width: 200px;
+    
+    background-color: blue;
+    border-radius: 0px;
+    /* border: none; */
+    color: aliceblue;
+    margin-right:20px ;
+    cursor: pointer;
+    border: 1px solid white;
+    
+}
+
+button:hover{
+    background-color: brown;
+    transition: 0.2s;
+  
+}
+button:active{
+    background-color: rgb(21, 21, 21);
+}
