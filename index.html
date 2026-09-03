@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="wrapper">
+        <header class="header">
+            <h1>Student Application Management System</h1>
+            <h3>Register and manage student applications</h3>
+        </header>
+        <div class="register">
+            
+            <form class="Student-deatils">
+                <div class="name">
+                    <label for="name"><h4>Student Name: </h4></label>
+                    <input type="text" id="student-name" placeholder="Student name" required>
+                </div>
+                <div class="email">
+                    <label for="email"><h4>Email:</h4> </label>
+                    <input type="email" id="student-email" placeholder="Email" required>
+                </div>
+                <div class="phone">
+                    <label for="phone"><h4>Phone-Number: </h4></label>
+                    <input type="text" id="student-contact" placeholder="phone" required>
+                </div>
+                <div class="dob">
+                    <label for="date"><h4>DOB: </h4></label>
+                   <input type="date" id="birth" placeholder="dob" required>
+                </div>
+                <div class="gender">
+                   <h4>Gender: </h4>
+                    <label  for="Female">Female</label>
+                    <input value="Female" type="radio" id="female">
+                    <label for="Male">Male</label>
+                    <input value="Male" type="radio" id="male">
+                </div>
+                <div class="course">
+                    <label for="course"><h4>Courses: </h4></label>
+                    <select name="enroll" id="course-enrolled" required>
+                        <option selected value="Select Course">Select Course</option>
+                        <option value="Web Development">Web Development</option>
+                        <option  value="UI/UX">UI/UX</option>
+                        <option value="Python">Python</option>
+                        <option value="Data Analytics">Data Analytics</option>
+                        <option value="MERN Stack">MERN Stack</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                    </select>
+                </div>
+                <div class="skills">
+                     <h4>Skills: </h4>
+                    <div class="box1">
+                        <label for="html">HTML</label>
+                        <label for="css">CSS</label>
+                         <label for="javascript">JavaScript</label>
+                          <label for="react">React</label>
+                           <label for="node">Node.js</label>
+                    </div>
+                    <div class="box2">
+                         <input type="checkbox" multiple>
+                         <input type="checkbox" multiple>
+                         <input type="checkbox" multiple>
+                         <input type="checkbox" multiple>
+                         <input type="checkbox" multiple>
+                    </div>
+       
+                </div>
+                <div class="profile-pic">
+                    <label for="Upload">Uplaod Photo: </label>
+                    <input type="file" placeholder="Upload photo">
+                </div>
+                <div class="about">
+                    <h3>About: </h3>
+                   <input type="text">
+                </div>
+                <div class="btn">
+                    <button>Submit</button>
+                    <button>Reset</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="main">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

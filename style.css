@@ -1,0 +1,234 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    scrollbar-width: none;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(251, 250, 251);
+    overflow: hidden;
+}
+
+.header {
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.register {
+    height: 33rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Student-deatils {
+    height: 30rem;
+    width: 50%;
+    background-color: rgb(210, 204, 204);
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   border-radius: 10px;
+}
+
+.name {
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.name input {
+    height: 50%;
+    width: 60%;
+    border-radius: 7px;
+    border: solid blue 1px;
+    text-align: center;
+}
+.email {
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.email input {
+    height: 50%;
+    width: 60%;
+    border-radius: 7px;
+    border: solid blue 1px;
+    text-align: center;
+}
+.phone {
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.phone input {
+    height: 50%;
+    width: 60%;
+    border-radius: 7px;
+    border: solid blue 1px;
+    text-align: center;
+}
+
+.dob {
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.dob input {
+    height: 50%;
+    width: 60%;
+    border-radius: 7px;
+    border: solid blue 1px;
+    text-align: center;
+}
+.gender {
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding-left: 5px;
+    gap: 15px;
+}
+.course {
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+#course-enrolled {
+    height: 50%;
+    width: 60%;
+    border-radius: 7px;
+    border: solid blue 1px;
+    text-align: center;
+}
+.skills {
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding-left: 5px;
+    
+}
+.box1 {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content:center;
+    gap: 10px;
+}
+.box2 {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content:center;
+    gap: 16px;
+}
+.profile-pic {
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 40px;
+}
+.about {
+    height: 8rem;
+    width: 100%;
+    padding-left: 5px;
+}
+.about input {
+    height: 70%;
+    width: 90%;
+    border-radius: 7px;
+    border: solid blue 1px;
+}
+
+.btn {
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn button {
+    height: 30px;
+    width: 90px;
+    border-radius: 7px;
+    border: solid 1px blue;
+}
+.btn button:first-child {
+    background-color: rgb(206, 30, 30);
+     border: solid 1px rgb(0, 0, 0);
+     color: white;
+}
+
+@media (max-width: 768px) {
+    .Student-deatils {
+        height: 80vh;
+        width: 80vw;
+        display: grid;
+       grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px){
+     .Student-deatils {
+        height: 60vh;
+        width: 60vw;
+        display: grid;
+       grid-template-columns: 1fr;
+    }
+}
+
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    gap: 10px;
+}
+
+.card {
+    height: 10rem;
+    width: 30rem;
+    background-color: rgb(167, 167, 167);
+}
