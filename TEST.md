@@ -834,85 +834,105 @@ Fix the code **without rewriting the complete program**.
 ### HTML
 
 ```html
-<form id="studentForm">
 
-    <input
-        type="text"
-        id="studentName"
-        placeholder="Student Name"
-    >
+``` i have written this code in task-13 html file also ..
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 13 - Debugging</title>
+</head>
+<body>
 
-    <button type="submit">
-        Add Student
-    </button>
+    <form id="studentForm">
 
-</form>
+        <input
+            type="text"
+            id="studentName"
+            placeholder="Student Name"
+        >
 
-<div id="studentContainer"></div>
-```
+        <button type="submit">
+            Add Student
+        </button>
 
-### Buggy JavaScript
+    </form>
 
-```javascript
-const form =
-    document.querySelector("#studentForm");
+    <div id="studentContainer"></div>
 
-const studentName =
-    document.querySelector("#studentName");
+    <script>
+        const form =
+            document.querySelector("#studentForm");
 
-const studentContainer =
-    document.querySelector("#studentContainer");
+        const studentName =
+            document.querySelector("#studentName");
 
-form.addEventListener(
-    "submit",
-    function (event) {
+        const studentContainer =
+            document.querySelector("#studentContainer");
 
-        const name =
-            studentName.value;
+        form.addEventListener(
+            "submit",
+            function (event) {
 
-        if (name.trim() === "") {
-            alert("Name is required");
-        }
+           
+                event.preventDefault();
 
-        const card =
-            document.createElement("div");
+                const name =
+                    studentName.value;
 
-        card.classList.add("student-card");
 
-        const heading =
-            document.createElement("h3");
+                if (name.trim() === "") {
+                    alert("Name is required");
+                    return;
+                }
 
-        heading.textContent =
-            name;
+                const card =
+                    document.createElement("div");
 
-        const deleteButton =
-            document.createElement("button");
+                card.classList.add("student-card");
 
-        deleteButton.textContent =
-            "Delete";
+                const heading =
+                    document.createElement("h3");
 
-        card.appendChild(heading);
-        card.appendChild(deleteButton);
+                heading.textContent =
+                    name;
 
-        studentContainer.appendChild(card);
-    }
-);
+                const deleteButton =
+                    document.createElement("button");
 
-studentContainer.addEventListener(
-    "click",
-    function (event) {
+                deleteButton.textContent =
+                    "Delete";
 
-        if (
-            event.target.classList.contains("delete-btn")
-        ) {
+   
+                deleteButton.classList.add("delete-btn");
 
-            const card =
-                event.target.parentElement;
+                card.appendChild(heading);
+                card.appendChild(deleteButton);
 
-            card.remove();
-        }
-    }
-);
+                studentContainer.appendChild(card);
+
+                studentName.value = "";
+            }
+        );
+
+        studentContainer.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    event.target.classList.contains("delete-btn")
+                ) {
+
+                    card.remove();
+                }
+            }
+        );
+    </script>
+
+</body>
+</html>
+
 ```
 
 ## Expected Behaviour

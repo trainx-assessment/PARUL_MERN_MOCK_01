@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>School Registration Form </h1>
+    <form id="form">
+        <!-- //name  -->
+        <div class="field">
+        <label for="">Name:</label>
+        <input id="name" type="text" required>
+        </div>
+
+        <!-- //email -->
+
+        <div class="field">
+        <label for="">Email:</label>
+        <input id="email"  type="email" required>
+        </div>
+
+        <!-- phone number -->
+         <div class="field">
+        <label for="">Phone Number:</label>
+        <input id="phone" type="number" required>
+        </div>
+
+
+        <!-- DOB -->
+         <div class="field">
+        <label for="">DOB:</label>
+        <input id="dob" type="date" required>
+        </div>
+
+        <!-- gender -->
+         <div class="field">
+         <label for="">gender:</label>
+         <input type="radio" name="gender" id="gender" value="male"> male
+         <input type="radio" name="gender" id="gender" value="female"> female
+         <input type="radio" name="gender" id="gender" value="others"> others
+         </div>
+
+         <!-- course -->
+          <div class="field">
+         <label for="">course:</label>
+         <select name="" id="course">
+            <option value="" selected>Select Course</option>
+            <option value="Web Development">Web Development</option>
+            <option value="UI/UX">UI/UX</option>
+            <option value="Python">Python</option>
+            <option value="Data Analytics">Data Analytics</option>
+            <option value="MERN Stack">MERN Stack</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+         </select>
+         </div>
+
+         <!-- skills -->
+         <div class="skills full">
+
+         <label for="">Skills:</label>
+
+         <label for="">HTML</label>
+         <input type="checkbox" id="html" value="HTML">
+
+
+         <label for="">CSS</label>
+         <input type="checkbox" id="css" value="CSS">
+
+         <label for="">JavaScript</label>
+         <input type="checkbox" id="js" value="JavaScript">
+
+         <label for="">Git</label>
+         <input type="checkbox" id="git" value="Git">
+
+         <label for="">React</label>
+         <input type="checkbox" id="react" value="React">
+
+         <label for="">Node.js</label>
+         <input type="checkbox" id="node" value="Node.js">
+         
+         </div>
+
+         <!-- textarea -->
+          <div class="full">
+
+         <label for="">text area</label>
+
+         <input id="about" type="text" maxlength="200">
+         <span id="counter">0 / 200</span>
+         </div>
+          
+         <!-- photo -->
+          <div class="full">
+          <label for="">Profile Photo:</label>
+          <input id="photo" type="file">
+          </div>
+
+
+
+          <!-- buttons -->
+           <div class="full">
+          <button type="submit" id="submitBtn">Register Student</button>
+          <button type="reset">Reset form</button>
+          </div>
+        
+    </form>
+
+    <div class="stats">
+        <h3>Student Statistics</h3>
+        <p id="total">Total Students: 0</p>
+        <p>Web Development: <span id="cwd">0</span></p>
+        <p>UI/UX: <span id="cux">0</span></p>
+        <p>Python: <span id="cpy">0</span></p>
+        <p>Data Analytics: <span id="cda">0</span></p>
+        <p>MERN Stack: <span id="cmern">0</span></p>
+        <p>Cloud Computing: <span id="ccld">0</span></p>
+    </div>
+
+    <div class="container">
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
