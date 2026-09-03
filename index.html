@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+    </header>
+     <main>
+        <section id="registration">
+            <h2>Student Registration</h2>
+            <form>
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="phonenumber" placeholder="Phone Number" required>
+                <input type="date" id="dob" placeholder="Date of Birth" required>
+                <input type="gender" id="gender" placeholder="Gender" required>
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="other">Other</label>
+                <input type="radio" id="other" name="gender" value="other" required>
+                <select id="course" name="course" required>
+                    <option value="">Select Course</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Python">Python</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="MERN Stack">MERN Stack</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                </select>
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="terms" value="yes" required>
+                    html
+                </label>
+                <label for="show-password">
+                    <input type="checkbox" id="show-password" name="show-password" value="yes">
+                    CSS
+                </label>
+                <label for="show-password">
+                    <input type="checkbox" id="show-password" name="show-password" value="yes">
+                    JavaScript
+                </label>
+                <label for="show-password">
+                    <input type="checkbox" id="show-password" name="show-password" value="yes">
+                    Git
+                </label>
+                <label for="show-password">
+                    <input type="checkbox" id="show-password" name="show-password" value="yes">
+                    React
+                </label>
+                <label for="show-password">
+                    <input type="checkbox" id="show-password" name="show-password" value="yes">
+                    Node.js
+                </label> 
+                <textarea id="About Student" placeholder="About Student" required></textarea>
+                <input type="file" id="profile-picture" name="profile-picture" accept=".pdf,.doc,.docx" required>
+                <button type="Register Student">Register Student</button>
+                <button type="Reset Form">Reset Form</button>
+            </form>
+        </section>
+        <div class="card-container">
+       <div class="card card1"><p>Card One</p></div>
+       <div class="card card2"><p>Card two</p></div>
+       <div class="card card3"><p>Card three</p></div>
+    </div>
+    <script src="script.js"></script>    
+</body>
+</html>
