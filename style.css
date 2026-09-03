@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 15px;
+    background: #fff;
+    color: #000;
+}
+
+header {
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#title {
+    margin: 5px;
+}
+
+#subtitle {
+    margin: 5px;
+}
+
+/* Sections */
+.form-section {
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.stats-section {
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.filter-section {
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.cards-section {
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.full-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, textarea {
+    border: 1px solid black;
+    padding: 5px;
+    margin-top: 2px;
+}
+
+textarea {
+    height: 70px;
+}
+
+.counter {
+    text-align: right;
+    font-size: 11px;
+}
+
+.radio-box, .checkbox-box {
+    display: flex;
+    gap: 10px;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+#reg, #reset {
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    padding: 8px 15px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#reg:hover, #reset:hover {
+    background: #eee;
+}
+
+.stats-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.stat-item {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.student-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.student-card {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.student-card img {
+    width: 100%;
+    height: 120px;
+    border: 1px solid black;
+    object-fit: cover;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.edit-btn, .delete-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    background: #eee;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+    .student-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .student-cards-container {
+        grid-template-columns: 1fr;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+}
