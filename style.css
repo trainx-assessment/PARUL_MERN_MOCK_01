@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: honeydew;
+}
+
+header {
+    background-color:lightskyblue ;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+header h3 {
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+form {
+    width: 80%;
+    max-width: 900px;
+    margin: 25px auto;
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group p {
+    margin-bottom: 7px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+
+
+input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.form-group label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+input[type="file"] {
+    width: auto;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(29, 114, 199);
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: rgb(11, 67, 122);
+}
+
+.statistics-section,
+.search-section,
+.students-section {
+    width: 80%;
+    max-width: 900px;
+    margin: 25px auto;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.statistics-section h2,
+.search-section h2,
+.students-section h2 {
+    margin-bottom: 15px;
+}
+
+.statistics-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    width: 180px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+}
+
+.search-container input {
+    flex: 2;
+}
+
+.search-container select {
+    flex: 1;
+}
+
+.student-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.student-card {
+    flex: 1 1 250px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #fafafa;
+}
+
+.student-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.student-card h3 {
+    margin-bottom: 8px;
+}
+
+.student-card p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.student-actions {
+    margin-top: 10px;
+}
+
+.delete-btn {
+    background-color: #777;
+}
+
+
+
+.no-students {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+footer {
+    background-color: darkslateblue;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 25px;
+}
+
+@media (max-width: 768px) {
+
+    form,
+    .statistics-section,
+    .search-section,
+    .students-section {
+        width: 90%;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    header h3 {
+        font-size: 15px;
+    }
+
+    form,
+    .statistics-section,
+    .search-section,
+    .students-section {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .form-group label {
+        margin-right: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+}
