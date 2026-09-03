@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <header class="page-header">
+            <h1>Student Application Management System</h1>
+        </header>
+
+        <section class="workspace" aria-label="Student application workspace">
+            <form id="studentForm" novalidate>
+                <div class="section-heading">
+                    <h2>Register a student</h2>
+                </div>
+
+                <div class="form-grid">
+                    <div class="field field-wide">
+                        <label for="studentName">Student Name</label>
+                        <input type="text" id="studentName" name="studentName" autocomplete="name" placeholder="e.g. Rahul Sharma">
+                        <small class="error-message" data-error-for="studentName"></small>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="email" placeholder="student@example.com">
+                        <small class="error-message" data-error-for="email"></small>
+                    </div>
+                    <div class="field">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" inputmode="numeric" autocomplete="tel" placeholder="10-digit number">
+                        <small class="error-message" data-error-for="phone"></small>
+                    </div>
+                    <div class="field">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob">
+                        <small class="error-message" data-error-for="dob"></small>
+                    </div>
+                    <fieldset class="field">
+                        <legend>Gender</legend>
+                        <div class="options-inline">
+                            <label><input type="radio" name="gender" value="Female"> Female</label>
+                            <label><input type="radio" name="gender" value="Male"> Male</label>
+                            <label><input type="radio" name="gender" value="Other"> Other</label>
+                        </div>
+                        <small class="error-message" data-error-for="gender"></small>
+                    </fieldset>
+                    <div class="field">
+                        <label for="course">Course</label>
+                        <select id="course" name="course">
+                            <option value="">Select a course</option>
+                            <option>Web Development</option>
+                            <option>UI/UX</option>
+                            <option>Python</option>
+                            <option>Data Analytics</option>
+                        </select>
+                        <small class="error-message" data-error-for="course"></small>
+                    </div>
+                    <fieldset class="field field-wide">
+                        <legend>Skills</legend>
+                        <div class="options-inline">
+                            <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+                            <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+                            <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+                            <label><input type="checkbox" name="skills" value="Git"> Git</label>
+                            <label><input type="checkbox" name="skills" value="C/C++">C/C++</label>
+                        </div>
+                        <small class="error-message" data-error-for="skills"></small>
+                    </fieldset>
+                    <div class="field field-wide">
+                        <label for="about">About Student</label>
+                        <textarea id="about" name="about" rows="4" placeholder="A short introduction..."></textarea>
+                        <small class="error-message" data-error-for="about"></small>
+                    </div>
+                    <div class="field field-wide">
+                        <label for="photo">Profile Photo</label>
+                        <input type="file" id="photo" name="photo" accept="image/*">
+                        <small class="error-message" data-error-for="photo"></small>
+                    </div>
+                </div>
+                <button class="primary-button" type="submit">submit</button>
+                <!-- <button type="submit">submit</button> -->
+            </form>
+
+            <section class="directory" aria-labelledby="directory-title">
+                <div class="directory-header">
+                    <div>
+                        <p class="eyebrow">Live directory</p>
+                        <h2 id="directory-title">Registered students</h2>
+                    </div>
+                    </div>
+                    <p id="studentCount" class="student-count" aria-live="polite">Total Students: 0</p>
+                </div>
+                <div id="studentContainer" class="student-container" aria-live="polite">
+                    <p class="empty-state">No applications yet. Your registered students will appear here.</p>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
