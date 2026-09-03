@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+      </div>
+
+    </header>
+
+    <main>
+      <form action="submit" class="form">
+        <div>
+          <label for="name">Student Name</label>
+          <input id="name" type="name" placeholder="Enter your name" required />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="email" placeholder="Enter email" required />
+        </div>
+
+        <div>
+          <label for="text">Phone Number</label>
+          <input type="text" placeholder="Enter phone number" required />
+        </div>
+
+        <div>
+          <label for="date">Date of Birth</label>
+          <input type="date" required />
+        </div>
+
+        <div class="form-group">
+              <span>Gender</span>
+              <div>
+                <input type="radio" id="male" name="gender" value="Male" />
+                <label for="male">Male</label>
+              </div>
+              <div>
+                <input type="radio" id="female" name="gender" value="Female" />
+                <label for="female">Female</label>
+              </div>
+              <div>
+                <input type="radio" id="other" name="gender" value="Other" />
+                <label for="other">Other</label>
+              </div>
+            </div>
+
+        <div class="form-group">
+              <label for="course">Course</label>
+              <select id="course" name="course">
+                <option value="">Select Course</option>
+                <option value="Web Development">Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Python">Python</option>
+                <option value="Data Analytics">Data Analytics</option>
+                <option value="MERN Stack">MERN Stack</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+              </select>
+            </div>
+
+        <div class="form-group">
+              <span>Skills</span>
+              <div>
+                <input type="checkbox" id="html" name="skills" value="HTML" />
+                <label for="html">HTML</label>
+              </div>
+              <div>
+                <input type="checkbox" id="css" name="skills" value="CSS" />
+                <label for="css">CSS</label>
+              </div>
+              <div>
+                <input type="checkbox" id="javascript" name="skills" value="JavaScript" />
+                <label for="javascript">JavaScript</label>
+              </div>
+              <div>
+                <input type="checkbox" id="git" name="skills" value="Git" />
+                <label for="git">Git</label>
+              </div>
+              <div>
+                <input type="checkbox" id="react" name="skills" value="React" />
+                <label for="react">React</label>
+              </div>
+              <div>
+                <input type="checkbox" id="node" name="skills" value="Node.js" />
+                <label for="node">Node.js</label>
+              </div>
+            </div>
+
+        <div class="form-group">
+              <label for="about">About Student</label>
+              <textarea id="about" name="about" maxlength="200" rows="5" placeholder="Tell us about the student..."></textarea>
+              <div class="character-counter">
+                <span id="characterCount">0</span> / 200
+              </div>
+              <span class="max">Maximum 200 characters</span>
+            </div>
+
+        <div class="form-group">
+              <label for="profilePhoto">Profile Photo</label>
+              <input type="file" id="profilePhoto" name="profilePhoto" accept="image/*" />
+            </div>
+
+        <div class="btn">
+          <button class="reg">Register Students</button>
+          <button class="reset">Reset Form</button>
+        </div>
+      </form>
+    </main>
+
+    <div class="students-card"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

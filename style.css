@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+}
+
+header {
+    background: rgb(64, 64, 65);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 10px;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.form div {
+    margin-bottom: 20px;
+}
+
+label,
+span {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea,
+button {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.form-group input[type='radio'],
+.form-group input[type='checkbox'] {
+    width: auto;
+    margin-right: 10px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.character-counter {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 6px;
+}
+
+.max {
+    color: #666;
+}
+
+.btn {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.btn button {
+    width: 50%;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+.reg{
+    background: rgb(52, 52, 240);
+}
+.reset{
+    background: gray;
+}
+
+.students-card {
+    max-width: 900px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.student-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.student-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.student-card h2 {
+    margin: 10px 0;
+}
+
+.student-card p {
+    margin: 8px 0;
+}
+
+.student-card button {
+    width: 48%;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.student-card button:first-of-type {
+    background: rgb(52, 52, 240);
+}
+
+.student-card button:last-of-type {
+    background: gray;
+}
+
+@media (max-width: 600px) {
+    .students-card {
+        grid-template-columns: 1fr;
+        margin: 20px;
+    }
+}
