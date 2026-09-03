@@ -1,0 +1,307 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #f8fafc;
+    --panel: #ffffff;
+    --text: #1f2937;
+    --muted: #64748b;
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary: #60a5fa;
+    --accent: #dc2626;
+    --border: #cbd5e1;
+    --danger: #dc2626;
+    --shadow: none;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.app-shell {
+    width: min(1180px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 2rem 0 3rem;
+}
+
+.hero,
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+.hero {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    background: #071bfe;
+
+}
+
+.hero h1,
+.panel h2 {
+    /* color: white */
+    margin: 0;
+}
+
+.hero h1 {
+    color: #ffffff;
+}
+
+.hero p {
+    margin: 0.75rem 0 0;
+    color: white;
+}
+
+.panel {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.panel h2 {
+    color: #1f2937;
+}
+
+.count-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border);
+}
+
+#studentCount {
+    color: #2563eb;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.field,
+.fieldset-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.field label,
+.fieldset-block legend {
+    font-weight: 700;
+    color: var(--text);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.9rem 1rem;
+    font: inherit;
+    color: var(--text);
+    background: #fff;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #94a3b8;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.fieldset-block {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+.choice-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem 1.25rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: #fff;
+}
+
+.choice-row label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-weight: 500;
+}
+
+.wrap {
+    align-items: center;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.error-message {
+    min-height: 1em;
+    font-size: 0.85rem;
+    color: var(--danger);
+}
+
+.submit-btn {
+    margin-top: 1.2rem;
+    border: 0;
+    border-radius: 4px;
+    background: #2563eb;
+    color: #fff;
+    padding: 0.95rem 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #1d4ed8;
+}
+
+.student-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.student-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: #ffffff;
+}
+
+.student-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    background: #e5e7eb;
+}
+
+.student-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #2563eb;
+}
+
+.student-meta {
+    display: grid;
+    gap: 0.35rem;
+    color: #374151;
+    font-size: 0.95rem;
+}
+
+.student-meta p {
+    padding: 0.22rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.student-meta p:last-child {
+    border-bottom: 0;
+}
+
+.student-meta p,
+.student-about {
+    margin: 0;
+}
+
+.student-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-pill {
+    padding: 0.35rem 0.7rem;
+    border-radius: 3px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.delete-btn {
+    border: 0;
+    border-radius: 4px;
+    padding: 0.8rem 1rem;
+    background: #dc2626;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+.field input[type="radio"],
+.field input[type="checkbox"] {
+    accent-color: var(--primary);
+}
+
+.fieldset-block legend {
+    color: var(--text);
+}
+
+.choice-row label {
+    padding: 0.25rem 0.55rem;
+    border-radius: 3px;
+    background: #f8fafc;
+}
+
+.student-about {
+    padding: 0.75rem;
+    border-radius: 4px;
+    background: #f8fafc;
+}
+
+@media (max-width: 768px) {
+    .app-shell {
+        width: min(100% - 1rem, 1180px);
+        padding-top: 1rem;
+    }
+
+    .hero,
+    .panel {
+        padding: 1rem;
+        border-radius: 4px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .count-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
