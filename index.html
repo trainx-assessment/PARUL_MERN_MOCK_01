@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+    </header>
+    <main>
+        
+        <section>
+            <h2>Student Registration Form</h2>
+            <form id="studentForm">
+                <label for="name"><b>Student Name:</b></label>
+                <input type="text" id="name" name="name" required>
+                <label for="email"><b>Email:</b></label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone-number"><b>Phone Number:</b></label>
+                <input type="text" id="phone-number" name="phone-number" required>
+                <label for="DOB"><b>Date Of Birth:</b></label>
+                <input type="date" id="DOB" name="DOB" required>
+             
+                <label><b>Gender:</b></label>
+                <div class="gender-option">
+                    <label>
+                        Male
+                        <input type="radio" name="gender" value="Male" required>
+                    </label>
+                    <label>
+                        Female
+                        <input type="radio" name="gender" value="Female">
+                    </label>
+                    <label>
+                        Others
+                        <input type="radio" name="gender" value="Others">
+                    </label>
+                </div>
+               
+                <label for="courseSelector">
+                    <b>Course:</b>
+                </label>
+                <select id="courseSelector" required>
+                    <option value="">Select course</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Python">Python</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="MERN Stack">MERN Stack</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                </select>
+                
+                <label><b>Skills:</b></label>
+                <div class="skills-option">
+                    <label>
+                        HTML
+                        <input type="checkbox" value="HTML">
+                    </label>
+                    <label>
+                        CSS
+                        <input type="checkbox" value="CSS">
+                    </label>
+                    <label>
+                        JavaScript
+                        <input type="checkbox" value="JavaScript">
+                    </label>
+                    <label>
+                        Git
+                        <input type="checkbox" value="Git">
+                    </label>
+                    <label>
+                        React
+                        <input type="checkbox" value="React">
+                    </label>
+                    <label>
+                        Node.js
+                        <input type="checkbox" value="Node.js">
+                    </label>
+                </div>
+                
+                <label for="about-student">
+                    <b>About Student:</b>
+                </label>
+                <textarea
+                    id="about-student"
+                    name="about-student"
+                    maxlength="200"
+                    placeholder="Write about student (max 200 characters):"
+                ></textarea>
+                
+                <label for="profile-pic">
+                    <b>Upload your profile photo:</b>
+                </label>
+                <input
+                    type="file"
+                    id="profile-pic"
+                    accept="image/*"
+                >
+               
+                <div class="form-button">
+                    <button type="submit">Register Student</button>
+                    <button type="reset">Reset Information</button>
+                </div>
+            </form>
+        </section>
+        
+        <section>
+            <h2>Student Statistics</h2>
+            <p>
+                Total Students:
+                <span id="totalStudents">0</span>
+            </p>
+            <p>
+                Web Development:
+                <span id="webDevelopment">0</span>
+            </p>
+            <p>
+                UI/UX:
+                <span id="uiux">0</span>
+            </p>
+            <p>
+                Python:
+                <span id="python">0</span>
+            </p>
+            <p>
+                Data Analytics:
+                <span id="dataAnalytics">0</span>
+            </p>
+            <p>
+                MERN Stack:
+                <span id="mern">0</span>
+            </p>
+            <p>
+                Cloud Computing:
+                <span id="cloud">0</span>
+            </p>
+        </section>
+        
+        <section>
+            <h2>Search and Filter</h2>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search students..."
+            >
+            <select id="courseFilter">
+                <option value="all">All Courses</option>
+                <option value="Web Development">Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Python">Python</option>
+                <option value="Data Analytics">Data Analytics</option>
+                <option value="MERN Stack">MERN Stack</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+        </section>
+      
+        <section>
+            <h2>Students</h2>
+            <div id="studentContainer"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html> 
