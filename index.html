@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="head">
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+
+    </header>
+
+    <main id="main">
+
+        <h2>Student Registration Form</h2>
+
+        <form id="studentForm">
+
+            <label>Student Name</label>
+            <input class="input" type="text" id="name" required>
+
+            <label>Email</label>
+            <input class="input" type="email" id="email" required>
+
+            <label>Phone Number</label>
+            <input class="input" type="text" id="phone" required>
+
+            <label>Date of Birth</label>
+            <input class="input" type="date" id="dob" required>
+
+            <label>Gender</label>
+
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <input type="radio" name="gender" value="Other"> Other
+
+            <label>Course</label>
+
+            <select class="input" id="course">
+
+                <option value="">Select Course</option>
+                <option>Web Development</option>
+                <option>UI/UX</option>
+                <option>Python</option>
+                <option>Data Analytics</option>
+                <option>MERN Stack</option>
+                <option>Cloud Computing</option>
+
+            </select>
+
+            <label>Skills</label>
+
+            <input type="checkbox" name="skills" value="HTML"> HTML
+            <input type="checkbox" name="skills" value="CSS"> CSS
+            <input type="checkbox" name="skills" value="JavaScript"> JavaScript
+            <input type="checkbox" name="skills" value="Git"> Git
+            <input type="checkbox" name="skills" value="React"> React
+            <input type="checkbox" name="skills" value="Node.js"> Node.js
+
+            <label>About Student</label>
+
+            <textarea class="input" id="about" maxlength="200"></textarea>
+
+            <label>Profile Photo</label>
+
+            <input type="file" id="photo" accept="image/*">
+
+            <br>
+
+            <button type="submit">Register Student</button>
+
+            <button type="reset" class="reset">Reset Form</button>
+
+        </form>
+
+    </main>
+
+    <footer id="foot">
+
+        <p>Student Application Management System</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
