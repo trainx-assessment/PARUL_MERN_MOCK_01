@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register and manage student applications.">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div>
+                <p class="eyebrow">APPLICATION DESK / 2026</p>
+                <h1>Student Application<br><span>Management System</span></h1>
+                <p class="subtitle">Register and manage student applications</p>
+            </div>
+            <button class="theme-toggle" id="themeToggle" type="button">Dark Mode</button>
+        </div>
+    </header>
+
+    <main class="page-shell">
+        <section class="workspace-grid" aria-label="Student registration workspace">
+            <div class="section-heading">
+                <p class="eyebrow">01 / NEW APPLICATION</p>
+                <h2>Register a student</h2>
+                <p>Capture a complete profile to add it to the application directory.</p>
+            </div>
+
+            <form id="studentForm" novalidate>
+                <div class="form-grid">
+                    <div class="field-group">
+                        <label for="studentName">Student Name <span>*</span></label>
+                        <input id="studentName" name="studentName" type="text" autocomplete="name" placeholder="e.g. Rahul Sharma" required>
+                        <small class="error-message" id="studentNameError"></small>
+                    </div>
+                    <div class="field-group">
+                        <label for="email">Email <span>*</span></label>
+                        <input id="email" name="email" type="email" autocomplete="email" placeholder="student@example.com" required>
+                        <small class="error-message" id="emailError"></small>
+                    </div>
+                    <div class="field-group">
+                        <label for="phone">Phone Number <span>*</span></label>
+                        <input id="phone" name="phone" type="text" inputmode="numeric" autocomplete="tel" placeholder="10 digit phone number" required>
+                        <small class="error-message" id="phoneError"></small>
+                    </div>
+                    <div class="field-group">
+                        <label for="dob">Date of Birth <span>*</span></label>
+                        <input id="dob" name="dob" type="date" required>
+                        <small class="error-message" id="dobError"></small>
+                    </div>
+                    <fieldset class="field-group">
+                        <legend>Gender <span>*</span></legend>
+                        <div class="choice-row">
+                            <label><input type="radio" name="gender" value="Male"> Male</label>
+                            <label><input type="radio" name="gender" value="Female"> Female</label>
+                            <label><input type="radio" name="gender" value="Other"> Other</label>
+                        </div>
+                        <small class="error-message" id="genderError"></small>
+                    </fieldset>
+                    <div class="field-group">
+                        <label for="course">Course <span>*</span></label>
+                        <select id="course" name="course" required>
+                            <option value="">Select Course</option>
+                            <option>Web Development</option>
+                            <option>UI/UX</option>
+                            <option>Python</option>
+                            <option>Data Analytics</option>
+                            <option>MERN Stack</option>
+                            <option>Cloud Computing</option>
+                        </select>
+                        <small class="error-message" id="courseError"></small>
+                    </div>
+                    <fieldset class="field-group full-width">
+                        <legend>Skills <span>*</span></legend>
+                        <div class="choice-row skills-row">
+                            <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+                            <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+                            <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+                            <label><input type="checkbox" name="skills" value="Git"> Git</label>
+                            <label><input type="checkbox" name="skills" value="React"> React</label>
+                            <label><input type="checkbox" name="skills" value="Node.js"> Node.js</label>
+                        </div>
+                        <small class="error-message" id="skillsError"></small>
+                    </fieldset>
+                    <div class="field-group full-width">
+                        <label for="about">About Student <span>*</span></label>
+                        <textarea id="about" name="about" maxlength="200" rows="4" placeholder="Tell us about the student's interests and goals..." required></textarea>
+                        <div class="field-footer"><small>Minimum 20 characters</small><output id="characterCounter">0 / 200</output></div>
+                        <small class="error-message" id="aboutError"></small>
+                    </div>
+                    <div class="field-group full-width">
+                        <label for="profilePhoto">Profile Photo <span>*</span></label>
+                        <input id="profilePhoto" name="profilePhoto" type="file" accept="image/*" required>
+                        <small class="file-note">JPG, JPEG or PNG files only</small>
+                        <small class="error-message" id="profilePhotoError"></small>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button class="button button-primary" id="submitButton" type="submit">Register Student</button>
+                    <button class="button button-secondary" id="resetButton" type="reset">Reset Form</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="stats-section" aria-labelledby="statsTitle">
+            <div class="section-heading compact-heading">
+                <p class="eyebrow">02 / OVERVIEW</p>
+                <h2 id="statsTitle">Application pulse</h2>
+            </div>
+            <div class="stats-grid" id="statistics"></div>
+        </section>
+
+        <section class="directory-section" aria-labelledby="directoryTitle">
+            <div class="directory-header">
+                <div class="section-heading compact-heading">
+                    <p class="eyebrow">03 / DIRECTORY</p>
+                    <h2 id="directoryTitle">Student applications</h2>
+                </div>
+                <div class="directory-controls">
+                    <label class="sr-only" for="searchInput">Search student by name</label>
+                    <input id="searchInput" type="search" placeholder="Search student by name...">
+                    <label class="sr-only" for="courseFilter">Filter by course</label>
+                    <select id="courseFilter">
+                        <option value="All Courses">All Courses</option>
+                        <option>Web Development</option>
+                        <option>UI/UX</option>
+                        <option>Python</option>
+                        <option>Data Analytics</option>
+                        <option>MERN Stack</option>
+                        <option>Cloud Computing</option>
+                    </select>
+                </div>
+            </div>
+            <div class="student-cards" id="studentContainer" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Student Application Management System</p>
+        <p>Built with HTML, CSS &amp; Vanilla JavaScript</p>
+    </footer>
+</body>
+</html>
