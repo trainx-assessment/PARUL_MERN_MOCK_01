@@ -1,0 +1,241 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #e8f0f8;
+}
+header{
+    background: #7d9bc5;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+}
+main{
+    max-width: 1100px;
+    margin: 40px auto;
+}
+section{
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+}
+#studentForm{
+    max-width: 600px;
+    margin: 10px auto;
+    border: 1px solid black;
+    
+}
+/* .form-grid {
+    display: grid;
+    grid-template-columns:
+        1fr 1fr;
+    gap: 10px;
+} */
+.form-group{
+    display: flex;
+    margin-bottom: 30px;
+    /* font-weight: bold; */
+    justify-content: flex-start;
+}
+
+input,select,textarea {
+    width: 55%;
+    padding: 2px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 13px;
+}
+.inline-options{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.inline-options label{
+    font-weight: normal;
+}
+.inline-options input{
+    width: auto;
+}
+.counter {
+    text-align: right;
+    font-size: 13px;
+    margin-top: 4px;
+}
+.error {
+    display: block;
+    color: #dc2626;
+    font-size: 12px;
+    margin-top: 4px;
+    font-weight: 500;
+}
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+button {
+    border: none;
+    border-radius: 7px;
+    padding: 11px 18px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+}
+button:hover {
+    opacity: 0.85;
+}
+button.secondary {
+    background: #181b22;
+}
+.search-grid {
+    display: grid;
+    grid-template-columns:
+        2fr 1fr;
+    gap: 15px;
+}
+.card-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+}
+.edit-btn {
+    background: #f59e0b;
+}
+.delete-btn {
+    background: #dc2626;
+}
+.preview {
+    display: none;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+.student-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.student-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.student-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.student-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.card-content h3 {
+    margin: 10px 0;
+    color: #1f2937;
+    font-size: 18px;
+}
+.card-content p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #4b5563;
+}
+.card-content strong {
+    color: #2563eb;
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.stat {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.stat strong {
+    display: block;
+    font-size: 24px;
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+.stat {
+    font-size: 14px;
+    color: #6b7280;
+}
+.empty-message {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 16px;
+    padding: 40px 20px;
+}
+@media (max-width: 768px) {
+    .form-grid,
+    .search-grid {
+        grid-template-columns: 1fr;
+    }
+    .student-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+    .full-width {
+        grid-column: auto;
+    }
+    header button {
+        position: static;
+
+        margin-top: 15px;
+    }
+}
+@media (max-width: 480px) {
+    main {
+        width: 95%;
+    }
+    section {
+        padding: 18px;
+    }
+    .student-container {
+        grid-template-columns: 1fr;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+    .inline-options {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* footerrrrrrr */
+
+footer{
+    text-align: center;
+    padding: 25px;
+    background: #1f2937;
+    color: white;
+}
