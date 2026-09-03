@@ -18,6 +18,8 @@ const statisticsContainer = document.getElementById(
     "student-statistics"
 );
 
+let editingStudentId = null;
+
 
 // ==================== ERROR FUNCTIONS ====================
 
@@ -41,8 +43,7 @@ function removeError(element) {
 }
 
 function clearErrors() {
-    const errors =
-        document.querySelectorAll(".error-message");
+    const errors = document.querySelectorAll(".error-message");
 
     errors.forEach(function (error) {
         error.remove();
@@ -50,7 +51,7 @@ function clearErrors() {
 }
 
 
-// ==================== ABOUT CHARACTER COUNTER ====================
+// ==================== ABOUT COUNTER ====================
 
 about.addEventListener("input", function () {
     let counter = document.getElementById("about-counter");
@@ -68,6 +69,7 @@ about.addEventListener("input", function () {
 // ==================== DISPLAY STUDENTS ====================
 
 function displayStudents() {
+
     studentCardsContainer.innerHTML = "";
 
     students.forEach(function (student) {
@@ -103,7 +105,8 @@ function displayStudents() {
             "Skills: " + student.skills.join(", ");
 
         const aboutText = document.createElement("p");
-        aboutText.textContent = "About: " + student.about;
+        aboutText.textContent =
+            "About: " + student.about;
 
         const editButton = document.createElement("button");
         editButton.textContent = "Edit";
@@ -137,7 +140,8 @@ function updateStatistics() {
     statisticsContainer.innerHTML = "";
 
     const total = document.createElement("p");
-    total.textContent = "Total Students: " + students.length;
+    total.textContent =
+        "Total Students: " + students.length;
 
     statisticsContainer.appendChild(total);
 
@@ -176,14 +180,21 @@ form.addEventListener("submit", function (event) {
 
     let isValid = true;
 
+
     // Student Name
     const nameValue = studentName.value.trim();
 
     if (nameValue === "") {
-        showError(studentName, "Student name is required.");
+        showError(
+            studentName,
+            "Student name is required."
+        );
         isValid = false;
     }
-    else if (nameValue.length < 3 || nameValue.length > 40) {
+    else if (
+        nameValue.length < 3 ||
+        nameValue.length > 40
+    ) {
         showError(
             studentName,
             "Name must be between 3 and 40 characters."
@@ -206,11 +217,17 @@ form.addEventListener("submit", function (event) {
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (emailValue === "") {
-        showError(email, "Email is required.");
+        showError(
+            email,
+            "Email is required."
+        );
         isValid = false;
     }
     else if (!emailRegex.test(emailValue)) {
-        showError(email, "Enter a valid email address.");
+        showError(
+            email,
+            "Enter a valid email address."
+        );
         isValid = false;
     }
 
@@ -219,7 +236,10 @@ form.addEventListener("submit", function (event) {
     const phoneValue = phone.value.trim();
 
     if (phoneValue === "") {
-        showError(phone, "Phone number is required.");
+        showError(
+            phone,
+            "Phone number is required."
+        );
         isValid = false;
     }
     else if (!/^\d{10}$/.test(phoneValue)) {
@@ -235,8 +255,14 @@ form.addEventListener("submit", function (event) {
     const dobValue = dob.value;
 
     if (dobValue === "") {
-        showError(dob, "Date of birth is required.");
+
+        showError(
+            dob,
+            "Date of birth is required."
+        );
+
         isValid = false;
+
     }
     else {
 
@@ -244,11 +270,14 @@ form.addEventListener("submit", function (event) {
         const today = new Date();
 
         if (selectedDate > today) {
+
             showError(
                 dob,
                 "Date of birth cannot be in the future."
             );
+
             isValid = false;
+
         }
         else {
 
@@ -271,10 +300,12 @@ form.addEventListener("submit", function (event) {
             }
 
             if (age < 15) {
+
                 showError(
                     dob,
                     "Student must be at least 15 years old."
                 );
+
                 isValid = false;
             }
         }
@@ -307,7 +338,12 @@ form.addEventListener("submit", function (event) {
     const courseValue = course.value;
 
     if (courseValue === "") {
-        showError(course, "Please select a course.");
+
+        showError(
+            course,
+            "Please select a course."
+        );
+
         isValid = false;
     }
 
@@ -338,52 +374,79 @@ form.addEventListener("submit", function (event) {
     const aboutValue = about.value.trim();
 
     if (aboutValue === "") {
+
         showError(
             about,
             "About student is required."
         );
+
         isValid = false;
+
     }
     else if (aboutValue.length < 20) {
+
         showError(
             about,
             "About student must be at least 20 characters."
         );
+
         isValid = false;
+
     }
     else if (aboutValue.length > 200) {
+
         showError(
             about,
             "About student cannot exceed 200 characters."
         );
+
         isValid = false;
     }
 
 
     // Profile Photo
-    if (profilePhoto.files.length === 0) {
+    if (editingStudentId === null) {
 
-        showError(
-            profilePhoto,
-            "Profile photo is required."
-        );
-
-        isValid = false;
-
-    }
-    else {
-
-        const file =
-            profilePhoto.files[0];
-
-        if (!file.type.startsWith("image/")) {
+        if (profilePhoto.files.length === 0) {
 
             showError(
                 profilePhoto,
-                "Please select an image file."
+                "Profile photo is required."
             );
 
             isValid = false;
+
+        }
+        else {
+
+            const file = profilePhoto.files[0];
+
+            if (!file.type.startsWith("image/")) {
+
+                showError(
+                    profilePhoto,
+                    "Please select an image file."
+                );
+
+                isValid = false;
+            }
+        }
+    }
+    else {
+
+        if (profilePhoto.files.length > 0) {
+
+            const file = profilePhoto.files[0];
+
+            if (!file.type.startsWith("image/")) {
+
+                showError(
+                    profilePhoto,
+                    "Please select an image file."
+                );
+
+                isValid = false;
+            }
         }
     }
 
@@ -394,7 +457,7 @@ form.addEventListener("submit", function (event) {
     }
 
 
-    // ==================== CREATE STUDENT ====================
+    // ==================== SKILLS ====================
 
     const skills = [];
 
@@ -402,6 +465,74 @@ form.addEventListener("submit", function (event) {
         skills.push(skill.value);
     });
 
+
+    // ==================== EDIT STUDENT ====================
+
+    if (editingStudentId !== null) {
+
+        const student =
+            students.find(function (student) {
+                return student.id === editingStudentId;
+            });
+
+        if (student) {
+
+            student.name = nameValue;
+            student.email = emailValue;
+            student.phone = phoneValue;
+            student.dob = dobValue;
+            student.gender = selectedGender.value;
+            student.course = courseValue;
+            student.skills = skills;
+            student.about = aboutValue;
+
+
+            // Change photo only if new photo selected
+            if (profilePhoto.files.length > 0) {
+
+                student.photo =
+                    URL.createObjectURL(
+                        profilePhoto.files[0]
+                    );
+            }
+
+
+            // Display updated student
+            displayStudents();
+
+
+            // Update statistics
+            updateStatistics();
+
+
+            alert("Student updated successfully!");
+
+
+            // Reset editing mode
+            editingStudentId = null;
+
+            form.reset();
+
+            document.querySelector(
+                'button[type="submit"]'
+            ).textContent = "Register Student";
+
+
+            const counter =
+                document.getElementById("about-counter");
+
+            if (counter) {
+                counter.textContent = "0 / 200";
+            }
+
+            clearErrors();
+
+            return;
+        }
+    }
+
+
+    // ==================== CREATE NEW STUDENT ====================
 
     const student = {
 
@@ -431,22 +562,15 @@ form.addEventListener("submit", function (event) {
     };
 
 
-    // Add student to array
     students.push(student);
 
-
-    // Display students
     displayStudents();
 
-
-    // Update statistics
     updateStatistics();
-
 
     alert("Student registered successfully!");
 
 
-    // Reset form
     form.reset();
 
     const counter =
@@ -460,7 +584,160 @@ form.addEventListener("submit", function (event) {
 });
 
 
-// ==================== REMOVE ERRORS WHEN FIXED ====================
+// ==================== TASK 8 + TASK 9 ====================
+
+// One click listener on student card container
+studentCardsContainer.addEventListener(
+    "click",
+    function (event) {
+
+
+        // ==================== DELETE ====================
+
+        if (
+            event.target.classList.contains("delete-btn")
+        ) {
+
+            const card =
+                event.target.closest(".student-card");
+
+            const studentId =
+                Number(card.dataset.id);
+
+            const confirmDelete =
+                confirm(
+                    "Are you sure you want to delete this student?"
+                );
+
+            if (!confirmDelete) {
+                return;
+            }
+
+            const studentIndex =
+                students.findIndex(function (student) {
+                    return student.id === studentId;
+                });
+
+            if (studentIndex !== -1) {
+
+                students.splice(studentIndex, 1);
+
+                card.remove();
+
+                updateStatistics();
+            }
+
+            return;
+        }
+
+
+        // ==================== EDIT ====================
+
+        if (
+            event.target.classList.contains("edit-btn")
+        ) {
+
+            const card =
+                event.target.closest(".student-card");
+
+            const studentId =
+                Number(card.dataset.id);
+
+
+            // Find student
+            const student =
+                students.find(function (student) {
+                    return student.id === studentId;
+                });
+
+
+            if (!student) {
+                return;
+            }
+
+
+            // Fill form
+            studentName.value = student.name;
+            email.value = student.email;
+            phone.value = student.phone;
+            dob.value = student.dob;
+            course.value = student.course;
+            about.value = student.about;
+
+
+            // Gender
+            const genderRadioButtons =
+                document.querySelectorAll(
+                    'input[name="gender"]'
+                );
+
+            genderRadioButtons.forEach(
+                function (radio) {
+
+                    radio.checked =
+                        radio.value === student.gender;
+                }
+            );
+
+
+            // Skills
+            const skillCheckboxes =
+                document.querySelectorAll(
+                    'input[name="skills"]'
+                );
+
+            skillCheckboxes.forEach(
+                function (checkbox) {
+
+                    checkbox.checked =
+                        student.skills.includes(
+                            checkbox.value
+                        );
+                }
+            );
+
+
+            // Save editing student ID
+            editingStudentId = student.id;
+
+
+            // Change button text
+            const submitButton =
+                document.querySelector(
+                    'button[type="submit"]'
+                );
+
+            submitButton.textContent =
+                "Update Student";
+
+
+            // Update character counter
+            let counter =
+                document.getElementById("about-counter");
+
+            if (!counter) {
+
+                counter = document.createElement("small");
+
+                counter.id = "about-counter";
+
+                about.parentElement.appendChild(counter);
+            }
+
+            counter.textContent =
+                `${about.value.length} / 200`;
+
+
+            // Scroll to form
+            form.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    }
+);
+
+
+// ==================== REMOVE ERRORS ====================
 
 studentName.addEventListener("input", function () {
     removeError(studentName);
@@ -489,70 +766,6 @@ about.addEventListener("input", function () {
 profilePhoto.addEventListener("change", function () {
     removeError(profilePhoto);
 });
-
-
-// ==================== TASK 8: DELETE STUDENT ====================
-
-// Only ONE click event listener on student card container
-studentCardsContainer.addEventListener(
-    "click",
-    function (event) {
-
-        // Check if Delete button was clicked
-        if (
-            !event.target.classList.contains("delete-btn")
-        ) {
-            return;
-        }
-
-
-        // Find the related student card
-        const card =
-            event.target.closest(".student-card");
-
-
-        // Get student ID
-        const studentId =
-            Number(card.dataset.id);
-
-
-        // Confirmation
-        const confirmDelete =
-            confirm(
-                "Are you sure you want to delete this student?"
-            );
-
-
-        // Cancel deletion
-        if (!confirmDelete) {
-            return;
-        }
-
-
-        // Find student index
-        const studentIndex =
-            students.findIndex(function (student) {
-
-                return student.id === studentId;
-
-            });
-
-
-        // Remove student from array
-        if (studentIndex !== -1) {
-
-            students.splice(studentIndex, 1);
-
-
-            // Remove correct card
-            card.remove();
-
-
-            // Update statistics
-            updateStatistics();
-        }
-    }
-);
 
 
 // ==================== INITIAL STATISTICS ====================
