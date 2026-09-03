@@ -1,0 +1,82 @@
+```html
+<form id="studentForm">
+
+    <label>Student Name : </label>
+    <input type="text" id="studentName">
+    <span id="nameError"></span>
+    <br><br>
+
+    <label>Email : </label>
+    <input type="email" id="email">
+    <span id="emailError"></span>
+    <br><br>
+
+    <label>Phone Number : </label>
+    <input type="text" id="phone">
+    <span id="phoneError"></span>
+    <br><br>
+
+    <label>Date of Birth : </label>
+    <input type="date" id="dob">
+    <span id="dobError"></span>
+    <br><br>
+
+    <label>Gender : </label>
+
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+
+    <span id="genderError"></span>
+
+    <br><br>
+
+    <label>Course : </label>
+
+    <select id="course">
+        <option value="">Select Course</option>
+        <option>Web Development</option>
+        <option>UI/UX</option>
+        <option>Python</option>
+        <option>Data Analytics</option>
+        <option>MERN Stack</option>
+        <option>Cloud Computing</option>
+    </select>
+
+    <span id="courseError"></span>
+
+    <br><br>
+
+    <label>Skills : </label>
+
+    <input type="checkbox" name="skills" value="HTML"> HTML
+    <input type="checkbox" name="skills" value="CSS"> CSS
+    <input type="checkbox" name="skills" value="JavaScript"> JavaScript
+    <input type="checkbox" name="skills" value="Git"> Git
+    <input type="checkbox" name="skills" value="React"> React
+    <input type="checkbox" name="skills" value="Node.js"> Node.js
+
+    <span id="skillsError"></span>
+
+    <br><br>
+
+    <label>About Student : </label>
+    <br>
+
+    <textarea id="about" rows="5" cols="30" maxlength="200"></textarea>
+
+    <p id="counter">0 / 200</p>
+    <span id="aboutError"></span>
+
+    <label>Profile Photo : </label>
+    <input type="file" id="photo" accept="image/*">
+
+    <span id="photoError"></span>
+
+    <br><br>
+
+    <button type="submit">Register Student</button>
+    <button type="reset">Reset Form</button>
+
+</form>
+```
