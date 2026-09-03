@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+header {
+    background: linear-gradient(135deg, #243b8f, #4169e1);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+#studentForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#studentForm > div:nth-last-child(3),
+#studentForm > div:nth-last-child(2),
+#studentForm > div:last-child {
+    grid-column: 1 / -1;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    margin-right: 8px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button[type="reset"] {
+    background: #64748b;
+}
+
+button[type="reset"]:hover {
+    background: #475569;
+}
+
+.search-filter {
+    display: flex;
+    gap: 15px;
+}
+
+.search-filter input,
+.search-filter select {
+    flex: 1;
+}
+
+#studentContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.student-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background: white;
+}
+
+.student-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+footer {
+    text-align: center;
+    background: rgb(233, 238, 246);
+    color: var(--muted);
+    padding: 20px;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    #studentForm {
+        grid-template-columns: 1fr;
+    }
+
+    #studentForm > div {
+        grid-column: 1 / -1;
+    }
+
+    #studentContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .search-filter {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        width: 95%;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    #studentContainer {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
