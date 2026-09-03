@@ -1,124 +1,57 @@
+```css
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #f5f7ff;
-    color: #1e293b;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
 }
 
-/* ================================
-   HEADER
-================================ */
+/* Header */
 
 .header {
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    padding: 65px 20px;
+    background: #333;
     color: white;
-    background: linear-gradient(135deg, #4f46e5, #7c3aed, #9333ea); 
-}
-
-.header::before {
-    content: "";
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.08);
-    top: -150px;
-    left: -80px;
-}
-
-.header::after {
-    content: "";
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.08);
-    bottom: -140px;
-    right: -60px;
+    text-align: center;
+    padding: 25px;
 }
 
 .header h1 {
-    position: relative;
-    z-index: 1;
-    font-size: 38px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    letter-spacing: 0.5px;
+    margin-bottom: 8px;
 }
 
-.header p {
-    position: relative;
-    z-index: 1;
-    font-size: 18px;
-    opacity: 0.9;
-}
-
-
-/* ================================
-   MAIN CONTAINER
-================================ */
+/* Main Container */
 
 .container {
     width: 90%;
-    max-width: 1150px;
-    margin: 40px auto;
+    max-width: 1100px;
+    margin: 30px auto;
 }
 
-
-/* ================================
-   SECTIONS
-================================ */
+/* Sections */
 
 .section {
     background: white;
-    padding: 30px;
-    margin-bottom: 30px;
-    border-radius: 18px;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 10px 35px rgba(79, 70, 229, 0.08);
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
 }
 
 .section h2 {
-    font-size: 25px;
-    margin-bottom: 25px;
-    color: #312e81;
-    position: relative;
-    padding-left: 15px;
+    margin-bottom: 20px;
 }
 
-.section h2::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 5px;
-    width: 5px;
-    height: 25px;
-    border-radius: 10px;
-    background: linear-gradient(#4f46e5, #9333ea);
-}
-
-
-/* ================================
-   REGISTRATION FORM
-================================ */
+/* Form */
 
 .student-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 22px;
+    gap: 15px;
 }
 
 .form-group {
@@ -126,199 +59,123 @@ body {
     flex-direction: column;
 }
 
-.form-group label,
-.form-group legend {
-    font-size: 14px;
-    font-weight: 600;
-    color: #374151;
-    margin-bottom: 8px;
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: bold;
 }
 
 input,
 select,
 textarea {
-    width: 100%;
-    padding: 13px 15px;
-    border: 1px solid #d1d5db;
-    border-radius: 10px;
-    background: #f9fafb;
-    font-size: 15px;
-    color: #1f2937;
-    transition: all 0.25s ease;
-}
-
-input:hover,
-select:hover,
-textarea:hover {
-    border-color: #a78bfa;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-    outline: none;
-    border-color: #6366f1;
-    background: white;
-    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
 }
 
 textarea {
     resize: vertical;
-    min-height: 120px;
 }
-
-small {
-    margin-top: 6px;
-    color: #64748b;
-}
-
-
-/* ================================
-   FULL WIDTH
-================================ */
 
 .full-width {
     grid-column: 1 / -1;
 }
 
-
-/* ================================
-   FIELDSETS
-================================ */
-
-fieldset {
-    border: 1px solid #d1d5db;
-    border-radius: 10px;
-    padding: 15px;
-}
-
-fieldset legend {
-    padding: 0 8px;
-}
+/* Radio and Checkbox */
 
 .options {
     display: flex;
+    gap: 15px;
     flex-wrap: wrap;
-    gap: 20px;
 }
 
 .options label {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    cursor: pointer;
-    font-weight: 500;
+    font-weight: normal;
 }
 
 .options input {
-    width: auto;
-    accent-color: #6366f1;
+    margin-right: 5px;
 }
 
+/* Error */
 
-/* ================================
-   BUTTONS
-================================ */
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+    min-height: 16px;
+}
 
-.buttons {
-    display: flex;
-    gap: 15px;
+#characterCount {
+    text-align: right;
+    font-size: 13px;
+    color: #666;
     margin-top: 5px;
 }
 
+/* Buttons */
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
 .btn {
+    padding: 10px 20px;
     border: none;
-    padding: 13px 25px;
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: 600;
+    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    font-size: 14px;
 }
 
 .register-btn {
+    background: #333;
     color: white;
-    background: linear-gradient(135deg, #4f46e5, #7c3aed);
-    box-shadow: 0 6px 15px rgba(79, 70, 229, 0.25);
 }
 
 .register-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 22px rgba(79, 70, 229, 0.35);
+    background: #555;
 }
 
 .reset-btn {
-    background: #f1f5f9;
-    color: #475569;
+    background: #ddd;
+    color: #333;
 }
 
 .reset-btn:hover {
-    background: #e2e8f0;
-    transform: translateY(-2px);
+    background: #ccc;
 }
 
-
-/* ================================
-   STATISTICS
-================================ */
+/* Statistics */
 
 .stats-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 }
 
 .stat-card {
-    position: relative;
-    overflow: hidden;
-    padding: 25px;
+    border: 1px solid #ddd;
+    padding: 20px;
     text-align: center;
-    border-radius: 15px;
-    background: linear-gradient(145deg, #f8faff, #eef2ff);
-    border: 1px solid #e0e7ff;
-    transition: all 0.3s ease;
-}
-
-.stat-card::after {
-    content: "";
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: rgba(99, 102, 241, 0.08);
-    right: -25px;
-    top: -25px;
-}
-
-.stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(79, 70, 229, 0.12);
+    border-radius: 5px;
 }
 
 .stat-card h3 {
-    position: relative;
-    z-index: 1;
-    font-size: 14px;
-    color: #64748b;
-    margin-bottom: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .stat-card p {
-    position: relative;
-    z-index: 1;
-    font-size: 32px;
-    font-weight: 700;
-    color: #4f46e5;
+    font-size: 25px;
+    font-weight: bold;
 }
 
-
-/* ================================
-   SEARCH
-================================ */
+/* Search */
 
 .search-container {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
 .search-container input,
@@ -326,50 +183,32 @@ fieldset legend {
     flex: 1;
 }
 
-
-/* ================================
-   STUDENT CARDS
-================================ */
+/* Student Cards */
 
 .students-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+    gap: 20px;
 }
 
 .student-card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
     overflow: hidden;
     background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 16px;
-    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.07);
-    transition: all 0.3s ease;
-}
-
-.student-card:hover {
-    transform: translateY(-8px);
-    border-color: #c4b5fd;
-    box-shadow: 0 15px 35px rgba(79, 70, 229, 0.15);
 }
 
 .student-image {
-    height: 170px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #e0e7ff, #f3e8ff);
+    text-align: center;
+    padding: 20px;
+    background: #f5f5f5;
 }
 
-.student-image span {
-    width: 85px;
-    height: 85px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.student-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
     border-radius: 50%;
-    background: white;
-    font-size: 45px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .student-info {
@@ -377,47 +216,64 @@ fieldset legend {
 }
 
 .student-info h3 {
-    font-size: 20px;
     margin-bottom: 12px;
-    color: #312e81;
 }
 
 .student-info p {
+    margin-bottom: 8px;
     font-size: 14px;
-    color: #64748b;
-    margin-bottom: 6px;
 }
 
+.student-info strong {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
 
-/* ================================
-   FOOTER
-================================ */
+/* Card Buttons */
+
+.card-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.card-buttons button {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: #ddd;
+    color: #333;
+}
+
+.delete-btn {
+    background: #e5e5e5;
+    color: #b00000;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    opacity: 0.8;
+}
+
+/* Footer */
 
 .footer {
+    background: #333;
+    color: white;
     text-align: center;
-    padding: 25px 20px;
-    color: #cbd5e1;
-    background: #111827;
+    padding: 20px;
+    margin-top: 30px;
 }
 
-.footer p {
-    font-size: 14px;
-}
-
-
-/* ================================
-   TABLET
-================================ */
+/* Responsive */
 
 @media (max-width: 768px) {
-
-    .header {
-        padding: 50px 20px;
-    }
-
-    .header h1 {
-        font-size: 29px;
-    }
 
     .student-form {
         grid-template-columns: 1fr;
@@ -428,50 +284,16 @@ fieldset legend {
     }
 
     .stats-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
     }
 
     .students-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
     }
 
-    .search-container {
-        flex-direction: column;
-    }
 }
 
-
-/* ================================
-   MOBILE
-================================ */
-
-@media (max-width: 480px) {
-
-    .header {
-        padding: 40px 15px;
-    }
-
-    .header h1 {
-        font-size: 23px;
-    }
-
-    .header p {
-        font-size: 14px;
-    }
-
-    .container {
-        width: 94%;
-        margin: 25px auto;
-    }
-
-    .section {
-        padding: 20px;
-        border-radius: 14px;
-    }
-
-    .section h2 {
-        font-size: 21px;
-    }
+@media (max-width: 500px) {
 
     .stats-container {
         grid-template-columns: 1fr;
@@ -481,17 +303,13 @@ fieldset legend {
         grid-template-columns: 1fr;
     }
 
-    .options {
+    .search-container {
         flex-direction: column;
-        gap: 12px;
     }
 
     .buttons {
         flex-direction: column;
     }
 
-    .btn {
-        width: 100%;
-    }
 }
 ```
