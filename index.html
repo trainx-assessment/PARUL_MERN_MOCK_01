@@ -12,53 +12,57 @@
         <p>Register and manage student applications</p>
     </header>
     <main>
-        <form>
+        <form id="form">
             <div class="details">
                 <div>
                     <label for="stdname">Enter Name:</label>
-                    <input type="text" name="stdname" required><br>
+                    <input type="text" id="stdname" name="stdname" required><br>
                 </div>
                 <div>
                     <label for="stdmail">Enter Email:</label>
-                    <input type="email" name="stdmail"required><br>
+                    <input type="email" id="stdmail" name="stdmail" required><br>
                 </div>
                 <div>
                     <label for="stdphone">Enter Phone:</label>
-                    <input type="text" name="stdphone" required><br>
+                    <input type="text" id="stdphone" name="stdphone" required><br>
                 </div>
                 <div>
                     <label for="stddob">Select DOB:</label>
-                    <input type="date" name="stddob"required><br>
+                    <input type="date" id="stddob" name="stddob" required><br>
                 </div>
                 <div>
-                    <input type="radio" name="gender">Male</input>
-                    <input type="radio" name="gender">Female</input>
-                    <input type="radio" name="gender">Other</input>
+                    <label>Gender:</label><br>
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label> 
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="Others">
+                    <label for="other">Others</label>
                 </div>
                 <div>
                     <label for="course">Courses: </label>
-                    <select name="course" id="course">
-                        <option value="0" selected disabled>Select Course</option>
-                        <option value="1">Web Development</option>
-                        <option value="2">UI/UX</option>
-                        <option value="3">Python</option>
-                        <option value="4">MERN Stack</option>
-                        <option value="5">Cloud Computing</option>
+                    <select name="course" id="course" required>
+                        <option value="" selected disabled>Select Course</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="UI/UX">UI/UX</option>
+                        <option value="Python">Python</option>
+                        <option value="MERN Stack">MERN Stack</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
                     </select>
                 </div>
             </div>
             <div>
-                <label for="skills">Skills:</label><br>
-                <input type="checkbox" name="skills" value="HTML">HTML</input>
-                <input type="checkbox" name="skills" value="CSS">CSS</input>
-                <input type="checkbox" name="skills" value="JavaScript">JavaScript</input>
-                <input type="checkbox" name="skills" value="Git">Git</input>
-                <input type="checkbox" name="skills" value="React">React</input>
-                <input type="checkbox" name="skills" value="Node.js">Node.js</input><br>
+                <label>Skills:</label><br>
+                <input type="checkbox" id="html" name="skills" value="HTML"> <label for="html">HTML</label>
+                <input type="checkbox" id="css" name="skills" value="CSS"> <label for="css">CSS</label>
+                <input type="checkbox" id="js" name="skills" value="JavaScript"> <label for="js">JavaScript</label>
+                <input type="checkbox" id="git" name="skills" value="Git"> <label for="git">Git</label>
+                <input type="checkbox" id="react" name="skills" value="React"> <label for="react">React</label>
+                <input type="checkbox" id="node" name="skills" value="Node.js"> <label for="node">Node.js</label><br>
             </div>
             <label for="about">About:</label>
-            <textarea name="about" id="about"></textarea><br>
-            <input type="file" accept="" class="fileinput"><br>
+            <textarea name="about" id="about" placeholder="About You"></textarea><br>
+            <input type="file" id="fileinput" accept="image/*"><br>            
             <div class="btns">
                 <button type="submit">Register Student</button>
                 <button type="reset">Reset Form</button>
