@@ -14,181 +14,133 @@ const studentCardsContainer = document.getElementById(
     "student-cards-container"
 );
 
+const statisticsContainer = document.getElementById(
+    "student-statistics"
+);
 
-// Show error message
-function showError(input, message) {
-    removeError(input);
+
+// ==================== ERROR FUNCTIONS ====================
+
+function showError(element, message) {
+    removeError(element);
 
     const error = document.createElement("small");
-    error.className = "error-message";
+    error.classList.add("error-message");
     error.textContent = message;
-    error.style.color = "red";
 
-    input.parentElement.appendChild(error);
+    element.parentElement.appendChild(error);
 }
 
-
-// Remove error message
-function removeError(input) {
-    const oldError = input.parentElement.querySelector(
-        ".error-message"
-    );
+function removeError(element) {
+    const oldError =
+        element.parentElement.querySelector(".error-message");
 
     if (oldError) {
         oldError.remove();
     }
 }
 
-
-// Remove all errors
 function clearErrors() {
-    document.querySelectorAll(".error-message").forEach(error => {
+    const errors =
+        document.querySelectorAll(".error-message");
+
+    errors.forEach(function (error) {
         error.remove();
     });
 }
 
 
-// Character counter
-const counter = document.createElement("small");
-
-counter.id = "character-counter";
-counter.textContent = "0 / 200";
-
-about.parentElement.appendChild(counter);
+// ==================== ABOUT CHARACTER COUNTER ====================
 
 about.addEventListener("input", function () {
+    let counter = document.getElementById("about-counter");
+
+    if (!counter) {
+        counter = document.createElement("small");
+        counter.id = "about-counter";
+        about.parentElement.appendChild(counter);
+    }
+
     counter.textContent = `${about.value.length} / 200`;
 });
 
 
-// Task 6 - Display Student Cards
-function displayStudents() {
+// ==================== DISPLAY STUDENTS ====================
 
+function displayStudents() {
     studentCardsContainer.innerHTML = "";
 
-    students.forEach(student => {
+    students.forEach(function (student) {
 
         const card = document.createElement("div");
-
         card.classList.add("student-card");
-
         card.setAttribute("data-id", student.id);
 
-
-        // Student Photo
         const photo = document.createElement("img");
-
         photo.src = student.photo;
-        photo.alt = student.name;
+        photo.alt = student.name + " profile photo";
 
-
-        // Student Name
         const name = document.createElement("h3");
-
         name.textContent = student.name;
 
+        const emailText = document.createElement("p");
+        emailText.textContent = "Email: " + student.email;
 
-        // Email
-        const emailElement = document.createElement("p");
+        const phoneText = document.createElement("p");
+        phoneText.textContent = "Phone: " + student.phone;
 
-        emailElement.textContent =
-            `Email: ${student.email}`;
+        const dobText = document.createElement("p");
+        dobText.textContent = "DOB: " + student.dob;
 
+        const genderText = document.createElement("p");
+        genderText.textContent = "Gender: " + student.gender;
 
-        // Phone
-        const phoneElement = document.createElement("p");
+        const courseText = document.createElement("p");
+        courseText.textContent = "Course: " + student.course;
 
-        phoneElement.textContent =
-            `Phone: ${student.phone}`;
+        const skillsText = document.createElement("p");
+        skillsText.textContent =
+            "Skills: " + student.skills.join(", ");
 
+        const aboutText = document.createElement("p");
+        aboutText.textContent = "About: " + student.about;
 
-        // DOB
-        const dobElement = document.createElement("p");
-
-        dobElement.textContent =
-            `DOB: ${student.dob}`;
-
-
-        // Gender
-        const genderElement = document.createElement("p");
-
-        genderElement.textContent =
-            `Gender: ${student.gender}`;
-
-
-        // Course
-        const courseElement = document.createElement("p");
-
-        courseElement.textContent =
-            `Course: ${student.course}`;
-
-
-        // Skills
-        const skillsElement = document.createElement("p");
-
-        skillsElement.textContent =
-            `Skills: ${student.skills.join(", ")}`;
-
-
-        // About
-        const aboutElement = document.createElement("p");
-
-        aboutElement.textContent =
-            `About: ${student.about}`;
-
-
-        // Edit Button
         const editButton = document.createElement("button");
-
         editButton.textContent = "Edit";
+        editButton.classList.add("edit-btn");
 
-
-        // Delete Button
         const deleteButton = document.createElement("button");
-
         deleteButton.textContent = "Delete";
+        deleteButton.classList.add("delete-btn");
 
-
-        // Add elements to card
         card.appendChild(photo);
         card.appendChild(name);
-        card.appendChild(emailElement);
-        card.appendChild(phoneElement);
-        card.appendChild(dobElement);
-        card.appendChild(genderElement);
-        card.appendChild(courseElement);
-        card.appendChild(skillsElement);
-        card.appendChild(aboutElement);
+        card.appendChild(emailText);
+        card.appendChild(phoneText);
+        card.appendChild(dobText);
+        card.appendChild(genderText);
+        card.appendChild(courseText);
+        card.appendChild(skillsText);
+        card.appendChild(aboutText);
         card.appendChild(editButton);
         card.appendChild(deleteButton);
 
-
-        // Add card to container
         studentCardsContainer.appendChild(card);
     });
 }
 
 
-// Task 7 - Student Statistics
+// ==================== STATISTICS ====================
+
 function updateStatistics() {
 
-    const statistics = document.getElementById(
-        "student-statistics"
-    );
+    statisticsContainer.innerHTML = "";
 
-    statistics.innerHTML = "";
+    const total = document.createElement("p");
+    total.textContent = "Total Students: " + students.length;
 
+    statisticsContainer.appendChild(total);
 
-    // Total Students
-    const totalStudents = document.createElement("p");
-
-    totalStudents.textContent =
-        `Total Students: ${students.length}`;
-
-    statistics.appendChild(totalStudents);
-
-
-    // Courses
     const courses = [
         "Web Development",
         "UI/UX",
@@ -198,24 +150,24 @@ function updateStatistics() {
         "Cloud Computing"
     ];
 
+    courses.forEach(function (courseName) {
 
-    courses.forEach(courseName => {
+        const count = students.filter(function (student) {
+            return student.course === courseName;
+        }).length;
 
-        const count = students.filter(
-            student => student.course === courseName
-        ).length;
+        const courseStat = document.createElement("p");
 
-        const courseElement = document.createElement("p");
+        courseStat.textContent =
+            courseName + ": " + count;
 
-        courseElement.textContent =
-            `${courseName}: ${count}`;
-
-        statistics.appendChild(courseElement);
+        statisticsContainer.appendChild(courseStat);
     });
 }
 
 
-// Form Submit
+// ==================== FORM SUBMIT ====================
+
 form.addEventListener("submit", function (event) {
 
     event.preventDefault();
@@ -224,46 +176,25 @@ form.addEventListener("submit", function (event) {
 
     let isValid = true;
 
-
     // Student Name
     const nameValue = studentName.value.trim();
 
-    const nameRegex = /^[A-Za-z ]+$/;
-
     if (nameValue === "") {
-
+        showError(studentName, "Student name is required.");
+        isValid = false;
+    }
+    else if (nameValue.length < 3 || nameValue.length > 40) {
         showError(
             studentName,
-            "Student name is required."
+            "Name must be between 3 and 40 characters."
         );
-
         isValid = false;
-
-    } else if (nameValue.length < 3) {
-
-        showError(
-            studentName,
-            "Name must be at least 3 characters."
-        );
-
-        isValid = false;
-
-    } else if (nameValue.length > 40) {
-
-        showError(
-            studentName,
-            "Name cannot exceed 40 characters."
-        );
-
-        isValid = false;
-
-    } else if (!nameRegex.test(nameValue)) {
-
+    }
+    else if (!/^[A-Za-z ]+$/.test(nameValue)) {
         showError(
             studentName,
             "Name can contain only letters and spaces."
         );
-
         isValid = false;
     }
 
@@ -275,21 +206,11 @@ form.addEventListener("submit", function (event) {
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (emailValue === "") {
-
-        showError(
-            email,
-            "Email is required."
-        );
-
+        showError(email, "Email is required.");
         isValid = false;
-
-    } else if (!emailRegex.test(emailValue)) {
-
-        showError(
-            email,
-            "Please enter a valid email address."
-        );
-
+    }
+    else if (!emailRegex.test(emailValue)) {
+        showError(email, "Enter a valid email address.");
         isValid = false;
     }
 
@@ -297,74 +218,63 @@ form.addEventListener("submit", function (event) {
     // Phone
     const phoneValue = phone.value.trim();
 
-    const phoneRegex = /^\d{10}$/;
-
     if (phoneValue === "") {
-
-        showError(
-            phone,
-            "Phone number is required."
-        );
-
+        showError(phone, "Phone number is required.");
         isValid = false;
-
-    } else if (!phoneRegex.test(phoneValue)) {
-
+    }
+    else if (!/^\d{10}$/.test(phoneValue)) {
         showError(
             phone,
             "Phone number must contain exactly 10 digits."
         );
-
         isValid = false;
     }
 
 
     // DOB
-    if (dob.value === "") {
+    const dobValue = dob.value;
 
-        showError(
-            dob,
-            "Date of birth is required."
-        );
-
+    if (dobValue === "") {
+        showError(dob, "Date of birth is required.");
         isValid = false;
+    }
+    else {
 
-    } else {
-
-        const selectedDate = new Date(dob.value);
-
+        const selectedDate = new Date(dobValue);
         const today = new Date();
 
-        today.setHours(0, 0, 0, 0);
-
-
         if (selectedDate > today) {
-
             showError(
                 dob,
-                "Future date is not allowed."
+                "Date of birth cannot be in the future."
             );
-
             isValid = false;
+        }
+        else {
 
-        } else {
+            let age =
+                today.getFullYear() -
+                selectedDate.getFullYear();
 
-            // Minimum age 15
-            const minimumAgeDate =
-                new Date(selectedDate);
+            const monthDifference =
+                today.getMonth() -
+                selectedDate.getMonth();
 
-            minimumAgeDate.setFullYear(
-                minimumAgeDate.getFullYear() + 15
-            );
+            if (
+                monthDifference < 0 ||
+                (
+                    monthDifference === 0 &&
+                    today.getDate() < selectedDate.getDate()
+                )
+            ) {
+                age--;
+            }
 
-
-            if (minimumAgeDate > today) {
-
+            if (age < 15) {
                 showError(
                     dob,
                     "Student must be at least 15 years old."
                 );
-
                 isValid = false;
             }
         }
@@ -372,112 +282,80 @@ form.addEventListener("submit", function (event) {
 
 
     // Gender
-    const gender = document.querySelector(
-        'input[name="gender"]:checked'
-    );
+    const selectedGender =
+        document.querySelector(
+            'input[name="gender"]:checked'
+        );
 
-
-    if (!gender) {
+    if (!selectedGender) {
 
         const genderGroup =
             document.querySelector(
                 'input[name="gender"]'
             ).parentElement.parentElement;
 
-
-        const error =
-            document.createElement("small");
-
-        error.className = "error-message";
-
-        error.textContent =
-            "Please select a gender.";
-
-        error.style.color = "red";
-
-        genderGroup.appendChild(error);
+        showError(
+            genderGroup.querySelector("p"),
+            "Please select a gender."
+        );
 
         isValid = false;
     }
 
 
     // Course
-    if (course.value === "") {
+    const courseValue = course.value;
 
-        showError(
-            course,
-            "Please select a course."
-        );
-
+    if (courseValue === "") {
+        showError(course, "Please select a course.");
         isValid = false;
     }
 
 
     // Skills
-    const selectedSkills = Array.from(
+    const selectedSkills =
         document.querySelectorAll(
             'input[name="skills"]:checked'
-        )
-    ).map(skill => skill.value);
-
+        );
 
     if (selectedSkills.length === 0) {
 
-        const skillInput =
+        const skillsGroup =
             document.querySelector(
                 'input[name="skills"]'
-            );
+            ).parentElement.parentElement;
 
-
-        const skillGroup =
-            skillInput.parentElement.parentElement;
-
-
-        const error =
-            document.createElement("small");
-
-        error.className = "error-message";
-
-        error.textContent =
-            "Please select at least one skill.";
-
-        error.style.color = "red";
-
-        skillGroup.appendChild(error);
+        showError(
+            skillsGroup.querySelector("p"),
+            "Please select at least one skill."
+        );
 
         isValid = false;
     }
 
 
-    // About Student
+    // About
     const aboutValue = about.value.trim();
 
-
     if (aboutValue === "") {
-
         showError(
             about,
             "About student is required."
         );
-
         isValid = false;
-
-    } else if (aboutValue.length < 20) {
-
+    }
+    else if (aboutValue.length < 20) {
         showError(
             about,
             "About student must be at least 20 characters."
         );
-
         isValid = false;
-
-    } else if (aboutValue.length > 200) {
-
+    }
+    else if (aboutValue.length > 200) {
         showError(
             about,
             "About student cannot exceed 200 characters."
         );
-
         isValid = false;
     }
 
@@ -492,16 +370,17 @@ form.addEventListener("submit", function (event) {
 
         isValid = false;
 
-    } else {
+    }
+    else {
 
-        const file = profilePhoto.files[0];
-
+        const file =
+            profilePhoto.files[0];
 
         if (!file.type.startsWith("image/")) {
 
             showError(
                 profilePhoto,
-                "Only image files are allowed."
+                "Please select an image file."
             );
 
             isValid = false;
@@ -509,199 +388,173 @@ form.addEventListener("submit", function (event) {
     }
 
 
-    // If everything is valid
-    if (isValid) {
+    // Stop if invalid
+    if (!isValid) {
+        return;
+    }
 
 
-        // Task 5 - Create Student Object
-        const student = {
+    // ==================== CREATE STUDENT ====================
 
-            id: students.length + 1,
+    const skills = [];
 
-            name: studentName.value.trim(),
-
-            email: studentName.value.trim()
-                ? email.value.trim()
-                : "",
-
-            phone: phone.value.trim(),
-
-            dob: dob.value,
-
-            gender: gender.value,
-
-            course: course.value,
-
-            skills: selectedSkills,
-
-            about: about.value.trim(),
-
-            photo: profilePhoto.files[0].name
-        };
+    selectedSkills.forEach(function (skill) {
+        skills.push(skill.value);
+    });
 
 
-        // Store student
-        students.push(student);
+    const student = {
+
+        id: students.length > 0
+            ? students[students.length - 1].id + 1
+            : 1,
+
+        name: nameValue,
+
+        email: emailValue,
+
+        phone: phoneValue,
+
+        dob: dobValue,
+
+        gender: selectedGender.value,
+
+        course: courseValue,
+
+        skills: skills,
+
+        about: aboutValue,
+
+        photo: URL.createObjectURL(
+            profilePhoto.files[0]
+        )
+    };
 
 
-        // Task 6 - Display cards
-        displayStudents();
+    // Add student to array
+    students.push(student);
 
 
-        // Task 7 - Update statistics
-        updateStatistics();
+    // Display students
+    displayStudents();
 
 
-        console.log(
-            "Student added:",
-            student
-        );
-
-        console.log(
-            "All students:",
-            students
-        );
+    // Update statistics
+    updateStatistics();
 
 
-        alert(
-            "Student registration successful!"
-        );
+    alert("Student registered successfully!");
 
 
-        // Reset form
-        form.reset();
+    // Reset form
+    form.reset();
 
+    const counter =
+        document.getElementById("about-counter");
+
+    if (counter) {
         counter.textContent = "0 / 200";
-
-        clearErrors();
     }
+
+    clearErrors();
 });
 
 
-// Remove errors when user fixes input
+// ==================== REMOVE ERRORS WHEN FIXED ====================
 
-studentName.addEventListener(
-    "input",
-    function () {
-        removeError(studentName);
-    }
-);
+studentName.addEventListener("input", function () {
+    removeError(studentName);
+});
 
+email.addEventListener("input", function () {
+    removeError(email);
+});
 
-email.addEventListener(
-    "input",
-    function () {
-        removeError(email);
-    }
-);
+phone.addEventListener("input", function () {
+    removeError(phone);
+});
 
+dob.addEventListener("change", function () {
+    removeError(dob);
+});
 
-phone.addEventListener(
-    "input",
-    function () {
-        removeError(phone);
-    }
-);
+course.addEventListener("change", function () {
+    removeError(course);
+});
 
+about.addEventListener("input", function () {
+    removeError(about);
+});
 
-dob.addEventListener(
-    "change",
-    function () {
-        removeError(dob);
-    }
-);
+profilePhoto.addEventListener("change", function () {
+    removeError(profilePhoto);
+});
 
 
-course.addEventListener(
-    "change",
-    function () {
-        removeError(course);
-    }
-);
+// ==================== TASK 8: DELETE STUDENT ====================
 
+// Only ONE click event listener on student card container
+studentCardsContainer.addEventListener(
+    "click",
+    function (event) {
 
-about.addEventListener(
-    "input",
-    function () {
-        removeError(about);
-    }
-);
-
-
-profilePhoto.addEventListener(
-    "change",
-    function () {
-        removeError(profilePhoto);
-    }
-);
-
-
-// Gender error remove
-document.querySelectorAll(
-    'input[name="gender"]'
-).forEach(input => {
-
-    input.addEventListener(
-        "change",
-        function () {
-
-            const genderGroup =
-                input.parentElement.parentElement;
-
-            const error =
-                genderGroup.querySelector(
-                    ".error-message"
-                );
-
-
-            if (error) {
-                error.remove();
-            }
+        // Check if Delete button was clicked
+        if (
+            !event.target.classList.contains("delete-btn")
+        ) {
+            return;
         }
-    );
-});
 
 
-// Skills error remove
-document.querySelectorAll(
-    'input[name="skills"]'
-).forEach(input => {
-
-    input.addEventListener(
-        "change",
-        function () {
-
-            const selected =
-                document.querySelectorAll(
-                    'input[name="skills"]:checked'
-                );
+        // Find the related student card
+        const card =
+            event.target.closest(".student-card");
 
 
-            if (selected.length > 0) {
-
-                const skillGroup =
-                    input.parentElement.parentElement;
-
-
-                const error =
-                    skillGroup.querySelector(
-                        ".error-message"
-                    );
+        // Get student ID
+        const studentId =
+            Number(card.dataset.id);
 
 
-                if (error) {
-                    error.remove();
-                }
-            }
+        // Confirmation
+        const confirmDelete =
+            confirm(
+                "Are you sure you want to delete this student?"
+            );
+
+
+        // Cancel deletion
+        if (!confirmDelete) {
+            return;
         }
-    );
-});
 
 
-// Show initial statistics
+        // Find student index
+        const studentIndex =
+            students.findIndex(function (student) {
+
+                return student.id === studentId;
+
+            });
+
+
+        // Remove student from array
+        if (studentIndex !== -1) {
+
+            students.splice(studentIndex, 1);
+
+
+            // Remove correct card
+            card.remove();
+
+
+            // Update statistics
+            updateStatistics();
+        }
+    }
+);
+
+
+// ==================== INITIAL STATISTICS ====================
+
 updateStatistics();
-
-
-console.log(
-    "Student Application Management System loaded successfully."
-);
