@@ -1,0 +1,121 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.head {
+    background-color: rgb(243, 173, 243);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: rgb(245, 212, 245);
+}
+
+.form div {
+    display: flex;
+    gap: 5px;
+    padding: 3px;
+    align-items: center;
+}
+
+
+.form input,
+select {
+    border-radius: 5px;
+}
+
+.btn {
+    border-radius: 5px;
+}
+
+.row {
+    display: flex;
+    justify-content: left;
+}
+
+.cards-sec {
+    padding: 16px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.student-card {
+    padding: 16px;
+    border: 1px solid #d5d5d5;
+    border-radius: 8px;
+    background-color: #eacee5;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
+}
+
+.student-card h3 {
+    margin-top: 0;
+}
+
+.student-card p {
+    margin: 8px 0;
+}
+
+.student-card button {
+    margin-top: 12px;
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.student-card .del {
+    background-color: #f3c4c4;
+}
+
+.student-card .edit {
+    background-color: #c9e6f5;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+footer {
+    margin-top: auto;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(243, 173, 243);
+}
+
+.stats {
+    display: flex;
+    padding: 10px;
+    background-color: rgb(247, 214, 247);
+    justify-content: center;
+    align-items: center;
+}
+
+.filter {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+#search {
+    width: 220px;
+    padding: 6px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+}
