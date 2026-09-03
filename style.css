@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #222;
+}
+
+header {
+    background-color: #666;
+    color: white;
+    padding: 22px 30px;
+}
+
+.header-content, .container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1, h2, h3, p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 25px;
+    margin-bottom: 6px;
+}
+
+header p {
+    color: #d5d5d5;
+    margin-bottom: 0;
+}
+
+.container {
+    padding: 25px 20px;
+}
+
+.form-section, .statistics-section, .search-section, .students-section {
+    background-color: white;
+    border: 1px solid #d1d1d1;
+    border-radius: 7px;
+    padding: 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 5px #d6d6d6;
+}
+
+h2 {
+    font-size: 20px;
+    border-bottom: 2px solid #1769aa;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.full-row {
+    grid-column: 1 / 3;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    height: 90px;
+    resize: vertical;
+}
+
+.radio-box, .skills-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.radio-box label, .skills-box label {
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.radio-box input, .skills-box input {
+    width: auto;
+}
+
+.error {
+    display: block;
+    min-height: 16px;
+    color: #bd2020;
+    margin-top: 4px;
+}
+
+.counter {
+    font-size: 12px;
+    text-align: right;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+.button-box {
+    margin-top: 20px;
+}
+
+button {
+    border: none;
+    border-radius: 4px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.main-button, .edit-button {
+    background-color: #1769aa;
+    color: white;
+}
+
+.reset-button, .delete-button, .theme-button {
+    background-color: #555;
+    color: white;
+    margin-left: 8px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.statistics-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.statistics-box p {
+    margin: 0;
+    background-color: #f3f3f3;
+    border-left: 4px solid #1769aa;
+    padding: 10px;
+}
+
+.search-box {
+    display: flex;
+    gap: 15px;
+}
+
+.search-box input, .search-box select {
+    flex: 1;
+}
+
+.student-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.student-card {
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    padding: 16px;
+    background-color: #fafafa;
+}
+
+.student-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #1769aa;
+}
+
+.student-card h3 {
+    margin: 12px 0;
+    color: #1769aa;
+}
+
+.student-card p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    overflow-wrap: break-word;
+}
+
+.no-student {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #666;
+}
+
+footer {
+    background-color: #666;
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.dark-mode {
+    background-color: #161616;
+    color: #eee;
+}
+
+.dark-mode .form-section, .dark-mode .statistics-section, .dark-mode .search-section, .dark-mode .students-section, .dark-mode .student-card {
+    background-color: #2b2b2b;
+    color: #eee;
+    border-color: #555;
+}
+
+.dark-mode input, .dark-mode select, .dark-mode textarea {
+    background-color: #444;
+    color: white;
+    border-color: #777;
+}
+
+.dark-mode .statistics-box p {
+    background-color: #3b3b3b;
+}
+
+@media (max-width: 768px) {
+    .student-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .statistics-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 18px;
+    }
+
+    .header-content, .search-box {
+        display: block;
+    }
+
+    .theme-button {
+        margin: 15px 0 0;
+    }
+
+    .form-grid, .student-container, .statistics-box {
+        grid-template-columns: 1fr;
+    }
+
+    .full-row {
+        grid-column: auto;
+    }
+
+    .search-box select {
+        margin-top: 12px;
+    }
+}
