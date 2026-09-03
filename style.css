@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: white;
+  color: rgb(37, 33, 33);
+}
+header {
+  background: blue;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+header h1 {
+  margin-bottom: 10px;
+}
+header p {
+  margin-bottom: 15px;
+}
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+section {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px gray;
+}
+section h2 {
+  margin-bottom: 20px;
+  color: blue;
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+form label {
+  font-weight: bold;
+}
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+form textarea {
+  height: 100px;
+}
+form textarea,
+form input[type="file"],
+form button,
+form small {
+  grid-column: 1 / -1;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
+}
+small {
+  color: red;
+}
+#charCount {
+  text-align: right;
+  font-size: 13px;
+  color: gray;
+}
+#submitBtn {
+  background: blue;
+  color: white;
+}
+#resetBtn {
+  background: gray;
+  color: white;
+}
+footer {
+  background: rgb(22, 21, 21);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
