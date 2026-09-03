@@ -11,19 +11,6 @@
   --muted-color: #64748b;
   --border-color: #dbe3f0;
   --error-color: #dc2626;
-  --shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-}
-
-body.dark-mode {
-  --bg-color: #0f172a;
-  --panel-color: #111827;
-  --primary-color: #60a5fa;
-  --primary-dark: #3b82f6;
-  --text-color: #e2e8f0;
-  --muted-color: #cbd5e1;
-  --border-color: #334155;
-  --error-color: #fca5a5;
-  --shadow: 0 10px 30px rgba(148, 163, 184, 0.12);
 }
 
 body {
@@ -39,7 +26,7 @@ body {
 }
 
 .site-header {
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  background: var(--primary-color);
   color: #ffffff;
   padding: 2rem 0;
 }
@@ -53,7 +40,7 @@ body {
 
 .site-header h1 {
   margin: 0 0 0.5rem;
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-size: 2.2rem;
 }
 
 .site-header p {
@@ -76,10 +63,9 @@ main {
 .panel {
   background: var(--panel-color);
   border: 1px solid var(--border-color);
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .panel h2 {
@@ -121,8 +107,8 @@ select,
 textarea {
   width: 100%;
   border: 1px solid var(--border-color);
-  border-radius: 10px;
-  padding: 0.75rem 0.85rem;
+  border-radius: 5px;
+  padding: 0.7rem;
   background: #fff;
   color: var(--text-color);
 }
@@ -138,9 +124,9 @@ textarea {
   flex-wrap: wrap;
   gap: 0.75rem 1rem;
   border: 1px solid var(--border-color);
-  border-radius: 10px;
-  padding: 0.8rem;
-  background: #fafcff;
+  border-radius: 5px;
+  padding: 0.7rem;
+  background: #ffffff;
 }
 
 .radio-group label,
@@ -159,10 +145,9 @@ textarea {
 
 button {
   border: none;
-  border-radius: 10px;
-  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
   cursor: pointer;
-  transition: 0.2s ease;
 }
 
 button[type="submit"] {
@@ -220,13 +205,9 @@ button[type="submit"]:hover {
 
 .student-card {
   border: 1px solid var(--border-color);
-  border-radius: 14px;
-  padding: 1rem;
+  border-radius: 8px;
+  padding: 0.9rem;
   background: #f8fafc;
-}
-
-body.dark-mode .student-card {
-  background: #0f172a;
 }
 
 .student-card img {
@@ -234,7 +215,7 @@ body.dark-mode .student-card {
   height: 96px;
   float: left;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 4px;
   margin: 0 1rem 0.5rem 0;
   border: 1px solid var(--border-color);
 }

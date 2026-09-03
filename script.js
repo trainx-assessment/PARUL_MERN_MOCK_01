@@ -1,13 +1,5 @@
+localStorage.removeItem("students");
 const students = [];
-
-try {
-  const storedStudents = JSON.parse(localStorage.getItem("students") || "[]");
-  if (Array.isArray(storedStudents)) {
-    students.push(...storedStudents);
-  }
-} catch (error) {
-  localStorage.removeItem("students");
-}
 
 const form = document.getElementById("studentForm");
 const studentName = document.getElementById("studentName");
@@ -19,11 +11,8 @@ const studentAbout = document.getElementById("studentAbout");
 const studentPhoto = document.getElementById("studentPhoto");
 const submitBtn = document.getElementById("submitBtn");
 const resetBtn = document.getElementById("resetBtn");
-const searchInput = document.getElementById("searchInput");
-const courseFilter = document.getElementById("courseFilter");
 const studentContainer = document.getElementById("studentContainer");
 const charCounter = document.querySelector(".char-counter");
-const themeToggle = document.getElementById("themeToggle");
 
 function setError(fieldName, message) {
   const errorElement = document.querySelector(`[data-error-for="${fieldName}"]`);
@@ -225,52 +214,13 @@ function readFileAsDataURL(file) {
   });
 }
 
-function saveStudents() {
-  localStorage.setItem("students", JSON.stringify(students));
-}
-
-function updateStatistics() {
-  const totals = {
-    "Web Development": 0,
-    "UI/UX": 0,
-    Python: 0,
-    "Data Analytics": 0,
-    "MERN Stack": 0,
-    "Cloud Computing": 0,
-  };
-
-  students.forEach((student) => {
-    if (totals[student.course] !== undefined) {
-      totals[student.course] += 1;
-    }
-  });
-
-  document.getElementById("totalStudents").textContent = students.length;
-
-  Object.keys(totals).forEach((course) => {
-    const target = document.getElementById(`course-${course}`);
-    if (target) {
-      target.textContent = totals[course];
-    }
-  });
-}
-
 function renderStudents() {
-  const searchText = searchInput.value.trim().toLowerCase();
-  const selectedCourse = courseFilter.value;
-
-  const filteredStudents = students.filter((student) => {
-    const matchesSearch = student.name.toLowerCase().includes(searchText);
-    const matchesCourse = selectedCourse === "All Courses" || student.course === selectedCourse;
-    return matchesSearch && matchesCourse;
-  });
-
-  if (filteredStudents.length === 0) {
+  if (students.length === 0) {
     studentContainer.innerHTML = '<p class="no-students">No students found</p>';
     return;
   }
 
-  studentContainer.innerHTML = filteredStudents
+  studentContainer.innerHTML = students
     .map(
       (student) => `
         <div class="student-card" data-id="${student.id}">
@@ -375,8 +325,6 @@ async function submitStudent(event) {
     students.push({ id: nextId, ...studentData });
   }
 
-  saveStudents();
-  updateStatistics();
   renderStudents();
   resetFormState();
 }
@@ -408,8 +356,6 @@ function handleCardClick(event) {
     const studentIndex = students.findIndex((student) => student.id === selectedId);
     if (studentIndex !== -1) {
       students.splice(studentIndex, 1);
-      saveStudents();
-      updateStatistics();
       renderStudents();
     }
   }
@@ -450,8 +396,6 @@ function handleLiveValidation(event) {
 
 form.addEventListener("submit", submitStudent);
 resetBtn.addEventListener("click", resetForm);
-searchInput.addEventListener("input", renderStudents);
-courseFilter.addEventListener("change", renderStudents);
 studentContainer.addEventListener("click", handleCardClick);
 
 [studentName, studentEmail, studentPhone, studentDob, studentCourse, studentAbout, studentPhoto].forEach((field) => {
@@ -467,11 +411,5 @@ document.querySelectorAll('input[name="skills"]').forEach((checkbox) => {
   checkbox.addEventListener("change", handleLiveValidation);
 });
 
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-  themeToggle.textContent = document.body.classList.contains("dark-mode") ? "Light Mode" : "Dark Mode";
-});
-
 updateCharCounter();
-updateStatistics();
 renderStudents();
