@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+     <header class="page-title">
+        <h1>Student Registration</h1>
+           <p>Register and manage student applications.</p>
+        </header>
+        <section class="registration-box">
+        <h2>Student Information</h2>
+        <form>
+           <div class="form-row">
+                   <div class="form-group">
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName" name="studentName" required></div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required></div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <div class="options">
+                            <div class="option">
+                                <input type="radio" id="male" name="gender" value="Male">
+                                <label for="male">Male</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" id="female" name="gender" value="Female">
+                                <label for="female">Female</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" id="other" name="gender" value="Other">
+                                <label for="other">Other</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course">Course</label>
+
+                        <select id="course" name="course">
+                            <option value="">Select Course</option>
+                            <option>Web Development</option>
+                            <option>UI/UX</option>
+                            <option>Python</option>
+                            <option>Data Analytics</option>
+                            <option>MERN Stack</option>
+                            <option>Cloud Computing</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label>Skills</label>
+
+                        <div class="options">
+                            <div class="option">
+                                <input type="checkbox" id="html" name="skills" value="HTML">
+                       <label for="html">HTML</label>
+                   </div>
+                  <div class="option">
+                   <input type="checkbox" id="css" name="skills" value="CSS">
+                    <label for="css">CSS</label>
+                </div>
+                <div class="option">
+                   <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+                    <label for="javascript">JavaScript</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="git" name="skills" value="Git">
+                    <label for="git">Git</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="react" name="skills" value="React">
+                    <label for="react">React</label>
+                    </div>
+                    <div class="option">
+                      <input type="checkbox" id="node" name="skills" value="Node.js">
+                       <label for="node">Node.js</label>                    </div>
+                </div>
+                </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="about">About Student</label>
+                        <textarea
+                            id="about"
+                            name="about"
+                            maxlength="200"
+                            placeholder="Write something about the student..."></textarea>
+
+                    <span class="help-text">Maximum 200 characters</span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="profilePhoto">Profile Photo</label>
+                        <input
+                            type="file"
+                            id="profilePhoto"
+                            name="profilePhoto"
+                            accept="image/*">
+                    </div>
+                </div>
+                <div class="button">
+                    <button type="submit" class="register-btn">
+                        Register Student
+                    </button>
+                    <button type="reset" class="reset-btn">
+                        Reset Form
+                    </button>
+                </div>
+            </form>
+        </section>
+        <section class="students-section">
+            <h2>Registered Students</h2>
+            <div class="student-cards">
+                <article class="student-card">
+                    <div class="student-header">
+                        <img
+                            class="profile-image"
+                            src=""
+                            alt="Rahul Sharma">
+                            <div>
+                           <h3>Rahul Sharma</h3>
+                        <p>Web Development</p>
+                        </div>
+                    </div>
+
+                    <div class="student-info">
+                        <div class="info-item">
+                            <span class="info-label">Email</span>
+                            <span class="info-value">asdkod@example.com</span>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-label">Contact No</span>
+                            <span class="info-value">4104555591</span>
+                        </div>
+
+          <div class="info-item">
+                    <span class="info-label">Gender</span>
+                   <span class="info-value">Male</span>
+                        </div>
+
+                        <div class="skills">
+                            <span class="skill">HTML</span>
+                            <span class="skill">CSS</span>
+                            <span class="skill">JavaScript</span>
+                        </div>
+                    </div> 
+
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
