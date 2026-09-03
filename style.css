@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: rgb(236, 200, 156);
+}
+
+.heading {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    
+}
+#register, #reset{
+    padding: 10px;
+}
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 50px;
+    color: white;
+    border-radius: 20px;
+    background-color: rgb(72, 38, 4);
+}
+
+.registration-form div {
+    display: flex;
+    gap: 10px;
+    padding: 3px;
+    align-items: center;
+}
+
+
+input, select {
+    border-radius: 10px;
+    display: flex;
+    padding: 10px;
+}
+
+.reg-res-button {
+    border-radius: 5px;
+}
+
+.seperate {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer{
+    margin: auto;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    color: #eeeeee;
+    padding: 20px;
+    background-color: rgb(72, 38, 4);
+}
+.students-section {
+    padding: 16px;
+}
+
+.students-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.student-card {
+    padding: 16px;
+    border: 1px solid black;
+    color: #eeeeee;
+    border-radius: 8px;
+    background-color: rgb(72, 38, 4);
+}
+
+.student-card h3 {
+    margin-top: 0;
+}
+
+.student-photo {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    background-color: #eeeeee;
+}
+
+.student-card p {
+    margin: 8px 0;
+}
+
+.student-card .student-skills {
+    margin-bottom: 0;
+}
+
+.student-card button {
+    margin-top: 12px;
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.student-card .delete-button {
+    background-color: #f30808;
+    color: white;
+}
+
+.student-card .edit-button {
+    background-color: #74c7f1;
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .students-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
