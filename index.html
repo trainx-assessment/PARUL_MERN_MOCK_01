@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header class="heading">
+    <h1>Student Application Management System</h1>
+</header>
+<form class="student-form">
+    <div class="form-container">
+        <div class="input-text">
+    <label for="studentName">Student Name:</label>
+    <input type="text" id="studentName" name="studentName" placeholder="Name" required>
+
+    <label for="studentEmail">Student Email:</label>
+    <input type="email" id="studentEmail" name="studentEmail" placeholder="Email" required>
+    <label for="studentPhone">Student Phone:</label>
+    <input type="tel" id="studentPhone" name="studentPhone" placeholder="Phone number" required>
+    <p>Date of birth</p>
+    <input type="date" name="Date of birth">
+    </div>
+    <div class="gender">
+    <label for="studentGender">Student Gender:</label>
+    <label for="studentMale">Male</label>
+    <input type="radio" id="studentMale" name="studentGender" value="male" required>
+    <label for="studentFemale">Female</label>
+    <input type="radio" id="studentFemale" name="studentGender" value="female" required>
+    
+    </div>
+    
+        <div class="course">
+    <label for="Course" >Select Course</label>
+    <select id="studentGender" name="studentGender" required>
+        <option value="Course">Select Course</option>
+        <option value="">Web Development</option>
+        <option value="">UI/UX</option>
+        <option value="">Python</option>
+        <option value="">Data Analytics</option>
+        <option value="">MERN Stack</option>
+        <option value="">Cloud Computing</option>
+  
+    </div>
+    <div class="skills">
+    <label for="studentSkill">Student Skills:</label>
+    <input type="checkbox" id="studentSkills" name="studentSkills" value="HTML">HTML
+    <input type="checkbox" id="studentSkills" name="studentSkills" value="CSS"> CSS
+    <input type="checkbox" id="studentSkills" name="studentSkills" value="JavaScript"> JavaScript
+    <input type="checkbox" id="studentSkills" name="studentSkills" value="Git"> Git
+    <input type="checkbox" id="studentSkills" name="studentSkills" value="React"> React
+    <input type="checkbox" id="studentSkills" name="studentSkills" value="Node.js"> Node.js
+    </div>
+
+    <div class="aboutStudent">
+    <h3>About Student</h3>
+    <input type="text" name="About Student" placeholder="About Student" id="aboutStudentText">
+</div>
+<div class="media">
+    <label for="studentResume">Upload Profile image:</label>
+    <input type="file" name="studentResume" id="studentResume" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg">
+</div>
+
+<button type="submit">Submit</button>
+
+
+
+
+<div class="student-card" data-id="1"></div>
+    
+    </div>
+</form>
+
+
+
+<script src="script.js">
+
+</script>
+<body>
+    
+</body>
+</html>
