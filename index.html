@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Student Application Management System</h1>
+      <p>Register and manage student applications</p>
+    </header>
+
+    <main>
+      <section id="registrationSection">
+        <form id="studentForm">
+          <h2>Register New Student</h2>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="studentName">Student Name</label>
+              <input
+                type="text"
+                id="studentName"
+                placeholder="Enter full name"
+                required
+              />
+              <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+              <label for="studentEmail">Email</label>
+              <input
+                type="email"
+                id="studentEmail"
+                placeholder="Enter email"
+                required
+              />
+              <span class="error-message"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="studentPhone">Phone Number</label>
+              <input
+                type="text"
+                id="studentPhone"
+                placeholder="Enter 10-digit number"
+                required
+              />
+              <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+              <label for="studentDOB">Date of Birth</label>
+              <input type="date" id="studentDOB" required />
+              <span class="error-message"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Gender</label>
+              <div class="radio-group">
+                <label
+                  ><input type="radio" name="gender" value="Male" /> Male</label
+                >
+                <label
+                  ><input type="radio" name="gender" value="Female" />
+                  Female</label
+                >
+                <label
+                  ><input type="radio" name="gender" value="Other" />
+                  Other</label
+                >
+              </div>
+              <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+              <label for="studentCourse">Course</label>
+              <select id="studentCourse">
+                <option value="">Select Course</option>
+                <option value="Web Development">Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Python">Python</option>
+                <option value="Data Analytics">Data Analytics</option>
+                <option value="MERN Stack">MERN Stack</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+              </select>
+              <span class="error-message"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Skills</label>
+            <div class="checkbox-group">
+              <label
+                ><input type="checkbox" name="skills" value="HTML" />
+                HTML</label
+              >
+              <label
+                ><input type="checkbox" name="skills" value="CSS" /> CSS</label
+              >
+              <label
+                ><input type="checkbox" name="skills" value="JavaScript" />
+                JavaScript</label
+              >
+              <label
+                ><input type="checkbox" name="skills" value="Git" /> Git</label
+              >
+              <label
+                ><input type="checkbox" name="skills" value="React" />
+                React</label
+              >
+              <label
+                ><input type="checkbox" name="skills" value="Node.js" />
+                Node.js</label
+              >
+            </div>
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="studentAbout">About Student</label>
+            <textarea
+              id="studentAbout"
+              placeholder="About Yourself ..."
+              maxlength="200"
+            ></textarea>
+            <small id="aboutCounter">0 / 200</small>
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="studentPhoto">Profile Photo</label>
+            <input type="file" id="studentPhoto" accept="image/*" />
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-buttons">
+            <button type="submit" id="registerBtn">Register Student</button>
+            <button type="reset" id="resetBtn">Reset Form</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="statisticsSection">
+        <h2>Statistics</h2>
+        <div id="stats"></div>
+      </section>
+        
+      <section id="searchSection">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search student by name..."
+        />
+        <select id="courseFilter">
+          <option value="">All Courses</option>
+          <option value="Web Development">Web Development</option>
+          <option value="UI/UX">UI/UX</option>
+          <option value="Python">Python</option>
+          <option value="Data Analytics">Data Analytics</option>
+          <option value="MERN Stack">MERN Stack</option>
+          <option value="Cloud Computing">Cloud Computing</option>
+        </select>
+      </section>
+
+      <section id="studentsSection">
+        <h2>Registered Students</h2>
+        <div id="studentContainer"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Student Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

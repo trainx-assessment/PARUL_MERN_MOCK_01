@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #b3ffd3;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #01cffe;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+header h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+    
+header p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+section {
+  background-color: white;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  border: 1px solid #dddddd;
+  box-shadow: 0 2px 5px #ddd;
+}
+
+section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+form {
+  width: 100%;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="file"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.radio-group,
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.radio-group input,
+.checkbox-group input {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+}
+
+.error-message.show {
+  display: block;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.1s;
+}
+
+#registerBtn {
+  background-color: #000671;
+  color: white;
+}
+
+#registerBtn:hover {
+  background-color: #237bb5;
+}
+
+#resetBtn {
+  background-color: #00b0bd;
+  color: white;
+}
+
+#resetBtn:hover {
+  background-color: #7fd5db;
+}
+
+#stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+#stats div {
+  padding: 15px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#searchSection {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;  
+}
+
+#searchInput,
+#courseFilter {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px;
+  border: 1px solid #ddd;      
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+#searchInput:focus,
+#courseFilter:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+#studentContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.student-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s;
+}
+
+.student-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
+}
+
+.student-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.student-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.student-card p {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.student-card strong {
+  color: #2c3e50;
+}
+
+.skills-list {
+  background-color: #ecf0f1;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.edit-btn,
+.delete-btn {
+  flex: 1;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #2980b9;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.no-students {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  font-size: 16px;
+}
+
+footer {
+  background-color: #01cffe;
+  color: rgb(6, 6, 6);
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 40px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  #studentContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  #searchSection {
+    flex-direction: column;
+  }
+
+  #searchInput,
+  #courseFilter {
+    width: 100%;
+  }
+
+  #stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  header p {
+    font-size: 12px;
+  }
+
+  main {
+    padding: 0 10px;
+    margin: 15px auto;
+  }
+
+  section {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .radio-group,
+  .checkbox-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  #studentContainer {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .student-card {
+    padding: 15px;
+  }
+
+  .student-card img {
+    height: 150px;
+  }
+
+  .card-buttons {
+    flex-direction: column;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    width: 100%;
+  }
+}
