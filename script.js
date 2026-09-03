@@ -30,7 +30,9 @@ function showError(input, message) {
 
 // Remove error message
 function removeError(input) {
-    const oldError = input.parentElement.querySelector(".error-message");
+    const oldError = input.parentElement.querySelector(
+        ".error-message"
+    );
 
     if (oldError) {
         oldError.remove();
@@ -48,6 +50,7 @@ function clearErrors() {
 
 // Character counter
 const counter = document.createElement("small");
+
 counter.id = "character-counter";
 counter.textContent = "0 / 200";
 
@@ -66,9 +69,9 @@ function displayStudents() {
     students.forEach(student => {
 
         const card = document.createElement("div");
+
         card.classList.add("student-card");
 
-        // Store student ID
         card.setAttribute("data-id", student.id);
 
 
@@ -81,53 +84,68 @@ function displayStudents() {
 
         // Student Name
         const name = document.createElement("h3");
+
         name.textContent = student.name;
 
 
         // Email
         const emailElement = document.createElement("p");
-        emailElement.textContent = `Email: ${student.email}`;
+
+        emailElement.textContent =
+            `Email: ${student.email}`;
 
 
         // Phone
         const phoneElement = document.createElement("p");
-        phoneElement.textContent = `Phone: ${student.phone}`;
+
+        phoneElement.textContent =
+            `Phone: ${student.phone}`;
 
 
         // DOB
         const dobElement = document.createElement("p");
-        dobElement.textContent = `DOB: ${student.dob}`;
+
+        dobElement.textContent =
+            `DOB: ${student.dob}`;
 
 
         // Gender
         const genderElement = document.createElement("p");
-        genderElement.textContent = `Gender: ${student.gender}`;
+
+        genderElement.textContent =
+            `Gender: ${student.gender}`;
 
 
         // Course
         const courseElement = document.createElement("p");
-        courseElement.textContent = `Course: ${student.course}`;
+
+        courseElement.textContent =
+            `Course: ${student.course}`;
 
 
         // Skills
         const skillsElement = document.createElement("p");
+
         skillsElement.textContent =
             `Skills: ${student.skills.join(", ")}`;
 
 
         // About
         const aboutElement = document.createElement("p");
+
         aboutElement.textContent =
             `About: ${student.about}`;
 
 
         // Edit Button
         const editButton = document.createElement("button");
+
         editButton.textContent = "Edit";
 
 
         // Delete Button
         const deleteButton = document.createElement("button");
+
         deleteButton.textContent = "Delete";
 
 
@@ -151,6 +169,52 @@ function displayStudents() {
 }
 
 
+// Task 7 - Student Statistics
+function updateStatistics() {
+
+    const statistics = document.getElementById(
+        "student-statistics"
+    );
+
+    statistics.innerHTML = "";
+
+
+    // Total Students
+    const totalStudents = document.createElement("p");
+
+    totalStudents.textContent =
+        `Total Students: ${students.length}`;
+
+    statistics.appendChild(totalStudents);
+
+
+    // Courses
+    const courses = [
+        "Web Development",
+        "UI/UX",
+        "Python",
+        "Data Analytics",
+        "MERN Stack",
+        "Cloud Computing"
+    ];
+
+
+    courses.forEach(courseName => {
+
+        const count = students.filter(
+            student => student.course === courseName
+        ).length;
+
+        const courseElement = document.createElement("p");
+
+        courseElement.textContent =
+            `${courseName}: ${count}`;
+
+        statistics.appendChild(courseElement);
+    });
+}
+
+
 // Form Submit
 form.addEventListener("submit", function (event) {
 
@@ -163,6 +227,7 @@ form.addEventListener("submit", function (event) {
 
     // Student Name
     const nameValue = studentName.value.trim();
+
     const nameRegex = /^[A-Za-z ]+$/;
 
     if (nameValue === "") {
@@ -205,7 +270,9 @@ form.addEventListener("submit", function (event) {
 
     // Email
     const emailValue = email.value.trim();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    const emailRegex =
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (emailValue === "") {
 
@@ -229,6 +296,7 @@ form.addEventListener("submit", function (event) {
 
     // Phone
     const phoneValue = phone.value.trim();
+
     const phoneRegex = /^\d{10}$/;
 
     if (phoneValue === "") {
@@ -264,9 +332,11 @@ form.addEventListener("submit", function (event) {
     } else {
 
         const selectedDate = new Date(dob.value);
+
         const today = new Date();
 
         today.setHours(0, 0, 0, 0);
+
 
         if (selectedDate > today) {
 
@@ -280,11 +350,13 @@ form.addEventListener("submit", function (event) {
         } else {
 
             // Minimum age 15
-            const minimumAgeDate = new Date(selectedDate);
+            const minimumAgeDate =
+                new Date(selectedDate);
 
             minimumAgeDate.setFullYear(
                 minimumAgeDate.getFullYear() + 15
             );
+
 
             if (minimumAgeDate > today) {
 
@@ -304,16 +376,23 @@ form.addEventListener("submit", function (event) {
         'input[name="gender"]:checked'
     );
 
+
     if (!gender) {
 
-        const genderGroup = document.querySelector(
-            'input[name="gender"]'
-        ).parentElement.parentElement;
+        const genderGroup =
+            document.querySelector(
+                'input[name="gender"]'
+            ).parentElement.parentElement;
 
-        const error = document.createElement("small");
+
+        const error =
+            document.createElement("small");
 
         error.className = "error-message";
-        error.textContent = "Please select a gender.";
+
+        error.textContent =
+            "Please select a gender.";
+
         error.style.color = "red";
 
         genderGroup.appendChild(error);
@@ -341,18 +420,24 @@ form.addEventListener("submit", function (event) {
         )
     ).map(skill => skill.value);
 
+
     if (selectedSkills.length === 0) {
 
-        const skillInput = document.querySelector(
-            'input[name="skills"]'
-        );
+        const skillInput =
+            document.querySelector(
+                'input[name="skills"]'
+            );
+
 
         const skillGroup =
             skillInput.parentElement.parentElement;
 
-        const error = document.createElement("small");
+
+        const error =
+            document.createElement("small");
 
         error.className = "error-message";
+
         error.textContent =
             "Please select at least one skill.";
 
@@ -366,6 +451,7 @@ form.addEventListener("submit", function (event) {
 
     // About Student
     const aboutValue = about.value.trim();
+
 
     if (aboutValue === "") {
 
@@ -410,6 +496,7 @@ form.addEventListener("submit", function (event) {
 
         const file = profilePhoto.files[0];
 
+
         if (!file.type.startsWith("image/")) {
 
             showError(
@@ -422,8 +509,9 @@ form.addEventListener("submit", function (event) {
     }
 
 
-    // If valid
+    // If everything is valid
     if (isValid) {
+
 
         // Task 5 - Create Student Object
         const student = {
@@ -432,7 +520,9 @@ form.addEventListener("submit", function (event) {
 
             name: studentName.value.trim(),
 
-            email: email.value.trim(),
+            email: studentName.value.trim()
+                ? email.value.trim()
+                : "",
 
             phone: phone.value.trim(),
 
@@ -454,16 +544,28 @@ form.addEventListener("submit", function (event) {
         students.push(student);
 
 
-        // Task 6 - Display card
+        // Task 6 - Display cards
         displayStudents();
 
 
-        console.log("Student added:", student);
+        // Task 7 - Update statistics
+        updateStatistics();
 
-        console.log("All students:", students);
+
+        console.log(
+            "Student added:",
+            student
+        );
+
+        console.log(
+            "All students:",
+            students
+        );
 
 
-        alert("Student registration successful!");
+        alert(
+            "Student registration successful!"
+        );
 
 
         // Reset form
@@ -478,33 +580,60 @@ form.addEventListener("submit", function (event) {
 
 // Remove errors when user fixes input
 
-studentName.addEventListener("input", function () {
-    removeError(studentName);
-});
+studentName.addEventListener(
+    "input",
+    function () {
+        removeError(studentName);
+    }
+);
 
-email.addEventListener("input", function () {
-    removeError(email);
-});
 
-phone.addEventListener("input", function () {
-    removeError(phone);
-});
+email.addEventListener(
+    "input",
+    function () {
+        removeError(email);
+    }
+);
 
-dob.addEventListener("change", function () {
-    removeError(dob);
-});
 
-course.addEventListener("change", function () {
-    removeError(course);
-});
+phone.addEventListener(
+    "input",
+    function () {
+        removeError(phone);
+    }
+);
 
-about.addEventListener("input", function () {
-    removeError(about);
-});
 
-profilePhoto.addEventListener("change", function () {
-    removeError(profilePhoto);
-});
+dob.addEventListener(
+    "change",
+    function () {
+        removeError(dob);
+    }
+);
+
+
+course.addEventListener(
+    "change",
+    function () {
+        removeError(course);
+    }
+);
+
+
+about.addEventListener(
+    "input",
+    function () {
+        removeError(about);
+    }
+);
+
+
+profilePhoto.addEventListener(
+    "change",
+    function () {
+        removeError(profilePhoto);
+    }
+);
 
 
 // Gender error remove
@@ -512,18 +641,24 @@ document.querySelectorAll(
     'input[name="gender"]'
 ).forEach(input => {
 
-    input.addEventListener("change", function () {
+    input.addEventListener(
+        "change",
+        function () {
 
-        const genderGroup =
-            input.parentElement.parentElement;
+            const genderGroup =
+                input.parentElement.parentElement;
 
-        const error =
-            genderGroup.querySelector(".error-message");
+            const error =
+                genderGroup.querySelector(
+                    ".error-message"
+                );
 
-        if (error) {
-            error.remove();
+
+            if (error) {
+                error.remove();
+            }
         }
-    });
+    );
 });
 
 
@@ -532,27 +667,39 @@ document.querySelectorAll(
     'input[name="skills"]'
 ).forEach(input => {
 
-    input.addEventListener("change", function () {
+    input.addEventListener(
+        "change",
+        function () {
 
-        const selected =
-            document.querySelectorAll(
-                'input[name="skills"]:checked'
-            );
+            const selected =
+                document.querySelectorAll(
+                    'input[name="skills"]:checked'
+                );
 
-        if (selected.length > 0) {
 
-            const skillGroup =
-                input.parentElement.parentElement;
+            if (selected.length > 0) {
 
-            const error =
-                skillGroup.querySelector(".error-message");
+                const skillGroup =
+                    input.parentElement.parentElement;
 
-            if (error) {
-                error.remove();
+
+                const error =
+                    skillGroup.querySelector(
+                        ".error-message"
+                    );
+
+
+                if (error) {
+                    error.remove();
+                }
             }
         }
-    });
+    );
 });
+
+
+// Show initial statistics
+updateStatistics();
 
 
 console.log(
