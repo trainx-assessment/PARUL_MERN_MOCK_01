@@ -1,0 +1,206 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: blue;
+  color: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-shell {
+  width: 50%;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border: 1px solid black;
+}
+
+.page-header {
+  background: transparent;
+  margin-bottom: 20px;
+}
+
+.page-header h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+}
+
+.page-header p {
+  margin: 0;
+  color: black;
+}
+
+.primary-btn,
+.secondary-btn,
+.delete-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: #fff;
+  color: black;
+}
+
+.secondary-btn {
+  background: #e5e7eb;
+  color: #111;
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card {
+  padding: 20px 0;
+}
+
+.list-panel {
+  grid-column: auto;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: auto;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.radio-group,
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.field-error {
+  min-height: 18px;
+  color: red;
+  font-size: 12px;
+  margin-top:5px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.search-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.student-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.student-card {
+  background: #f9fafb;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.student-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.student-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.student-meta {
+  line-height: 1.8;
+  color: #444;
+}
+
+.skills-list {
+  margin: 8px 0 0 18px;
+}
+
+.about-text {
+  margin-top: 12px;
+  color: #444;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 25px;
+  background: #f3f4f6;
+  border: 1px dashed #bbb;
+  border-radius: 8px;
+  color: #555;
+}
+
+.page-footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-actions,
+  .card-actions {
+    flex-direction: column;
+  }
+}
+
