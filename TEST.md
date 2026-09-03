@@ -6,20 +6,20 @@
 
 ## Technologies
 
-* HTML5
-* CSS3
-* Vanilla JavaScript
+- HTML5
+- CSS3
+- Vanilla JavaScript
 
 ## Instructions
 
-* Complete all tasks.
-* Use only HTML, CSS, and Vanilla JavaScript.
-* Do not use Bootstrap, Tailwind CSS, React, jQuery, or any external JavaScript/CSS framework.
-* Keep your code properly formatted and readable.
-* Use meaningful variable, function, class, and ID names.
-* Your application must work without errors in the browser console.
-* Your UI must be responsive.
-* Commit and push the completed project to the assigned GitHub repository.
+- Complete all tasks.
+- Use only HTML, CSS, and Vanilla JavaScript.
+- Do not use Bootstrap, Tailwind CSS, React, jQuery, or any external JavaScript/CSS framework.
+- Keep your code properly formatted and readable.
+- Use meaningful variable, function, class, and ID names.
+- Your application must work without errors in the browser console.
+- Your UI must be responsive.
+- Commit and push the completed project to the assigned GitHub repository.
 
 ---
 
@@ -43,8 +43,8 @@ script.js
 
 Connect:
 
-* `style.css` with `index.html`
-* `script.js` with `index.html`
+- `style.css` with `index.html`
+- `script.js` with `index.html`
 
 ## Page Structure
 
@@ -63,10 +63,14 @@ Examples:
 
 ```html
 <header>
-<main>
-<section>
-<form>
-<footer>
+  <main>
+    <section>
+      <form>
+        <footer></footer>
+      </form>
+    </section>
+  </main>
+</header>
 ```
 
 ## Header
@@ -93,23 +97,23 @@ Create a student registration form containing the following fields.
 
 ## Student Name
 
-* Input type: `text`
-* Required
+- Input type: `text`
+- Required
 
 ## Email
 
-* Input type: `email`
-* Required
+- Input type: `email`
+- Required
 
 ## Phone Number
 
-* Input type: `text`
-* Required
+- Input type: `text`
+- Required
 
 ## Date of Birth
 
-* Input type: `date`
-* Required
+- Input type: `date`
+- Required
 
 ## Gender
 
@@ -165,7 +169,7 @@ Maximum 200 characters
 Use:
 
 ```html
-<input type="file">
+<input type="file" />
 ```
 
 Accept image files only.
@@ -193,15 +197,15 @@ Create a clean and professional user interface.
 
 The application should have:
 
-* Proper spacing
-* Consistent font sizes
-* Proper alignment
-* Borders
-* Border radius
-* Shadows where appropriate
-* Hover effects
-* Proper button styling
-* Good readability
+- Proper spacing
+- Consistent font sizes
+- Proper alignment
+- Borders
+- Border radius
+- Shadows where appropriate
+- Hover effects
+- Proper button styling
+- Good readability
 
 ## Registration Form
 
@@ -267,9 +271,7 @@ Use at least **two media queries**.
 Recommended breakpoints:
 
 ```css
-@media (max-width: 768px)
-
-@media (max-width: 480px)
+@media (max-width: 768px) @media (max-width: 480px);
 ```
 
 The application should remain readable and usable on mobile devices.
@@ -299,12 +301,12 @@ Implement validation using JavaScript.
 
 Rules:
 
-* Required
-* Minimum 3 characters
-* Maximum 40 characters
-* Only letters and spaces allowed
-* Numbers are not allowed
-* Special characters are not allowed
+- Required
+- Minimum 3 characters
+- Maximum 40 characters
+- Only letters and spaces allowed
+- Numbers are not allowed
+- Special characters are not allowed
 
 Use a **Regular Expression**.
 
@@ -331,8 +333,8 @@ John@
 
 Rules:
 
-* Required
-* Must contain a valid email address
+- Required
+- Must contain a valid email address
 
 Examples:
 
@@ -357,9 +359,9 @@ student.com
 
 Rules:
 
-* Required
-* Exactly 10 digits
-* Numbers only
+- Required
+- Exactly 10 digits
+- Numbers only
 
 Use a **Regular Expression**.
 
@@ -383,8 +385,8 @@ Invalid:
 
 Rules:
 
-* Required
-* Future dates must not be accepted
+- Required
+- Future dates must not be accepted
 
 Bonus validation:
 
@@ -422,10 +424,10 @@ At least **one skill** must be selected.
 
 Rules:
 
-* Required
-* Spaces-only input should not be accepted
-* Minimum 20 characters
-* Maximum 200 characters
+- Required
+- Spaces-only input should not be accepted
+- Minimum 20 characters
+- Maximum 200 characters
 
 Display a character counter:
 
@@ -441,8 +443,8 @@ Update the counter while the user types.
 
 Rules:
 
-* Profile photo is required
-* Only image files should be accepted
+- Profile photo is required
+- Only image files should be accepted
 
 Accepted examples:
 
@@ -500,12 +502,12 @@ Generate them using JavaScript.
 Use DOM manipulation such as:
 
 ```javascript
-document.createElement()
-appendChild()
-append()
-classList.add()
-textContent
-setAttribute()
+document.createElement();
+appendChild();
+append();
+classList.add();
+textContent;
+setAttribute();
 ```
 
 Every card must have:
@@ -523,22 +525,22 @@ data-id=""
 Example:
 
 ```html
-<div class="student-card" data-id="1">
+<div class="student-card" data-id="1"></div>
 ```
 
 Each card should display:
 
-* Student Photo
-* Student Name
-* Email
-* Phone Number
-* Date of Birth
-* Gender
-* Course
-* Skills
-* About Student
-* Edit button
-* Delete button
+- Student Photo
+- Student Name
+- Email
+- Phone Number
+- Date of Birth
+- Gender
+- Course
+- Skills
+- About Student
+- Edit button
+- Delete button
 
 Example:
 
@@ -599,9 +601,9 @@ Cloud Computing: 0
 
 The statistics should update automatically whenever:
 
-* A student is added
-* A student is deleted
-* A student's course is edited
+- A student is added
+- A student is deleted
+- A student's course is edited
 
 ---
 
@@ -642,7 +644,7 @@ Are you sure you want to delete this student?
 Use:
 
 ```javascript
-confirm()
+confirm();
 ```
 
 ---
@@ -691,7 +693,7 @@ Search students while the user types.
 Use the:
 
 ```javascript
-input
+input;
 ```
 
 event.
@@ -788,24 +790,23 @@ Web Development
 
 Display Rahul only if Rahul belongs to Web Development.
 
-
 ---
 
 # Task 12 — Form Reset
 
 After successful registration:
 
-* Clear all text fields
-* Clear email
-* Clear phone number
-* Reset date
-* Reset gender
-* Reset course
-* Reset skills
-* Clear textarea
-* Reset photo
-* Reset character counter
-* Remove validation messages
+- Clear all text fields
+- Clear email
+- Clear phone number
+- Reset date
+- Reset gender
+- Reset course
+- Reset skills
+- Clear textarea
+- Reset photo
+- Reset character counter
+- Remove validation messages
 
 The **Reset Form** button should also perform the same reset.
 
@@ -835,17 +836,9 @@ Fix the code **without rewriting the complete program**.
 
 ```html
 <form id="studentForm">
+  <input type="text" id="studentName" placeholder="Student Name" />
 
-    <input
-        type="text"
-        id="studentName"
-        placeholder="Student Name"
-    >
-
-    <button type="submit">
-        Add Student
-    </button>
-
+  <button type="submit">Add Student</button>
 </form>
 
 <div id="studentContainer"></div>
@@ -854,82 +847,61 @@ Fix the code **without rewriting the complete program**.
 ### Buggy JavaScript
 
 ```javascript
-const form =
-    document.querySelector("#studentForm");
+const form = document.querySelector("#studentForm");
 
-const studentName =
-    document.querySelector("#studentName");
+const studentName = document.querySelector("#studentName");
 
-const studentContainer =
-    document.querySelector("#studentContainer");
+const studentContainer = document.querySelector("#studentContainer");
 
-form.addEventListener(
-    "submit",
-    function (event) {
+form.addEventListener("submit", function (event) {
+  const name = studentName.value;
 
-        const name =
-            studentName.value;
+  if (name.trim() === "") {
+    alert("Name is required");
+  }
 
-        if (name.trim() === "") {
-            alert("Name is required");
-        }
+  const card = document.createElement("div");
 
-        const card =
-            document.createElement("div");
+  card.classList.add("student-card");
 
-        card.classList.add("student-card");
+  const heading = document.createElement("h3");
 
-        const heading =
-            document.createElement("h3");
+  heading.textContent = name;
 
-        heading.textContent =
-            name;
+  const deleteButton = document.createElement("button");
 
-        const deleteButton =
-            document.createElement("button");
+  deleteButton.textContent = "Delete";
 
-        deleteButton.textContent =
-            "Delete";
+  card.appendChild(heading);
+  card.appendChild(deleteButton);
 
-        card.appendChild(heading);
-        card.appendChild(deleteButton);
+  studentContainer.appendChild(card);
+});
 
-        studentContainer.appendChild(card);
-    }
-);
+studentContainer.addEventListener("click", function (event) {
+  if (event.target.classList.contains("delete-btn")) {
+    const card = event.target.parentElement;
 
-studentContainer.addEventListener(
-    "click",
-    function (event) {
-
-        if (
-            event.target.classList.contains("delete-btn")
-        ) {
-
-            const card =
-                event.target.parentElement;
-
-            card.remove();
-        }
-    }
-);
+    card.remove();
+  }
+});
 ```
 
 ## Expected Behaviour
 
 Fix all problems so that:
 
-* The page does not refresh after submission.
-* Empty names are rejected.
-* Space-only names are rejected.
-* Cards are not created if validation fails.
-* Valid names create cards.
-* Multiple students can be added.
-* Delete buttons work.
-* Only the selected card is removed.
-* The Delete button must have the correct class.
-* Use `closest()` to locate the card.
-* Clear the input after successful submission.
+- The page does not refresh after submission.
+- Empty names are rejected.
+- Space-only names are rejected.
+- Cards are not created if validation fails.
+- Valid names create cards.
+- Multiple students can be added.
+- Delete buttons work.
+- Only the selected card is removed.
+- The Delete button must have the correct class.
+- Use `closest()` to locate the card.
+- Clear the input after successful submission.
 
 ---
 
@@ -945,8 +917,8 @@ Dark Mode
 
 When clicked:
 
-* Switch between light and dark themes.
-* Change button text appropriately.
+- Switch between light and dark themes.
+- Change button text appropriately.
 
 Example:
 
@@ -967,40 +939,41 @@ Example:
 ```javascript
 document.body.classList.toggle("dark-mode");
 ```
+
 # Final Submission Requirements
 
 Before submitting, make sure:
 
-* `index.html` exists
-* `style.css` exists
-* `script.js` exists
-* All three files are connected correctly
-* Semantic HTML is used
-* Form fields have proper labels
-* CSS Grid/Flexbox is used
-* At least two media queries are used
-* Form validation works
-* Regex is used for Student Name
-* Regex is used for Phone Number
-* JavaScript validation messages are displayed
-* Student objects are stored in an array
-* Unique student IDs are generated
-* Cards are generated dynamically
-* Student count updates correctly
-* Course statistics update correctly
-* Delete functionality works
-* Event delegation is used
-* `closest()` is used
-* Edit functionality works
-* Search functionality works
-* Course filter works
-* Search and filter work together
-* Array Storage works
-* Data remains after refresh
-* Form resets correctly
-* There are no JavaScript errors in the browser console
-* Code is properly formatted
-* Latest code is committed and pushed to GitHub
+- `index.html` exists
+- `style.css` exists
+- `script.js` exists
+- All three files are connected correctly
+- Semantic HTML is used
+- Form fields have proper labels
+- CSS Grid/Flexbox is used
+- At least two media queries are used
+- Form validation works
+- Regex is used for Student Name
+- Regex is used for Phone Number
+- JavaScript validation messages are displayed
+- Student objects are stored in an array
+- Unique student IDs are generated
+- Cards are generated dynamically
+- Student count updates correctly
+- Course statistics update correctly
+- Delete functionality works
+- Event delegation is used
+- `closest()` is used
+- Edit functionality works
+- Search functionality works
+- Course filter works
+- Search and filter work together
+- Array Storage works
+- Data remains after refresh
+- Form resets correctly
+- There are no JavaScript errors in the browser console
+- Code is properly formatted
+- Latest code is committed and pushed to GitHub
 
 ---
 
@@ -1010,53 +983,53 @@ The assessment will evaluate:
 
 ### HTML
 
-* Semantic HTML
-* Forms
-* Input types
-* Labels
-* Radio buttons
-* Checkboxes
-* Select dropdown
-* Textarea
-* File input
-* HTML structure
+- Semantic HTML
+- Forms
+- Input types
+- Labels
+- Radio buttons
+- Checkboxes
+- Select dropdown
+- Textarea
+- File input
+- HTML structure
 
 ### CSS
 
-* Selectors
-* Box model
-* Flexbox/Grid
-* Responsive design
-* Media queries
-* Spacing
-* Typography
-* Buttons
-* Cards
-* Hover states
-* Overall UI quality
+- Selectors
+- Box model
+- Flexbox/Grid
+- Responsive design
+- Media queries
+- Spacing
+- Typography
+- Buttons
+- Cards
+- Hover states
+- Overall UI quality
 
 ### JavaScript
 
-* Variables
-* Functions
-* Arrays
-* Objects
-* Regular Expressions
-* Form handling
-* Form validation
-* DOM selection
-* DOM manipulation
-* `createElement()`
-* Events
-* Event delegation
-* `closest()`
-* `data-*` attributes
-* Array methods
-* Search
-* Filtering
-* Edit functionality
-* Delete functionality
-* `JSON.stringify()`
-* `JSON.parse()`
-* Debugging
-* Code readability
+- Variables
+- Functions
+- Arrays
+- Objects
+- Regular Expressions
+- Form handling
+- Form validation
+- DOM selection
+- DOM manipulation
+- `createElement()`
+- Events
+- Event delegation
+- `closest()`
+- `data-*` attributes
+- Array methods
+- Search
+- Filtering
+- Edit functionality
+- Delete functionality
+- `JSON.stringify()`
+- `JSON.parse()`
+- Debugging
+- Code readability
