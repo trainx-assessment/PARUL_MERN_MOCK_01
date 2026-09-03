@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Manager System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Student Manager System</h1>
+        <p>Add, Update or Delete Student data with ease ...!</p>
+    </header>
+    <main>
+        <div class="manage-buttons">
+            <div class="add">
+                <button>Add Student</button>
+            </div>
+            <div class="delete-all">
+                <button>Delete All</button>
+            </div>
+        </div>
+        <div class="student">
+            <p>Students registered </p>
+            <div class="student-card-wrap">
+                <div class="card">
+                    <div class="student-card">
+                        <div class="card-head">
+                            <div class="pic">
+                                <img src="" alt="profile photo">
+                            </div>
+                            <div class="card-sub">
+                                <div class="name">Dhruval Kharshikar</div>
+                                <div class="card-sub-sub">
+                                    <div class="card-left">
+                                        <div class="email">email</div>
+                                        <div class="phone">7016806241</div>
+                                    </div>
+                                    <div class="card-right">
+                                        <div class="dob">23-11-2006</div>
+                                        <div class="gender">Male</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about">about me</div>
+                        <div class="course">
+                            <label for="">Course : </label>
+                            <ul>
+                                <li>2</li>
+                            </ul>
+                        </div>
+                        <div class="skills">
+                            <label for="">Skills</label>
+                            <ul>
+                                <li>1</li>
+                                <li>1</li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                    <button id="update">update</button>
+                    <button id="delete">delete</button>
+                </div>
+            </div>
+        </div>
+        <div class="form-add">
+            <form action="">
+                <h1>Fill the form and Register the Student</h1>
+                <table>
+                    <tr>
+                        <td>
+                            Full Name :
+                        </td>
+                        <td>
+                            <input type="text" id="name" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Email :
+                        </td>
+                        <td>
+                            <input type="email" id="email" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Phone Number :
+                        </td>
+                        <td>
+                            <input type="text" id="phone" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Date of Birth :
+                        </td>
+                        <td>
+                            <input type="date" id="date" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Gender :
+                        </td>
+                        <td id="radio">
+                            <input type="radio" name="r1" id="m1" > Male
+                            <input type="radio" name="r1" id="f2" > Female
+                            <input type="radio" name="r1" id="o3" > Others
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Course :
+                        </td>
+                        <td>
+                            <select name="" id="course">
+                                <option value="" selected disabled>Choose a course</option>
+                                <option value="">Web Development</option>
+                                <option value="">UI/UX</option>
+                                <option value="">Python</option>
+                                <option value="">Data Analytics</option>
+                                <option value="">MERN Stack</option>
+                                <option value="">Cloud Computing</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Skills :
+                        </td>
+                        <td id="checkbox">
+                            <div>
+                                <input type="checkbox" name="c1" id="ch1">HTML
+                            </div>
+                            <div>
+                                <input type="checkbox" name="c1" id="ch2">CSS
+                            </div>
+                            <div>
+                                <input type="checkbox" name="c1" id="ch3">JavaScript
+                            </div>
+                            <div>
+                                <input type="checkbox" name="c1" id="ch4">Git
+                            </div>
+                            <div>
+                                <input type="checkbox" name="c1" id="ch5">React
+                            </div>
+                            <div>
+                                <input type="checkbox" name="c1" id="ch6">Node
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            About me :
+                        </td>
+                        <td>
+                            <textarea name="" id="about" placeholder="Maximum 200 characters"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Profile Photo <br> <p id="only">
+
+                                (only jpeg / png) :
+                            </p>
+                        </td>
+                        <td>
+                            <input type="file" name="" id="file-inp">
+                        </td>
+                    </tr>
+                </table>
+                <div class="buttons">
+                    <button type="submit" id="sub">Add Student</button>
+                    <button type="reset" id="res">Reset Form</button>
+                </div>
+                <button class="cancel">x</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h2>Student Manager System</h2>
+        <h5> by Dhruval Kharshikar</h5>
+        <p>&copy; Dhruval Kharshikar</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
