@@ -1,0 +1,416 @@
+/* =========================
+   General Reset
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+
+/* =========================
+   Main Container
+========================= */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+
+
+/* =========================
+   Form
+========================= */
+
+#studentForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#studentForm > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#studentForm p {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+/* =========================
+   Radio & Checkbox
+========================= */
+
+#studentForm input[type="radio"],
+#studentForm input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+}
+
+#studentForm div:has(input[type="radio"]),
+#studentForm div:has(input[type="checkbox"]) {
+    display: block;
+}
+
+#studentForm div:has(input[type="radio"]) label,
+#studentForm div:has(input[type="checkbox"]) label {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+
+/* =========================
+   Full Width Form Fields
+========================= */
+
+#studentForm > div:nth-last-of-type(2),
+#studentForm > div:nth-last-of-type(3),
+#studentForm > div:last-child {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================
+   Character Counter
+========================= */
+
+#charCount {
+    margin-top: 5px;
+    color: #6b7280;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+button {
+    border: none;
+    padding: 11px 20px;
+    border-radius: 7px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+#submitBtn {
+    background: #2563eb;
+    color: white;
+}
+
+#submitBtn:hover {
+    background: #1d4ed8;
+}
+
+#resetBtn {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+#resetBtn:hover {
+    background: #d1d5db;
+}
+
+
+/* =========================
+   Statistics
+========================= */
+
+#statistics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+#statistics p {
+    background: #f3f4f6;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+#statistics span {
+    color: #2563eb;
+    font-size: 20px;
+}
+
+
+/* =========================
+   Search & Filter
+========================= */
+
+#searchInput,
+#courseFilter {
+    margin-bottom: 15px;
+}
+
+#searchInput {
+    margin-right: 15px;
+}
+
+
+/* =========================
+   Student Cards
+========================= */
+
+#studentCardsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.student-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+
+.student-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.12);
+}
+
+.student-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.student-card h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.student-card p {
+    margin-bottom: 7px;
+}
+
+.student-card .skills {
+    margin-top: 10px;
+}
+
+.student-card button {
+    margin-top: 15px;
+}
+
+.edit-btn {
+    background: #f59e0b;
+    color: white;
+}
+
+.delete-btn {
+    background: #dc2626;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #d97706;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+
+/* =========================
+   Validation Messages
+========================= */
+
+.error-message {
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 768px) {
+
+    #studentForm {
+        grid-template-columns: 1fr;
+    }
+
+    #studentCardsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #statistics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 480px) {
+
+    main {
+        width: 95%;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    #studentCardsContainer {
+        grid-template-columns: 1fr;
+    }
+
+    #statistics {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+}
+/* =========================
+   Dark Mode
+========================= */
+
+body.dark-mode {
+    background: #111827;
+    color: #f9fafb;
+}
+
+body.dark-mode section {
+    background: #1f2937;
+    color: #f9fafb;
+}
+
+body.dark-mode section h2 {
+    color: #f9fafb;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background: #374151;
+    color: #f9fafb;
+    border-color: #4b5563;
+}
+
+body.dark-mode #statistics p {
+    background: #374151;
+}
+
+body.dark-mode .student-card {
+    background: #1f2937;
+    border-color: #4b5563;
+}
+
+body.dark-mode #charCount {
+    color: #d1d5db;
+}
+
+#darkModeBtn {
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#darkModeBtn:hover {
+    opacity: 0.85;
+}
