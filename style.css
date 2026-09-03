@@ -1,0 +1,175 @@
+/* Global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #780116;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background: #F7B538;
+    padding: 20px;
+    color: #780116;
+}
+
+/* Registration Section */
+#registration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+#registration form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #DB7C26;
+    background: #F7B538;
+    border-radius: 12px;
+}
+
+#registration h1 {
+    grid-column: 1 / span 2;
+    text-align: center;
+    color: #780116;
+}
+
+#registration label {
+    font-weight: bold;
+    margin-top: 8px;
+    color: #780116;
+}
+
+#registration input,
+#registration select,
+#registration textarea,
+#registration button {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #C32F27;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Skills Section */
+#skills {
+    grid-column: 1 / span 2;
+    padding: 10px;
+    border: 1px solid #D8572A;
+    border-radius: 8px;
+    background: #fff;
+}
+
+#skills h1 {
+    text-align: center;
+    color: #D8572A;
+}
+
+/* About Section */
+.aboutSection {
+    grid-column: 1 / span 2;
+}
+
+/* Profile Photo */
+.profilePhoto {
+    grid-column: 1 / span 2;
+}
+
+/* Buttons */
+.submit-btns {
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit-btns button {
+    background: #DB7C26;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Statistics Section */
+#statistics {
+    text-align: center;
+    padding: 20px;
+    background: #D8572A;
+    color: #fff;
+}
+
+/* Search & Filter */
+#search-filter {
+    text-align: center;
+    padding: 20px;
+    background: #C32F27;
+    color: #fff;
+}
+
+#search-filter input,
+#search-filter select {
+    margin: 10px;
+    padding: 8px;
+    border: 1px solid #780116;
+    border-radius: 6px;
+}
+
+/* Student Cards */
+#student-cards {
+    padding: 20px;
+    text-align: center;
+}
+
+#student-cards .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+#student-cards .card {
+    border: 1px solid #DB7C26;
+    padding: 15px;
+    background: #F7B538;
+    border-radius: 6px;
+    color: #780116;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #780116;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #registration form {
+        grid-template-columns: 1fr;
+    }
+    #student-cards .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    #student-cards .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.reg-text{
+    text-align: center;
+}
