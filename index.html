@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Student Application Management System</h1>
+    <p>Register and manage student applications</p>
+</header>
+
+<main>
+    <section>
+        <h2>Student Registration Form</h2>
+        <div class="two">
+            <form id="studentForm">
+            <div class="formGrp">
+                <label>Student Name</label>
+                <input required>
+            </div>
+
+            <div class="formGrp">
+                <label>Email</label>
+                <input required>
+            </div>
+
+            <div class="formGrp">
+                <label>Phone Number</label>
+                <input required>
+            </div>
+
+            <div class="formGrp">
+                <label>Date of Birth</label>
+                <input required>
+            </div>
+
+            <div class="formGrp">
+                <label>Gender</label>
+                <label><input type="radio" value="Male" required> Male</label>
+                <label><input type="radio" value="Female"> Female</label>
+            </div>
+
+            <div class="formGrp">
+                <label>Course</label>
+                <select required>
+                    <option>Select Course</option>
+                    <option>Web Development</option>
+                    <option>UI/UX</option>
+                    <option>Python</option>
+                    <option>Data Analytics</option>
+                    <option>MERN Stack</option>
+                    <option>Cloud Computing</option>
+                </select>
+            </div>
+
+            
+            <div class="formGrp">
+                <label>Skills</label>
+                <label><input type="checkbox" value="HTML"> HTML</label>
+                <label><input type="checkbox" value="CSS"> CSS</label>
+                <label><input type="checkbox" value="JavaScript"> JavaScript</label>
+                <label><input type="checkbox" value="Git"> Git</label>
+                <label><input type="checkbox" value="React"> React</label>
+                <label><input type="checkbox" value="Node.js"> Node.js</label>
+            </div>
+
+            <div class="formGrp">
+                <label>About Student</label>
+                <textarea></textarea>
+                <p id="blacky">Maximum 200 characters</p>
+            </div>
+
+            <div class="formGrp">
+                <label>Profile Photo</label>
+                <input>
+            </div>
+
+            <div class="buttonsContainer">
+                <button id="blue">Register Student</button>
+                <button id="red">Reset Form</button>
+            </div>
+
+            </form>
+        </div>
+        
+    </section>
+</main>
+
+<footer>
+    <p>Student Application Management System</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

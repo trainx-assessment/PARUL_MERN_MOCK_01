@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color:white;
+}
+
+header, footer{
+    background-color:crimson;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 30px auto;
+}
+
+section{
+    width:70%;
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #ece9e9;
+    border-radius: 10px;
+}
+
+section h2{
+    color:black;
+}
+
+.formGrp{
+    margin: 10px;
+    width:380px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.formGrp{
+    width: 70%;
+}
+
+.formGrp label{
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+textarea{
+    height: 100px;
+}
+
+label{
+    display: inline-block;
+    margin-right: 12px;
+}
+
+button{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color:white;
+    background-color: black;
+}
+
+p{
+    margin-top: 5px;
+    color:white
+}
+
+#blacky{
+    color:black;
+}
+
+.two{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
