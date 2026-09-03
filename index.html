@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Student Application Manager</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <h1>Student Application Manager</h1>
+    <p class="subtitle">Register students and keep track of every application in one place.</p>
+  </div>
+</header>
+
+<main class="wrap layout">
+
+  <section class="panel form-panel" aria-labelledby="formHeading">
+    <h2 id="formHeading">New application</h2>
+
+    <form id="studentForm" novalidate>
+
+      <div class="field">
+        <label for="studentName">Student name</label>
+        <input type="text" id="studentName" name="studentName" placeholder="e.g. Rahul Sharma" autocomplete="off">
+        <span class="error-message" id="err-studentName"></span>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="e.g. rahul@example.com" autocomplete="off">
+        <span class="error-message" id="err-email"></span>
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="10-digit number" autocomplete="off">
+        <span class="error-message" id="err-phone"></span>
+      </div>
+
+      <div class="field">
+        <label for="dob">Date of birth</label>
+        <input type="date" id="dob" name="dob">
+        <span class="error-message" id="err-dob"></span>
+      </div>
+
+      <div class="field">
+        <span class="group-label">Gender</span>
+        <div class="radio-row">
+          <label class="option"><input type="radio" name="gender" value="Male"> Male</label>
+          <label class="option"><input type="radio" name="gender" value="Female"> Female</label>
+          <label class="option"><input type="radio" name="gender" value="Other"> Other</label>
+        </div>
+        <span class="error-message" id="err-gender"></span>
+      </div>
+
+      <div class="field">
+        <label for="course">Course</label>
+        <select id="course" name="course">
+          <option value="">Select a course</option>
+          <option value="Web Development">Web Development</option>
+          <option value="UI/UX">UI/UX</option>
+          <option value="Python">Python</option>
+          <option value="Data Analytics">Data Analytics</option>
+        </select>
+        <span class="error-message" id="err-course"></span>
+      </div>
+
+      <div class="field">
+        <span class="group-label">Skills</span>
+        <div class="checkbox-row">
+          <label class="option"><input type="checkbox" name="skills" value="HTML"> HTML</label>
+          <label class="option"><input type="checkbox" name="skills" value="CSS"> CSS</label>
+          <label class="option"><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+          <label class="option"><input type="checkbox" name="skills" value="Git"> Git</label>
+        </div>
+        <span class="error-message" id="err-skills"></span>
+      </div>
+
+      <div class="field">
+        <label for="about">About student</label>
+        <textarea id="about" name="about" rows="4" placeholder="A short note about the student..."></textarea>
+        <span class="error-message" id="err-about"></span>
+      </div>
+
+      <div class="field">
+        <label for="photo">Profile photo</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+        <span class="error-message" id="err-photo"></span>
+      </div>
+
+      <button type="submit" class="btn-submit">Add student</button>
+    </form>
+  </section>
+
+  <section class="panel list-panel" aria-labelledby="listHeading">
+    <div class="list-panel-head">
+      <h2 id="listHeading">Applications</h2>
+      <span class="count-badge">Total Students: <strong id="studentCount">0</strong></span>
+    </div>
+
+    <div id="studentContainer" class="student-grid">
+      <p class="empty-state" id="emptyState">No students added yet. Fill in the form to get started.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Student Application Manager — built with HTML, CSS &amp; vanilla JavaScript.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
