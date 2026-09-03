@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Application Manager</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Student Application Manager</h1>
+      <p class="subtitle">Fill the form below to register a new student</p>
+    </header>
+
+    <main>
+      <section class="form-section">
+        <h2 class="form-title">Student Registration Form</h2>
+
+        <form id="studentForm" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="studentName"
+                >Student Name <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                id="studentName"
+                name="studentName"
+                placeholder="e.g. Meet Parmar"
+              />
+              <span class="error-message" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email"
+                >Email Address <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="e.g. student@example.com"
+              />
+              <span class="error-message" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone"
+                >Phone Number <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                placeholder="10-digit mobile number"
+              />
+              <span class="error-message" id="phoneError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="dob"
+                >Date of Birth <span class="required">*</span></label
+              >
+              <input type="date" id="dob" name="dob" />
+              <span class="error-message" id="dobError"></span>
+            </div>
+
+            <div class="form-group">
+              <label>Gender <span class="required">*</span></label>
+              <div class="radio-row">
+                <label class="inline-label">
+                  <input type="radio" name="gender" value="Male" /> Male
+                </label>
+                <label class="inline-label">
+                  <input type="radio" name="gender" value="Female" /> Female
+                </label>
+                <label class="inline-label">
+                  <input type="radio" name="gender" value="Other" /> Other
+                </label>
+              </div>
+              <span class="error-message" id="genderError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="course">Course <span class="required">*</span></label>
+              <select id="course" name="course">
+                <option value="">Select Course</option>
+                <option value="Web Development">Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Python">Python</option>
+                <option value="Data Analytics">Data Analytics</option>
+              </select>
+              <span class="error-message" id="courseError"></span>
+            </div>
+
+            <div class="form-group form-group-full">
+              <label>Skills <span class="required">*</span></label>
+              <div class="checkbox-row">
+                <label class="inline-label">
+                  <input type="checkbox" name="skills" value="HTML" /> HTML
+                </label>
+                <label class="inline-label">
+                  <input type="checkbox" name="skills" value="CSS" /> CSS
+                </label>
+                <label class="inline-label">
+                  <input type="checkbox" name="skills" value="JavaScript" />
+                  JavaScript
+                </label>
+                <label class="inline-label">
+                  <input type="checkbox" name="skills" value="Git" /> Git
+                </label>
+              </div>
+              <span class="error-message" id="skillsError"></span>
+            </div>
+
+            <div class="form-group form-group-full">
+              <div class="label-row">
+                <label for="about"
+                  >About Student <span class="required">*</span></label
+                >
+                <span class="char-count" id="charCount">0 / 200</span>
+              </div>
+              <textarea
+                id="about"
+                name="about"
+                rows="4"
+                maxlength="200"
+                placeholder="Tell us about the student (maximum 200 characters)..."
+              ></textarea>
+              <span class="error-message" id="aboutError"></span>
+            </div>
+
+            <div class="form-group form-group-full">
+              <label for="photo"
+                >Profile Photo <span class="required">*</span></label
+              >
+              <input type="file" id="photo" name="photo" accept="image/*" />
+              <p class="hint-text">
+                Accepted formats: .jpg, .jpeg, .png (image files only)
+              </p>
+              <span class="error-message" id="photoError"></span>
+            </div>
+
+            <div class="form-group form-group-full button-row">
+              <button type="submit" class="submit-btn">Submit</button>
+              <button type="reset" id="resetBtn" class="reset-btn">
+                Reset
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <section class="students-section">
+        <div class="students-header">
+          <h2>Registered Students</h2>
+          <p id="studentCount">Total Students: 0</p>
+        </div>
+
+        <div id="studentContainer" class="student-container">
+          <p id="emptyMessage" class="empty-message">
+            No students added yet. Fill the form to add one!
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Parul University Marquee Training Program Batch 10 </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
