@@ -4,94 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudentForm</title>
-    <style src="style.css"></style>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <header>
-        <h1 class="header1">Student Application Management System</h1> 
+        <h1 class="header1">Student Application Management System</h1>
         <p class="header2">Register and manage student applications</p>
     </header>
+
     <form id="mainForm" action="/submit" method="POST">
-        <label>Student Name:<input type="text" id="name" name="name" required></label>
-        
 
-        <label>Email:<input type="email" id="email" name="email" required></label>
-        
+        <label>
+            Student Name:
+            <input type="text" id="name" name="name" required>
+        </label>
 
-        <label>Phone:<input type="text" id="phone" name="phone" required></label>
-        
-        <label>DOB:<input type="date" id="dob" name="dob" required></label>
-        
-        <label>Gender:<input type="radio" class="gend" id="gender" name="gender" value="male" required>
-        <label for="gender">Male</label>
-        <input type="radio" class="gend" id="gender" name="gender" value="female" required>
-        <label for="gender">Female</label></label>
-        
+        <label>
+            Email:
+            <input type="email" id="email" name="email" required>
+        </label>
 
+        <label>
+            Phone:
+            <input type="text" id="phone" name="phone" required>
+        </label>
 
-        <label>Course
+        <label>
+            DOB:
+            <input type="date" id="dob" name="dob" required>
+        </label>
 
-            <select class="Course">
-                <option class="Course" value="Select Course">Select Course</option>
-                <option class="Course" value="Web Development">Web Development</option>
-                <option class="Course" value="UI/UX">UI/UX</option>
-                <option class="Course" value="Python">Python</option>
-                <option class="Course" value="Data Analytics">Data Analytics</option>
-                <option class="Course" value="Cloud Computing">Cloud Computing</option>
+        <label>
+            Gender:
+            <input type="radio" class="gend" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+
+            <input type="radio" class="gend" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </label>
+
+        <label>
+            Course:
+            <select class="Course" name="course" required>
+                <option value="">Select Course</option>
+                <option value="Web Development">Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Python">Python</option>
+                <option value="Data Analytics">Data Analytics</option>
+                <option value="Cloud Computing">Cloud Computing</option>
             </select>
         </label>
-        
 
+        <label>
+            Skills:
 
-        <label>Skills:<input type="checkbox" class="skills" name="skills" value="HTML" required>
-        <label>HTML</label>
-        <input type="checkbox" class="skills" name="skills" value="CSS" required>
-        <label>CSS</label>
-        <input type="checkbox" class="skills" name="skills" value="JavaScript" required>
-        <label>JavaScript</label>
-        <input type="checkbox" class="skills" name="skills" value="GIT" required>
-        <label>GIT</label>
-        <input type="checkbox" class="skills" name="skills" value="React" required>
-        <label>React</label>
-        <input type="checkbox" class="skills" name="skills" value="Nodejs" required>
-        <label>Node.js</label>
-</label>
-        
-        <label>About:<textarea id="about" maxlength="200" required></textarea></label>
-        
+            <input type="checkbox" class="skills" name="skills" value="HTML">
+            <label>HTML</label>
 
-        <label>Profile Photo:<input type="file" class="pfp" id="profilePhoto" name="profilePhoto"></label>
-        
+            <input type="checkbox" class="skills" name="skills" value="CSS">
+            <label>CSS</label>
 
-        
+            <input type="checkbox" class="skills" name="skills" value="JavaScript">
+            <label>JavaScript</label>
+
+            <input type="checkbox" class="skills" name="skills" value="GIT">
+            <label>GIT</label>
+
+            <input type="checkbox" class="skills" name="skills" value="React">
+            <label>React</label>
+
+            <input type="checkbox" class="skills" name="skills" value="Nodejs">
+            <label>Node.js</label>
+        </label>
+
+        <label>
+            About:
+            <textarea id="about" name="about" maxlength="200" required></textarea>
+        </label>
+
+        <label>
+            Profile Photo:
+            <input type="file" class="pfp" id="profilePhoto" name="profilePhoto">
+        </label>
+
         <button type="submit" id="submit">Submit</button>
         <button type="reset" id="reset">Reset</button>
+
     </form>
-    <section class="student-count">
 
-            <h2>Total Students</h2>
+    <section class="counter">
+        <h2>Total Students</h2>
+        <p id="totalStudents">0</p>
+    </section>
 
-            <p id="totalStudents">
-                0
-            </p>
+    <section class="rec">
+    <h2>Submitted Students</h2>
 
-        </section>
-
-        <section class="students-section">
-
-            <h2>Submitted Students</h2>
-
-
-            <div
-                id="studentsContainer"
-                class="students-container">
-
-            </div>
-
-        </section>
-
+    <div class="outerBox">
+        <div id="studentsContainer" class="studentsContainer"></div>
+    </div>
+</section>
 
     <script src="script.js"></script>
+
 </body>
 </html>

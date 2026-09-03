@@ -5,31 +5,41 @@
 .header2 {
     text-align: center;
 }
-#mainForm{
-    /* position: absolute;
-    left:30%;
-    top:13%;
-    text-align:start;
-    background-color: whitesmoke;
-    border: 2px solid white;
-    height: 40%;
-    width: 40%;
-    border-radius: 2%; */
+
+#mainForm {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
     gap: 50px;
     width: 98vw;
 }
-#submit,#reset{
+
+#submit,
+#reset {
     color: white;
     background-color: rgb(111, 152, 193);
-    height:200%;
+    height: 40px;
     width: 90%;
-    
+    border: none;
+    border-radius: 5px;
 }
-.student-count{
+
+.counter {
     text-align: center;
 }
-.students-section{
+
+.rec {
     text-align: center;
+}
+
+.outerBox {
+    width: 98vw;
+}
+
+.studentsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: rgb(111, 152, 193);
+    text-align: start;
+    border:solid 2px black;
 }
