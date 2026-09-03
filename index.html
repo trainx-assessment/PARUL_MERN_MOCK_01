@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentRegistrationForm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="heading">
+            <div>
+                <h1>Student Application Management System</h1>
+                <h4>Register and manage student applications</h4>
+            </div>
+            <div>
+                <button class="dkmode">Dark Mode</button>
+            </div>
+        </div>
+    </header>
+
+    <form class="registration-form">
+        <div class="seperate">
+            <div>
+                <label for="name">Name :</label>
+                <input type="text" id="name">
+            </div>
+
+            <div>
+                <label for="email">Email :</label>
+                <input type="email" id="email">
+            </div>
+        </div>
+
+        <div class="seperate">
+            <div>
+                <label for="number">Ph. No. :</label>
+                <input type="text" id="number">
+            </div>
+
+            <div>
+                <label for="dob">D.O.B :</label>
+                <input type="date" id="dob">
+            </div>
+        </div>
+
+        <div class="seperate">
+            <div>
+                <label for="gender">Gender :</label>
+                <label><input type="radio" id="male" name="gender"> Male</label>
+                <label><input type="radio" id="female" name="gender"> Female</label>
+                <label><input type="radio" id="others" name="gender"> Others</label>
+            </div>
+
+            <div>
+                <label for="course">Course :</label>
+                <select name="course" id="course">
+                    <option value="">Select Course</option>
+                    <option value="2">Web Development</option>
+                    <option value="3">UI/UX</option>
+                    <option value="4">Python</option>
+                    <option value="5">Data Analytics</option>
+                    <option value="6">MERN Stack</option>
+                    <option value="7">Cloud Computing</option>
+                </select>
+            </div>
+        </div>
+
+        <div>
+            <label for="skills">Skills :</label>
+            <label><input type="checkbox" name="skills" value="html"> HTML</label>
+            <label><input type="checkbox" name="skills" value="css"> CSS</label>
+            <label><input type="checkbox" name="skills" value="javascript"> JavaScript</label>
+            <label><input type="checkbox" name="skills" value="react"> React</label>
+            <label><input type="checkbox" name="skills" value="node"> Node.js</label>
+        </div>
+
+        <div>
+            <label for="about">About Yourself :</label>
+            <textarea name="" id="about" placeholder="Maximum 200 words"></textarea>
+        </div>
+
+        <div>
+            <label for="photo">Profile Photo :</label>
+            <input type="file" id="photo" accept="image/*">
+        </div>
+
+        <div>
+            <button id="register" class="reg-res-button" type="submit">Register</button>
+            <button id="reset" class="reg-res-button" type="reset">Reset</button>
+        </div>
+    </form>
+
+    <div class="student-statistics">
+        <div class="search-filter"></div>
+    </div>
+
+    <section class="students-section">
+        <h2 id="students-heading">Student Applications</h2>
+        <div class="students-container" aria-live="polite"></div>
+    </section>
+
+    <footer>
+        <div class="footing">
+            <p>All rights are reserved &copy; 2026 Satya Prateek.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
