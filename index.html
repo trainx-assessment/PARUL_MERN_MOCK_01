@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Manager</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- css link  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Student Manager</span>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="#form">Register</a></li>
+                <li><a href="#students">Students</a></li>
+                <li><a href="#stats">Stats</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Student Application Manager</h1>
+            <p>Manage and register students efficiently</p>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Stats Section -->
+        <section class="stats-section" id="stats">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Total Students</h3>
+                    <p class="stat-number" id="totalCount">0</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Form Section -->
+        <section class="form-section" id="form">
+            <h2>Student Registration Form</h2>
+            <form id="studentForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="studentName"><i class="fas fa-user"></i> Student Name</label>
+                        <input type="text" id="studentName" name="studentName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob"><i class="fas fa-calendar"></i> Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                </div>
+
+                <div class="form-group" id="gender-group">
+                    <label><i class="fas fa-venus-mars"></i> Gender</label>
+                    <div class="radio-group">
+                        <label class="radio-label"><input type="radio" name="gender" value="Male" required> Male</label>
+                        <label class="radio-label"><input type="radio" name="gender" value="Female" required> Female</label>
+                        <label class="radio-label"><input type="radio" name="gender" value="Other" required> Other</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="course"><i class="fas fa-book"></i> Course</label>
+                        <select id="course" name="course" required>
+                            <option value="">Select a Course</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="UI/UX">UI/UX</option>
+                            <option value="Python">Python</option>
+                            <option value="Data Analytics">Data Analytics</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="profilePhoto"><i class="fas fa-image"></i> Profile Photo</label>
+                        <input type="file" id="profilePhoto" name="profilePhoto" accept="image/*">
+                    </div>
+                </div>
+
+                <div class="form-group" id="skills-group">
+                    <label><i class="fas fa-laptop-code"></i> Skills</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label"><input type="checkbox" name="skills" value="HTML"> HTML</label>
+                        <label class="checkbox-label"><input type="checkbox" name="skills" value="CSS"> CSS</label>
+                        <label class="checkbox-label"><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+                        <label class="checkbox-label"><input type="checkbox" name="skills" value="Git"> Git</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="about"><i class="fas fa-pen-fancy"></i> About Student</label>
+                    <textarea id="about" name="about" rows="4" placeholder="Tell us about yourself..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Submit
+                </button>
+            </form>
+        </section>
+
+        <!-- Students Display Section -->
+        <section class="students-section" id="students">
+            <h2>Registered Students</h2>
+            <div id="studentsContainer" class="students-container">
+                <!-- Student cards will be displayed here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
