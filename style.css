@@ -110,7 +110,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 1rem;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .field {
@@ -251,6 +251,13 @@ section {
 
 .btn[type="reset"] {
   background-color: rgba(255, 0, 0, 0.25);
+  color: lightcoral;
+}
+
+#name-err,
+#email-err,
+#phone-err,
+#dob-err {
   color: lightcoral;
 }
 
