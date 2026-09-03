@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-container">
+    <form id="student-form" class="student-form">
+      <h1>Student Registration</h1>
+
+      <fieldset>
+        <legend>Gender</legend>
+        <div class="option-group">
+          <input id="male" name="gender" type="radio" value="Male">
+          <label for="male">Male</label>
+          <input id="female" name="gender" type="radio" value="Female">
+          <label for="female">Female</label>
+          <input id="other" name="gender" type="radio" value="Other">
+          <label for="other">Other</label>
+        </div>
+      </fieldset>
+
+      <div class="form-group">
+        <label for="course">Course</label>
+        <select id="course" name="course">
+          <option value="" selected>Select Course</option>
+          <option value="Web Development">Web Development</option>
+          <option value="UI/UX">UI/UX</option>
+          <option value="Python">Python</option>
+          <option value="Data Analytics">Data Analytics</option>
+          <option value="MERN Stack">MERN Stack</option>
+          <option value="Cloud Computing">Cloud Computing</option>
+        </select>
+      </div>
+
+      <fieldset>
+        <legend>Skills</legend>
+        <div class="option-group skills-group">
+          <input id="html" name="skills" type="checkbox" value="HTML"><label for="html">HTML</label>
+          <input id="css" name="skills" type="checkbox" value="CSS"><label for="css">CSS</label>
+          <input id="javascript" name="skills" type="checkbox" value="JavaScript"><label for="javascript">JavaScript</label>
+          <input id="git" name="skills" type="checkbox" value="Git"><label for="git">Git</label>
+          <input id="react" name="skills" type="checkbox" value="React"><label for="react">React</label>
+          <input id="nodejs" name="skills" type="checkbox" value="Node.js"><label for="nodejs">Node.js</label>
+        </div>
+      </fieldset>
+
+      <div class="form-group">
+        <label for="about">About Student</label>
+        <textarea id="about" name="about" maxlength="200" rows="5" aria-describedby="about-help"></textarea>
+        <small id="about-help">Maximum 200 characters</small>
+      </div>
+
+      <div class="form-group">
+        <label for="profile-photo">Profile Photo</label>
+        <input id="profile-photo" name="profile-photo" type="file" accept="image/*">
+      </div>
+
+      <div class="button-group">
+        <button type="submit">Register Student</button>
+        <button type="reset">Reset Form</button>
+      </div>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
