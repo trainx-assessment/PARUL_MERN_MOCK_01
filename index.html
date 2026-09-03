@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Management System</title>
+
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="nav">
+                <h1>Student Application Management System</h1>
+                <p>Register and manage student application</P>
+            </div>
+        </div>
+
+        <div id="StudentForm">
+            <form action="POST">
+                <label for="Name: ">Name</label>
+                <input type="text" placeholder="Enter Your Name: " required>
+                <br>
+                <label for="email">Email: </label>
+                <input type="email" placeholder="Enter Your email: " required>
+                <br>
+                <label for="Phone">Phone Number: </label>
+                <input type="text" placeholder="Enter Your Phone Number: " required>
+                <br>
+                <label for="dob">DOB: </label>
+                <input type="date" placeholder="Enter Your DOB: " required>
+                <br>    
+                <label for="Gender">Gender: </label>
+                <input type="radio" name="gender" id="gender" <option value="1">MALE</option>
+                <input type="radio" name="gender" id="gender" <option value="2">FEMALE</option>
+                <br>
+<!-- Course -->
+                <label for="course">Select Course: </label>
+
+                <option value="">1. Web Development</option>
+                <option value="">2. UI/UX</option>
+                <option value="">3. Python</option>
+                <option value="">4. Data Analytics</option>
+                <option value="">5. MERN Stack</option>
+                <option value="">6. Cloud Computing</option> <br>
+
+                <div>
+                    <label for="course">Select Your Course </label>
+                    <textarea name="course" id="course" maxlength="1"></textarea>
+                </div>
+
+
+
+<!-- SKILLS -->
+                <label for="skills">Skills</label> <br>
+
+                <input type="checkbox" name="skills" id="html" value="HTML">
+                <label for="html">HTML</label> <br>
+
+                <input type="checkbox" name="skills" id="css" value="CSS">
+                <label for="css">CSS</label> <br>
+
+                <input type="checkbox" name="skills" id="javascript" value="Javascript">
+                <label for="javascript">Javascript</label> <br>
+
+                <input type="checkbox" name="skills" id="git" value="Git">
+                <label for="git">GIT</label> <br>
+
+                <input type="checkbox" name="skills" id="React" value="React">
+                <label for="React">React</label> <br>
+
+                <input type="checkbox" name="skills" id="Node.js" value="Node.js">
+                <label for="Node.js">Node.js</label> <br>
+
+
+
+                <div>
+                    <label for="about">About Student </label>
+                    <textarea name="about" id="about" maxlength="200"></textarea>
+                </div> <br>
+
+                <div>
+                    <picture>Upload Profile photo</picture>
+                </div>
+                <div>
+                    <button>Register Student</button>
+                    <button>Reset Form</button>
+                </div>
+
+
+                
+
+
+
+
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
