@@ -179,4 +179,4 @@ document.querySelector("#themeToggle").addEventListener("click", (event) => {
     event.target.textContent = document.body.classList.contains("dark-mode") ? "Light Mode" : "Dark Mode";
 }
 );
-render();
+render(); 
