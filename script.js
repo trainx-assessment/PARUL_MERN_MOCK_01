@@ -44,6 +44,17 @@ function getNextStudentId() {
     return lastStudent ? lastStudent.id + 1 : 1;
 }
 
+function resetStudentForm(resetFields) {
+    if (resetFields) {
+        form.reset();
+    }
+
+    document.querySelectorAll(".error-message").forEach((error) => error.innerText = "");
+    document.getElementById("about-counter").innerText = "0 / 200";
+    editingStudentId = null;
+    submitButton.innerText = "Register Student";
+}
+
 function displayStudents() {
     studentCardsContainer.innerHTML = "";
     updateStatistics();
@@ -305,11 +316,8 @@ form.addEventListener("submit", (event) => {
             students[studentIndex].photo = photo.name;
         }
 
-        editingStudentId = null;
-        submitButton.innerText = "Register Student";
         displayStudents();
-        form.reset();
-        document.getElementById("about-counter").innerText = "0 / 200";
+        resetStudentForm(true);
         return;
     }
 
@@ -328,8 +336,7 @@ form.addEventListener("submit", (event) => {
 
     students.push(student);
     displayStudents();
-    form.reset();
-    document.getElementById("about-counter").innerText = "0 / 200";
+    resetStudentForm(true);
 });
 
 document.getElementById("student-name").addEventListener("input", () => document.getElementById("name-error").innerText = "");
@@ -353,8 +360,7 @@ document.getElementById("student-about").addEventListener("input", () => {
 });
 
 form.addEventListener("reset", () => {
-    document.querySelectorAll(".error-message").forEach((error) => error.innerText = "");
-    document.getElementById("about-counter").innerText = "0 / 200";
-    editingStudentId = null;
-    submitButton.innerText = "Register Student";
+    setTimeout(() => {
+        resetStudentForm(false);
+    }, 0);
 });
