@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: white;
+    color: #333;
+    line-height: 1.6;
+}
+header {
+    background-color:grey;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 18px;
+}
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+section h2 {
+    margin-bottom: 20px;
+}
+#student-form {
+    display: grid;
+    gap: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+input,
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+textarea {
+    resize: vertical;
+}
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+#submitButton {
+    background-color:black;
+    color: white;
+}
+
+#resetButton {
+    background-color: #6b7280;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+footer {
+    text-align: center;
+    background-color: grey;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
