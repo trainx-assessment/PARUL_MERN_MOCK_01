@@ -1,0 +1,342 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #222222;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  padding: 20px 15px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #cccccc;
+}
+header h1 {
+  margin: 0 0 6px;
+}
+header p {
+  margin: 0;
+  color: #666666;
+}
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+#themeToggleBtn {
+  background-color: #3a3a3a;
+  border-color: #222222;
+  color: #ffffff;
+  white-space: nowrap;
+}
+#themeToggleBtn:hover {
+  background-color: #222222;
+}
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+section h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+#studentForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+}
+.field label {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+.full {
+  grid-column: 1 / -1;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  background-color: #fafafa;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #888888;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+}
+.opt {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-right: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.opt input {
+  width: auto;
+}
+.msg {
+  color: #333333;
+  font-size: 0.85em;
+  margin-top: 4px;
+}
+.hint {
+  font-size: 0.8em;
+  color: #777777;
+  margin-top: 4px;
+}
+.btnRow {
+  flex-direction: row;
+  gap: 10px;
+}
+button {
+  padding: 10px 18px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.15s ease, background-color 0.15s ease;
+}
+button:hover {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+#submitBtn {
+  background-color: #e0e0e0;
+  border-color: #aaaaaa;
+  color: #111111;
+}
+#submitBtn:hover {
+  background-color: #cccccc;
+}
+#resetBtn:hover {
+  background-color: #e8e8e8;
+}
+
+#statsContainer {
+  padding: 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+}
+#totalStudents {
+  margin-top: 0;
+  font-weight: bold;
+}
+#courseStats {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+#courseStats li {
+  padding: 8px 10px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+}
+
+#searchFilterSection {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+#searchInput, #courseFilter {
+  flex: 1;
+  min-width: 200px;
+  padding: 8px 10px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  background-color: #fafafa;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.student-card {
+  padding: 15px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  background-color: #fafafa;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.15s ease;
+}
+.student-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.student-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  border: 1px solid #dddddd;
+  object-fit: cover;
+}
+.student-card h3 {
+  margin: 10px 0 6px;
+}
+.student-card p {
+  text-align: left;
+  margin: 4px 0;
+}
+.cardActions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+.editBtn {
+  background-color: #e8e8e8;
+  border-color: #cccccc;
+}
+.deleteBtn {
+  background-color: #e0e0e0;
+  border-color: #aaaaaa;
+  color: #111111;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 15px;
+  margin-top: 30px;
+  background-color: #f0f0f0;
+  border-top: 1px solid #cccccc;
+  color: #666666;
+}
+
+@media (max-width: 768px) {
+  #studentForm {
+    grid-template-columns: 1fr;
+  }
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  #courseStats {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  #searchFilterSection {
+    flex-direction: column;
+  }
+}
+
+body.darkMode {
+  background-color: #181818;
+  color: #e8e8e8;
+}
+body.darkMode header {
+  background-color: #222222;
+  border-bottom-color: #3a3a3a;
+}
+body.darkMode header p {
+  color: #bbbbbb;
+}
+body.darkMode #themeToggleBtn {
+  background-color: #e8e8e8;
+  border-color: #ffffff;
+  color: #111111;
+}
+body.darkMode #themeToggleBtn:hover {
+  background-color: #ffffff;
+}
+body.darkMode section {
+  background-color: #222222;
+  border-color: #3a3a3a;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+body.darkMode input,
+body.darkMode select,
+body.darkMode textarea {
+  background-color: #2a2a2a;
+  border-color: #444444;
+  color: #e8e8e8;
+}
+body.darkMode input:focus,
+body.darkMode select:focus,
+body.darkMode textarea:focus {
+  border-color: #888888;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+body.darkMode .hint {
+  color: #999999;
+}
+body.darkMode .msg {
+  color: #cccccc;
+}
+body.darkMode button {
+  background-color: #333333;
+  border-color: #444444;
+  color: #e8e8e8;
+}
+body.darkMode #submitBtn {
+  background-color: #444444;
+  border-color: #555555;
+  color: #ffffff;
+}
+body.darkMode #submitBtn:hover {
+  background-color: #555555;
+}
+body.darkMode #resetBtn:hover {
+  background-color: #3a3a3a;
+}
+body.darkMode #statsContainer {
+  background-color: #222222;
+  border-color: #3a3a3a;
+}
+body.darkMode #courseStats li {
+  background-color: #2a2a2a;
+  border-color: #444444;
+}
+body.darkMode #searchInput,
+body.darkMode #courseFilter {
+  background-color: #2a2a2a;
+  border-color: #444444;
+  color: #e8e8e8;
+}
+body.darkMode .student-card {
+  background-color: #222222;
+  border-color: #444444;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+body.darkMode .student-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.55);
+}
+body.darkMode .editBtn {
+  background-color: #3a3a3a;
+  border-color: #555555;
+}
+body.darkMode .deleteBtn {
+  background-color: #4a3a3a;
+  border-color: #6a5050;
+  color: #f0e0e0;
+}
+body.darkMode footer {
+  background-color: #222222;
+  border-top-color: #3a3a3a;
+  color: #bbbbbb;
+}
