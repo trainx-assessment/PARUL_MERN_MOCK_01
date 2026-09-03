@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Student Application Management System</h1>
+      <p>Register and manage student applications</p>
+    </header>
+    <main>
+      <section id="registration-section">
+        <h2>Student Registration Form</h2>
+        <form id="student-form">
+          <label for="student-name">Name:</label>
+          <input type="text" name="student-name" id="student-name" />
+          <label for="student-email">Email:</label>
+          <input type="email" name="student-email" id="" student-email />
+          <label for="Phone-number">Phone-Number:</label>
+          <input type="text" name="Phone-Number" id="Phone-Number" />
+          <label for="Date-of-Birth">Date of Birth</label>
+          <input type="date" name="Date-of-Birth" id="Date-of-Birth" />
+          <div class="form-group">
+            <label>Gender</label>
+            <div class="radio-group">
+              <label
+                ><input type="radio" name="gender" value="Male" />Male</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="gender"
+                  value="Female"
+                />Female</label
+              >
+              <label
+                ><input type="radio" name="gender" value="Other" />Other</label
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="course">Course</label>
+            <select id="course" name="course">
+              <option value="">Select Course</option>
+              <option value="Web Development">Web Development</option>
+              <option value="UI/UX">UI/UX</option>
+              <option value="Python">Python</option>
+              <option value="Data Analytics">Data Analytics</option>
+              <option value="MERN Stack">MERN Stack</option>
+              <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Skills:</label>
+            <div class="skills-group">
+              <label input type="checkbox" name="skills" value="HTML"
+                >HTML</label
+              >
+              <label input type="checkbox" name="skills" value="CSS">CSS</label>
+              <label input type="checkbox" name="skills" value="JavaScript"
+                >JavaScript</label
+              >
+              <label input type="checkbox" name="skills" value="Git">Git</label>
+              <label input type="checkbox" name="skills" value="React"
+                >React</label
+              >
+              <label input type="checkbox" name="skills" value="Node"
+                >Node</label
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="about">About Student:</label>
+            <textarea id="about" name="about" placeholder="About yourself .."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="profilePhoto">
+                    <input type="file" name="profilePhoto" id="profilePhoto">
+                </label>
+            </div>
+            <div class="form-buttons">
+                <button type="submit">Register Student</button>
+                <button type="reset">Reset Form</button>
+            </div>
+
+        </form>
+      </section>
+      <section id="statistics-section">
+            <h2>Student Statistics</h2>
+            <div class="statistics-container">
+
+                <div class="stat-card">
+                    <h3>Total Students</h3>
+                    <p id="totalStudents">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Web Development</h3>
+                    <p id="webDevelopmentCount">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>UI/UX</h3>
+                    <p id="uiuxCount">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Python</h3>
+                    <p id="pythonCount">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Data Analytics</h3>
+                    <p id="dataAnalyticsCount">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>MERN Stack</h3>
+                    <p id="mernCount">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Cloud Computing</h3>
+                    <p id="cloudCount">0</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
