@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Manager System</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -13,26 +14,47 @@
     <main>
         <div class="manage-buttons">
             <div class="add">
-                <button>Add</button>
+                <button>Add Student</button>
             </div>
             <div class="delete-all">
                 <button>Delete All</button>
             </div>
         </div>
         <div class="student">
-            <div class="student-card"></div>
-            <div class="student-card"></div>
-            <div class="student-card"></div>
+            <p>Students registered </p>
+            <div class="student-card-wrap">
+                <div class="card">
+                    <div class="student-card">card1</div>
+                    <button id="update">update</button>
+                    <button id="delete">delete</button>
+                </div>
+                <div class="card">
+                    <div class="student-card">card1</div>
+                    <button id="update">update</button>
+                    <button id="delete">delete</button>
+                </div>
+                <div class="card">
+                    <div class="student-card">card1</div>
+                    <button id="update">update</button>
+                    <button id="delete">delete</button>
+                </div>
+                <div class="card">
+                    <div class="student-card">card1</div>
+                    <button id="update">update</button>
+                    <button id="delete">delete</button>
+                </div>
+            </div>
         </div>
         <div class="form-add">
             <form action="">
+                <h1>Fill the form and Register the Student</h1>
                 <table>
                     <tr>
                         <td>
                             Full Name :
                         </td>
                         <td>
-                            <input type="text" id="name">
+                            <input type="text" id="name" required>
                         </td>
                     </tr>
                     <tr>
@@ -40,7 +62,7 @@
                             Email :
                         </td>
                         <td>
-                            <input type="email" id="email">
+                            <input type="email" id="email" required>
                         </td>
                     </tr>
                     <tr>
@@ -48,7 +70,7 @@
                             Phone Number :
                         </td>
                         <td>
-                            <input type="text" id="phone">
+                            <input type="text" id="phone" required>
                         </td>
                     </tr>
                     <tr>
@@ -56,14 +78,14 @@
                             Date of Birth :
                         </td>
                         <td>
-                            <input type="date" id="date">
+                            <input type="date" id="date" required>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             Gender :
                         </td>
-                        <td>
+                        <td id="radio">
                             <input type="radio" name="r1" id="m1" > Male
                             <input type="radio" name="r1" id="f2" > Female
                             <input type="radio" name="r1" id="o3" > Others
@@ -89,13 +111,25 @@
                         <td>
                             Skills :
                         </td>
-                        <td>
-                            <input type="checkbox" name="c1" id="ch1">HTML
-                            <input type="checkbox" name="c1" id="ch2">CSS
-                            <input type="checkbox" name="c1" id="ch3">JavaScript
-                            <input type="checkbox" name="c1" id="ch4">Git
-                            <input type="checkbox" name="c1" id="ch5">React
-                            <input type="checkbox" name="c1" id="ch6">Node
+                        <td id="checkbox">
+                            <div>
+                                <input type="checkbox" name="c1" id="ch1">HTML
+                            </div>
+                            <div>
+                                <input type="checkbox" name="c1" id="ch2">CSS
+                            </div>
+                            <div>
+                                <input type="checkbox" name="c1" id="ch3">JavaScript
+                            </div>
+                            <div>
+                                <input type="checkbox" name="c1" id="ch4">Git
+                            </div>
+                            <div>
+                                <input type="checkbox" name="c1" id="ch5">React
+                            </div>
+                            <div>
+                                <input type="checkbox" name="c1" id="ch6">Node
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -108,22 +142,21 @@
                     </tr>
                     <tr>
                         <td>
-                            Profile Photo <br> (only jpeg / png) :
+                            Profile Photo <br> <p id="only">
+
+                                (only jpeg / png) :
+                            </p>
                         </td>
                         <td>
                             <input type="file" name="" id="file-inp">
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <button type="submit">Add Student</button>
-                        </td>
-                        <td>
-                            <button type="reset">Reset Form</button>
-
-                        </td>
-                    </tr>
                 </table>
+                <div class="buttons">
+                    <button type="submit" id="sub">Add Student</button>
+                    <button type="reset" id="res">Reset Form</button>
+                </div>
+                <button class="cancel">x</button>
             </form>
         </div>
     </main>
@@ -132,5 +165,7 @@
         <h5> by Dhruval Kharshikar</h5>
         <p>&copy; Dhruval Kharshikar</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
