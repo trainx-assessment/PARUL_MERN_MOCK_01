@@ -1,0 +1,136 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: khaki;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30px;
+}
+header{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 40px;
+
+}
+.form{
+    background-color: darkolivegreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    border-radius: 20px;
+    height: 400px;
+    width: 100%;
+    gap: 10px;
+    
+}
+
+.part{
+ display: flex;
+ /* background-color: blue; */
+ flex-direction: row;
+ gap: 20px;
+ 
+}
+
+.form input{
+    background-color: beige;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    display:flex;
+    justify-content: center;
+}
+.form select{
+     background-color: beige;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 5px;
+    display:flex;
+    justify-content: center;
+
+}
+.form button{
+     /* background-color: beige;
+    border: 2px solid black; */
+     background-color: black;
+    color:white;
+    border-radius: 20px;
+    padding: 5px;
+    display:flex;
+    justify-content: center;
+    border: none;
+    
+}
+.submit{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+
+}
+.cards{
+    /* background-color:darkgray; */
+    height: 400px;
+    width: 100%;
+    display: flex;
+     flex-direction: row;
+     gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    background-color: aliceblue;
+    height: 200px;
+    width: 400px;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color: black;
+    font-family:fantasy;
+  
+}
+@media (max-width: 480px){
+    .card{
+        flex-direction: row;
+    }
+}
+
+.btn{
+    background-color: black;
+    color:white;
+    
+}
+.selected{
+    height:60px;
+    width: 100%;
+    background-color: darkgreen;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.selected input{
+    background-color: black;
+    color: white;
+    border: none;
+    padding:20px;
+    border-radius: 20px; 
+}
