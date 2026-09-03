@@ -10,6 +10,10 @@ const course = document.getElementById("course");
 const about = document.getElementById("about");
 const profilePhoto = document.getElementById("profile-photo");
 
+const studentCardsContainer = document.getElementById(
+    "student-cards-container"
+);
+
 
 // Show error message
 function showError(input, message) {
@@ -54,7 +58,100 @@ about.addEventListener("input", function () {
 });
 
 
-// Form submit
+// Task 6 - Display Student Cards
+function displayStudents() {
+
+    studentCardsContainer.innerHTML = "";
+
+    students.forEach(student => {
+
+        const card = document.createElement("div");
+        card.classList.add("student-card");
+
+        // Store student ID
+        card.setAttribute("data-id", student.id);
+
+
+        // Student Photo
+        const photo = document.createElement("img");
+
+        photo.src = student.photo;
+        photo.alt = student.name;
+
+
+        // Student Name
+        const name = document.createElement("h3");
+        name.textContent = student.name;
+
+
+        // Email
+        const emailElement = document.createElement("p");
+        emailElement.textContent = `Email: ${student.email}`;
+
+
+        // Phone
+        const phoneElement = document.createElement("p");
+        phoneElement.textContent = `Phone: ${student.phone}`;
+
+
+        // DOB
+        const dobElement = document.createElement("p");
+        dobElement.textContent = `DOB: ${student.dob}`;
+
+
+        // Gender
+        const genderElement = document.createElement("p");
+        genderElement.textContent = `Gender: ${student.gender}`;
+
+
+        // Course
+        const courseElement = document.createElement("p");
+        courseElement.textContent = `Course: ${student.course}`;
+
+
+        // Skills
+        const skillsElement = document.createElement("p");
+        skillsElement.textContent =
+            `Skills: ${student.skills.join(", ")}`;
+
+
+        // About
+        const aboutElement = document.createElement("p");
+        aboutElement.textContent =
+            `About: ${student.about}`;
+
+
+        // Edit Button
+        const editButton = document.createElement("button");
+        editButton.textContent = "Edit";
+
+
+        // Delete Button
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+
+
+        // Add elements to card
+        card.appendChild(photo);
+        card.appendChild(name);
+        card.appendChild(emailElement);
+        card.appendChild(phoneElement);
+        card.appendChild(dobElement);
+        card.appendChild(genderElement);
+        card.appendChild(courseElement);
+        card.appendChild(skillsElement);
+        card.appendChild(aboutElement);
+        card.appendChild(editButton);
+        card.appendChild(deleteButton);
+
+
+        // Add card to container
+        studentCardsContainer.appendChild(card);
+    });
+}
+
+
+// Form Submit
 form.addEventListener("submit", function (event) {
 
     event.preventDefault();
@@ -64,66 +161,104 @@ form.addEventListener("submit", function (event) {
     let isValid = true;
 
 
-    // Student Name Validation
+    // Student Name
     const nameValue = studentName.value.trim();
     const nameRegex = /^[A-Za-z ]+$/;
 
     if (nameValue === "") {
-        showError(studentName, "Student name is required.");
+
+        showError(
+            studentName,
+            "Student name is required."
+        );
+
         isValid = false;
-    } 
-    else if (nameValue.length < 3) {
-        showError(studentName, "Name must be at least 3 characters.");
+
+    } else if (nameValue.length < 3) {
+
+        showError(
+            studentName,
+            "Name must be at least 3 characters."
+        );
+
         isValid = false;
-    } 
-    else if (nameValue.length > 40) {
-        showError(studentName, "Name cannot exceed 40 characters.");
+
+    } else if (nameValue.length > 40) {
+
+        showError(
+            studentName,
+            "Name cannot exceed 40 characters."
+        );
+
         isValid = false;
-    } 
-    else if (!nameRegex.test(nameValue)) {
+
+    } else if (!nameRegex.test(nameValue)) {
+
         showError(
             studentName,
             "Name can contain only letters and spaces."
         );
+
         isValid = false;
     }
 
 
-    // Email Validation
+    // Email
     const emailValue = email.value.trim();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (emailValue === "") {
-        showError(email, "Email is required.");
+
+        showError(
+            email,
+            "Email is required."
+        );
+
         isValid = false;
-    } 
-    else if (!emailRegex.test(emailValue)) {
-        showError(email, "Please enter a valid email address.");
+
+    } else if (!emailRegex.test(emailValue)) {
+
+        showError(
+            email,
+            "Please enter a valid email address."
+        );
+
         isValid = false;
     }
 
 
-    // Phone Validation
+    // Phone
     const phoneValue = phone.value.trim();
     const phoneRegex = /^\d{10}$/;
 
     if (phoneValue === "") {
-        showError(phone, "Phone number is required.");
+
+        showError(
+            phone,
+            "Phone number is required."
+        );
+
         isValid = false;
-    } 
-    else if (!phoneRegex.test(phoneValue)) {
+
+    } else if (!phoneRegex.test(phoneValue)) {
+
         showError(
             phone,
             "Phone number must contain exactly 10 digits."
         );
+
         isValid = false;
     }
 
 
-    // DOB Validation
+    // DOB
     if (dob.value === "") {
 
-        showError(dob, "Date of birth is required.");
+        showError(
+            dob,
+            "Date of birth is required."
+        );
+
         isValid = false;
 
     } else {
@@ -135,12 +270,16 @@ form.addEventListener("submit", function (event) {
 
         if (selectedDate > today) {
 
-            showError(dob, "Future date is not allowed.");
+            showError(
+                dob,
+                "Future date is not allowed."
+            );
+
             isValid = false;
 
         } else {
 
-            // Minimum age 15 years
+            // Minimum age 15
             const minimumAgeDate = new Date(selectedDate);
 
             minimumAgeDate.setFullYear(
@@ -160,7 +299,7 @@ form.addEventListener("submit", function (event) {
     }
 
 
-    // Gender Validation
+    // Gender
     const gender = document.querySelector(
         'input[name="gender"]:checked'
     );
@@ -183,16 +322,19 @@ form.addEventListener("submit", function (event) {
     }
 
 
-    // Course Validation
+    // Course
     if (course.value === "") {
 
-        showError(course, "Please select a course.");
+        showError(
+            course,
+            "Please select a course."
+        );
 
         isValid = false;
     }
 
 
-    // Skills Validation
+    // Skills
     const selectedSkills = Array.from(
         document.querySelectorAll(
             'input[name="skills"]:checked'
@@ -205,12 +347,15 @@ form.addEventListener("submit", function (event) {
             'input[name="skills"]'
         );
 
-        const skillGroup = skillInput.parentElement.parentElement;
+        const skillGroup =
+            skillInput.parentElement.parentElement;
 
         const error = document.createElement("small");
 
         error.className = "error-message";
-        error.textContent = "Please select at least one skill.";
+        error.textContent =
+            "Please select at least one skill.";
+
         error.style.color = "red";
 
         skillGroup.appendChild(error);
@@ -219,7 +364,7 @@ form.addEventListener("submit", function (event) {
     }
 
 
-    // About Student Validation
+    // About Student
     const aboutValue = about.value.trim();
 
     if (aboutValue === "") {
@@ -231,8 +376,7 @@ form.addEventListener("submit", function (event) {
 
         isValid = false;
 
-    } 
-    else if (aboutValue.length < 20) {
+    } else if (aboutValue.length < 20) {
 
         showError(
             about,
@@ -241,8 +385,7 @@ form.addEventListener("submit", function (event) {
 
         isValid = false;
 
-    } 
-    else if (aboutValue.length > 200) {
+    } else if (aboutValue.length > 200) {
 
         showError(
             about,
@@ -253,7 +396,7 @@ form.addEventListener("submit", function (event) {
     }
 
 
-    // Profile Photo Validation
+    // Profile Photo
     if (profilePhoto.files.length === 0) {
 
         showError(
@@ -279,10 +422,10 @@ form.addEventListener("submit", function (event) {
     }
 
 
-    // If everything is valid
+    // If valid
     if (isValid) {
 
-        // Create student object
+        // Task 5 - Create Student Object
         const student = {
 
             id: students.length + 1,
@@ -307,11 +450,14 @@ form.addEventListener("submit", function (event) {
         };
 
 
-        // Add student to array
+        // Store student
         students.push(student);
 
 
-        // Check data in console
+        // Task 6 - Display card
+        displayStudents();
+
+
         console.log("Student added:", student);
 
         console.log("All students:", students);
