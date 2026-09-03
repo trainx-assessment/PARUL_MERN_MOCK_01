@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+}
+
+.form {
+  background-color: white;
+  max-width: 900px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #23dbdb5c;
+}
+
+
+.first,
+.second {
+  display: flex;
+  gap: 20px;
+}
+
+.first input,
+.second input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+
+input,
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.third {
+  padding: 10px 0;
+}
+
+.gender,
+.courses,
+.skills {
+  margin-bottom: 15px;
+}
+
+select {
+  margin-left: 10px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+}
+
+
+.btn button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn button[type="reset"] {
+  background-color: #f44336;
+  color: white;
+  margin-left: 10px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.student-cards {
+  max-width: 800px;
+  margin: 30px auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #ccc;
+}
+
+
+@media (max-width: 768px) {
+  .first,
+  .second {
+    flex-direction: column;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+  .body {
+    padding: 10px;
+  }
+
+  .form {
+    padding: 15px;
+  }
+
+  .btn button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
