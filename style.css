@@ -1,0 +1,242 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-color:#fcdcee;
+    color:#000;
+}
+
+header{
+    text-align:center;
+    margin-bottom:20px;
+}
+.heading{
+    text-align:center;
+    font-size:32px;
+    background-color: #9244d268;
+}
+header p{
+    margin-top:8px;
+    color:#555;
+}
+main{
+    max-width:1000px;
+    margin:auto;
+}
+.fm{
+    max-width:800px;
+    margin:2% auto;
+    background:rgb(252,245,245);
+    padding:30px;
+    border-radius:20px;
+        border: solid 1px #000 ;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+.fm h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#555;
+}
+form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px 25px;
+}
+form>label{
+    font-weight:bold;
+    margin-top:2px;
+}
+input,select{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+.radio-group,.skills-group{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+.radio-group input,.skills-group input{
+    width:auto;
+    margin:0;
+}
+.radio-group label,.skills-group label{
+    font-weight:normal;
+}
+textarea{
+    width:100%;
+    min-height:100px;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:15px;
+    resize:vertical;
+}
+.full{
+    grid-column:1/-1;
+}
+.button-group{
+    grid-column:1/-1;
+    display:flex;
+    gap:15px;
+}
+button{
+    padding:12px 25px;
+    background-color:#9244d2;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+button:hover{
+    background-color:#26933a;
+    transform:translateY(-2px);
+}
+.statistics-section,.search-section,.students-section{
+    max-width:800px;
+    margin:30px auto;
+    background:rgb(252,245,245);
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    border: solid 1px #000 ;
+}
+.statistics-section h2,.search-section h2,.students-section h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#555;
+}
+.statistics{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:15px;
+}
+.stat-card{
+    background:white;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+.stat-card h3{
+    margin-bottom:10px;
+}
+.stat-card p{
+    font-size:25px;
+    font-weight:bold;
+}
+.search-section{
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+.search-section input,.search-section select{
+    flex:1;
+}
+.student-list{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+.student-card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.student-card img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    display:block;
+    margin:0 auto 15px;
+}
+.student-card h3{
+    text-align:center;
+    margin-bottom:15px;
+}
+.student-card p{
+    margin:8px 0;
+}
+.student-card button{
+    width:auto;
+    margin-top:10px;
+    margin-right:10px;
+}
+footer{
+    text-align:center;
+    margin-top:40px;
+    padding:20px;
+    color:#555;
+}
+@media(max-width:768px){
+    body{
+        padding:20px;
+    }
+    .heading{
+        font-size:26px;
+    }
+    .fm{
+        padding:25px;
+    }
+    form{
+        grid-template-columns:1fr;
+    }
+    .full,.button-group{
+        grid-column:auto;
+    }
+    .statistics{
+        grid-template-columns:1fr 1fr;
+    }
+    .student-list{
+        grid-template-columns:1fr;
+    }
+    .search-section{
+        flex-direction:column;
+        align-items:stretch;
+    }
+}
+@media(max-width:480px){
+    body{
+        padding:10px;
+    }
+    .heading{
+        font-size:22px;
+    }
+    .fm{
+        padding:18px;
+    }
+    .fm h2{
+        font-size:18px;
+    }
+    form{
+        gap:12px;
+    }
+    input,select,textarea{
+        font-size:14px;
+    }
+    .button-group{
+        flex-direction:column;
+    }
+    button{
+        width:100%;
+    }
+    .statistics{
+        grid-template-columns:1fr;
+    }
+    .statistics-section,.search-section,.students-section{
+        padding:18px;
+    }
+}
+.footerr p{
+    background-color:#fcdcee;
+    color:#000;
+}
