@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Application Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="page-header">
+
+        <h1>
+            Student Application Management System
+        </h1>
+
+        <p class="intro">
+            Register and manage student applications
+        </p>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main>
+
+        <section id="container">
+
+
+            <!-- =========================
+                 REGISTRATION FORM
+            ========================== -->
+
+            <section class="registration-card">
+
+                <h2>
+                    Register Student
+                </h2>
+
+
+                <form id="registrationForm">
+
+
+                    <!-- Student Name -->
+
+                    <label for="name">
+                        <b>Student Name:</b>
+                    </label>
+
+                    <input type="text" name="username" id="name" placeholder="studentname" required>
+
+
+                    <!-- Email -->
+
+                    <label for="email">
+                        <b>Email:</b>
+                    </label>
+
+                    <input type="email" name="email" id="email" placeholder="studentemail" required>
+
+
+                    <!-- Phone -->
+
+                    <label for="phone">
+                        <b>Phone Number:</b>
+                    </label>
+
+                    <input type="tel" name="phone" id="phone" placeholder="studentphone" required>
+
+
+                    <!-- Date of Birth -->
+
+                    <label for="dob">
+                        <b>Date of Birth:</b>
+                    </label>
+
+                    <input type="date" name="dob" id="dob" required>
+
+
+                    <!-- Gender -->
+
+                    <label for="gender">
+                        <b>Gender:</b>
+                    </label>
+
+                    <select name="gender" id="gender">
+
+                        <option value="Male">
+                            Male
+                        </option>
+
+                        <option value="Female">
+                            Female
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+
+                    <!-- Course -->
+
+                    <label for="course">
+                        <b>Course:</b>
+                    </label>
+
+                    <select name="course" id="course">
+
+                        <option value="Web Development">
+                            Web Development
+                        </option>
+
+                        <option value="UI/UX">
+                            UI/UX
+                        </option>
+
+                        <option value="Python">
+                            Python
+                        </option>
+
+                        <option value="Data Analytics">
+                            Data Analytics
+                        </option>
+
+                        <option value="MERN Stack">
+                            MERN Stack
+                        </option>
+
+                        <option value="Cloud Computing">
+                            Cloud Computing
+                        </option>
+
+                    </select>
+
+
+                    <!-- Skills -->
+
+                    <div class="form-label">
+                        <b>Skills:</b>
+                    </div>
+
+
+                    <div class="skills-list">
+
+
+                        <input type="checkbox" name="skills" id="html" value="HTML">
+
+                        <label for="html">
+                            HTML
+                        </label>
+
+
+                        <input type="checkbox" name="skills" id="css" value="CSS">
+
+                        <label for="css">
+                            CSS
+                        </label>
+
+
+                        <input type="checkbox" name="skills" id="js" value="JavaScript">
+
+                        <label for="js">
+                            JavaScript
+                        </label>
+
+
+                        <input type="checkbox" name="skills" id="git" value="Git">
+
+                        <label for="git">
+                            Git
+                        </label>
+
+
+                        <input type="checkbox" name="skills" id="react" value="React">
+
+                        <label for="react">
+                            React
+                        </label>
+
+
+                        <input type="checkbox" name="skills" id="node" value="Node.js">
+
+                        <label for="node">
+                            Node.js
+                        </label>
+
+                    </div>
+
+
+                    <!-- About -->
+
+                    <label for="about">
+                        About You:
+                    </label>
+
+                    <textarea name="about" id="about" placeholder="Tell us about yourself..."></textarea>
+
+
+                    <!-- Profile Photo -->
+
+                    <label for="photo">
+                        <b>Profile Photo:</b>
+                    </label>
+
+                    <input type="file" name="photo" id="photo" accept="image/*">
+
+
+                    <!-- Buttons -->
+
+                    <div class="form-buttons">
+
+                        <input type="submit" value="Register Student" id="register">
+
+                        <input type="reset" value="Reset" id="reset">
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- =========================
+                 STUDENT LIST
+            ========================== -->
+
+            <section class="student-list">
+
+
+                <!-- Student Count -->
+
+                <div class="student-count-card">
+
+                    <h2>
+                        Registered Students
+                    </h2>
+
+                    <p id="studentCount">
+                        0
+                    </p>
+
+                    <div class="count-label">
+                        Total students registered
+                    </div>
+
+                </div>
+
+
+                <!-- Dynamic Student Cards -->
+
+                <div class="student-cards-section" id="studentCards" aria-label="Student cards">
+
+                    <!-- Student cards will be added here -->
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="page-footer">
+
+        <p>
+            © 2026 Student Application Management System
+        </p>
+
+        <p>
+            Register • Manage • Connect
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

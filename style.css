@@ -1,0 +1,721 @@
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    color: #ffffff;
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.page-header {
+    width: 100%;
+    padding: 45px 8%;
+
+    background: #001f3f;
+
+    border-bottom: 1px solid #dddddd;
+
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+h1 {
+    margin: 0 0 12px;
+    font-size: 38px;
+}
+
+
+.intro {
+    max-width: 500px;
+
+    margin: 0;
+
+    color: #d9e7f2;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+#container {
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 30px 8% 30px 4%;
+}
+
+
+/* =========================
+   REGISTRATION CARD
+========================= */
+
+.registration-card {
+    width: 45%;
+
+    min-height: 850px;
+
+    padding: 10px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #222222;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+.registration-card h2 {
+    margin: 0 0 20px;
+
+    color: #001f3f;
+}
+
+
+/* =========================
+   FORM LABELS
+========================= */
+
+.registration-card form > label,
+.form-label {
+    display: block;
+
+    margin: 12px 0 5px;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   INPUT FIELDS
+========================= */
+
+.registration-card input[type="text"],
+.registration-card input[type="email"],
+.registration-card input[type="tel"],
+.registration-card input[type="date"],
+.registration-card input[type="file"],
+.registration-card select,
+.registration-card textarea {
+
+    width: 100%;
+
+    padding: 9px;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 4px;
+
+    font: inherit;
+
+    transition: 0.2s ease;
+}
+
+
+/* Hover Effect */
+
+.registration-card input[type="text"]:hover,
+.registration-card input[type="email"]:hover,
+.registration-card input[type="tel"]:hover,
+.registration-card input[type="date"]:hover,
+.registration-card input[type="file"]:hover,
+.registration-card select:hover,
+.registration-card textarea:hover {
+
+    border-color: #001f3f;
+}
+
+
+/* Focus Effect */
+
+.registration-card input[type="text"]:focus,
+.registration-card input[type="email"]:focus,
+.registration-card input[type="tel"]:focus,
+.registration-card input[type="date"]:focus,
+.registration-card input[type="file"]:focus,
+.registration-card select:focus,
+.registration-card textarea:focus {
+
+    outline: none;
+
+    border: 2px solid #001f3f;
+
+    box-shadow: 0 0 6px rgba(0, 31, 63, 0.25);
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.registration-card textarea {
+
+    min-height: 80px;
+
+    resize: vertical;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px 10px;
+
+    align-items: center;
+
+    margin-bottom: 8px;
+}
+
+
+.skills-list label {
+
+    margin: 0;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   FORM BUTTONS
+========================= */
+
+.form-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+
+.form-buttons input {
+
+    padding: 10px 20px;
+
+    border: 0;
+
+    border-radius: 4px;
+
+    color: #ffffff;
+
+    background: #001f3f;
+
+    cursor: pointer;
+}
+
+
+.form-buttons input[type="reset"] {
+
+    color: #222222;
+
+    background: #dddddd;
+}
+
+
+/* =========================
+   STUDENT LIST
+========================= */
+
+.student-list {
+
+    display: flex;
+
+    width: 55%;
+
+    height: 850px;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    padding: 10px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 10px;
+
+    background-color: #ffffff;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   STUDENT COUNT
+========================= */
+
+.student-count-card {
+
+    flex-shrink: 0;
+
+    padding: 18px;
+
+    color: #ffffff;
+
+    background-color: #001f3f;
+
+    border-radius: 5px;
+}
+
+
+.student-count-card h2,
+.student-count-card p {
+
+    margin: 0 0 10px;
+}
+
+
+.student-count-card p {
+
+    font-size: 36px;
+
+    font-weight: bold;
+}
+
+
+.count-label {
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   STUDENT CARDS SECTION
+========================= */
+
+.student-cards-section {
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex-wrap: nowrap;
+
+    gap: 10px;
+
+    width: 100%;
+
+    flex: 1;
+
+    min-height: 0;
+
+    padding: 10px;
+
+    border: 1px solid #dddddd;
+
+    background-color: #f2f2f2;
+
+    /* Vertical scrolling */
+    overflow-y: auto;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.student-cards-section::-webkit-scrollbar {
+
+    width: 8px;
+}
+
+
+.student-cards-section::-webkit-scrollbar-track {
+
+    background: #eeeeee;
+}
+
+
+.student-cards-section::-webkit-scrollbar-thumb {
+
+    background: #001f3f;
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   STUDENT CARD
+========================= */
+
+.student-card {
+
+    width: 100%;
+
+    flex: 0 0 auto;
+
+    min-width: 0;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 8px;
+
+    background-color: #ffffff;
+
+    color: #222222;
+
+    transition: 0.2s ease;
+}
+
+
+.student-card:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   STUDENT CARD BODY
+========================= */
+
+.student-card-body {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 15px 10px;
+}
+
+
+/* =========================
+   STUDENT AVATAR
+========================= */
+
+.student-avatar {
+
+    display: grid;
+
+    width: 64px;
+    height: 64px;
+
+    flex: 0 0 64px;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 3px solid #001f3f;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    background-color: #001f3f;
+
+    font-weight: bold;
+
+    overflow: hidden;
+}
+
+
+.student-avatar img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   STUDENT INFORMATION
+========================= */
+
+.student-info {
+
+    width: 100%;
+
+    min-width: 0;
+}
+
+
+.student-card h3 {
+
+    margin: 0 0 8px;
+
+    color: #001f3f;
+
+    font-size: 17px;
+}
+
+
+.student-info p {
+
+    margin: 5px 0;
+
+    color: #666666;
+
+    font-size: 11px;
+
+    white-space: normal;
+
+    overflow: visible;
+}
+
+
+.student-detail {
+
+    font-size: 11px;
+
+    color: #555555;
+}
+
+
+.student-detail b {
+
+    color: #222222;
+}
+
+
+/* =========================
+   SKILL TAGS
+========================= */
+
+.student-skills {
+
+    margin-top: 8px;
+}
+
+
+.skill-tag {
+
+    display: inline-block;
+
+    margin: 2px;
+
+    padding: 3px 6px;
+
+    border-radius: 3px;
+
+    color: #ffffff;
+
+    background-color: #001f3f;
+
+    font-size: 9px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.student-about {
+
+    margin-top: 8px !important;
+
+    line-height: 1.4;
+}
+
+
+/* =========================
+   STUDENT ACTIONS
+========================= */
+
+.student-actions {
+
+    display: flex;
+
+    gap: 5px;
+
+    margin-top: 8px;
+}
+
+
+.student-actions button {
+
+    padding: 5px 7px;
+
+    border: 1px solid #001f3f;
+
+    border-radius: 3px;
+
+    color: #ffffff;
+
+    background-color: #001f3f;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+
+.student-actions button + button {
+
+    color: #001f3f;
+
+    background-color: #ffffff;
+}
+
+
+/* =========================
+   STUDENT TABS
+========================= */
+
+.student-tabs {
+
+    padding: 8px 10px;
+
+    border-top: 1px solid #eeeeee;
+
+    color: #666666;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.page-footer {
+
+    width: 100%;
+
+    padding: 12px 8%;
+
+    color: #d9e7f2;
+
+    background-color: #001f3f;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    border-top-left-radius: 15px;
+
+    border-top-right-radius: 15px;
+}
+
+
+.page-footer p {
+
+    margin: 3px 0;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    #container {
+
+        flex-direction: column;
+    }
+
+
+    .registration-card,
+    .student-list {
+
+        width: 100%;
+    }
+
+
+    .student-list {
+
+        height: 850px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .page-header {
+
+        padding: 30px 20px;
+    }
+
+
+    h1 {
+
+        font-size: 30px;
+    }
+
+
+    #container {
+
+        flex-direction: column;
+
+        padding: 20px 15px;
+    }
+
+
+    .registration-card,
+    .student-list {
+
+        width: 100%;
+    }
+
+
+    .student-list {
+
+        height: 700px;
+    }
+
+
+    .student-cards-section {
+
+        flex-direction: column;
+
+        flex-wrap: nowrap;
+    }
+
+
+    .student-card {
+
+        width: 100%;
+
+        flex: 0 0 auto;
+    }
+
+}
+
