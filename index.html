@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+    </header>
+
+    <main>
+        <form action="#">
+            <div class="grid">
+                <div class="field">
+                    <label for="name">Student Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                </div>
+                <div class="field">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="field">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" name="phone" placeholder="Phone number" required>
+                </div>
+                <div class="field">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="field">
+                    <label for="gender">Gender:</label>
+                    <div class="subfield-grid">
+                        <div class="subfield">
+                            <input type="radio" id="male" name="gender" value="male" required>
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="subfield">
+                            <input type="radio" id="female" name="gender" value="female" required>
+                            <label for="female">Female</label>
+                        </div>
+                        <div class="subfield">
+                            <input type="radio" id="other" name="gender" value="other" required>
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="course">Course:</label>
+                    <select id="course" name="course" required>
+                        <option value="" disabled selected>Select Course</option>
+                        <option value="web_development">Web Development</option>
+                        <option value="ui_ux">UI/UX</option>
+                        <option value="python">Python</option>
+                        <option value="data_analytics">Data Analytics</option>
+                        <option value="mern_stack">MERN Stack</option>
+                        <option value="cloud_computing">Cloud Computing</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="skills">Skills:</label>
+                    <div class="subfield-grid">
+                        <div class="subfield">
+                            <input type="checkbox" id="html" name="skills" value="html">
+                            <label for="html">HTML</label>
+                        </div>
+                        <div class="subfield">
+                            <input type="checkbox" id="css" name="skills" value="css">
+                            <label for="css">CSS</label>
+                        </div>
+                        <div class="subfield">
+                            <input type="checkbox" id="javascript" name="skills" value="javascript">
+                            <label for="javascript">JavaScript</label>
+                        </div>
+                        <div class="subfield">
+                            <input type="checkbox" id="git" name="skills" value="git">
+                            <label for="git">Git</label>
+                        </div>
+                        <div class="subfield">
+                            <input type="checkbox" id="react" name="skills" value="react">
+                            <label for="react">React</label>
+                        </div>
+                        <div class="subfield">
+                            <input type="checkbox" id="node" name="skills" value="node">
+                            <label for="node">Node.js</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="about">About Student:</label>
+                    <textarea name="about" id="about" maxlength="200" placeholder="About" required></textarea>
+                    <p class="count">Characters: <span id="lettercount">0</span>/200</p>
+                </div>
+                <div class="field">
+                    <label for="pfp">Profile Photo:</label>
+                    <input type="file" id="pfp" name="pfp" accept=".jpg, jpeg, .png" required>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <input type="submit" value="Register Student">
+                <input type="reset" value="Reset Form">
+            </div>
+        </form>
+
+
+        <section class="student-cards">
+            <h1>Registered Students</h1>
+            <div class="cards-container" id="cards-container">
+                
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
