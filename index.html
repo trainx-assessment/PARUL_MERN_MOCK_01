@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Application Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <img src="Dev.jpeg" alt="dev"/>
+                </div>
+
+                <div>
+                    <h1>Student Application Management System</h1>
+                    <p>Register and manage student applications.</p>
+                </div>
+            </div>
+
+            <button id="darkModeBtn" class="dark-mode-btn">
+             Dark Mode
+            </button>
+
+        </header>
+
+
+        <aside class="sidebar" style="    background-color: rgb(238, 223, 85);
+">
+
+            <h2>Menu</h2>
+
+            <a href="#registration" class="sidebar-item active" style="color: black;">
+                Add Student
+            </a>
+
+            <a href="#statistics" class="sidebar-item" style="color: black;">
+                Statistics
+            </a>
+
+            <a href="#students-section" class="sidebar-item" style="color: black;">
+                 Students
+            </a>
+
+        </aside>
+
+
+        <main class="main-content" style="background-color: antiquewhite;">
+
+            <section id="registration" class="section" style="background-color: rgb(223, 210, 210);">
+
+                <div class="section-heading">
+                    <h2>Student Registration</h2>
+                    <p>Enter student details to register an application.</p>
+                </div>
+
+
+                <form id="studentForm" novalidate>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Student Name <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Enter student name"
+                            >
+
+                            <small id="nameError" class="error"></small>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email <span>*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="example@gmail.com"
+                            >
+
+                            <small id="emailError" class="error"></small>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone Number <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="phone"
+                                maxlength="10"
+                                placeholder="10 digit phone number"
+                            >
+
+                            <small id="phoneError" class="error"></small>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="dob">
+                                Date of Birth <span>*</span>
+                            </label>
+
+                            <input type="date" id="dob">
+
+                            <small id="dobError" class="error"></small>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Gender <span>*</span>
+                            </label>
+
+                            <div class="radio-group">
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="gender"
+                                        value="Male"
+                                    >
+                                    Male
+                                </label>
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="gender"
+                                        value="Female"
+                                    >
+                                    Female
+                                </label>
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="gender"
+                                        value="Other"
+                                    >
+                                    Other
+                                </label>
+
+                            </div>
+
+                            <small id="genderError" class="error"></small>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="course">
+                                Course <span>*</span>
+                            </label>
+
+                            <select id="course">
+
+                                <option value="">
+                                    Select Course
+                                </option>
+
+                                <option value="Web Development">
+                                    Web Development
+                                </option>
+
+                                <option value="UI/UX">
+                                    UI/UX
+                                </option>
+
+                                <option value="Python">
+                                    Python
+                                </option>
+
+                                <option value="Data Analytics">
+                                    Data Analytics
+                                </option>
+
+                                <option value="MERN Stack">
+                                    MERN Stack
+                                </option>
+
+                                <option value="Cloud Computing">
+                                    Cloud Computing
+                                </option>
+
+                            </select>
+
+                            <small id="courseError" class="error"></small>
+
+                        </div>
+
+
+                        <div class="form-group full-width">
+
+                            <label>
+                                Skills <span>*</span>
+                            </label>
+
+                            <div class="skills-group">
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="skills"
+                                        value="HTML"
+                                    >
+                                    HTML
+                                </label>
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="skills"
+                                        value="CSS"
+                                    >
+                                    CSS
+                                </label>
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="skills"
+                                        value="JavaScript"
+                                    >
+                                    JavaScript
+                                </label>
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="skills"
+                                        value="Git"
+                                    >
+                                    Git
+                                </label>
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="skills"
+                                        value="React"
+                                    >
+                                    React
+                                </label>
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="skills"
+                                        value="Node.js"
+                                    >
+                                    Node.js
+                                </label>
+
+                            </div>
+
+                            <small id="skillsError" class="error"></small>
+
+                        </div>
+
+
+                        <div class="form-group full-width">
+
+                            <label for="about">
+                                About Student <span>*</span>
+                            </label>
+
+                            <textarea
+                                id="about"
+                                maxlength="200"
+                                placeholder="Write at least 20 characters about the student..."
+                            ></textarea>
+
+                            <div class="counter">
+                                <span id="charCounter">0 / 200</span>
+                            </div>
+
+                            <small id="aboutError" class="error"></small>
+
+                        </div>
+
+
+                        
+                        <div class="form-group full-width">
+
+                            <label for="photo">
+                                Profile Photo <span>*</span>
+                            </label>
+
+                            <input
+                                type="file"
+                                id="photo"
+                                accept="image/png,image/jpeg,image/jpg"
+                            >
+
+                            <small id="photoError" class="error"></small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-buttons">
+
+                        <button
+                            type="submit"
+                            id="submitBtn"
+                            class="btn primary-btn"
+                        >
+                            Register Student
+                        </button>
+
+                        <button
+                            type="button"
+                            id="resetBtn"
+                            class="btn secondary-btn"
+                        >
+                            Reset Form
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <section id="statistics" class="section" style="background-color: rgb(236, 234, 234);">
+
+                <div class="section-heading">
+                    <h2 >Statistics</h2>
+                    <p style="color: rgb(29, 27, 27);">Overview of registered students.</p>
+                </div>
+
+
+                <div class="statistics-container">
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon"></div>
+
+                        <div>
+                            <h3>Total Students</h3>
+                            <p id="totalStudents">0</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon"></div>
+
+                        <div>
+                            <h3>Web Development</h3>
+                            <p id="webDevelopmentCount">0</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon"></div>
+
+                        <div>
+                            <h3>Python</h3>
+                            <p id="pythonCount">0</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon"></div>
+
+                        <div>
+                            <h3>MERN Stack</h3>
+                            <p id="mernCount">0</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon"></div>
+
+                        <div>
+                            <h3>UI/UX</h3>
+                            <p id="uiuxCount">0</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon"></div>
+
+                        <div>
+                            <h3>Data Analytics</h3>
+                            <p id="dataAnalyticsCount">0</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon"></div>
+
+                        <div>
+                            <h3>Cloud Computing</h3>
+                            <p id="cloudCount">0</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="section">
+
+                <div class="section-heading">
+                    <h2>Search & Filter</h2>
+                </div>
+
+
+                <div class="search-filter">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search student by name..."
+                    >
+
+
+                    <select id="courseFilter">
+
+                        <option value="All">
+                            All Courses
+                        </option>
+
+                        <option value="Web Development">
+                            Web Development
+                        </option>
+
+                        <option value="UI/UX">
+                            UI/UX
+                        </option>
+
+                        <option value="Python">
+                            Python
+                        </option>
+
+                        <option value="Data Analytics">
+                            Data Analytics
+                        </option>
+
+                        <option value="MERN Stack">
+                            MERN Stack
+                        </option>
+
+                        <option value="Cloud Computing">
+                            Cloud Computing
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+
+            <section id="students-section" class="section">
+
+                <div class="section-heading">
+                    <h2>Registered Students</h2>
+                    <p>All registered student applications.</p>
+                </div>
+
+
+                <div id="studentCards" class="student-cards"></div>
+
+                <p id="noStudents" class="no-students">
+                    No students found.
+                </p>
+
+            </section>
+
+        </main>
+
+
+       
+        <footer class="footer" style="    background-color: rgb(238, 223, 85);
+">
+
+          
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
