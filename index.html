@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+    </header>
+
+    <main>
+        <section class="panel">
+            <h2>Student Registration</h2>
+            <form id="studentForm">
+                <div class="row">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter student name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter email" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field">
+                        <label for="number">Phone Number</label>
+                        <input type="tel" id="number" name="number" placeholder="Enter number" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field">
+                        <label>Gender</label>
+                        <div class="inline-options">
+                            <label><input type="radio" name="gender" value="male"> Male</label>
+                            <label><input type="radio" name="gender" value="female"> Female</label>
+                            <label><input type="radio" name="gender" value="other"> Other</label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="course">Course</label>
+                        <select id="course" name="course" required>
+                            <option value="">Select Course</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="UI/UX">UI/UX</option>
+                            <option value="Python">Python</option>
+                            <option value="Data Analytics">Data Analytics</option>
+                            <option value="MERN Stack">MERN Stack</option>
+                            <option value="Cloud Computing">Cloud Computing</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field full">
+                    <label>Skills</label>
+                    <div class="inline-options">
+                        <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+                        <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+                        <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+                        <label><input type="checkbox" name="skills" value="Git"> Git</label>
+                        <label><input type="checkbox" name="skills" value="React"> React</label>
+                        <label><input type="checkbox" name="skills" value="Node.js"> Node.js</label>
+                    </div>
+                </div>
+
+                <div class="field full">
+                    <label for="description">About Student</label>
+                    <textarea id="description" name="description" placeholder="Write a short note about the student" required></textarea>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" class="btn btn-primary">Register Student</button>
+                    <button type="reset" class="btn btn-light">Reset Form</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>Student Applications</h2>
+            <div id="studentCards" class="cards-grid"></div>
+            <p id="emptyState" class="empty-state">No student applications found.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Student Application Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
