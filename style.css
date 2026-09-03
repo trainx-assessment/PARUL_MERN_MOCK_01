@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+form h1 {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 100%;
+    background-color: #4CAF50;
+}
+
+form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+
+}
+
+.student-input {
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+
+}
+
+.student-input>div {
+    margin-bottom: 15px;
+}
+
+
+.student-input input .student-input input,
+.student-input input,
+.student-input input,
+.student-input select,
+.student-input textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+}
+
+.student-input input,
+.student-input input {
+    width: auto;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.student-input input,
+.student-input input {
+    font-weight: normal;
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.student-input br {
+    display: block;
+    margin-top: 5px;
+}
+
+.student-input button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.student-input button[type="submit"]:hover {
+    background-color: #333;
+}
