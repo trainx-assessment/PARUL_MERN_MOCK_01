@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Student Application Management System" />
+    <title>Student Application Management System</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <h1>Student Application Management System</h1>
+      <p>Register and manage student applications</p>
+      <div class="header-actions">
+        <!-- Dark Mode Toggle Button -->
+        <button type="button" id="darkModeBtn" class="dark-mode-btn">
+          Dark Mode
+        </button>
+      </div>
+    </header>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+
+    <!-- MAIN -->
+    <main>
+      <!-- STUDENT REGISTRATION FORM -->
+      <section class="section">
+        <h2 class="section-title">Student Registration</h2>
+
+        <form id="studentForm" class="student-form" novalidate>
+          <!-- Student Name -->
+
+          <div class="form-group">
+            <label for="studentName"
+              >Student Name<span class="required">*</span></label
+            >
+
+            <input
+              type="text"
+              id="studentName"
+              name="studentName"
+              placeholder="Enter student name"
+              maxlength="40"
+            />
+
+            <span id="studentNameError" class="validation-message"></span>
+          </div>
+
+          <!-- Email -->
+
+          <div class="form-group">
+            <label for="studentEmail"
+              >Email<span class="required">*</span></label
+            >
+
+            <input
+              type="email"
+              id="studentEmail"
+              name="studentEmail"
+              placeholder="student@example.com"
+            />
+
+            <span id="studentEmailError" class="validation-message"></span>
+          </div>
+
+          <!-- Phone -->
+
+          <div class="form-group">
+            <label for="studentPhone"
+              >Phone Number<span class="required">*</span></label
+            >
+
+            <input
+              type="text"
+              id="studentPhone"
+              name="studentPhone"
+              placeholder="9876543210"
+              maxlength="10"
+            />
+
+            <span id="studentPhoneError" class="validation-message"></span>
+          </div>
+
+          <!-- Date of Birth -->
+
+          <div class="form-group">
+            <label for="studentDob"
+              >Date of Birth<span class="required">*</span></label
+            >
+            <input type="date" id="studentDob" name="studentDob" />
+            <span id="studentDobError" class="validation-message"></span>
+          </div>
+
+          <!-- Gender -->
+
+          <div class="form-group">
+            <label>Gender<span class="required">*</span></label>
+
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="gender" value="Male" />Male</label
+              >
+
+              <label class="radio-option">
+                <input type="radio" name="gender" value="Female" />Female</label
+              >
+
+              <label class="radio-option">
+                <input type="radio" name="gender" value="Other" />Other</label
+              >
+            </div>
+
+            <span id="genderError" class="validation-message"></span>
+          </div>
+
+          <!-- Course -->
+
+          <div class="form-group">
+            <label for="studentCourse">
+              Course
+              <span class="required">*</span>
+            </label>
+
+            <select id="studentCourse" name="studentCourse">
+              <option value="">Select Course</option>
+              <option value="Web Development">Web Development</option>
+              <option value="UI/UX">UI/UX</option>
+              <option value="Python">Python</option>
+              <option value="Data Analytics">Data Analytics</option>
+              <option value="MERN Stack">MERN Stack</option>
+              <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+
+            <span id="studentCourseError" class="validation-message"></span>
+          </div>
+
+          <!-- Skills -->
+
+          <div class="form-group full-width">
+            <label>
+              Skills
+              <span class="required">*</span>
+            </label>
+
+            <div class="checkbox-group">
+              <label class="checkbox-option">
+                <input type="checkbox" name="skills" value="HTML" />
+                HTML
+              </label>
+
+              <label class="checkbox-option">
+                <input type="checkbox" name="skills" value="CSS" />
+                CSS
+              </label>
+
+              <label class="checkbox-option">
+                <input type="checkbox" name="skills" value="JavaScript" />
+                JavaScript
+              </label>
+
+              <label class="checkbox-option">
+                <input type="checkbox" name="skills" value="Git" />
+                Git
+              </label>
+
+              <label class="checkbox-option">
+                <input type="checkbox" name="skills" value="React" />
+                React
+              </label>
+
+              <label class="checkbox-option">
+                <input type="checkbox" name="skills" value="Node.js" />
+                Node.js
+              </label>
+            </div>
+
+            <span id="skillsError" class="validation-message"></span>
+          </div>
+
+          <!-- About Student -->
+
+          <div class="form-group full-width">
+            <label for="studentAbout"
+              >About Student
+              <span class="required">*</span>
+            </label>
+
+            <textarea
+              id="studentAbout"
+              name="studentAbout"
+              maxlength="200"
+              placeholder="Tell us about the student..."
+            ></textarea>
+
+            <div id="characterCounter" class="character-counter">0 / 200</div>
+            <span id="studentAboutError" class="validation-message"></span>
+          </div>
+
+          <!-- Profile Photo -->
+
+          <div class="form-group full-width">
+            <label for="studentPhoto">
+              Profile Photo
+              <span class="required">*</span>
+            </label>
+
+            <input
+              type="file"
+              id="studentPhoto"
+              name="studentPhoto"
+              accept="image/jpeg,image/jpg,image/png"
+            />
+
+            <span id="studentPhotoError" class="validation-message"></span>
+          </div>
+
+          <!-- Buttons -->
+
+          <div class="form-buttons">
+            <button type="submit" id="submitBtn" class="btn btn-primary">
+              Register Student
+            </button>
+
+            <button type="button" id="resetBtn" class="btn btn-secondary">
+              Reset Form
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- STATISTICS -->
+
+      <section class="section">
+        <h2 class="section-title">Student Statistics</h2>
+
+        <div class="statistics-grid">
+          <div class="stat-card">
+            <span id="totalStudents" class="stat-number"> 0 </span>
+            <span class="stat-label"> Total Students </span>
+          </div>
+
+          <div class="stat-card">
+            <span id="webDevelopmentCount" class="stat-number"> 0 </span>
+            <span class="stat-label"> Web Development </span>
+          </div>
+
+          <div class="stat-card">
+            <span id="uiuxCount" class="stat-number"> 0 </span>
+            <span class="stat-label"> UI/UX </span>
+          </div>
+
+          <div class="stat-card">
+            <span id="pythonCount" class="stat-number"> 0 </span>
+            <span class="stat-label"> Python </span>
+          </div>
+
+          <div class="stat-card">
+            <span id="dataAnalyticsCount" class="stat-number"> 0 </span>
+            <span class="stat-label"> Data Analytics </span>
+          </div>
+
+          <div class="stat-card">
+            <span id="mernCount" class="stat-number"> 0 </span>
+            <span class="stat-label"> MERN Stack </span>
+          </div>
+
+          <div class="stat-card">
+            <span id="cloudCount" class="stat-number"> 0 </span>
+            <span class="stat-label"> Cloud Computing </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEARCH AND FILTER -->
+
+      <section class="section">
+        <h2 class="section-title">Search and Filter Students</h2>
+
+        <div class="search-filter">
+          <div class="form-group">
+            <label for="searchInput"> Search Student </label>
+
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search student by name..."
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="courseFilter"> Filter by Course </label>
+
+            <select id="courseFilter">
+              <option value="">All Courses</option>
+              <option value="Web Development">Web Development</option>
+              <option value="UI/UX">UI/UX</option>
+              <option value="Python">Python</option>
+              <option value="Data Analytics">Data Analytics</option>
+              <option value="MERN Stack">MERN Stack</option>
+              <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- STUDENT CARDS -->
+
+      <section class="section">
+        <h2 class="section-title">Student Applications</h2>
+        <div id="studentContainer" class="student-container"></div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>Student Application Management System</p>
+      <p>Built with HTML5, CSS3 and Vanilla JavaScript</p>
+    </footer>
+  </body>
+</html>
