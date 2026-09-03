@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+
+
+    <header>
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+    </header>
+    <main>
+
+
+        <h2>
+            Registration Form
+        </h2>
+
+        <section id="registration-section">
+            <form name="Rform" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="studentName">Student Name:</label>
+                    <input type="text" id="studentName" placeholder="Enter student name">
+                    <span class="error" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter email">
+                    <span class="error" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number :</label>
+                    <input type="text" id="phone" placeholder="Enter phone number">
+                    <span class="error" id="phoneError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="DOB">Date of Birth:</label>
+                    <input type="date" id="DOB">
+                    <span class="error" id="dateError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="gender" value="Male">
+                            Male
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender" value="Female">
+                            Female
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender" value="Other">
+                            Other
+                        </label>
+                    </div>
+
+                    <span class="error" id="genderError"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="course">Course</label>
+
+                    <select id="course">
+                        <option value="">Select Course</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="UI/UX">UI/UX</option>
+                        <option value="Python">Python</option>
+                        <option value="Data Analytics">Data Analytics</option>
+                        <option value="MERN Stack">MERN Stack</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                    </select>
+
+                    <span class="error" id="courseError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Skills</label>
+
+                    <div class="checkbox-group">
+
+                        <label>
+                            <input type="checkbox" name="skills" value="HTML">
+                            HTML
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="skills" value="CSS">
+                            CSS
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="skills" value="JavaScript">
+                            JavaScript
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="skills" value="Git">
+                            Git
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="skills" value="React">
+                            React
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="skills" value="Node.js">
+                            Node.js
+                        </label>
+
+                    </div>
+
+                    <small class="error" id="skillsError"></small>
+                </div>
+
+
+                <div class="form-group full-width">
+
+                    <label for="about">About Student</label>
+
+                    <textarea id="about" maxlength="200" placeholder="Tell us about the student">
+                    </textarea>
+
+                    <div id="characterCount">
+                        0 / 200
+                    </div>
+
+                    <small class="error" id="aboutError"></small>
+
+                </div>
+
+                <div class="form-group full-width">
+
+                    <label for="photo">Profile Photo</label>
+
+                    <input type="file" id="photo" accept="image/*">
+
+                    <small class="error" id="photoError"></small>
+
+                </div>
+
+
+                <div class="form-buttons full-width">
+
+                    <button type="submit" id="submitBtn">
+                        Register Student
+                    </button>
+
+                    <button type="button" id="resetBtn" onclick="location.reload()">
+                        Reset Form
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+
+
+
+
+
+    </main>
+
+
+
+    <footer>
+
+        <p>
+            Student Application Management System
+        </p>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
