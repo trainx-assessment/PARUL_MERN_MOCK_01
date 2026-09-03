@@ -1060,3 +1060,20 @@ The assessment will evaluate:
 * `JSON.parse()`
 * Debugging
 * Code readability
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
