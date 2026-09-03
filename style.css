@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #24324a;
+  background: grey;
+}
+.page-header {
+  padding: 30px 20px;
+  color: white;
+  text-align: center;
+  background: grey;
+}
+.page-header h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+.page-header p {
+  margin: 0;
+}
+.page-content {
+  width: 92%;
+  max-width: 1100px;
+  margin: 25px auto;
+}
+.box {
+  margin-bottom: 22px;
+  padding: 22px;
+  background: white;
+  border: 1px solid #d9e0e8;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #24324a12;
+}
+.box h2 {
+  margin: 0 0 18px;
+  color: #315c8c;
+  font-size: 21px;
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 20px;
+}
+.full-row {
+  grid-column: 1 / -1;
+}
+.form-field label,
+.field-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbc7d4;
+  border-radius: 5px;
+  font: inherit;
+}
+textarea {
+  min-height: 85px;
+  resize: vertical;
+}
+.choice-field > label {
+  display: inline-block;
+  margin: 5px 14px 0 0;
+  font-weight: normal;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #b9d6f2;
+  border-color: #315c8c;
+}
+.error-message {
+  display: block;
+  min-height: 18px;
+  margin-top: 4px;
+  color: #bd3030;
+  font-size: 12px;
+}
+.input-error {
+  border-color: #bd3030 !important;
+}
+.counter {
+  margin-top: 4px;
+  color: #68788c;
+  font-size: 12px;
+  text-align: right;
+}
+.form-buttons,
+.card-buttons {
+  display: flex;
+  gap: 10px;
+}
+.form-buttons {
+  margin-top: 4px;
+}
+button {
+  padding: 10px 16px;
+  color: white;
+  background: #505357;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+button:hover {
+  background: #24466c;
+}
+.reset-button,
+.delete-button {
+  background: #697789;
+}
+.reset-button:hover,
+.delete-button:hover {
+  background: #4c5968;
+}
+.statistics .total {
+  font-size: 18px;
+  font-weight: bold;
+}
+.course-statistics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.course-statistics p {
+  margin: 0;
+  padding: 10px;
+  background: #eef4fa;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.student-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.student-card {
+  padding: 16px;
+  border: 1px solid #d5dfe9;
+  border-radius: 7px;
+  background: #fbfcfe;
+}
+.student-photo {
+  display: block;
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.student-card h3 {
+  margin: 0 0 12px;
+  color: #315c8c;
+  text-align: center;
+}
+.student-card p {
+  margin: 0 0 8px;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+.card-buttons {
+  margin-top: 15px;
+}
+footer {
+  padding: 18px;
+  color: #68788c;
+  text-align: center;
+  font-size: 13px;
+}
+@media (max-width: 768px) {
+  .student-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .course-statistics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 23px;
+  }
+  form,
+  .student-cards,
+  .course-statistics {
+    grid-template-columns: 1fr;
+  }
+  .box {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Applications</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <header class="page-header">
+      <h1>Student Application Management System</h1>
+      <p>Register and manage student applications</p>
+    </header>
+
+    <main class="page-content">
+      <section class="box">
+        <h2>Student Registration</h2>
+        <form id="student-form" novalidate>
+
+          <div class="form-field">
+            <label for="name">Student Name</label
+            ><input
+              type="text"
+              id="name"
+              placeholder="Enter student name"
+            /><small id="name-error" class="error-message"></small>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label
+            ><input
+              type="email"
+              id="email"
+              placeholder="student@example.com"
+            /><small id="email-error" class="error-message"></small>
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Phone Number</label
+            ><input
+              type="text"
+              id="phone"
+              placeholder="10 digit phone number"
+            /><small id="phone-error" class="error-message"></small>
+          </div>
+
+          <div class="form-field">
+            <label for="dob">Date of Birth</label
+            ><input type="date" id="dob" /><small
+              id="dob-error"
+              class="error-message"
+            ></small>
+          </div>
+
+          <div class="form-field choice-field">
+            <span class="field-label">Gender</span
+            ><label
+              ><input type="radio" name="gender" value="Male" /> Male</label
+            ><label
+              ><input type="radio" name="gender" value="Female" /> Female</label
+            ><label
+              ><input type="radio" name="gender" value="Other" /> Other</label
+            ><small id="gender-error" class="error-message"></small>
+          </div>
+
+          <div class="form-field">
+            <label for="course">Course</label
+            ><select id="course">
+              <option value="">Select Course</option>
+              <option>Web Development</option>
+              <option>UI/UX</option>
+              <option>Python</option>
+              <option>Data Analytics</option>
+              <option>MERN Stack</option>
+              <option>Cloud Computing</option></select
+            ><small id="course-error" class="error-message"></small>
+          </div>
+
+          <div class="form-field full-row choice-field">
+            <span class="field-label">Skills</span
+            ><label
+              ><input type="checkbox" name="skills" value="HTML" /> HTML</label
+            ><label
+              ><input type="checkbox" name="skills" value="CSS" /> CSS</label
+            ><label
+              ><input type="checkbox" name="skills" value="JavaScript" />
+              JavaScript</label
+            ><label
+              ><input type="checkbox" name="skills" value="Git" /> Git</label
+            ><label
+              ><input type="checkbox" name="skills" value="React" />
+              React</label
+            ><label
+              ><input type="checkbox" name="skills" value="Node.js" />
+              Node.js</label
+            ><small id="skills-error" class="error-message"></small>
+          </div>
+
+          <div class="form-field full-row">
+            <label for="about-student">About Student</label
+            ><textarea
+              id="about-student"
+              maxlength="200"
+              placeholder="Write at least 20 characters about the student"
+            ></textarea>
+            <div class="counter" id="about-counter">0 / 200</div>
+            <small id="about-student-error" class="error-message"></small>
+          </div>
+
+          <div class="form-field full-row">
+            <label for="profile-photo">Profile Photo</label
+            ><input type="file" id="profile-photo" accept="image/*" /><small
+              id="profile-photo-error"
+              class="error-message"
+            ></small>
+          </div>
+
+          <div class="form-buttons full-row">
+            <button type="submit" id="submit-button">Register Student</button
+            ><button type="reset" class="reset-button">Reset Form</button>
+          </div>
+          
+        </form>
+      </section>
+
+      <section class="box statistics">
+        <h2>Student Statistics</h2>
+        <p class="total">Total Students: <span id="total-students">0</span></p>
+        <div id="course-statistics" class="course-statistics"></div>
+      </section>
+
+      <section class="box">
+        <h2>Student Applications</h2>
+        <div id="student-cards" class="student-cards"></div>
+      </section>
+
+    </main>
+    
+    <footer>Student Application Management System</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
