@@ -207,3 +207,39 @@ function validateDOB(dob) {
 
   return true;
 }
+
+const studentCardHolder = document.querySelector("#student-cards");
+
+function renderUsers() {
+  studentCardHolder.innerHTML = "";
+  usersDB.forEach((u) => {
+    const card = document.createElement("div");
+    card.className = "student-card";
+    card.dataset.id = u.id;
+
+    const n = document.createElement("h2");
+    n.textContent = u.name;
+    const e = document.createElement("p");
+    e.textContent = u.email;
+    const p = document.createElement("p");
+    p.textContent = u.phone;
+    const d = document.createElement("p");
+    d.textContent = u.dob;
+    const g = document.createElement("p");
+    g.textContent = "Gender: " + u.gender;
+    const c = document.createElement("p");
+    c.textContent = "Course: " + u.course;
+
+    const s = document.createElement("p");
+    s.textContent = "Skills: " + u.skills.join(", ");
+
+    const a = document.createElement("p");
+    a.textContent = "About Me:  " + u.about;
+
+    card.append(n, e, p, d, g, c, s, a);
+
+    studentCardHolder.append(card);
+  });
+}
+
+renderUsers();

@@ -13,7 +13,8 @@ a {
   color: inherit;
 }
 
-input, button {
+input,
+button {
   background-color: transparent;
   outline: none;
   border: none;
@@ -85,7 +86,6 @@ section {
 }
 
 .registration-sec {
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,14 +125,13 @@ section {
   color: inherit;
   width: 100%;
   height: 100%;
-
 }
 
 .field input::placeholder {
   color: inherit;
 }
 
-.field:focus-within{
+.field:focus-within {
   color: lightgray;
   border: 2px solid lightgray;
 }
@@ -171,7 +170,7 @@ section {
 
 .field:focus-within select,
 .field textarea {
-    color: lightgray;
+  color: lightgray;
 }
 
 .field select option {
@@ -229,7 +228,7 @@ section {
   transition: all 0.3s ease;
 }
 
-.btn:hover{
+.btn:hover {
   filter: brightness(0.85);
 }
 
@@ -261,14 +260,31 @@ section {
   color: lightcoral;
 }
 
-@media screen and (max-width: 768px)   {
-    .field-group {
-      grid-template-columns: 1fr;
-    }
+/* USer cards */
+#student-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
 
-    .skill-group,
-    .profile-group,
-    .about-field {
-      grid-column: 1/2;
-    }
+.student-card {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .field-group {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-group,
+  .profile-group,
+  .about-field {
+    grid-column: 1/2;
+  }
 }
