@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gilroy, sans-serif;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: bisque;
+
+}
+
+h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+  font-style: italic;
+}
+
+h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 20px;
+}
+
+.container {
+  padding: 10px;
+  margin: 20px;
+  border: 2px solid black;
+  border-radius: 8px;
+  width: 750px;
+  height: 850px;
+  display: flex;
+}
+
+#student_name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#student_email {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#student_number {
+  font-weight: bold;
+  font-size: 2px;
+}
+
+#student_DOB {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+p {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#student_course {
+  font-weight: bold;
+  font-size: 20px;
+}

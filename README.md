@@ -1,15 +1,15 @@
-# PARUL-MERN-MOCK-01 - Instructions 
+# PARUL-MERN-MOCK-01 - Instructions
 
 ## Assessment Details
 
-| | |
-|---|---|
-| **Duration** | 3 Hours |
-| **Technology** | HTML5, CSS3, JavaScript |
-| **Difficulty** | Intermediate |
-| **Total Marks** | 100 |
-| **Development Environment** | VS Code |
-| **Submission** | GitHub Pull Request |
+|                             |                         |
+| --------------------------- | ----------------------- |
+| **Duration**                | 3 Hours                 |
+| **Technology**              | HTML5, CSS3, JavaScript |
+| **Difficulty**              | Intermediate            |
+| **Total Marks**             | 100                     |
+| **Development Environment** | VS Code                 |
+| **Submission**              | GitHub Pull Request     |
 
 ---
 
@@ -56,7 +56,6 @@ Open Terminal and run:
 ```bash
 git clone https://github.com/YOUR-USERNAME/html-css-js-mock-01.git
 ```
-
 
 Then enter the project:
 
@@ -147,11 +146,11 @@ This is a frontend-only application.
 
 You do not need:
 
-* Node.js
-* npm
-* Express
-* MongoDB
-* React
+- Node.js
+- npm
+- Express
+- MongoDB
+- React
 
 You can open:
 
@@ -245,14 +244,14 @@ Submission — Rahul Sharma
 
 Your assessment will be considered successfully submitted when:
 
-* Your work is completed on your personal branch.
-* Your branch has been pushed to your GitHub fork.
-* Your final implementation is present in the branch.
-* The required functionality from `TEST.md` has been completed.
-* The debugging exercise has been completed.
-* Your Pull Request has been created.
-* The Pull Request targets the original repository's `main` branch.
-* You have **not merged the Pull Request**.
+- Your work is completed on your personal branch.
+- Your branch has been pushed to your GitHub fork.
+- Your final implementation is present in the branch.
+- The required functionality from `TEST.md` has been completed.
+- The debugging exercise has been completed.
+- Your Pull Request has been created.
+- The Pull Request targets the original repository's `main` branch.
+- You have **not merged the Pull Request**.
 
 ---
 
@@ -268,4 +267,6 @@ The instructor will review your submission and the automated assessment checks w
 
 ## Good Luck! 🚀
 
-````
+```
+
+```
