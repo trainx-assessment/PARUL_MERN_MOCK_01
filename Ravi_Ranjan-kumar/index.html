@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .registration{
+       background-color: rgb(138, 110, 110);
+       width: 700px;
+       height: 300px;
+       border-radius: 10px;
+       border:10px black;
+      }
+      .form-input{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Student Application Management System</h1>
+      <p class="subtitle">Register and manage student applications</p>
+      <button type="button" id="themeToggle" class="theme-toggle">
+        Dark Mode
+      </button>
+    </header>
+    <main>
+      <section>
+        <div class="registration">
+          <h2>Student Registration Form</h2>
+          <div class="form-input">
+        
+            <label for="name">Name:
+              <input type="text" placeholder="Enter name:" required />
+            </label>
+            <label for="email">Email:
+              <input type="email" placeholder="Enter email:" required/>
+            </label>
+            <label for="phone_number">Phone Number
+               <input type="number" placeholder="Enter phone number:" required/>
+            </label>
+            <label for="DOB">DOB:
+              <input type="date"  required/>
+            </label>
+            <label for="gender">Gender:
+              <span>male</span>
+              <input type="radio" name="gender">
+              <span>female</span>
+              <input type="radio" name="gender">
+              <span>other</span>
+              <input type="radio" name="gender">
+            </label>
+            <select id="dropdown">
+              <option value="all">Select course</option>
+              <option value="all">Web Development</option>
+              <option value="all">UI/UX</option>
+              <option value="all">Python</option>
+              <option value="all">Data Analytics</option>
+              <option value="all">MERN Stack</option>
+              <option value="all">Cloud Computingk</option>
+            </select>
+  
+
+            <label for="skills">Skills:
+              <span>HTML</span>
+              <input type="checkbox" name="skills">
+
+               <span>CSS</span>
+              <input type="checkbox" name="skills">
+               <span>JS</span>
+              <input type="checkbox" name="skills">
+               <span>Node js</span>
+              <input type="checkbox" name="skills">
+               <span>React</span>
+              <input type="checkbox" name="skills">
+            </label>
+            
+          </div>
+          <h2>About Student</h2>
+          <textarea maxlength="200"></textarea>
+        </div>
+        <button type="submit">Register Student</button>
+        <button type="reset">Reset Form</button>
+      </section>
+      <section></section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
