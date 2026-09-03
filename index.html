@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header>
+        <h1 id="header-h1">Student Application Management System</h1>
+        <h2 id="header-h2">Register and manage student applications</h2>
+    </header>
+
+    <main>
+        <h2>Student Registration Form</h2>
+        <section id="formsection">
+            <form id="form">
+                <section id="for2">
+                <section id="p1">
+                <label for="sname">Student Name : </label>
+                <input type="text" id="sname" required class="in" placeholder="Your Name">
+                </section>
+                <section id="p2">
+                <label for="email">Email :</label>
+                <input type="email" name="" id="email" required class="in" placeholder="Your Email">
+                </section>
+                </section>
+                <section id="for2">
+                <section id="p1">
+                <label for="pnumber">Phone Number :</label>
+                <input type="number" name="" id="pnumber" required class="in" placeholder="Your Phone Number">
+                </section>
+                <section id="p2">
+                <label for="dob">DOB :</label>
+                <input type="date" name="" id="dob" required class="in">
+                </section>
+                </section>
+                <section id="for2">
+                <section id="p1">
+                <label for="gender">Gender :</label>
+                <input type="radio" name="gender" id="gender" required style="margin-left: 2%;">Male
+                <input type="radio" name="gender" id="gender" required style="margin-left: 2%;">Female
+                </section>
+                <section id="p2">
+                <label for="course">Course</label>
+                <select name="" id="selector" class="in">
+                    <option value="">Select Course</option>
+                    <option value="web">Web Development</option>
+                    <option value="uiux">UI/UX</option>
+                    <option value="python">Python</option>
+                    <option value="da">Data Analytics</option>
+                    <option value="mern">MERN Stack</option>
+                    <option value="cloud">Cloud Computing</option>
+                </select>
+                </section>
+                </section>
+                <section id="p">
+                <label for="skills">Skills :</label>
+                <input type="checkbox" style="margin-left: 2%;" id="skills">HTML
+                <input type="checkbox" style="margin-left: 2%;" id="skills">CSS
+                <input type="checkbox" style="margin-left: 2%;" id="skills">JavaScript
+                <input type="checkbox" style="margin-left: 2%;" id="skills">Git
+                <input type="checkbox" style="margin-left: 2%;" id="skills">React
+                <input type="checkbox" style="margin-left: 2%;" id="skills">Node.js
+                </section>
+                <section id="p" class="p3">
+                <label for="about">About Student : </label>
+                <input type="text" id="about" placeholder="Write About Yourself in 20 to 200 Words.">
+                </section>
+                <section id="p">
+                <label for="photo">Profile Photo : </label>
+                <input type="file" accept="image" id="photo">
+                </section>
+                <section id="btns">
+                    <button id="btn1">Register Student</button>
+                    <button id="btn2">Reset Form</button>
+                </section>
+            </form>
+        </section>
+    </main>
+
+    <h2>Student Card</h2>
+    <section id="student-card">
+        <section id="card11" class="cards">
+
+        </section>
+        <section id="card11" class="cards">
+
+        </section>
+        <section id="card11" class="cards">
+
+        </section>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
