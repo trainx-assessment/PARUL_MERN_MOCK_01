@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Application Management System</h1>
+        <h4>Register and manage student applications</h4>
+    </header>
+    <main>
+        <section id="registration">
+            <h2>Student Registation Form</h2>
+        <form>
+            <label for="Student Name">NAME :</label>
+            <input type="text" placeholder="Student Name" required><br><br>
+            <label for="Student Email">EMAIL :</label>
+            <input type="email" placeholder="Student Email" required><br><br>
+            <label for="Phone Number">PHONE NUMBER :</label>
+            <input type="number" placeholder="Phone Number" required><br><br>
+            <label for="Date of Birth">DOB :</label>
+            <input type="date" placeholder="Date of Birth" required><br><br>
+            <input type="radio" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="female" required>
+            <label for="female">Female</label>
+            <input type="radio" name="gender" value="other" required>
+            <label for="other">Other</label><br><br>
+
+            <label for="select">SELECT COURSE : </label>
+            <select>
+                <option value="">Select a course</option>
+                <option value="Web Development">Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="python">Python</option>
+                <option value="Data Analytics">Data Analytics</option>
+                <option value="MERN Stack">MERN Stack</option>
+                <option value="Cloud Computing">Clout Computing </option>
+            </select><br><br>
+            <input type="checkbox" value="HTML">
+            <label for="HTML">HTML</label>
+            <input type="checkbox" value="CSS">
+            <label for="CSS">CSS</label>
+            <input type="checkbox" value="JavaScript">
+            <label for="JavaScript">JavaScript</label>
+            <input type="checkbox" value="Git">
+            <label for="Git">Git</label>
+            <input type="checkbox" value="React">
+            <label for="React">React</label>
+            <input type="checkbox" value="Node.js">
+            <label for="Node.js">Node.js</label><br><br>
+            <div class="button">
+            <input type="submit" value="Submit" class="btn">
+            </div>
+        </form>
+    </section>
+    </main>
+    
+</body>
+</html>
