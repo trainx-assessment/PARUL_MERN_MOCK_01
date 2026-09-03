@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <main>
+  <header>
+      <p class="top-header">Student Application Management System</p>
+      <p class="top-subhead">Register and manage student applications</p>
+  </header>
+
+  <section>  
+      <form class="forms">
+        <div class="n">
+          <label for="name" class="x">Name</label>
+          <input type="text" id="name" required placeholder="Enter your name"  >
+        </div>
+
+        <div class="e">
+          <label for="email" class="x">Email</label>
+          <input type="email" required placeholder="Enter your email" name="email" id="email">
+        </div>
+
+        <div class="number">
+          <label for="phone" class="x">Phone Number </label>
+          <input type="number" required name="number" id="number" placeholder="Enter your number">
+        </div>
+        
+        <div class="birth">
+          <label for="birth" class="x">Date Of Birth</label>
+          <input type="date" required name="birth" id="birth">
+        </div>
+
+        <div class="genders">
+          <label for="gender" class="x">Gender</label>
+          <div class="gen">
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="other">
+            <label for="other" >Other</label>
+            </div>
+          
+        </div>
+
+        <div class="courses">
+          <label for="course" class="x">Courses</label>
+          <select name="course" id="course" style="width: 230px; height: 37px;border-radius: 8px;text-align: center;">
+            <option value="UI/UX" name="course" >Select Course</option>
+            <option value="Web Development" name="course">Web Development</option>
+            <option value="UI/UX" name="course" >UI/UX</option>
+            <option value="Python" name=""course>Python</option>
+            <option value="Data Analytics" name="course">Data Analytics</option>
+            <option value="Mern Stack" name="course">Mern Stack</option>
+            <option value="Cloud Computing" name="course">Cloud Computing</option>
+          </select>
+        </div>
+
+        <div class="skills">
+          <label for="skill" class="x">Skills</label>
+          <select name="skill" id="skill"  style="width: 230px; height: 37px;border-radius: 8px;text-align: center;" >
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Git">Git</option>
+            <option value="React">React</option>
+            <option value="Node.js">Node.js</option>
+          </select>
+        </div>
+
+        <div class="detail">
+          <label for="detail" class="x">Student Details</label>
+        <textarea name="stu-details" id="stu-details" maxlength="200"></textarea>
+        </div>
+        
+
+        <div class="profile">
+          <label for="profile" class="x">Profile Image</label>
+          <input type="file" name="profile" id="profile">
+        </div>
+
+        <div class="buttons">
+          <button class="register">Register Student</button>
+          <button class="reset">Reset Form</button>
+        </div>
+      </form>
+
+    </section>
+
+  <!-- <footer>
+
+  </footer> -->
+  </main>
+
+
+  <section>
+      <div class="parent-student"></div>
+    </section>
+  <script src="script.js"></script>
+</body>
+</html>
