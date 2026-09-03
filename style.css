@@ -84,6 +84,11 @@ textarea {
     margin-top: 4px;
 }
 
+.error-message {
+    color: red;
+    display: block;
+}
+
 #form-buttons {
     display: flex;
     gap: 12px;

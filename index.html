@@ -16,27 +16,31 @@
         <section id="registration">
             <h2>Student Registration Form</h2>
             
-            <form id="student-form">
+            <form id="student-form" novalidate>
                 <div id="name">
                     <label for="student-name">Student Name</label>
                     <input type="text" id="student-name" name="studentName" required>
+                    <small class="error-message" id="name-error"></small>
                 </div>
 
 
                 <div id="email">
                 <label for="student-email">Email Address</label>
-                <input type="email" id="student-email" name="studentEmail" required>                    
+                <input type="email" id="student-email" name="studentEmail" required>
+                <small class="error-message" id="email-error"></small>
                 </div>
 
                 
                 <div id="phone">
                 <label for="student-phone">Phone Number</label>
-                <input type="text" id="student-phone" name="studentPhone" required>                    
+                <input type="text" id="student-phone" name="studentPhone" required>
+                <small class="error-message" id="phone-error"></small>
                 </div>
                 
                 <div id="dob">
                 <label for="student-dob">Date of Birth</label>
-                <input type="text" id="student-dob" name="studentDob" required>                        
+                <input type="date" id="student-dob" name="studentDob" required>
+                <small class="error-message" id="dob-error"></small>
                 </div>
                 
                 <div id="gender">
@@ -45,6 +49,7 @@
                     <label for="student-male">Male</label>
                     <input type="radio" id="student-female" name="studentGender" value="female" required>
                     <label for="student-female">Female</label>
+                    <small class="error-message" id="gender-error"></small>
                 </div>
                 
                 <div id="course">
@@ -58,6 +63,7 @@
                     <option value="MERN Stack">MERN Stack</option>
                     <option value="Cloud Computing">Cloud Computing</option>
                 </select>
+                    <small class="error-message" id="course-error"></small>
                 </div>
                 
 
@@ -72,17 +78,21 @@
                         <option value="React">React</option>
                         <option value="Node.js">Node.js</option>
                     </select>
+                    <small class="error-message" id="skills-error"></small>
                 </div>
 
 
                 <div id="about-photo">
                     <label for="student-about">About Student</label>
                     <br>
-                    <textarea name="studentAbout" id="student-about" maxlength="200"></textarea>
+                    <textarea name="studentAbout" id="student-about" maxlength="200" required></textarea>
+                    <small id="about-counter">0 / 200</small>
+                    <small class="error-message" id="about-error"></small>
 
                     <br>
                     <label for="student-photo">Profile Photo</label>
-                    <input type="file" name="studentPhoto" id="student-photo" accept="image/*"></input>
+                    <input type="file" name="studentPhoto" id="student-photo" accept=".jpg,.jpeg,.png" required>
+                    <small class="error-message" id="photo-error"></small>
                     <br>
                 </div>
 
