@@ -1,0 +1,240 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #7c9dc8;
+    color: #01060d;
+    line-height: 1.6;
+    transition: 0.3s;
+}
+
+
+
+.header {
+    background: linear-gradient(135deg, #030a1a, #99a4c1);
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.header-content {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.theme-btn {
+    margin-top: 20px;
+    padding: 10px 18px;
+    border: 1px solid white;
+    border-radius: 6px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    background-color: white;
+    color: #13264f;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.form-section,
+.statistics-section,
+.search-section,
+.students-section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #19284f;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: white;
+    color: #1f2937;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #031c52;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 10px 0;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
+}
+
+.radio-group input,
+.checkbox-group input {
+    width: auto;
+}
+
+
+.character-counter {
+    text-align: right;
+    margin-top: 5px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.error-message {
+    min-height: 20px;
+    margin-top: 4px;
+    color: #dc2626;
+    font-size: 13px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.search-filter {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+}
+
+
+.student-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.student-card {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+
+.student-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.student-content {
+    padding: 18px;
+}
+
+.student-content h3 {
+    margin-bottom: 10px;
+    color: #1e3a8a;
+}
+
+.student-info {
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.student-info strong {
+    color: #334155;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 8px 0;
+}
+
+.skill-tag {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+
+.footer-btn {
+    text-align: center;
+   display: flex;
+   align-items: center;
+}
+
+
+
+
+
+
+
+
