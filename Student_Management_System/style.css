@@ -1,0 +1,239 @@
+/* Minimal, simple styles — reduced decoration for a handmade look */
+:root {
+    --bg: #ffffff;
+    --panel-bg: #f8f8f8;
+    --text: #222;
+    --muted: #666;
+    --accent: #2a6fdb; /* basic blue */
+    --danger: #c0392b;
+    --success: #16a34a;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.4;
+    font-size: 15px;
+}
+
+.page-header {
+    padding: 18px 14px;
+    text-align: center;
+    background: transparent;
+    border-bottom: 1px solid #eee
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600
+}
+
+.page-header p {
+    margin: 6px 0 0;
+    color: var(--muted);
+    font-size: 13px
+}
+
+.app-container {
+    max-width: 980px;
+    margin: 18px auto;
+    padding: 0 14px 40px
+}
+
+.panel {
+    background: var(--panel-bg);
+    border: 1px solid #e7e7e7;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 16px
+}
+
+h2 {
+    margin: 0 0 10px;
+    font-size: 16px
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap: 12px
+}
+
+.field {
+    display: flex;
+    flex-direction: column
+}
+
+.field.full-width {
+    grid-column: 1/-1
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 13px
+}
+
+input, select, textarea {
+    font: inherit;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff
+}
+
+textarea {
+    min-height: 90px
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    gap: 10px;
+    align-items: center
+}
+
+.char-counter {
+    font-size: 12px;
+    color: var(--muted);
+    text-align: right;
+    margin-top: 6px
+}
+
+.error-message {
+    color: var(--danger);
+    font-size: 12px;
+    min-height: 16px;
+    margin-top: 6px
+}
+
+.action-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px
+}
+
+button {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    background: #f2f2f2;
+    cursor: pointer
+}
+
+#submitBtn {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent)
+}
+
+.secondary-btn {
+    background: #fff
+}
+
+.toolbar-panel {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap
+}
+
+.toolbar-item {
+    flex: 1;
+    min-width: 180px
+}
+
+.stats-container {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap
+}
+
+.stats-item {
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    border-radius: 4px;
+    font-size: 13px
+}
+
+.student-container {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px
+}
+
+.student-card {
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    padding: 12px;
+    border-radius: 6px
+}
+
+.student-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 4px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 8px
+}
+
+.student-card h3 {
+    margin: 6px 0 8px;
+    font-size: 15px;
+    text-align: center
+}
+
+.student-card p {
+    margin: 4px 0;
+    font-size: 13px
+}
+
+.card-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px
+}
+
+.edit-btn {
+    background: var(--success);
+    color: #fff;
+    border-color: var(--success);
+    flex: 1
+}
+
+.delete-btn {
+    background: var(--danger);
+    color: #fff;
+    border-color: var(--danger);
+    flex: 1
+}
+
+.empty-message {
+    text-align: center;
+    color: var(--muted);
+    padding: 18px
+}
+
+.page-footer {
+    padding: 14px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px
+}
+
+@media (max-width: 760px) {
+    .form-grid {
+        grid-template-columns:1fr
+    }
+
+    .toolbar-panel {
+        flex-direction: column
+    }
+}

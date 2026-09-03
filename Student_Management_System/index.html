@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header class="page-header">
+    <div class="header-content">
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+    </div>
+</header>
+
+<main class="app-container">
+    <section class="form-panel panel">
+        <h2>Student Registration</h2>
+        <form id="studentForm" novalidate>
+            <div class="form-grid">
+                <div class="field">
+                    <label for="studentName">Student Name</label>
+                    <input
+                            type="text"
+                            id="studentName"
+                            name="studentName"
+                            placeholder="Enter student name"
+                    />
+                    <small class="error-message" data-error-for="studentName"></small>
+                </div>
+                
+                <div class="field">
+                    <label for="studentEmail">Email</label>
+                    <input
+                            type="email"
+                            id="studentEmail"
+                            name="studentEmail"
+                            placeholder="Enter student email"
+                    />
+                    <small class="error-message" data-error-for="studentEmail"></small>
+                </div>
+                
+                <div class="field">
+                    <label for="studentPhone">Phone Number</label>
+                    <input
+                            type="text"
+                            id="studentPhone"
+                            name="studentPhone"
+                            placeholder="Enter 10-digit phone number"
+                    />
+                    <small class="error-message" data-error-for="studentPhone"></small>
+                </div>
+                
+                <div class="field">
+                    <label for="studentDob">Date of Birth</label>
+                    <input type="date" id="studentDob" name="studentDob"/>
+                    <small class="error-message" data-error-for="studentDob"></small>
+                </div>
+                
+                <div class="field">
+                    <label>Gender</label>
+                    <div class="radio-group" id="genderGroup">
+                        <label><input type="radio" name="studentGender" value="Male"/> Male</label>
+                        <label><input type="radio" name="studentGender" value="Female"/> Female</label>
+                        <label><input type="radio" name="studentGender" value="Other"/> Other</label>
+                    </div>
+                    <small class="error-message" data-error-for="studentGender"></small>
+                </div>
+                
+                <div class="field">
+                    <label for="studentCourse">Course</label>
+                    <select id="studentCourse" name="studentCourse">
+                        <option value="">Select Course</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="UI/UX">UI/UX</option>
+                        <option value="Python">Python</option>
+                        <option value="Data Analytics">Data Analytics</option>
+                        <option value="MERN Stack">MERN Stack</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                    </select>
+                    <small class="error-message" data-error-for="studentCourse"></small>
+                </div>
+                
+                <div class="field full-width">
+                    <label>Skills</label>
+                    <div class="checkbox-group" id="skillGroup">
+                        <label><input type="checkbox" name="skill" value="HTML"/> HTML</label>
+                        <label><input type="checkbox" name="skill" value="CSS"/> CSS</label>
+                        <label><input type="checkbox" name="skill" value="JavaScript"/> JavaScript</label>
+                        <label><input type="checkbox" name="skill" value="Git"/> Git</label>
+                        <label><input type="checkbox" name="skill" value="React"/> React</label>
+                        <label><input type="checkbox" name="skill" value="Node.js"/> Node.js</label>
+                    </div>
+                    <small class="error-message" data-error-for="studentSkills"></small>
+                </div>
+                
+                <div class="field full-width">
+                    <label for="aboutStudent">About Student</label>
+                    <textarea
+                            id="aboutStudent"
+                            name="aboutStudent"
+                            rows="4"
+                            maxlength="200"
+                            placeholder="Write about the student (minimum 20 characters)"
+                    ></textarea>
+                    <div class="char-counter"><span id="charCount">0</span> / 200</div>
+                    <small class="error-message" data-error-for="aboutStudent"></small>
+                </div>
+                
+                <div class="field full-width">
+                    <label for="studentPhoto">Profile Photo</label>
+                    <input
+                            type="file"
+                            id="studentPhoto"
+                            name="studentPhoto"
+                            accept="image/jpeg,image/png,image/jpg"
+                    />
+                    <small class="error-message" data-error-for="studentPhoto"></small>
+                </div>
+            </div>
+            
+            <div class="action-row">
+                <button type="submit" id="submitBtn">Register Student</button>
+                <button type="button" id="resetBtn" class="secondary-btn">Reset Form</button>
+            </div>
+        </form>
+    </section>
+    
+    <section class="stats-panel panel">
+        <h2>Student Statistics</h2>
+        <div id="statsContainer" class="stats-container"></div>
+    </section>
+    
+    <section class="toolbar-panel panel">
+        <div class="toolbar-item">
+            <label for="searchStudent">Search Student</label>
+            <input
+                    type="text"
+                    id="searchStudent"
+                    placeholder="Search student by name..."
+            />
+        </div>
+        
+        <div class="toolbar-item">
+            <label for="courseFilter">Filter by Course</label>
+            <select id="courseFilter">
+                <option value="All Courses">All Courses</option>
+                <option value="Web Development">Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Python">Python</option>
+                <option value="Data Analytics">Data Analytics</option>
+                <option value="MERN Stack">MERN Stack</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+        </div>
+    </section>
+    
+    <section class="cards-panel panel">
+        <h2>Student Records</h2>
+        <div id="studentContainer" class="student-container"></div>
+    </section>
+</main>
+
+<footer class="page-footer">
+    <p>Student Management System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
