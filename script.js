@@ -309,9 +309,42 @@ studentForm.addEventListener("submit", async function (event) {
       photo: photoData
     };
     students.push(newStudent);
+    if (target.classList.contains("edit-btn")) {
+        const student = students.find(s => s.id === studentId);
+        if (!student) return;
+    
+        editingStudentId = student.id;
+        document.getElementById("studentName").value = student.name;
+        document.getElementById("studentEmail").value = student.email;
+        document.getElementById("studentPhone").value = student.phone;
+        document.getElementById("studentDob").value = student.dob;
+    
+        const genderRadio = document.querySelector(`input[name="gender"][value="${student.gender}"]`);
+        if (genderRadio) genderRadio.checked = true;
+    
+        document.getElementById("studentCourse").value = student.course;
+    
+        document.querySelectorAll('input[name="skills"]').forEach(cb => {
+          cb.checked = student.skills.includes(cb.value);
+        });
+    
+        aboutTextarea.value = student.about;
+        aboutCounter.textContent = `${student.about.length} / 200`;
+    
+        submitBtn.textContent = "Update Student";
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
   }
 
   saveToStorage();
   renderFilteredStudents();
   resetForm();
 });
+function resetForm() {
+  studentForm.reset();
+  aboutCounter.textContent = "0 / 200";
+  editingStudentId = null;
+  submitBtn.textContent = "Register Student";
+  clearErrors();
+}
+
