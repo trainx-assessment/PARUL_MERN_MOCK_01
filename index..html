@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Application Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+    </header>
+<main>
+            <section class="form-section">
+
+            <h2>Student Registration</h2>
+
+            <form id="studentForm">
+
+                <div class="form-group">
+                    <label for="studentName">Student Name</label>
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter student name"
+                        required
+                </div>
+
+                    <div class="form-group">
+                    <label for="studentEmail">Email</label>
+                    <input
+                        type="email"
+                        id="studentEmail"
+                        placeholder="Enter email"
+                        required
+                    >
+                </div>
+                    <div class="form-group">
+                    <label for="studentPhone">Phone</label>
+                    <input
+                        type="tel"
+                        id="studentPhone"
+                        placeholder="Enter phone number"
+                        required
+                    >
+                </div>
+
+                    <div class="form-group">
+                    <label for="studentCourse">Course</label>
+
+                    <select id="studentCourse" required>
+                        <option value="">Select Course</option>
+                        <option value="B.Tech CSE">B.Tech CSE</option>
+                        <option value="B.Tech AI & ML">B.Tech AI & ML</option>
+                        <option value="B.Tech AI & DS">B.Tech AI & DS</option>
+                        <option value="B.Tech CYBER SECURITY">B.Tech CYBER SECURITY</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="studentStatus">Status</label>
+
+                    <select id="studentStatus" required>
+                        <option value="">Select Status</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Rejected">Rejected</option>
+                    </select>
+                </div>
+
+
+                <button type="submit" id="submitButton">Submit
+                    
+                </button>
+
+            </form>
+
+        </section>
+
+
+        
+        
+
+
+        
+        <section class="search-section">
+
+            <h2>Search and Filter</h2>
+
+            <div class="search-container">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by student name..."
+                >
+
+                <select id="filterStatus">
+
+                    <option value="All">All Status</option>
+                    <option value="Approved">Approved</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Rejected">Rejected</option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        
+        
+
+    </main>
+
+
+   
+
+
+    
+
+</body>
+
+</html>
