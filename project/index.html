@@ -7,7 +7,107 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!-- Header Section -->
+
+    <header id="header">
+        <h1>Student Application Management System</h1>
+        <h4>Register and manage student applications</h4>
+    </header>
+    <!-- Main Section -->
+    <main id="main">
+        <!-- Student Registration Form -->
+        <section id="registration">
+            <form id="form">
+                <div>
+                    <label for="name">Student Name : </label>
+                    <input type="text" id="name" placeholder="John Ziemer" minlength="3" maxlength="40" required>
+                </div>
+                <p id="nameError" style="color: red;"></p>
+                <div>
+                    <label for="email">Email : </label>
+                    <input type="text" id="email" placeholder="xyz@gmail.com" required>
+                </div>
+                <p id="emailError" style="color: red;"></p>
+                <div>
+                    <label for="pnumber">Phone Number : </label>
+                    <input type="text" id="pnumber" placeholder="8924XXXXXX" required>
+                </div>
+                <p id="NumberError" style="color: red;"></p>
+                <div>
+                    <label for="dob">Date of Birth : </label>
+                    <input type="date" id="dob" required>
+                </div>
+                <p id="dobError" style="color: red;"></p>
+                <div>
+                    <label for="gender">Gender : </label>
+                    <div id="gender-box">
+                        <input type="radio" id="male" name="gender" class="gender" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" class="gender">
+                        <label for="female">Female</label>
+                        <input type="radio" id="other" name="gender" class="gender">
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+                <p id="genderError" style="color: red;"></p>
+                <div>
+                    <label for="course">Course : </label>
+                    <select name="course" id="course" style="padding-left: 10px; padding-right: 10px;" required>
+                        <option value="Select Course" disabled>Select Course</option>
+                        <option value="web-Dev">Web Development</option>
+                        <option value="UI/UX">UI/UX</option>
+                        <option value="python">Python</option>
+                        <option value="data-analyst">Data-Analitics</option>
+                        <option value="mern-stack">MERN Stack</option>
+                        <option value="cloud-computing">Cloud Computing</option>
+                    </select>
+                </div>
+                <p id="CourseError" style="color: red;"></p>
+                <div>
+                    <label for="skills">Skills</label>
+                    <div id="skill-box">
+                        <input type="checkbox" name="skills" id="html" required>
+                        <label for="html">HTML</label>
+                        <input type="checkbox" name="skills" id="css">
+                        <label for="css">CSS</label>
+                        <input type="checkbox" name="skills" id="js">
+                        <label for="js">JavaScript</label>
+                        <input type="checkbox" name="skills" id="git">
+                        <label for="git">Git</label>
+                        <input type="checkbox" name="skills" id="react">
+                        <label for="react">React</label>
+                        <input type="checkbox" name="skills" id="nodejs">
+                        <label for="nodejs">Node.js</label>
+                    </div>
+                </div>
+                <p id="skillError" style="color: red;"></p>
+                <div>
+                    <label for="about">About Student: </label>
+                    <input type="text" style="width: 250px;" maxlength="200" minlength="20" id="about" placeholder="Some Words about student" required>
+                </div>
+                <p id="aboutError" style="color: red;"></p>
+                <div>
+                    <label for="pfp">Profile Photo: </label>
+                    <input type="file" id="pfp" accept=".jpeg,.png,.jpg" required>
+                </div>
+                <p id="pfpError" style="color: red;"></p>
+                <div id="action-buttons">
+                    <button type="submit">Register Student</button>
+                    <button type="reset">Reset Form</button>
+                </div>
+            </form>
+        </section>
+
+    <!-- Students Statistics -->
+
+    <!-- Search and filter Section -->
+
+    <!-- Student Cards -->
+        <section id="cards">
+
+        </section>
+    </main>
+    <!-- Footer Section -->
     <script src="script.js"></script>
 </body>
 </html>
