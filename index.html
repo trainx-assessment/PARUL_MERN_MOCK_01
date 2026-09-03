@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Student Application Management System</h1>
+    </div>
+    <h4>Register and manage student applications</h4>
+    <button id="toggle">Toggle</button>
+    <main>
+
+        <form id="form_student">
+            <input type="text" placeholder="Student Name" >
+            <input class="email" type="email" placeholder="Student Email" >
+            <input class="no" type="text" placeholder="Student Phone Number" >
+            <input type="date" placeholder="Date of Birth" >
+            <div class="radio">
+                <label>
+                    <input type="radio" name="gender" value="male" >
+                    Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female" >
+                    Female
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="other" >
+                    Other
+                </label>
+            </div>
+            <!-- <label>
+                <input type="dropdown" name="Select Course">
+                <input type="option" value="Web Development"></input>
+                <input type="option" value="UI/UX"></input>   
+                <input type="option" value="Python"></input>  
+                <input type="option" value="Data Analytics"></input>
+                <input type="option" value="MERN Stack"></input>  
+                <input type="option" value="Cloud Computing"></input>
+            </label> -->
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="HTML" value="HTML" >
+                    HTML
+                </label>
+                <label>
+                    <input type="checkbox" name="CSS" value="CSS" >
+                    CSS
+                </label>
+                <label>
+                    <input type="checkbox" name="JavaScript" value="JavaScript" >
+                    JavaScript
+                </label>
+                <label>
+                    <input type="checkbox" name="Git" value="Git" >
+                    Git
+                </label>
+                <label>
+                    <input type="checkbox" name="React" value="React" >
+                    React
+                </label>
+                <label>
+                    <input type="checkbox" name="Node.js" value="Node.js" >
+                    Node.js
+                </label>
+            </div>
+            <input type="text" name="Maximum 200 characters" id="max" placeholder="Maximum 200 characters"
+                maxlength="200">
+            <input type="file" accept=".jpg,.jpeg,.png" >
+            <button type="submit">Register Student</button>
+            <button type="reset">Reset Form</button>
+        </form>
+        
+    </main>
+    <div class="page2">
+        <div class="card_container">
+            <div class="card1">
+                <p>Name:</p>
+                <p>email:</p>
+                <p>Phone:</p>
+                <p>DOB:</p>
+                <p>Gender:</p>
+                <p>Course:</p>
+                <p>Skills:</p>
+                <p>About Student:</p>
+                <p></p>Edit button:</p>
+                <p>Delete button:</p>
+            </div>
+            <div class="card2">
+                <p>Name:</p>
+                <p>email:</p>
+                <p>Phone:</p>
+                <p>DOB:</p>
+                <p>Gender:</p>
+                <p>Course:</p>
+                <p>Skills:</p>
+                <p>About Student:</p>
+                <p></p>Edit button:</p>
+                <p>Delete button:</p>
+            </div>
+            <div class="card3">
+                <p>Name:</p>
+                <p>email:</p>
+                <p>Phone:</p>
+                <p>DOB:</p>
+                <p>Gender:</p>
+                <p>Course:</p>
+                <p>Skills:</p>
+                <p>About Student:</p>
+                <p></p>Edit button:</p>
+                <p>Delete button:</p>
+            </div>
+        </div>
+    </div>
+    <div class="page3">
+        <h1></h1>
+    </div>
+    <footer>
+        
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>

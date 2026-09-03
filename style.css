@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    height: 10vh;
+    width: 100%;
+    background-color: cadetblue;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .card_container {
+        height: 300px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .page2{
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+#toggle {
+    background-color: cadetblue;
+    color: white;
+    margin-left: 520px;
+    margin-top: 20px;
+    height: 30px;
+    width: 10%;
+    border-radius: 5px;
+    border: none;
+}
+
+.main {
+    height: 100vh;
+    width: 100vh;
+}
+
+h4 {
+    font-size: larger;
+    color: rgb(79, 134, 136);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#form_student {
+    margin-left: 350px;
+    border-radius: 10px;
+    height: 80vh;
+    width: 80vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    background-color: cadetblue;
+}
+
+footer {
+    margin-top: 70px;
+    color: white;
+    height: 10vh;
+    width: 100%;
+    background-color: cadetblue;
+    padding: 20px;
+    text-align: center;
+}
+
+#form_student input[type="text"] {
+    background: white;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 30px;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+}
+
+#form_student input[type="email"] {
+    background: white;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 30px;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+}
+
+#form_student input[type="date"] {
+    background: white;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 30px;
+    width: 80%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+#form_student input[type="file"] {
+    background: white;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 30px;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+}
+
+#form_student input[type="dropdown"] {
+    background: white;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 30px;
+    width: 40%;
+    border-radius: 5px;
+}
+
+.radio {
+    margin-left: 20px;
+    justify-content: space-between;
+    height: 30px;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+}
+
+.checkbox {
+    margin-left: 20px;
+    justify-content: space-between;
+    height: 30px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+}
+
+.page2 {
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border: none;
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 30px;
+    width: 40%;
+    border-radius: 5px;
+}
+
+.card_container {
+    height: 70vh;
+    margin-left: 90vh;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.card1 {
+    padding-bottom: 5px;
+    font-size: larger;
+    color: white;
+    border-radius: 20px;
+    height: 50vh;
+    width: 50vh;
+    background-color: cadetblue;
+    padding-left: 20px;
+    padding-top: 20px;
+
+}
+
+.card2 {
+    padding-bottom: 5px;
+    font-size: larger;
+    color: white;
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 50vh;
+    border-radius: 20px;
+    width: 50vh;
+    background-color: cadetblue;
+}
+
+.card3 {
+    color: white;
+    padding-bottom: 5px;
+    font-size: larger;
+    border-radius: 20px;
+    height: 50vh;
+    width: 50vh;
+    background-color: cadetblue;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.max {
+    margin-bottom: 0px;
+}
