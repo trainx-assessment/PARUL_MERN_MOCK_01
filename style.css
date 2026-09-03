@@ -70,6 +70,15 @@ textarea:focus {
     margin: 0 14px 0 4px;
 }
 
+#student-skills label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+#student-skills input {
+    margin-right: 6px;
+}
+
 textarea {
     min-height: 100px;
     resize: vertical;

@@ -123,7 +123,9 @@ studentCardsContainer.addEventListener("click", (event) => {
         document.getElementById("student-dob").value = student.dob;
         document.querySelector('input[name="studentGender"][value="' + student.gender + '"]').checked = true;
         document.getElementById("student-course").value = student.course;
-        document.getElementById("student-skills").value = student.skills[0];
+        document.querySelectorAll('input[name="studentSkills"]').forEach((skillCheckbox) => {
+            skillCheckbox.checked = student.skills.includes(skillCheckbox.value);
+        });
         document.getElementById("student-about").value = student.about;
         document.getElementById("about-counter").innerText = student.about.length + " / 200";
 
@@ -153,7 +155,11 @@ form.addEventListener("submit", (event) => {
     const dob = document.getElementById("student-dob").value;
     const gender = document.querySelector('input[name="studentGender"]:checked');
     const course = document.getElementById("student-course").value;
-    const skills = document.getElementById("student-skills").value;
+    const skills = [];
+    const checkedSkills = document.querySelectorAll('input[name="studentSkills"]:checked');
+    checkedSkills.forEach((skillCheckbox) => {
+        skills.push(skillCheckbox.value);
+    });
     const about = document.getElementById("student-about").value.trim();
     const photo = document.getElementById("student-photo").files[0];
     let valid = true;
@@ -240,7 +246,7 @@ form.addEventListener("submit", (event) => {
         valid = false;
     }
 
-    if (skills === "") {
+    if (skills.length === 0) {
         document.getElementById("skills-error").innerText = "Select at least one skill.";
         valid = false;
     }
@@ -278,7 +284,7 @@ form.addEventListener("submit", (event) => {
         students[studentIndex].dob = dob;
         students[studentIndex].gender = gender.value;
         students[studentIndex].course = course;
-        students[studentIndex].skills = [skills];
+        students[studentIndex].skills = skills;
         students[studentIndex].about = about;
 
         if (photo !== undefined) {
@@ -301,7 +307,7 @@ form.addEventListener("submit", (event) => {
         dob,
         gender: gender.value,
         course,
-        skills: [skills],
+        skills: skills,
         about,
         photo: photo.name
     };
@@ -319,7 +325,9 @@ document.getElementById("student-dob").addEventListener("change", () => document
 document.getElementById("student-male").addEventListener("change", () => document.getElementById("gender-error").innerText = "");
 document.getElementById("student-female").addEventListener("change", () => document.getElementById("gender-error").innerText = "");
 document.getElementById("student-course").addEventListener("change", () => document.getElementById("course-error").innerText = "");
-document.getElementById("student-skills").addEventListener("change", () => document.getElementById("skills-error").innerText = "");
+document.querySelectorAll('input[name="studentSkills"]').forEach((skillCheckbox) => {
+    skillCheckbox.addEventListener("change", () => document.getElementById("skills-error").innerText = "");
+});
 document.getElementById("student-photo").addEventListener("change", () => document.getElementById("photo-error").innerText = "");
 
 document.getElementById("student-about").addEventListener("input", () => {
