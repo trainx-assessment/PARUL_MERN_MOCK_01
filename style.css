@@ -1,0 +1,67 @@
+@media screen {
+    max-height: 768px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #d0da50;
+    padding: 5px;
+    text-align: center;
+    height: 40px;
+    border-style: double;
+    position: relative;
+}
+
+.title-1 {
+    text-align: center;
+
+}
+
+#Student-Form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #b5d2e6;
+    align-items: center;
+    border-style: groove;
+    border-radius: 10px 10px 10px 10px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.cards {
+    height: 300px;
+    width: 100%;
+    margin: 20px;
+    margin-top: 30px;
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.child {
+    background-color: rgb(98, 151, 151);
+    color: white;
+    height: 220px;
+    width: 25%;
+    border-radius: 3px;
+    border-style: dotted;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    border-radius: 2px;
+}
