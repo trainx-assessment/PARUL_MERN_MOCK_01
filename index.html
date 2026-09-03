@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="head">
+        <h1>Student Application Management System</h1>
+        <h3>Register and manage student applications and any inquire you can ask</h3>
+    </header>
+    <br>
+    <section class="section">
+        <form class="form">
+            Name :  <input type="text" id="name">
+            <small id="namee"></small>
+            <br><br>
+            Email :  <input type="email" id="email">
+            <small id="emaile"></small>
+            <br><br>
+            Phone Number :  <input type="text" id="phoneNo" maxlength="10">
+            <small id="phoneNoe"></small>
+            <br><br>
+            Date ot Birth :  <input type="date" id="birth">
+            <small id="birthe"></small>
+            <br><br>
+            Gender :  <input type="radio">Male <input type="radio"> Female <input type="radio"> Other
+            <br><br>
+            Course :  <select id="course">
+                <option>Web Development</option>
+                <option>UI/UX</option>
+                <option>Python</option>
+                <option>Data Analytics</option>
+                <option>MERN Stack</option>
+                <option>Cloud Computin</option>
+            </select>
+            <small id="coursee"></small>
+                
+            <br><br>
+            Skills : <input type="checkbox">HTML
+                     <input type="checkbox">CSS
+                     <input type="checkbox">JavaScript
+                     <input type="checkbox">Git
+                     <input type="checkbox">React
+                     <input type="checkbox">Node.js
+            <br><br>
+            About Student :  <input type="text" id="about" maxlength="200" minlength="20">
+            <h4 id="aboute"></h4>
+            <br><br>
+            Profile Photo :  <input type="file" id="photo">
+            <small id="aboutee"></small>
+            <br><br>
+            <button class="register">Register Student</button>
+            <button class="reset">Reset Form</button>
+            <small id="forme"></small>
+        </form>
+    </section>
+    <br><br>
+
+    <section class="card">
+        <div class="cards">
+            <div class="stu1">
+                Student-1  <button class="details">Show Details</button>
+
+            </div>
+            <div class="stu2">
+                Student-2  <button class="details">Show Details</button>
+
+            </div>
+            <div class="stu3">
+                Student-3  <button class="details">Show Details</button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">Welcome to oue college and Thank you register the form</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

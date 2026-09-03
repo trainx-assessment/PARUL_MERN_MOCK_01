@@ -1,0 +1,58 @@
+/* @media(max-width: 768px);
+@media(max-width: 480px); */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 600px;
+    width: 500px;
+    border: none;
+    background-color: rgb(249, 244, 244);
+}
+#name,#email,#phoneNo,#birth,#course,#about {
+    border-radius: 3px;
+}
+.register,.reset{
+    margin-top:10px;
+    padding:5px 10px;
+    border:none;
+    border-radius:10px;
+    color:black;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+.details {
+    border: none;
+    border-radius: 3px;
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+}
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.stu1,.stu2,.stu3 {
+    width: 100px;
+    height: 100px;
+}
+.footer {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+}
