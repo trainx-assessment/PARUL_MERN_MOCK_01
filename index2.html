@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .app-header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        #footer {
+            background-color: #f1f1f1;
+            color: #333;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="app-header">
+        Student Application Management System
+    </header>
+    <form>
+        <h1>Student Registration</h1>
+        <label for="search">Search</label>
+        <input type="search" id="search" name="search" placeholder="Enter the student's name " >
+        <h3>Register and Manage Students</h3>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter full name" required>
+        <br><br>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter email
+    address" required>
+        <br><br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+        <br><br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>    
+        <br>
+        <br>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select gender  </option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>    
+            <br>
+            <br>
+        </select>
+        <br>
+        <br>
+        <label for="student-statistics" name="student-statistics"></label>
+
+        <label for="course">Course:</label>
+        
+ 
+        <select id="course" name="course" required>
+            <option value="">Select a course</option>
+            <option value="Web Development">Web Development</option>
+            <option value="UI/UX">UI/UX</option>
+            <option value="PYTHON">PYTHON</option>
+            <option value="MERN">MERN</option>
+            <option value="CLOUD COMPUTING">CLOUD COMPUTING</option>
+        </select>
+
+        <br><br>
+       <label for="skills" name="skills">Skills:</label>
+       <label></label><br>
+       <input type="checkbox" name="skills" value="HTML" id="skillHtml">
+       <label for="skillHtml" class="inline-label">HTML</label>
+
+       <input type="checkbox" name="skills" value="CSS" id="skillCss">
+       <label for="skillCss" class="inline-label">CSS</label>
+
+       <input type="checkbox" name="skills" value="JavaScript" id="skillJs">
+       <label for="skillJs" class="inline-label">JavaScript</label>
+
+       <input type="checkbox" name="skills" value="Git" id="skillGit">
+       <label for="skillGit" class="inline-label">Git</label>
+
+       <input type="checkbox" name="skills" value="React" id="skillReact">
+       <label for="skillReact" class="inline-label">React</label>
+
+       <input type="checkbox" name="skills" value="Node.js" id="skillNode">
+       <label for="skillNode" class="inline-label">Node.js</label>
+       <span class="error-msg" id="skillsError"></span>
+       <br>
+       <br>
+       <label for="studentAbout">About Student (Maximum 200 characters)</label>
+       <br>
+
+       <textarea id="studentAbout" name="studentAbout" maxlength="200" rows="4"></textarea>
+       <span id="charCounter">0 / 200</span>
+       <span class="error-msg" id="aboutError"></span>
+       <br>
+       <br>
+
+        <label for="grade">Grade / CGPA:</label>
+        <input type="number" id="grade" name="grade" placeholder="Enter CGPA (0 - 10)" min="0" max="10" step="0.1" required>
+        <br><br>
+        <label for="photo" id="photo" name="photo" placeholder="Upload Photo">Upload Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*">    
+<br>
+<br>
+<button class ="submit" type="submit">Register Student</button>
+<button type="reset">Reset Form</button>
+<br>
+<br>
+
+<h2>Student Statistics</h2>
+<p id="totalStudents">Total Students: 0</p>
+<ul id="courseStats">
+    <li>Web Development: <span id="countWeb"><button>0</button></span></li>
+    <li>UI/UX: <span id="countUiux"><button>0</button></span></li>
+    <li>Python: <span id="countPython"><button>0</button></span></li>
+    <li>Data Analytics: <span id="countData"><button>0</button></span></li>
+    <li>MERN Stack: <span id="countMern"><button>0</button></span></li>
+    <li>Cloud Computing: <span id="countCloud"><button>0</button></span></li>
+</ul>
+
+
+
+ 
+
+<footer id="footer">@2026 Student Application Management System. All rights reserved.</footer>
+
+
+  
+        
+
+        
+
+    </form>
+
+    <script src="scriptt.js">
+ 
+    </script>
+    
+</body>
+</html>
