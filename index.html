@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Application Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Student Application Manager</h1>
+
+
+    <form id="studentForm">
+        <div>
+            <label for="name">Student Name:</label>
+            <input type="text" id="name" placeholder="Enter name">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter email">
+        </div>
+        <div>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="Enter 10-digit number">
+        </div>
+        <div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob">
+        </div>
+        <div>
+            <label>Gender:</label><br>
+            <input type="radio" name="gender" value="Male" id="genderMale">
+            <label for="genderMale">Male</label>
+            <input type="radio" name="gender" value="Female" id="genderFemale">
+            <label for="genderFemale">Female</label>
+        </div>
+        <div>
+            <label for="course">Course:</label>
+            <select id="course">
+                <option value="">Select Course</option>
+                <option>Web Development</option>
+                <option>UI/UX</option>
+                <option>Python</option>
+                <option>Data Analytics</option>
+            </select>
+        </div>
+        <div>
+            <label>Skills:</label><br>
+            <input type="checkbox" name="skill" id="skillHtml" value="HTML">
+            <label for="skillHtml">HTML</label>
+            <input type="checkbox" name="skill" id="skillCss" value="CSS">
+            <label for="skillCss">CSS</label>
+            <input type="checkbox" name="skill" id="skillJs" value="JavaScript">
+            <label for="skillJs">JavaScript</label>
+            <input type="checkbox" name="skill" id="skillGit" value="Git">
+            <label for="skillGit">Git</label>
+        </div>
+        <div>
+            <label for="about">About Student:</label><br>
+            <textarea id="about" rows="3" cols="30" placeholder="Describe student..."></textarea>
+        </div>
+        <div>
+            <label for="photo">Profile Photo:</label>
+            <input type="file" id="photo" accept="image/*">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <hr>
+
+    <!-- Student List Section -->
+    <div class="students-section">
+        <h2>Total Students: <span id="total">0</span></h2>
+        <div id="studentList" class="card-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
