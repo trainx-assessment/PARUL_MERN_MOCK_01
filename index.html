@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Application Management System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="siteHeader">
+    <div class="headerInner">
+        <div class="headerText">
+            <h1>Student Application Management System</h1>
+            <p class="subtitle">Register and manage student applications</p>
+        </div>
+        <button type="button" id="themeToggleBtn" class="themeToggleBtn">Dark Mode</button>
+    </div>
+</header>
+
+<main class="pageWrapper">
+
+    <section class="panel" id="registrationSection">
+        <h2 class="panelHeading">Register a New Student</h2>
+        <form id="studentForm" novalidate>
+
+            <div class="formGrid">
+
+                <div class="fieldGroup">
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName" name="studentName" placeholder="e.g. Rahul Sharma">
+                    <span class="fieldError" id="studentNameError"></span>
+                </div>
+
+                <div class="fieldGroup">
+                    <label for="studentEmail">Email</label>
+                    <input type="email" id="studentEmail" name="studentEmail" placeholder="e.g. rahul@gmail.com">
+                    <span class="fieldError" id="studentEmailError"></span>
+                </div>
+
+                <div class="fieldGroup">
+                    <label for="studentPhone">Phone Number</label>
+                    <input type="text" id="studentPhone" name="studentPhone" placeholder="10 digit mobile number">
+                    <span class="fieldError" id="studentPhoneError"></span>
+                </div>
+
+                <div class="fieldGroup">
+                    <label for="studentDob">Date of Birth</label>
+                    <input type="date" id="studentDob" name="studentDob">
+                    <span class="fieldError" id="studentDobError"></span>
+                </div>
+
+                <div class="fieldGroup">
+                    <span class="groupLabel">Gender</span>
+                    <div class="inlineOptions">
+                        <label class="inlineLabel"><input type="radio" name="gender" value="Male"> Male</label>
+                        <label class="inlineLabel"><input type="radio" name="gender" value="Female"> Female</label>
+                        <label class="inlineLabel"><input type="radio" name="gender" value="Other"> Other</label>
+                    </div>
+                    <span class="fieldError" id="genderError"></span>
+                </div>
+
+                <div class="fieldGroup">
+                    <label for="studentCourse">Course</label>
+                    <select id="studentCourse" name="studentCourse">
+                        <option value="">Select Course</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="UI/UX">UI/UX</option>
+                        <option value="Python">Python</option>
+                        <option value="Data Analytics">Data Analytics</option>
+                        <option value="MERN Stack">MERN Stack</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                    </select>
+                    <span class="fieldError" id="studentCourseError"></span>
+                </div>
+
+                <div class="fieldGroup fullWidth">
+                    <span class="groupLabel">Skills</span>
+                    <div class="inlineOptions">
+                        <label class="inlineLabel"><input type="checkbox" name="skills" value="HTML"> HTML</label>
+                        <label class="inlineLabel"><input type="checkbox" name="skills" value="CSS"> CSS</label>
+                        <label class="inlineLabel"><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+                        <label class="inlineLabel"><input type="checkbox" name="skills" value="Git"> Git</label>
+                        <label class="inlineLabel"><input type="checkbox" name="skills" value="React"> React</label>
+                        <label class="inlineLabel"><input type="checkbox" name="skills" value="Node.js"> Node.js</label>
+                    </div>
+                    <span class="fieldError" id="skillsError"></span>
+                </div>
+
+                <div class="fieldGroup fullWidth">
+                    <label for="aboutStudent">About Student</label>
+                    <textarea id="aboutStudent" name="aboutStudent" rows="4" maxlength="200" placeholder="Tell us a little about the student (maximum 200 characters)"></textarea>
+                    <div class="counterRow">
+                        <span class="fieldError" id="aboutStudentError"></span>
+                        <span class="charCounter" id="aboutCharCounter">0 / 200</span>
+                    </div>
+                </div>
+
+                <div class="fieldGroup fullWidth">
+                    <label for="profilePhoto">Profile Photo</label>
+                    <input type="file" id="profilePhoto" name="profilePhoto" accept="image/png, image/jpeg, image/jpg">
+                    <span class="fieldError" id="profilePhotoError"></span>
+                </div>
+
+            </div>
+
+            <div class="formButtons">
+                <button type="submit" id="registerBtn" class="primaryBtn">Register Student</button>
+                <button type="reset" id="resetBtn" class="secondaryBtn">Reset Form</button>
+            </div>
+
+        </form>
+    </section>
+
+    <section class="panel" id="statsSection">
+        <h2 class="panelHeading">Student Statistics</h2>
+        <div class="statsRow">
+            <div class="statCard totalStatCard">
+                <span class="statValue" id="totalStudentsCount">0</span>
+                <span class="statLabel">Total Students</span>
+            </div>
+            <div class="statCard">
+                <span class="statValue" id="statWebDevelopment">0</span>
+                <span class="statLabel">Web Development</span>
+            </div>
+            <div class="statCard">
+                <span class="statValue" id="statUIUX">0</span>
+                <span class="statLabel">UI/UX</span>
+            </div>
+            <div class="statCard">
+                <span class="statValue" id="statPython">0</span>
+                <span class="statLabel">Python</span>
+            </div>
+            <div class="statCard">
+                <span class="statValue" id="statDataAnalytics">0</span>
+                <span class="statLabel">Data Analytics</span>
+            </div>
+            <div class="statCard">
+                <span class="statValue" id="statMernStack">0</span>
+                <span class="statLabel">MERN Stack</span>
+            </div>
+            <div class="statCard">
+                <span class="statValue" id="statCloudComputing">0</span>
+                <span class="statLabel">Cloud Computing</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel" id="searchSection">
+        <h2 class="panelHeading">Find Students</h2>
+        <div class="searchRow">
+            <input type="text" id="searchInput" placeholder="Search student by name...">
+            <select id="courseFilter">
+                <option value="">All Courses</option>
+                <option value="Web Development">Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Python">Python</option>
+                <option value="Data Analytics">Data Analytics</option>
+                <option value="MERN Stack">MERN Stack</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="panel" id="directorySection">
+        <h2 class="panelHeading">Student Directory</h2>
+        <div class="studentCardsContainer" id="studentCardsContainer"></div>
+        <p class="emptyState" id="emptyStateMessage">No students found</p>
+    </section>
+
+</main>
+
+<footer class="siteFooter">
+    <p>Student Application Management System, built for the classroom practical assessment.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
