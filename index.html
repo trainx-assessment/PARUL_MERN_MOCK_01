@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+    </header>
+    <form id="studentForm" novalidate>
+        <label for="name">Student Name:</label>
+        <input type="text" id="name" name="name" required>
+        <small class="error-message" id="nameError"></small>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <small class="error-message" id="emailError"></small>
+        <br>
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required>
+        <small class="error-message" id="phoneError"></small>
+        <br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <small class="error-message" id="dobError"></small>
+        <br>
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female" required>
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="Other" required>
+        <label for="other">Other</label>
+        <small class="error-message" id="genderError"></small>
+        <br>
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+            <option value="">Select Course</option>
+            <option value="Web Development">Web Development</option>
+            <option value="UI/UX">UI/UX</option>
+            <option value="Python">Python</option>
+            <option value="Data Analytics">Data Analytics</option>
+            <option value="MERN Stack">MERN Stack</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+        </select>
+        <small class="error-message" id="courseError"></small>
+        
+        <label for="skill">Skills:</label>
+        
+        <input type="checkbox" id="html" name="skill" value="HTML" required>
+         <label for="html">HTML</label>
+         
+         <input type="checkbox" id="css" name="skill" value="css" required>
+         <label for="css">CSS</label>
+         
+         <input type="checkbox" id="javascript" name="skill" value="javascript" required>
+         <label for="javascript">JAVASCRIPT</label>
+         
+         <input type="checkbox" id="git" name="skill" value="git" required>
+         <label for="git">GIT</label>
+         
+         <input type="checkbox" id="react" name="skill" value="react" required>
+         <label for="react">REACT</label>
+         
+         <input type="checkbox" id="nodejs" name="skill" value="nodejs" required>
+         <label for="nodejs">Node.Js</label>
+            <small class="error-message" id="skillError"></small>
+         <br>
+            <label for="about">About Student:</label>
+            <textarea name="about" id="about" maxlength="200" required></textarea>
+            <small id="aboutCounter">0 / 200</small>
+            <small class="error-message" id="aboutError"></small>
+            <br>
+            <label for="photo">Profile Photo:</label>
+            <input type="file" name="photo" id="photo" accept=".jpg,.jpeg,.png,image/jpeg,image/png" required>
+            <small class="error-message" id="photoError"></small>
+            <br>
+            <button type="submit" id="register">Register Student</button>
+            <button type="reset" id="reset">Reset Form</button>
+            <p id="formMessage" role="status" aria-live="polite"></p>
+        </form>
+        <section aria-labelledby="studentsHeading">
+            <h2 id="studentsHeading">Registered Students</h2>
+            <div id="studentCards" class="student-cards"></div>
+        </section>
+    <script src="script.js"></script>
+</body>
+</html>
