@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Student Application Management System</h1>
+</header>
+
+<main>
+
+
+    <section>
+        <h2>Student Registration</h2>
+
+        <form id="studentForm">
+
+            <input  class="name" type="text" id="name" placeholder="Student Name">
+
+            <input class="email" type="email" id="email" placeholder="Email">
+             
+            <input class="phone" type="text" id="phone" placeholder="Phone Number">
+             <input class="date" type="date" id="dob" placeholder="Date Of Birth">
+  <p style="margin-bottom: 15px;">Select Your Gender</p>           
+ <div class="gender">
+                
+              <label>
+              
+  <input type="radio" name="gender" value="male">
+  Male
+</label>
+
+<label>
+  <input type="radio" name="gender" value="female">
+  Female
+</label>
+<label>
+  <input type="radio" name="gender" value="Other">
+  Other
+</label>
+ </div>
+            <select class="course">
+                <option value="">Select Course</option>
+                <option>UI/UX</option>
+                <option>Python</option>
+                <option>Data Analytics</option>
+                <option>MERN Stack</option>
+                  <option>Cloud Computing</option>
+            </select>
+             <p style="margin-bottom: 15px;">Skills</p>
+<div class="skills">
+<input type="checkbox" name="skills" value="HTML"> HTML
+<input type="checkbox" name="skills" value="CSS"> CSS
+<input type="checkbox" name="skills" value="JavaScript"> JavaScript
+<input type="checkbox" name="skills" value="Git"> Git
+<input type="checkbox" name="skills" value="React"> React
+<input type="checkbox" name="skills" value="Node.js"> Node.js
+</div>
+<p style="margin-bottom: 15px;">Give image</p>
+<input style="background-color: white; margin-top:-15px; margin-bottom:15px;" type="file">
+<br>
+<textarea class="text" style="margin-bottom:15px ; margin-left:-10px; border-radius: 10px;"
+  placeholder="enter Your text" 
+  rows="4" 
+  cols="50" 
+  maxlength="200">
+</textarea>
+
+
+<br>
+
+
+   
+<button class="btn" type="submit">Register Student</button>
+<button type="reset">Reset Form</button>
+
+        </form>
+    </section>
+
+
+   <section>
+    <h2>Registered Students</h2>
+
+    <div class="container"></div>
+</section>
+
+    <section>
+        
+        <h2>Search Students</h2>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search student"
+        >
+
+        <select id="Course">
+            <option value="All">All Courses</option>
+            <option>UI/UX</option>
+                <option>Python</option>
+                <option>Data Analytics</option>
+                <option>MERN Stack</option>
+                  <option>Cloud Computing</option>
+        </select>
+    </section>
+
+    
+
+</main>
+
+
+<footer>
+    <H1> By Ritika Mandal</H1>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
