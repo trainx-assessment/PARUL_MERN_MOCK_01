@@ -1,0 +1,65 @@
+body {
+    padding: 0%;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+
+}
+
+h4 {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    padding: 10px;
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 600;
+    height: 450;
+
+}
+
+#student_name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#student_email {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#student_number {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#student_DOB {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+}
