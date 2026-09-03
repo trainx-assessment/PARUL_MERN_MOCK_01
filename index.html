@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Header Section -->
+
+        <header id="header">
+            <h2>Student Application Management System</h2>
+            <p>Register and manage student applications</p>
+        </header><br>
+
+        <!-- Basic Information -->
+
+        <div class="form-container">
+            <form>
+                <label for="username">Name: </label>
+                <input type="text" id="username" placeholder="John Doe" required><br>
+
+                <label for="email">Email: </label>
+                <input type="email" id="email" placeholder="abc@gmail.com" required><br>
+
+                <label for="phonenumber">Phone Number: </label>
+                <input type="text" id="phonenumber" placeholder="9876543210" required><br>
+
+                <label for="DOB">DOB: </label>
+                <input type="date" id="DOB" required><br><br>
+
+                <!-- Gender -->
+
+                <label for="gender">Gender: </label>
+                <p>Select your gender:</p>
+
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label><br><br>
+
+                <!-- Course -->
+
+                <label for="course">Choose your Course:</label>
+
+                <select name="course" id="course">
+
+                    <option value="" disabled selected>Select Course</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Python">Python</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="MERN Stack">MERN Stack</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                </select><br><br>
+
+                <!-- Skills -->
+
+                <label for="skills">Skills: </label><br><br>
+                <input type="checkbox" id="html" name="skills" value="HTML">
+                <label for="html">HTML</label>
+                <input type="checkbox" id="css" name="skills" value="CSS">
+                <label for="css">CSS</label>
+                <input type="checkbox" id="js" name="skills" value="JavaScript">
+                <label for="js">JavaScript</label>
+                <input type="checkbox" id="git" name="skills" value="Git">
+                <label for="git">Git</label>
+                <input type="checkbox" id="react" name="skills" value="React">
+                <label for="react">React</label>
+                <input type="checkbox" id="nodejs" name="skills" value="Node.js">
+                <label for="nodejs">Node.js</label><br><br>
+                
+                <!-- About Section -->
+
+                <label for="about">About: </label><br><br>
+                <textarea id="about"></textarea><br><br>
+
+                <!-- Profile Picture -->
+
+                <label for="pfp">Profile Photo: </label>
+                <input id="pfp" type="file"><br><br>
+
+                <!-- Register and Reset Buttons -->
+                <div>
+                    <button id="registerBtn" type="submit">Register Student</button>
+                    <button id="resetBtn" type="reset">Reset Form</button>
+                </div>
+
+            </form>
+        </div><br>
+
+        <div id="registeredStudents">
+            <h3>Registered Students: <span id="studentCount">0</span></h3>
+            <div class="student-filters">
+                <input type="search" id="studentSearch" placeholder="Search students..." aria-label="Search students">
+                <select id="courseFilter" aria-label="Filter students by course">
+                    <option value="">All Courses</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Python">Python</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="MERN Stack">MERN Stack</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                </select>
+            </div>
+            <div id="studentList" class="student-list"></div>
+        </div>
+        <footer>
+            <p>&copy; Shakti</p>
+        </footer>
+    </div>
+</body>
+
+</html>
