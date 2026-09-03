@@ -1,0 +1,8 @@
+About Me
+My name is Saavi Kotadia. 
+Batch No: Batch 11
+Enrollment no: 2403031460584
+Parul id: 2403031460584@paruluniversity.ac.in
+I created this Student Management System as a frontend project using HTML, CSS, and JavaScript. 
+I designed the pages to make student registration and management simple and easy to use.
+
