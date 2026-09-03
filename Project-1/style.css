@@ -1,13 +1,13 @@
 :root {
-  --primary-color: #2f6fed;
-  --primary-dark: #214ea8;
-  --secondary-color: #eaf1ff;
-  --accent-color: #f5f7ff;
+  --primary-color: #11e33b;
+  --primary-dark: #305aad;
+  --secondary-color: #bfe330;
+  --accent-color: #d35b2b;
   --danger-color: #d93025;
   --text-color: #1f2937;
   --muted-text: #6b7280;
-  --border-color: #dfe7f5;
-  --background-color: #f4f7fb;
+  --border-color: #5ee96c;
+  --background-color: #a2bfe3;
   --white: #ffffff;
   --shadow: 0 12px 30px rgba(31, 41, 55, 0.08);
 }
