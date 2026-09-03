@@ -676,7 +676,6 @@ Do not create a duplicate student while editing.
 
 # Task 10 — Search Students
 
-### Suggested Time: 10 Minutes
 
 Add a search input.
 
@@ -742,7 +741,7 @@ No students found
 
 # Task 11 — Filter Students by Course
 
-### Suggested Time: 10 Minutes
+### Suggested Time: 10 
 
 Create a course filter dropdown.
 
@@ -851,68 +850,50 @@ Fix the code **without rewriting the complete program**.
 <div id="studentContainer"></div>
 ```
 
-### Buggy JavaScript
+### Fixed JavaScript
 
 ```javascript
-const form =
-    document.querySelector("#studentForm");
+const form = document.querySelector('#studentForm');
+const studentName = document.querySelector('#studentName');
+const studentContainer = document.querySelector('#studentContainer');
 
-const studentName =
-    document.querySelector("#studentName");
+form.addEventListener('submit', function (event) {
+  event.preventDefault(); // stop form from submitting/reloading
 
-const studentContainer =
-    document.querySelector("#studentContainer");
+  const name = studentName.value || '';
+  if (name.trim() === '') {
+    alert('Name is required');
+    return; // don't create a card when validation fails
+  }
 
-form.addEventListener(
-    "submit",
-    function (event) {
+  const card = document.createElement('div');
+  card.classList.add('student-card');
 
-        const name =
-            studentName.value;
+  const heading = document.createElement('h3');
+  heading.textContent = name.trim();
 
-        if (name.trim() === "") {
-            alert("Name is required");
-        }
+  const deleteButton = document.createElement('button');
+  deleteButton.type = 'button';
+  deleteButton.className = 'delete-btn';
+  deleteButton.textContent = 'Delete';
 
-        const card =
-            document.createElement("div");
+  card.appendChild(heading);
+  card.appendChild(deleteButton);
 
-        card.classList.add("student-card");
+  studentContainer.appendChild(card);
 
-        const heading =
-            document.createElement("h3");
+  // clear and focus the input after successful submission
+  studentName.value = '';
+  studentName.focus();
+});
 
-        heading.textContent =
-            name;
-
-        const deleteButton =
-            document.createElement("button");
-
-        deleteButton.textContent =
-            "Delete";
-
-        card.appendChild(heading);
-        card.appendChild(deleteButton);
-
-        studentContainer.appendChild(card);
-    }
-);
-
-studentContainer.addEventListener(
-    "click",
-    function (event) {
-
-        if (
-            event.target.classList.contains("delete-btn")
-        ) {
-
-            const card =
-                event.target.parentElement;
-
-            card.remove();
-        }
-    }
-);
+// Use event delegation and closest() to locate the card to remove
+studentContainer.addEventListener('click', function (event) {
+  const btn = event.target.closest('.delete-btn');
+  if (!btn) return;
+  const card = btn.closest('.student-card');
+  if (card) card.remove();
+});
 ```
 
 ## Expected Behaviour

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Application Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Student Application Management System</h1>
+    <p class="subtitle">Register and manage student applications</p>
+    <button id="themeToggleBtn" class="theme-toggle" type="button">Dark Mode</button>
+  </header>
+
+  <main>
+    <section id="registration">
+      <h2>Student Registration Form</h2>
+      <form id="studentForm" novalidate>
+        <div class="form-group">
+          <label for="studentName">Student Name</label>
+          <input type="text" id="studentName" name="studentName" required minlength="3" maxlength="40" aria-required="true">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required aria-required="true">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" name="phone" required aria-required="true" pattern="\d{10}" placeholder="10 digits">
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" required aria-required="true">
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Gender</legend>
+          <label><input type="radio" name="gender" value="Male" required> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+          <label><input type="radio" name="gender" value="Other"> Other</label>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="course">Course</label>
+          <select id="course" name="course" required>
+            <option value="">Select Course</option>
+            <option>Web Development</option>
+            <option>UI/UX</option>
+            <option>Python</option>
+            <option>Data Analytics</option>
+            <option>MERN Stack</option>
+            <option>Cloud Computing</option>
+          </select>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Skills</legend>
+          <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+          <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+          <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+          <label><input type="checkbox" name="skills" value="Git"> Git</label>
+          <label><input type="checkbox" name="skills" value="React"> React</label>
+          <label><input type="checkbox" name="skills" value="Node.js"> Node.js</label>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="about">About Student <small>(Maximum 200 characters)</small></label>
+          <textarea id="about" name="about" maxlength="200" rows="4"></textarea>
+          <div id="aboutCounter" class="char-counter">0 / 200</div>
+        </div>
+
+        <div class="form-group">
+          <label for="profilePhoto">Profile Photo</label>
+          <input type="file" id="profilePhoto" name="profilePhoto" accept="image/*">
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="registerBtn">Register Student</button>
+          <button type="reset" id="resetBtn">Reset Form</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="statistics">
+      <h2>Student Statistics</h2>
+      <div id="stats">
+        <p>Total Students: <span id="totalStudents">0</span></p>
+        <ul id="courseStats">
+          <li>Web Development: <span data-course="Web Development">0</span></li>
+          <li>UI/UX: <span data-course="UI/UX">0</span></li>
+          <li>Python: <span data-course="Python">0</span></li>
+          <li>Data Analytics: <span data-course="Data Analytics">0</span></li>
+          <li>MERN Stack: <span data-course="MERN Stack">0</span></li>
+          <li>Cloud Computing: <span data-course="Cloud Computing">0</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="search-filter">
+      <h2>Search & Filter</h2>
+      <input type="search" id="searchInput" placeholder="Search student by name...">
+      <select id="courseFilter">
+        <option value="all">All Courses</option>
+        <option>Web Development</option>
+        <option>UI/UX</option>
+        <option>Python</option>
+        <option>Data Analytics</option>
+        <option>MERN Stack</option>
+        <option>Cloud Computing</option>
+      </select>
+    </section>
+
+    <section id="students">
+      <h2>Student Cards</h2>
+      <div id="studentContainer" class="student-container" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Student Application Management System</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
