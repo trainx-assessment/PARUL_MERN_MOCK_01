@@ -1,0 +1,246 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+
+header {
+    background-color: violet;
+    color: black;
+    text-align: center;
+    padding: 30px 20px;
+    animation-name: hed;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes hed {
+    0%{
+        background-color: purple;   
+    }
+    100%{
+        background-color: white;
+    }
+        
+    
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.form-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    margin-bottom: 25px;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group > label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.radio-group label {
+    font-weight: normal;
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    background-color: purple;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    animation-name: but;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes but {
+    0%{
+        background-color: purple;   
+    }
+    100%{
+        background-color: white;
+    }
+        
+    
+}
+
+button:hover {
+    background-color:violet;
+}
+
+
+.delete-btn {
+    margin-top: 15px;
+    background-color: #dc2626;
+}
+
+.delete-btn:hover {
+    background-color: #b91c1c;
+}
+
+
+
+
+.count-section {
+    background-color: white;
+    margin-top: 25px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+#studentCount {
+    font-size: 40px;
+    font-weight: bold;
+    color: purple;
+    margin-top: 10px;
+}
+
+.students-section {
+    margin-top: 30px;
+}
+
+.students-section h2 {
+    margin-bottom: 20px;
+}
+
+.student-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.student-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.student-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.student-card h3 {
+    text-align: center;
+    color:purple;
+    margin-bottom: 15px;
+}
+
+.student-card p {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+
+    main {
+        width: 95%;
+    }
+
+    .student-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .student-cards {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .radio-group,
+    .checkbox-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
