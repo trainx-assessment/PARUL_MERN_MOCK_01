@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+header {
+    background: #243b55;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header small {
+    display: block;
+    margin-top: 10px;
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 25px auto;
+}
+
+.form-box,
+.stats,
+.search,
+.student-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #0001;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 18px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+label {
+    display: block;
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    height: 90px;
+    resize: vertical;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.options label {
+    font-weight: normal;
+}
+
+.options input {
+    width: auto;
+}
+
+span {
+    color: #d33;
+    font-size: 13px;
+}
+
+#counter {
+    text-align: right;
+    color: #555;
+    margin: 5px 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+button {
+    border: 0;
+    padding: 11px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #243b55;
+    color: white;
+}
+
+button:hover {
+    opacity: .85;
+}
+
+#resetBtn {
+    background: #777;
+}
+
+.search {
+    display: flex;
+    gap: 12px;
+}
+
+.search input {
+    flex: 1;
+}
+
+.search select {
+    width: 220px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.student-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.student-card h3 {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.student-card p {
+    margin: 7px 0;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.card-buttons button:last-child {
+    background: #c0392b;
+}
+
+.stats {
+    text-align: center;
+}
+
+#stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#stats div {
+    padding: 10px 15px;
+    background: #eef2f5;
+    border-radius: 6px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #243b55;
+    color: white;
+}
+
+.dark-mode {
+    background: #181818;
+    color: #eee;
+}
+
+.dark-mode .form-box,
+.dark-mode .stats,
+.dark-mode .search,
+.dark-mode .student-card {
+    background: #282828;
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+    background: #333;
+    color: white;
+    border-color: #555;
+}
+
+.dark-mode #stats div {
+    background: #333;
+}
+
+@media (max-width: 768px) {
+    .grid,
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .search {
+        flex-wrap: wrap;
+    }
+
+    .search select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid,
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .search {
+        display: block;
+    }
+
+    .search input,
+    .search select,
+    .search button {
+        margin-bottom: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}
