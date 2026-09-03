@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000;
+    padding: 20px;
+}
+
+.header_section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header_section h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.header_section p {
+    font-size: 14px;
+}
+
+
+.main_section {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #00e5ff;
+    padding: 20px 30px;
+    border: 2px solid #000;
+    border-radius: 4px;
+}
+
+
+form div {
+    margin-bottom: 15px;
+}
+
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 14px;
+    border-radius: 2px;
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
+    max-width: 100%;
+    min-height: 80px;
+}
+
+
+.gender label, 
+input[type="checkbox"] + label {
+    margin-right: 15px;
+    margin-left: 3px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-top: 2px;
+    vertical-align: middle;
+}
+input[type="file"] {
+    margin-top: 5px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #efefef;
+    border: 1px solid #767676;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: #e5e5e5;
+}
+
+@media (max-width:768px) {
+    .main_section {
+        background-color: mediumorchid;
+    }
+}
+
+@media (max-width:480px) {
+    .main_section{
+        background-color:crimson;
+    }
+}
+
+/* ==================== Section ===================*/
+.student_section {
+    max-width: 600px;
+    margin: 2px auto;
+    background-color: #00e5ff;
+    padding: 20px 30px;
+    border: 2px solid #000;
+    border-radius: 4px;
+}
+
+.student_register{
+    margin: 10px 0;
+}
