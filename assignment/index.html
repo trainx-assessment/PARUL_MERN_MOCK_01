@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System - Pranjal Chavda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+            <div class="head">
+                <h1>Student Application Management System</h1>
+                <h3>Register and manage student applications</h3>
+
+            </div>
+            <div class="maindiv">
+
+                <div class="student-registration-form">
+                    <h2 class="register-h1">Register Student</h2>
+                    <div class="formdiv">
+                        <form id="studentForm">
+                            <div class="div1">
+                            <span>Name </span>
+                            <input type="text" id="studentName" placeholder="Name" required >
+                            <span>Email </span>
+                            <input type="email" id="studentEmail" placeholder="Email" required>
+                            </div>
+                            <div class="div2">
+                            <span>Phone number </span>
+                            <input type="number" id="studentPhone" placeholder="Phone" required>
+                            <span>DOB </span>
+                            <input type="date" id="studentDOB" placeholder="Date of Birth" required></div>
+                            <div class="div3">
+                            <label for="studentGender">Gender:</label>
+                            <select id="gender" required>
+                                <option value="">Male</option>
+                                <option value="">Female</option>
+                                <option value="">Other</option>
+                            </select>
+                            <label for="studentCourse">Course:</label>
+                            <select id="studentCourse" required>
+                                <option value="">Select Course</option>
+                                <option value=""> web development</option>
+                                <option value="">UI-UX</option>
+                                <option value="">Python</option>
+                                <option value="">Data-analutics</option>
+                                <option value="">Mern-stack</option>
+                                <option value="">Cloud computing</option>
+                            </select></div>
+                            <div class="div4">
+                            <label for="skills">skills:</label>
+                            <select id="studentSkills" required>
+                                <option value="">HTML</option>
+                                <option value="">CSS</option>
+                                <option value="">JavaScript</option>
+                                <option value="">Git</option>
+                                <option value="">React</option>
+                                <option value="">Node.js</option>
+                            </select>
+                            <span>About</span><input type="textarea" id="about" placeholder="Add about" required><br>
+                            <div class="div5">
+                            <span>Profile photo</span><input type="file" id="profile-photo" placeholder="Profile photo"
+                                required>
+                            <label for="extra">Choose</label>
+                            <select id="extra" required>
+                                <option value="">Register Student</option>
+                                <option value="">Reset form</option>
+                            </select></div>
+                        </div>
+                            <button type="submit" class="btn">Register</button>
+                        </form>
+                    </div>
+                </div>
+
+                <h2>Statistics</h2>
+                <div class="student-statistics">
+
+                </div>
+                <div class="student-filter-section">
+                    <h2>Search Students</h2>
+                    <span>Search</span><input type="text" id="searchInput">
+                </div>
+
+                <div class="student-cards">
+                    <h2>Student List</h2>
+                </div>
+            </div>
+            <footer>
+                <p>Student Application Management System - Pranjal Chavda</p>
+            </footer>
+        </div>
+        <script src="script.js"></script>
+</body>
+
+</html>
