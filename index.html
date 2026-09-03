@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Application Management System</h1>
+        <h5>Register and manage student applications</h5>
+    </header>
+
+
+    <h1 class="reg-text">Student Registration</h1>
+    <section id="registration">
+        <form>
+            <div>
+
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Enter Name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter Email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="number" id="phone" placeholder="Enter Phone Number" required>
+
+                <label for="dob">DOB</label>
+                <input type="date" id="dob" required>
+
+                <label for="male">Male</label>
+                <input id="male" type="radio">
+
+                <label for="female">Female</label>
+                <input type="radio" id="female">
+
+                <label for="others">Others</label>
+                <input type="radio" id="others">
+            </div>
+
+            <div id="course">
+                <select name="course" id="course-sel">
+                    <option>Select Course</option>
+                    <option>Web Development</option>
+                    <option>UI/UX</option>
+                    <option>Python</option>
+                    <option>Data Analytics</option>
+                    <option>MERN Stack</option>
+                    <option>Cloud Computing</option>
+                </select>
+            </div>
+
+
+            <div id="skills">
+                <h1>Skills</h1>
+                <label for="html">HTML</label>
+                <input id="html" type="checkbox">
+
+                <label for="css">CSS</label>
+                <input type="checkbox" id="css">
+
+                <label for="js">JavaScript</label>
+                <input type="checkbox" id="js">
+
+                <label for="git">Git</label>
+                <input type="checkbox" id="git">
+
+                <label for="react">React</label>
+                <input type="checkbox" id="react">
+
+                <label for="node">Node.js</label>
+                <input type="checkbox" id="node">
+            </div>
+
+            <div class="aboutSection">
+                <label for="about">About Student</label>
+                <textarea name="about student" id="about" placeholder="Enter about yourself" maxlength="200" required></textarea>
+            </div>
+
+            <div class="profilePhoto">
+                <label for="profile">Upload Profile Photo</label>
+                <input type="file" id="profile">
+            </div>
+
+            <div class="submit-btns">
+                <button id="reg-btn">Register Student</button>
+                <button id="reset-form">Reset Form</button>
+            </div>
+
+
+
+        </form>
+    </section>
+
+    <section id="statistics">
+        <h1>Student Statistics</h1>
+    </section>
+
+    <section id="search-filter">
+        <h2>Search & Filter</h2>
+        <input type="text" placeholder="Search students...">
+        <select>
+            <option value="">Filter by course</option>
+            <option value="Web Development">Web Development</option>
+            <option value="UI/UX">UI/UX</option>
+            <option value="Python">Python</option>
+            <option value="Data Analytics">Data Analytics</option>
+            <option value="MERN Stack">MERN Stack</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+        </select>
+    </section>
+
+
+    <section id="student-cards">
+        <h2>Student List</h2>
+        <div class="cards-container">
+            
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2026 Student Application Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
