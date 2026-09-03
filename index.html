@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div>
+                <h1>Student Application Management System</h1>
+                <p>Register and manage student applications</p>
+            </div>
+        </div>
+    </header>
+
+    <main class = "container">
+         <section class = "card form-section">
+            <form id ="studentForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="studentName">Student Name *</label>
+                        <input type="text" id="studentName" placeholder="e.g. Swastika Sahu">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" placeholder="e.g. swastika.sahu@gmail.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="text" id="phone" placeholder="e.g. 9632587410">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth *</label>
+                        <input type="date" id="dob">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gender" value="Male"> Male</label>
+                            <label><input type="radio" name="gender" value="Female"> Female</label>
+                            <label><input type="radio" name="gender" value="Other"> Other</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course">Course *</label>
+                        <select id="course">
+                            <option value="">Select Course</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="UI/UX">UI/UX</option>
+                            <option value="Python">Python</option>
+                            <option value="Data Analytics">Data Analytics</option>
+                            <option value="MERN Stack">MERN Stack</option>
+                            <option value="Cloud Computing">Cloud Computing</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Skills *</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+                        <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+                        <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+                        <label><input type="checkbox" name="skills" value="Git"> Git</label>
+                        <label><input type="checkbox" name="skills" value="React"> React</label>
+                        <label><input type="checkbox" name="skills" value="Node.js"> Node.js</label>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="about">About Student *</label>
+                    <textarea id="about" rows="3" placeholder="About yourself"></textarea>
+                    <div class="textarea-footer">
+                        <section id="charCount">0 / 200</section>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="photo">Profile Photo *</label>
+                    <input type="file" id="photo" accept="image/png, image/jpeg, image/jpg">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="submitBtn" class="btn primary-btn">Register Student</button>
+                    <button type="button" id="resetBtn" class="btn secondary-btn">Reset Form</button>
+                </div>
+            </form>
+         </section>
+
+         <section class="card stats-section">
+            <h2>Student Statistics</h2>
+            <h3 id="totalStudents">Total Students: 0</h3>
+            <div class="stats-grid" id="courseStats">
+                <p>Web Development: <span>0</span></p>
+                <p>UI/UX: <span>0</span></p>
+                <p>Python: <span>0</span></p>
+                <p>Data Analytics: <span>0</span></p>
+                <p>MERN Stack: <span>0</span></p>
+                <p>Cloud Computing: <span>0</span></p>
+            </div>
+        </section>
+
+        <section class="card filter-section">
+            <h2>Search & Filter</h2>
+            <div class="filter-controls">
+                <input type="text" id="searchInput" placeholder="Search student by name...">
+                <select id="filterCourse">
+                    <option value="All Courses">All Courses</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Python">Python</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="MERN Stack">MERN Stack</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                </select>
+            </div>
+        </section>
+
+        <section>
+            <div id="studentContainer" class="student-grid">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Student Application Management System</p>
+        <p>Contact: admin@parulcontact.ac.in</p>
+        <p>Phone Number: 0965374263</p>
+    </footer>
+</body>
+</html>
