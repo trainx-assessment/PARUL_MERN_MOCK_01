@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Application Management System</h1>
+        <h3>Register and manage student applications</h3>
+    </header>
+    
+    <div class="form-container" >
+        <form class="studentForm" id="studentForm" action="#">
+            <div class="name-container">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name!" required>
+            </div>
+    
+            <div class="phone-container">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+    
+            <div class="DOB-container">
+                <label for="DOB">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+    
+            <div class="gender-container">
+                <label for="gender">Gender:</label>
+                <div>
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                </div>
+                <div>
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                </div>
+                <div>
+                    <label for="other">Other</label>
+                    <input type="radio" id="other" name="gender" value="other" required>
+                </div>
+            </div>
+    
+            <div class="email-container">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+    
+            <div class="course-container">
+                <label for="course">Course:</label>
+                <select id="course" name="course" required>
+                    <option value="select" disabled selected>Select a course</option>
+                    <option value="web-development">
+                        Web Development
+                    </option>
+                   <option value="UI/UX">
+                        UI/UX
+                    </option>
+                    <option value="Python">
+                        Python
+                    </option>
+                    <option value="Data-Analytics">
+                        Data Analytics
+                    </option>
+                    <option value="MERN">
+                        Mern Stack
+                    </option>
+                    <option value="Cloud">
+                        Cloud Computing
+                    </option>
+                </select>
+            </div>
+            
+            <div class="skills-container">
+                <label id="skill" for="skill">Skills</label>
+                <div>
+                    <label for="HTML">HTML</label>
+                    <input type="checkbox" name="skills" id="HTML" value="HTML">
+                </div>
+                <div>
+                    <label for="CSS">CSS</label>
+                    <input type="checkbox" name="skills" id="CSS" value="CSS">
+                </div>
+                <div>
+                    <label for="JavaScript">JavaScript</label>
+                    <input type="checkbox" name="skills" id="JavaScript" value="JavaScript">
+                </div>
+                
+                <div>
+                    <label for="Git">Git</label>
+                    <input type="checkbox" name="skills" id="Git" value="Git">
+                </div>
+                
+                <div>
+                    <label for="React">React</label>
+                    <input type="checkbox" name="skills" id="React" value="React">
+                </div>
+                <div>
+                    <label for="Node.js">Node.js</label>
+                    <input type="checkbox" name="skills" id="Node.js" value="Node.js">
+                </div>
+            </div>
+            
+            <div class="aboutyou-container">
+                <label for="aboutYou">About You:</label>
+                <input type="text" id="aboutYou" name="aboutYou" placeholder="Tell us about yourself..." required maxlength="200">
+                <p id="charCount">0/200</p>
+            </div>
+            
+            <div class="profile-container">
+                <label for="profilePicture">Profile Picture:</label>
+                <input type="file" id="profilePicture" name="profilePicture" accept="image/*" required>
+            </div>
+            <div>
+            </div>
+            <div class="button-container">
+                <button type="submit">Submit</button>
+            </div>
+
+            <div class="button-container">
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+
+    </div>
+    <section id="studentDataContainer">
+        <h1>Student Data</h1>
+        <div id="student-card-container" class="student-card-container">
+                <!-- <div class="card">
+                    <div class="card-profile">
+                        <img src="full-moon-halloween-night.jpg" alt="Profile Picture" class="profile-picture">
+                    </div>
+                    <div class="card-details">
+                        <h2 class="card-name">John Doe</h2>
+                        <p class="card-phone">Phone: 123-456-7890</p>
+                        <p class="card-dob">DOB: 01/01/2000</p>
+                        <p class="card-gender ">Gender: Male</p>
+                        <p class="card-email">Email: </p>
+                        <p class="card-course">Course: Web Development</p>
+                        <p class="card-skills">Skills: HTML, CSS, JavaScript</p>
+                        <p class="card-about">About: I am a passionate web developer with experience in building responsive websites.</p>
+                    </div>
+                </div> -->
+            <!-- <div class="card"></div> -->
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+</body>
