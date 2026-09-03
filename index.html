@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <h1> Student Registration Form</h1><br>
+        <form>
+            <label for="name">Student Name</label><input type="text" name="name" id="name" class="big" placeholder="enter your name ..."><br>
+            <label for="email">Email Address</label><input type="text" name="email" id="email" class="big" placeholder="enter your email ..."><br>
+            <label for="phone">Phone Number</label><input type="number" name="phone" id="phone" class="big" placeholder="enter your phone number ..."><br>
+            <label for="dob">Date of Birth</label><input type="date" id="dob" name="dob"><br>
+            <div class="button" id="gender">
+                <label for="gender">Gender :-
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="female">Female
+                    <input type="radio" name="gender" value="other">Other
+                </label><br>
+            </div><br>
+            <label for="course">Select Course</label><select name="course" id="course">
+                <option value="Web Development">Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Python">Python</option>
+                <option value="Data Analytics">Data Analytics</option>
+                <option value="MERN Stack">MERN Stack</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+            </select><br>
+            <div class="button" id="skills">
+                <label for="skills">Skills :-
+                <input type="checkbox" name="courses" value="HTML">HTML
+                <input type="checkbox" name="courses" value="CSS">CSS
+                <input type="checkbox" name="courses" value="JavaScript">JavaScript
+                <input type="checkbox" name="courses" value="Git">Git
+                <input type="checkbox" name="courses" value="React">React
+                <input type="checkbox" name="courses" value="Node.js">Node.js
+                </label><br>
+            </div><br>
+            <label for="about">
+                <textarea id="about" name="about" rows="10" cols="50" placeholder="write a brief description about yourself ..."></textarea>
+            </label><br>
+            <h5>Upload your Profile photo</h5><input type="file" name="photo" typeof="image" accept="image/*"><br><br>
+            <div class="button">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
