@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="script.js"></script>
+    <header>
+        <div class="display">
+            <H1>Student Application Management System</H1>
+            <h4>Register and manage student applications</h4>
+        </div>
+        <hr>
+    </header>
+    <form>
+        <div class="box">
+            <div class="details">
+                <h3>Enter details here</h3>
+                <div class="row">
+                    <div class="col">
+                    <div>
+                        Name: <input type="text" id="name" placeholder="Name" required>
+                    </div>
+                    <div>
+                        Phone Number: <input type="number" id="ph" placeholder="0987654321" required>
+                    </div>
+                    <div>
+                        Gender: Male <input type="radio" id="gender"> Female<input type="radio"id=""> Others<input type="radio" id="">
+                    </div>
+                    
+                </div>
+                <div class="col">
+                    <div>
+                        Email: <input type="email" id="email" placeholder="abc@domain" required>
+                    </div>
+                    <div>
+                        DOB: <input type="date" id="dob">
+                    </div>
+                    <div>
+                        Course: 
+                    </div>
+                </div>
+                </div>
+                <div class="extra">
+                    <div class="skills">
+                        Skills: HTML <input type="checkbox" id="skills">  CSS <input type="checkbox" >  JavaScript <input type="checkbox" >  Git <input type="checkbox" >  React <input type="checkbox" >  Node.js
+                         <input type="checkbox" >
+                    </div>
+                    <div class="about">
+                        About You: <textarea name="" id="about" maxlength="200"></textarea>
+                    </div>
+                    <div class="pfp" >
+                        Passport Size Photo: <input type="file" id="pfp">
+                    </div>
+                    <button type="button" id="regst">Register Student</button>        <button type="button" id="reset">Reset Form</button>
+                </div>
+                
+                
+            </div>
+                
+        </div>
+        
+    </form>
+    <section class="statistics">
+        <div class="stathead">
+            <h2>Student Statistics</h2>
+        </div>
+        <div class="stats">
+            <h3>
+                Total Students: 0
+            </h3>
+            <h3>
+                Courses:
+            </h3>
+            <h4>
+                <p>Web Development: 0</p>
+                <p>UI/UX: 0</p>
+                <p>Python: 0</p>
+                <p>Data Analytics: 0</p>
+                <p>MERN Stack: 0</p>
+                <p>Cloud Computing: 0</p>
+            </h4>
+        </div>
+        
+    </section>
+    <section class="filters"></section>
+    <section class="cards"></section>
+</body>
+</html>

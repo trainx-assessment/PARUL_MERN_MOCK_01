@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(251, 235, 201);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header{
+    z-index: 10000;
+    background-color: rgb(251, 235, 201);
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+}
+
+.box{
+    position: absolute;
+    top: 10vh;
+    line-height: 40px;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box .details h3{
+    text-align: center;
+}
+
+.box .details{
+    height: 60vh;
+    background-color: rgb(255, 229, 172);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10PX;
+}
+
+.box .row{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.box .col{
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction:column;
+    gap: 20px;
+}
+
+.box .about{
+    display: flex;
+}
+
+input{
+    border-radius: 5px;
+}
+
+textarea{
+    border-radius: 5px;
+}
+
+button{
+    height: 30px;
+    width: 150px;
+    border-radius: 20px;
+}
+
+.statistics{
+    height: 40vh;
+    width: 100%;
+    /* background-color: aquamarine; */
+    position: absolute;
+    top: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
