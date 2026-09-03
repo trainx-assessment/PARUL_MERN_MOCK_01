@@ -1,0 +1,88 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(214, 218, 220);
+    color:rgb(24, 24, 26)
+}
+
+header{
+    background-color: rgb(65, 55, 215);
+    text-align: center;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+header h1{
+    margin-bottom:10px;
+    
+    
+}
+
+header p{
+    color: rgb(12, 11, 11);
+
+}
+
+main{
+    width: 90%;
+    margin: auto;
+}
+
+section{
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+section h2{
+    margin-bottom: 20px;
+}
+
+#studentForm input[type="text"],
+#studentForm input[type="email"],
+#studentForm input[type="date"],
+#studentForm select,
+#studentForm textarea{
+    width:100%;
+    padding: 10px;
+    border: 1px solid rgb(10, 10, 10);
+    margin-bottom: 15px;
+}
+
+button{
+    padding:10px;
+}
+
+#submitBtn{
+    background-color: red;
+    color: white;
+}
+ 
+#resetBtn{
+    background-color: red;
+    color: white;
+}
+
+#search-section{
+    padding: 20px;
+}
+
+#seachInput{
+    padding:10px;
+    width: 60%;
+}
+
+#studentContainer{
+    margin-top: 15px;
+}
+
+footer{
+    background-color: rgb(162, 161, 161);
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
