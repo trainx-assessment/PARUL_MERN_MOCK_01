@@ -1,0 +1,71 @@
+body {
+    font-family: Arial;
+    margin: 0;
+}
+header {
+    text-align: center;
+    padding: 20px;
+}
+main {
+    width: 80%;
+    margin: 20px auto;
+}
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+h2 {
+    text-align: center;
+}
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+form div {
+    padding: 5px;
+}
+form p {
+    margin: 5px 0;
+}
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+    width: 90%;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+textarea {
+    width: 95%;
+    height: 70px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.full {
+    grid-column: 1 / 3;
+}
+button {
+    padding: 8px 15px;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.card {
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 8px;
+}
+.card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
