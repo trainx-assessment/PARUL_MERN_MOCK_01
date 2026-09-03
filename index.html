@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student management system</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <center>
+    <header>
+        <h1>Student Application Management System</h1>
+        <h2>Register and manage student applications</h2>
+    </header>
+
+    <form>
+        <div class="div1">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter Name" minlength="3" maxlength="40" pattern="[a-zA-Z\s]+" title="Only letters and spaces are allowed" required>
+            <label for="email">Email:</label>
+           <input type="email" name="email" id="email" placeholder="Enter Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address" required><br>
+        </div>
+
+        <div class="div2">
+            <label for="phone">Phone Number:</label>
+        <input type="text" name="phone number" id="phone" placeholder="Enter Phone Number" minlength="10" maxlength="10" pattern="[0-9\s]+" title="Only numbers are allowed" required>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" name="date of birth" id="dob" placeholder="Enter Date" min="1900-01-01" max="2012-12-31" required><br>
+        </div>
+       
+       <div class="div3"> <h3>Gender:</h3>
+        <input type="radio" name="gender" value="male" required> Male
+        <input type="radio" name="gender" value="female" required> Female
+        <input type="radio" name="gender" value="other" required> Other</div>
+        <br>
+
+
+        <div class="div4">
+            <label for="course">Course:</label>
+        <select name="course" id="course" required>
+            <option value="">Select Course</option>
+            <option value="UI/UX">UI/UX</option>
+            <option value="Python">Python</option>
+            <option value="Data Analytics">Data Analytics</option>
+            <option value="MERN Stack">MERN Stack</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+        </select>
+        </div>
+
+        <div class="div5">
+        <h3>Skills:</h3>
+        <input type="checkbox" name="skills" value="HTML"> <label for="HTML">HTML</label>
+        <input type="checkbox" name="skills" value="CSS"> <label for="CSS">CSS</label>
+        <input type="checkbox" name="skills" value="JavaScript"> <label for="JavaScript">JavaScript</label>
+        <input type="checkbox" name="skills" value="git"> <label for="git">git</label>
+        <input type="checkbox" name="skills" value="Node.js"> <label for="Node.js">Node.js</label>
+        <input type="checkbox" name="skills" value="react"> <label for="react">react</label>
+
+        </div>
+        <br>
+
+        <textarea name="about student" placeholder="Tell us about yourself" required minlength="20" maxlength="200"></textarea><br>
+       
+        <input type="file" name="profile picture" accept="image/*/.jpg,.jpeg,.png" required><br>
+       
+
+        <div class="button">
+            <button type="submit">Submit</button>
+           <button type="reset">Reset form</button>
+         </div>
+         
+    </form>
+    <statistics>
+
+        <section class="students-section">
+
+            <div class="top">
+                <h2>Students</h2>
+                <div class="search-box">
+                    <input type="text" id="search" placeholder="Search by name...">
+
+                    <select id="filter">
+                        <option value="All">All Courses</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="UI/UX">UI/UX</option>
+                        <option value="Python">Python</option>
+                        <option value="Data Analytics">Data Analytics</option>
+                        <option value="MERN Stack">MERN Stack</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                    </select>
+                </div>
+            </div>
+    
+    
+
+    <script rel="script" src="script.js"></script>
+</body>
+</center>
+</html>
