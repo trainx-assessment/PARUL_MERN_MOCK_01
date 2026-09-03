@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="head">
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+        </div>
+    </header>
+
+    <div class="formm">
+    <section class="registration-section">
+
+        <h2>Student Registration Form</h2>
+
+        <form id="studentForm">
+
+
+            <div class="feild">
+                <div class="form-feild">
+                <label>Name:</label>
+                <input id="name" type="text" required>
+            </div>
+
+            <div class="form-feild">
+                <label>Email:</label>
+                <input id="email" type="email" required>
+            </div>
+            </div>
+            
+            <div class="feild">
+                    <div class="form-feild">
+                <label>Phone Number:</label>
+                <input id="phone" type="text" required>
+            </div>
+
+            <div class="form-feild">
+                <label>Date of Birth:</label>
+                <input id="dateOfBirth" type="date" required>
+            </div>
+            </div>
+
+            <div class="feild">
+                    <div class="form-feild">
+                <label>Gender: </label>
+
+                <label><input type="radio" name="gender">Male</label>
+                <label><input type="radio" name="gender">Female</label>
+                <label><input type="radio" name="gender">Other</label>
+            </div>
+
+            <div class="form-feild">
+                <label>Course: </label>
+                <select id="course" required>
+                <option value="">Select Course</option>
+                <option value="Web Development">Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Python">Python</option>
+                <option value="Data Analytics">Data Analytics</option>
+                <option value="MERN Stack">MERN Stack</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+                </select>
+            </div>
+            </div>
+            
+            <div class="form-feild" id="skills-feild">
+                <label>Skills: </label>
+                <label><input type="checkbox" name="skills">HTML</label>
+                <label><input type="checkbox" name="skills">CSS</label>
+                <label><input type="checkbox" name="skills">JavaScript</label>
+                <label><input type="checkbox" name="skills">Git</label>
+                <label><input type="checkbox" name="skills">React</label>
+                <label><input type="checkbox" name="skills">Node.js</label>
+            </div>
+
+            <div class="form-feild">
+                <label>About Student: </label>
+                <textarea maxlength="200" placeholder="Maximum 200 characters" style="height: 40px; width: 400px;"></textarea>
+                 <!-- <input type="text" maxlength="200" placeholder="Maximum 200 charcaters" style="height: 40px; width: 400px;"> -->
+            </div>
+
+            <div class="form-feild">
+                <label>Profile Photo: </label>
+                <input type="file" id="profilePhoto" accept="image/*">
+            </div>
+
+            <div class="form-feild" id="button-feild">
+                <button type="submit" id="registerBtn">Register Student</button>
+                <button type="reset" id="resetBtn">Reset Form</button>
+            </div>
+
+
+
+    </form>
+    </div>
+    </section>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
+

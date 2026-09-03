@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  width: 100%;
+  min-height: 100%;
+}
+
+body{
+    padding: 30px;
+    background-color: whitesmoke;
+}
+
+.head{
+    height: 10vh;
+    color: white;
+    background-color: navy;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 30px;
+    padding: 5px;
+}
+
+.formm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registration-section{
+    width: 120vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    border-radius: 30px;
+    background-color: aliceblue;
+
+}
+
+.registration-section h2{
+    margin: 20px;
+}
+
+#studentForm{
+
+    background-color: rgb(206, 229, 230);
+    height: 60vh;
+    width: 120vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: start;
+    justify-content: center;
+
+    padding: 30px;
+    padding-right: 100px;
+    border: none;
+    border-radius: 30px;
+    
+}
+
+.feild{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    /* justify-content: space-evenly; */
+}
+
+#skills-feild{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#button-feild{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#button-feild button{
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(53, 53, 110);
+    color: white;
+    height: 25px;
+    width: 120px;
+}
+
