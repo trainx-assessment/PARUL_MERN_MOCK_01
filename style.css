@@ -1,0 +1,226 @@
+body{
+    background-color: rgb(172, 222, 222);
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 10px;
+}
+
+p{
+    text-align: center;
+}
+input {
+    border-radius : 5px;
+}
+.fill-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+}
+.AboutStudent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    padding: 10px;
+    text-align: center;
+}
+button{
+    border-radius: 5px;
+}
+label{
+    border-radius: 5px;
+}
+.option {
+    border-radius: 5px;
+}
+h1{
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 10px;
+}
+p{
+    text-align: center;
+}
+input {
+    border-radius : 5px;
+}
+button{
+    border-radius: 5px;
+}
+label{
+    border-radius: 5px;
+}
+.option {
+    border-radius: 5px;
+}
+
+input,
+select,
+textarea,
+button {
+    width: 100%;
+    padding: 0.7rem 0.8rem;
+    border: 1px solid #89e4d1;
+    border-radius: 6px;
+    font: inherit;
+}
+
+
+@media (max-width: 768px) {
+    .student-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .fill-form,
+    .student-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+}
+#Submission{
+    background-color: rgb(162, 136, 186);
+
+}
+#resetBtn{
+    background-color: gray;
+    color: white;
+}
+
+footer{
+    background-color: rgb(22, 21 , 21);
+    color: white;
+    text-align : center;
+    padding : 20px;
+}m input:not([type="radio"]),
+.fill-form select,
+.AboutStudent textarea,
+.AboutStudent input[type="file"] {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #ffffff;
+  color: var(--ink);
+  font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent);
+  outline: 3px solid rgb(15 118 110 / 18%);
+}
+
+.AboutStudent {
+  margin-top: 1.5rem;
+}
+
+.AboutStudent textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+#charCount {
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: right;
+}
+
+small {
+  display: block;
+  min-height: 1.25rem;
+  color: var(--danger);
+}
+
+button {
+  padding: 0.7rem 1.1rem;
+  border: 0;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+#Submission {
+  background: var(--accent);
+}
+
+#Submission:hover {
+  background: var(--accent-dark);
+}
+
+#resetBtn {
+  margin-left: 0.5rem;
+  background: #475569;
+}
+
+#resetBtn:hover {
+  background: #334155;
+}
+
+.student-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+  min-height: 2rem;
+}
+
+footer {
+  margin-top: 3rem;
+  padding: 1.5rem 1rem;
+  background: #0f172a;
+  color: #e2e8f0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .student-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    width: min(100% - 1rem, 1100px);
+    margin: 1rem auto;
+  }
+
+  .fill-form,
+  .fill-form h2,
+  .AboutStudent,
+  .student-cards {
+    grid-column: auto;
+  }
+
+  .fill-form {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .AboutStudent {
+    padding: 1rem;
+  }
+
+  .student-cards {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel ="Stylesheet" href="style.css"/>
+</head>
+<body>
+    <h1>Student Registration Form</h1>
+    <main class="main">
+    <p>Resgister and manage Student Applications</p>
+    <form class="fill-form" id="studentForm">
+        <label>Student Name :</label>
+    <input id= "Student-name" placeholder = "Student Name"></input>
+    <br>
+    <label>Email :</label>
+    <input id = "Email" placeholder ="Type text Email"></input>
+    <br>
+    <label>Phone Number : </label>
+    <input id = "Phone Number" placeholder="Phone Number"></input>
+    <br>
+    <label>Date-of-birth :</label>
+    <input type = "Date" id ="D.O.B"/>
+    <br>
+    <input type = "radio" name = "gender" value = "Male"/>Male
+    <input type = "radio" name = "gender" value = "Female"/>Female
+    <input type = "radio" name = "gender" value = "Others"/>Others
+    <br>
+    <br>
+    <Select id = "Course" aria-placeholder="Course">
+    <option value = "">Select Course</option>
+    <option>WebDevelopment</option>
+    <option>UI/UX</option>
+    <option>Python</option>
+    <option>Data Analyst</option>
+    <option>MERN Stack</option>
+    <option>Cloud Computing</option>
+   </Select>
+   <br>
+   <Select id = "Skills" aria-placeholder="Skills">
+    <option value = " " >Select Skills</option>
+    <option>HTML</option>
+    <option>CSS</option>
+    <option>JavaScript</option>
+    <option>GIT</option>
+    <option>React</option>
+    <option>Node js</option>
+   </Select>
+    </form>
+    <div class="AboutStudent">
+        <label>About Student :</label>
+        <textarea id = "about" maxlength = "200"  placeholder = "Write about Student"></textarea>
+            <p id = "charCount" >0 / 200</p>
+            <small id = "aboutError"></small>
+            <label>Profile Photo</label>
+            <input type = "file" id = "profilePhoto" accept = "image.png"/>
+            <small id = "Photo-Error"></small>
+            <br><br>
+            <button type = "submit" id = "Submission">Register</button>
+            <button  type = "button" id = "resetBtn">ResetButton</button>
+    </div>
+    <section class="student-cards" id="studentCards" aria-live="polite"></section>
+    </main>
+    <!--  footer work -->
+      <footer>
+        <p>Student Application Management System</p>
+      </footer>
+      <script sc = "script.js"></script>
+    
+</body>
+</html>
