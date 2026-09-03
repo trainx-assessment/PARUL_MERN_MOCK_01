@@ -1,0 +1,42 @@
+body{
+    background-color: whitesmoke;
+    color:black;
+}
+
+.heading1{
+    text-align: center;
+}
+
+.heading3{
+    text-align: center;
+    text-decoration: underline;
+}
+input{
+    height: 20px;
+    margin:20px;
+}
+select{
+    margin:5px;
+    height: 20px;
+}
+#label{
+    width:25vw;
+    margin-left: 2vw;
+    margin-right:3vw;
+    margin-top: 2vw;
+}
+.form{
+    width:98vw;
+    flex-wrap: wrap;
+    display: flex;
+
+}
+
+.aboutself{
+    margin-left: 2vw;
+}
+
+#buttons{
+    display: flex;
+    justify-content: space-around;
+}

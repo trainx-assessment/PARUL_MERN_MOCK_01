@@ -80,7 +80,7 @@ Student Application Management System
 Also add a short subtitle:
 
 ```text
-Register and manage student applications
+Student Application Management System
 ```
 
 ---

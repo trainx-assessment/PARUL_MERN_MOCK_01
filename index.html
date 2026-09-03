@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="heading1">Student Application Management System</h1>
+        <h3 class="heading2">Student Application Management System</h3>
+    </header>
+    <section id="student-registration-form">
+        <h2 class="heading3">Student Registration Form</h2>
+        <form id="form">
+            <section class="form">
+            <label id="label">Student Name:</label><input class="name" type="text" >
+            <label id="label">Email:</label><input class="email" type="email" >
+            <label id="label">Phone Number:</label><input class="phnno" type="text" >
+            <label id="label">Date of Birth:</label><input class="dob" type="date" >
+            <label style="margin-right: -42px;" id="label">Gender:</label>
+            <section>
+            <input name="gender" class="gender" type="radio" value="Male"><label>Male</label>
+            <input name="gender" class="gender" type="radio" value="Female"><label>Female</label>
+            <input name="gender" class="gender" type="radio" value="other"><label>Others</label><br>
+        </section>
+        <label id="label">Select Course:</label><br>
+        <select class="course" required>
+            <option value="null">Select</option>
+            <option value="Web Development">Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Python">Python</option>
+                <option value="Data Analytics">Data Analytics</option>
+                <option value="MERN Stack">MERN Stack</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+        </section>
+            <label id="label"><b>Skills:</b></h4></label>
+            <input type="checkbox" class="checkbox" value="HTML"><label>HTML</label>
+            <input type="checkbox" class="checkbox" value="CSS"><label>CSS</label>
+            <input type="checkbox" class="checkbox" value="JavaScript"><label>JavaScript</label>
+            <input type="checkbox" class="checkbox" value="Git"><label>Git</label>
+            <input type="checkbox" class="checkbox" value="React"><label>React</label>
+            <input type="checkbox" class="checkbox" value="Node.js"><label>Node.js</label><br>
+            <label id="label">About Yourself:</label><br>
+            <textarea maxlength="200" rows="5" cols="50" class="aboutself"></textarea><br>
+            <label id="label">Profile Photo:</label><input class="pfp" type="file" ><br>
+            <section id="buttons"><button class="lele" type="submit">Register Student</button>
+                <button type="submit">Reset form</button></section>
+            </form>
+        </section>
+        <script src="script.js"></script>
+</body>
+
+</html>
