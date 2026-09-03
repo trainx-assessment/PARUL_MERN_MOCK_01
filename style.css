@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #f4f5f6;
+    color: #222;
+}
+header{
+    background: black;
+    color: white;
+    text-align: center;
+}
+header h1{
+    margin-bottom: 10px;
+}
+main{
+    width: 40%;
+    height: 50%;
+    margin: 30px auto;
+}
+section{
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+h2{
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+.form-grid{
+    display: grid;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.full-width{
+    width: 100%;
+}
+label{
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+input,select,textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b3adad;
+    border-radius: 6px;
+    font-size: 15px;
+}
+textarea{
+    height: 50px;
+}
+.radio-group,.checkbox-group{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.radio-group label,.checkbox-group label{
+    font-weight: 400;
+}
+.radio-group input,.checkbox-group input{
+    width: auto;
+}
+.buttons{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+button{
+    border: none;
+    padding: 11px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+#submitBtn{
+    background: #2e323b;
+    color: white;
+}
+#resetBtn{
+    background: rgb(18, 20, 23);
+    color: white;
+}
+button:hover{
+    opacity: 0.85;
+}
+footer{
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+}
