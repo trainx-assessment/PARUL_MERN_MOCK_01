@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial,sans-serif;
+}
+.header {
+    background: #1e3a8a;
+    color: white;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#first{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.header h1{
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+.header p{
+    font-size: 15px;
+}
+main{
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+.section{
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rbga(0 ,0, 0 ,0.97);
+}
+.section h2{
+    margin-bottom: 20px;
+}
+#stdentForm{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+.full-width{
+    grid-column: 1 / -1;
+}
+.form-group label{
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+input,
+select,
+textarea{
+    width: 100%;
+    padding: 11px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+input:focus,
+select:focus,
+textarea:focus{
+    border-color: black;
+}
+textarea{
+    height: 100px;
+    resize: vertical;
+}
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.radio-group input,
+.checkbox-group input {
+    width: auto;
+}
+.error{
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
+#characterCount{
+    text-align: right;
+    font-size: 13px;
+    margin-top: 5px;
+}
+.form-button{
+    display: flex;
+    gap: 15px;
+}
+button{
+    border: none;
+    padding: 11px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+
+}
+.primary-btn{
+    background-color: blue;
+    color: white;
+
+}
+.primary-btn:hover{
+    background-color: red;
+}
+.reset-btn{
+    background-color: brown;
+    color: white;
+}
+.reset-btn:hover{
+    background-color: brown;
+}
+#darkModeBtn{
+    background-color: white;
+    color-scheme: rgb(167, 65, 82);
+}
+.statistics{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+.stat-card{
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: antiquewhite;
+}
+.stat-card h3{
+    font-size: 15px;
+
+}
+.stat-card p{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.student-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.student-card{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 3px 8px red;
+
+}
+.student-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px;
+}
+.student-card h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.student-card p {
+    margin: 7px 0;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 5px;
+}
+.skill {
+    background: white;
+    color: blue;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+.card-buttons{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+.edit-btn{
+    background-color: aquamarine;
+    color: white;
+
+}
+.delete-btn{
+    background-color: rgb(222, 156, 156);
+    color: white;
+}
+.no-students {
+    text-align: center;
+    padding: 30px;
+    color: gray;
+    grid-column: 1 / -1;
+}
+footer {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 20px;
+}
+
+body.dark-mode {
+    background: black;
+    color: white;
+}
+
+body.dark-mode .section,
+body.dark-mode .student-card {
+    background: black;
+    color: white;
+}
+
+body.dark-mode .stat-card {
+    background: grey;
+    border-color: black;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background: gray;
+    color: white;
+    border-color: black;
+}
