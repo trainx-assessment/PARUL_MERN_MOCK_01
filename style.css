@@ -1,0 +1,289 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    line-height: 1.5;
+}
+
+
+header {
+    background-color: #16181c;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+}
+header h1 {
+    margin-bottom: 8px;
+}
+
+
+header button {
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+.radio-group,
+.skills {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+.radio-group label,
+.skills label {
+    font-weight: normal;
+}
+.radio-group input,
+.skills input {
+    width: auto;
+}
+
+
+/* .error {
+    color: red;
+    display: block;
+    margin-top: 5px;
+} */
+
+
+#charCount {
+    margin-top: 5px;
+    color: #555;
+}
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+
+button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+#submitBtn {
+    background-color: #2563eb;
+    color: white;
+}
+
+#resetBtn {
+    background-color: #8aeb0ced;
+    color: white;
+}
+
+
+button:hover {
+    opacity: 0.85;
+}
+
+
+/* STATISTICS */
+
+.course-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.course-stats p {
+    background-color: #eef2ff;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+
+/* SEARCH */
+
+.search-section {
+    display: flex;
+    gap: 15px;
+}
+
+
+.search-section input,
+.search-section select {
+    flex: 1;
+}
+.student-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+.student-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 18px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.student-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.student-card h3 {
+    margin-bottom: 10px;
+}
+
+
+.student-card p {
+    margin-bottom: 6px;
+}
+
+
+.card-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+
+.edit-btn {
+    background-color: #f59e0b;
+    color: white;
+}
+
+
+.delete-btn {
+    background-color: #dc2626;
+    color: white;
+}
+
+
+.no-students {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+}
+
+
+
+/* TABLET */
+
+@media (max-width: 768px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .student-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .course-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    main {
+        width: 95%;
+    }
+
+    .student-container {
+        grid-template-columns: 1fr;
+    }
+
+    .course-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .search-section {
+        flex-direction: column;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+}
+
+
