@@ -1,0 +1,133 @@
+<!-- OM OM OM OM -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Student Management System</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Student Registration</h2>
+            <form id="registration">
+
+                <div class="formInternals">
+                    <label for="student-name">Enter Name</label>
+                    <input type="text" id="student-name" name="name" required>
+                </div>
+
+                <div class="formInternals">
+                    <label for="student-email">Enter Email</label>
+                    <input type="text" id="student-email" email="email" required>
+                </div>
+
+                <div class="formInternals">
+                    <label for="student-contact">Enter Phone Number</label>
+                    <input type="text" id="student-contact" contact="contact" required>
+                </div>
+
+                <div class="formInternals">
+                    <label for="student-birth">Enter DOB</label>
+                    <input type="date" id="student-birth" birth="birth" required>
+                </div>
+
+                <div class="formInternals">
+                    <label>Select Gender</label>
+
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+
+                    <input type="radio" id="others" name="gender" value="others" required>
+                    <label for="others">Others</label>
+                </div>
+
+                <div class="formInternals">
+                    <label for="student-course">Select Course</label>
+                    <select id="student-course" name="course" required>
+                        <option value="">Select Course</option>
+                        <option value="Computer Science">Web Development</option>
+                        <option value="Information Technology">UI/UX</option>
+                        <option value="Electronics">Python</option>
+                        <option value="Data Analytics">Data Analytics</option>
+                        <option value="MERN Stack">MERN Stack</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                    </select>
+                </div>
+
+                <div class="formInternals">
+                    <label>Skills</label>
+                    <div class="Skills">
+                        <input type="checkbox" id="skill-html" name="skills" value="HTML">
+                        <label for="skill-html">HTML</label>
+
+                        <input type="checkbox" id="skill-css" name="skills" value="CSS">
+                        <label for="skill-css">CSS</label>
+
+                        <input type="checkbox" id="skill-js" name="skills" value="JAVASCRIPT">
+                        <label for="skill-js">JAVASCRIPT</label>
+
+                        <input type="checkbox" id="skill-git" name="skills" value="GIT">
+                        <label for="skill-git">GIT</label>
+
+                        <input type="checkbox" id="skill-react" name="skills" value="REACT">
+                        <label for="skill-react">REACT</label>
+
+                        <input type="checkbox" id="skill-node" name="skills" value="NODE-JS">
+                        <label for="skill-node">NODE-JS</label>
+                    </div>
+                </div>
+
+                <div class="formInternals">
+                    <label for="student-profile">Select Profile Picture</label>
+                    <input type="file" id="student-profile" name="profile" accept="image/*">
+                </div>
+
+                <div class="formInternals">
+                    <label for="student-about">About You</label>
+                    <textarea name="about" id="student-about" maxlength="200"></textarea>
+                </div>
+
+                <button type="submit">Submit Form</button>
+                <button type="reset">Reset Form</button>
+            </form>
+        </section>
+        <section id="statistics">
+            <h2>Student Statistics</h2>
+            <div class="stats">
+                <div class="statInternal">
+                    <h3>Total Students</h3>
+                    <p id="totalCount">0</p>
+                </div>
+                <div class="statInternal">
+                    <h3>Average Age</h3>
+                    <p id="avgAge">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="studentsList">
+            <h2>Our Students</h2>
+            <div id="currStudents"></div>
+        </section>
+
+        <footer>
+            <p>Student Management Portal.</p>
+            <p>-by rishumour</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
