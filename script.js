@@ -1,0 +1,10 @@
+const student=[]
+let name=document.getElementById("name")
+let email=document.getElementById("email")
+let dob=document.getElementById("dob")
+let female=document.getElementById("female")
+let male=document.getElementById("male")
+let others=document.getElementById("others")
+let about=document.getElementById("about")
+let photo=document.getElementById("photo")
+let register=document.getElementById("register")

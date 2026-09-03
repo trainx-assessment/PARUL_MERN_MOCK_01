@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: grey;
+  gap: 20px;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: black;
+    width: 100%;
+    color: aliceblue;
+}
+.form{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    background-color: burlywood;
+}
+main{
+    min-height: 90vh;
+    width: 100%;
+    background-color:grey;
+color: white;
+}
+.btn {
+  height: 2vh;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.btn #register{
+    height: 40px;
+    width: 110px;
+    border-radius: 10px;
+}
+.btn #reset{
+    height: 40px;
+    width: 80px;
+     border-radius: 10px;
+}
+.wrapper{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+@media (max-width: 786px) {
+   .form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   } 
+}
+.Cards{
+    width: 100%;
+    height: 25vh;
+    text-align: center;
+    margin-top: 10px;
+}
+.maincards{
+    width: 100%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+.card1{
+    height: 100%;
+    background-color: pink;
+    border-radius: 10px;
+}
+.card2{
+    height: 100%;
+    background-color: pink;
+    border-radius: 10px;
+}
+.card3{
+    height: 100%;
+    background-color: pink;
+    border-radius: 10px;
+}
+@media (max-width: 786px) {
+    .maincards{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 480px) {
+    .maincards{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
