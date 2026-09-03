@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+    </header>
+    <main>
+        <form>
+            <div class="details">
+                <div>
+                    <label for="stdname">Enter Name:</label>
+                    <input type="text" name="stdname" required><br>
+                </div>
+                <div>
+                    <label for="stdmail">Enter Email:</label>
+                    <input type="email" name="stdmail"required><br>
+                </div>
+                <div>
+                    <label for="stdphone">Enter Phone:</label>
+                    <input type="text" name="stdphone" required><br>
+                </div>
+                <div>
+                    <label for="stddob">Select DOB:</label>
+                    <input type="date" name="stddob"required><br>
+                </div>
+                <div>
+                    <input type="radio" name="gender">Male</input>
+                    <input type="radio" name="gender">Female</input>
+                    <input type="radio" name="gender">Other</input>
+                </div>
+                <div>
+                    <label for="course">Courses: </label>
+                    <select name="course" id="course">
+                        <option value="0" selected disabled>Select Course</option>
+                        <option value="1">Web Development</option>
+                        <option value="2">UI/UX</option>
+                        <option value="3">Python</option>
+                        <option value="4">MERN Stack</option>
+                        <option value="5">Cloud Computing</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label for="skills">Skills:</label><br>
+                <input type="checkbox" name="skills" value="HTML">HTML</input>
+                <input type="checkbox" name="skills" value="CSS">CSS</input>
+                <input type="checkbox" name="skills" value="JavaScript">JavaScript</input>
+                <input type="checkbox" name="skills" value="Git">Git</input>
+                <input type="checkbox" name="skills" value="React">React</input>
+                <input type="checkbox" name="skills" value="Node.js">Node.js</input><br>
+            </div>
+            <label for="about">About:</label>
+            <textarea name="about" id="about"></textarea><br>
+            <input type="file" accept="" class="fileinput"><br>
+            <div class="btns">
+                <button type="submit">Register Student</button>
+                <button type="reset">Reset Form</button>
+            </div>
+        </form>
+        <section>
+            <div class="cards">
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Made By Nishiraj Singh Panwar</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
