@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1e1e1e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e1e1e1;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: larger;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+header p {
+    margin-top: 0.5rem;
+    opacity: 0.8;
+}
