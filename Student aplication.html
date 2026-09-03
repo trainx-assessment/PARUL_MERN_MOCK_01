@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Manager</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Student aplication.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header Section -->
+        <header class="app-header">
+            <div class="logo-area">
+                <i class="fa-solid fa-graduation-cap header-icon"></i>
+                <div>
+                    <h1>Student Application Manager</h1>
+                    <p class="subtitle">Register, validate, and manage student applications in real-time</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Registration Form Section -->
+            <section class="form-card-wrapper">
+                <div class="section-title-box">
+                    <h2><i class="fa-solid fa-user-plus"></i> Student Registration Form</h2>
+                    <p>Fill out the details below to submit a new student application.</p>
+                </div>
+
+                <form id="studentForm" novalidate>
+                    <!-- Student Name -->
+                    <div class="form-group">
+                        <label for="studentName">
+                            <i class="fa-regular fa-user"></i> Student Name <span class="required">*</span>
+                        </label>
+                        <input type="text" id="studentName" placeholder="e.g. Rahul Sharma" autocomplete="off">
+                        <small class="error-msg" id="nameError"></small>
+                    </div>
+
+                    <!-- Email & Phone Grid -->
+                    <div class="form-row">
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="studentEmail">
+                                <i class="fa-regular fa-envelope"></i> Email Address <span class="required">*</span>
+                            </label>
+                            <input type="email" id="studentEmail" placeholder="e.g. rahul@example.com" autocomplete="off">
+                            <small class="error-msg" id="emailError"></small>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="form-group">
+                            <label for="studentPhone">
+                                <i class="fa-solid fa-phone"></i> Phone Number <span class="required">*</span>
+                            </label>
+                            <input type="tel" id="studentPhone" placeholder="10-digit mobile number" maxlength="10" autocomplete="off">
+                            <small class="error-msg" id="phoneError"></small>
+                        </div>
+                    </div>
+
+                    <!-- Date of Birth & Gender Grid -->
+                    <div class="form-row">
+                        <!-- Date of Birth -->
+                        <div class="form-group">
+                            <label for="studentDob">
+                                <i class="fa-regular fa-calendar"></i> Date of Birth <span class="required">*</span>
+                            </label>
+                            <input type="date" id="studentDob">
+                            <small class="error-msg" id="dobError"></small>
+                        </div>
+
+                        <!-- Gender -->
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-venus-mars"></i> Gender <span class="required">*</span></label>
+                            <div class="radio-group" id="genderGroup">
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="Male"> Male
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="Female"> Female
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="Other"> Other
+                                </label>
+                            </div>
+                            <small class="error-msg" id="genderError"></small>
+                        </div>
+                    </div>
+
+                    <!-- Course Dropdown -->
+                    <div class="form-group">
+                        <label for="studentCourse">
+                            <i class="fa-solid fa-book-open"></i> Course <span class="required">*</span>
+                        </label>
+                        <select id="studentCourse">
+                            <option value="" disabled selected>-- Select a Course --</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="UI/UX">UI/UX</option>
+                            <option value="Python">Python</option>
+                            <option value="Data Analytics">Data Analytics</option>
+                        </select>
+                        <small class="error-msg" id="courseError"></small>
+                    </div>
+
+                    <!-- Skills Checkboxes -->
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-laptop-code"></i> Skills <span class="required">*</span></label>
+                        <div class="checkbox-group" id="skillsGroup">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="skills" value="HTML"> HTML
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="skills" value="CSS"> CSS
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="skills" value="JavaScript"> JavaScript
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="skills" value="Git"> Git
+                            </label>
+                        </div>
+                        <small class="error-msg" id="skillsError"></small>
+                    </div>
+
+                    <!-- Profile Photo -->
+                    <div class="form-group">
+                        <label for="studentPhoto">
+                            <i class="fa-regular fa-image"></i> Profile Photo <span class="required">*</span>
+                        </label>
+                        <input type="file" id="studentPhoto" accept="image/*">
+                        <small class="error-msg" id="photoError"></small>
+                    </div>
+
+                    <!-- About Student -->
+                    <div class="form-group">
+                        <label for="studentAbout">
+                            <i class="fa-regular fa-comment-dots"></i> About Student <span class="required">*</span>
+                        </label>
+                        <textarea id="studentAbout" rows="3" placeholder="Write a short summary about the student..."></textarea>
+                        <small class="error-msg" id="aboutError"></small>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" id="submitBtn" class="btn-primary">
+                        <i class="fa-solid fa-paper-plane"></i> Submit Application
+                    </button>
+                </form>
+            </section>
+
+            <!-- Student Directory Section -->
+            <section class="directory-section">
+                <div class="directory-header">
+                    <h2><i class="fa-solid fa-users"></i> Submitted Applications</h2>
+                    <!-- Student Count Badge -->
+                    <div class="student-count-badge" id="studentCountBadge">
+                        Total Students: <span id="totalCount">0</span>
+                    </div>
+                </div>
+
+                <!-- Cards Grid Container -->
+                <div id="studentContainer" class="cards-grid">
+                    <div class="empty-state" id="emptyState">
+                        <i class="fa-regular fa-folder-open empty-icon"></i>
+                        <h3>No Applications Yet</h3>
+                        <p>Fill out and submit the registration form to see student cards here.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="Student aplication.js"></script>
+</body>
+</html>
