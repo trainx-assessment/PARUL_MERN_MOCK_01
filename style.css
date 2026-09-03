@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+p{
+    display: flex;
+    justify-content: center;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(234, 234, 233);
+}
+
+.main-container{
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: aliceblue;   
+}
+header{
+    padding: 10px;
+}
+input , label, select, textarea,button{
+    margin-bottom: 15px;
+}
+
+form{
+    
+}
+button{
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    border-radius: 5px;
+    height: 30px;
+    width: 80x;
+}
+
