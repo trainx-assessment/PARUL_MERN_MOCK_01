@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Student Application Management System</h1>
+      <p>Register and Manage Student Applications</p>
+    </header>
+
+    <main>
+      <section class="formSection">
+        <form id="studentForm">
+          <div class="group">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" name="studentName" required />
+          </div>
+
+          <div class="group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="group">
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" required />
+          </div>
+
+          <div class="group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required />
+          </div>
+
+          <div class="group">
+            <label>Gender</label>
+            <input type="radio" id="male" name="gender" value="Male" />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female" />
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="Other" />
+            <label for="other">Other</label>
+          </div>
+
+          <div class="group">
+            <label for="course">Course</label>
+            <select id="course" name="course">
+              <option value="">Select Course</option>
+              <option value="Web Development">Web Development</option>
+              <option value="UI/UX">UI/UX</option>
+              <option value="Python">Python</option>
+              <option value="Data Analytics">Data Analytics</option>
+              <option value="MERN Stack">MERN Stack</option>
+              <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+          </div>
+
+          <div class="group">
+            <label>Skills</label>
+            <input type="checkbox" id="skillHtml" name="skills" value="HTML" />
+            <label for="skillHtml">HTML</label>
+            <input type="checkbox" id="skillCss" name="skills" value="CSS" />
+            <label for="skillCss">CSS</label>
+            <input
+              type="checkbox"
+              id="skillJs"
+              name="skills"
+              value="JavaScript"
+            />
+            <label for="skillJs">JavaScript</label>
+            <input type="checkbox" id="skillGit" name="skills" value="Git" />
+            <label for="skillGit">Git</label>
+            <input
+              type="checkbox"
+              id="skillReact"
+              name="skills"
+              value="React"
+            />
+            <label for="skillReact">React</label>
+            <input
+              type="checkbox"
+              id="skillNode"
+              name="skills"
+              value="Node.js"
+            />
+            <label for="skillNode">Node.js</label>
+          </div>
+
+          <div class="group">
+            <label for="about">About Student</label>
+            <textarea id="about" name="about" maxlength="200"></textarea>
+            <small>Maximum 200 characters</small>
+          </div>
+
+          <div class="group">
+            <label for="photo">Profile Photo</label>
+            <input type="file" id="photo" name="photo" accept="image/*" />
+          </div>
+
+          <div class="buttons">
+            <button type="submit" id="registerBtn">Register Student</button>
+            <button type="reset" id="resetBtn">Reset Form</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="statsSection">
+        <h2>Student Statistics</h2>
+        <div id="statsContainer">
+          <p>Total Students: <span id="totalStudents">0</span></p>
+        </div>
+      </section>
+
+      <section class="searchSection">
+        <input type="text" id="searchInput" placeholder="Search by name" />
+        <select id="filterCourse">
+          <option value="all">All Courses</option>
+          <option value="Web Development">Web Development</option>
+          <option value="UI/UX">UI/UX</option>
+          <option value="Python">Python</option>
+          <option value="Data Analytics">Data Analytics</option>
+          <option value="MERN Stack">MERN Stack</option>
+          <option value="Cloud Computing">Cloud Computing</option>
+        </select>
+      </section>
+
+      <section class="cardSection">
+        <div id="studentCardsContainer"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Student Application Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
