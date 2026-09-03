@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <header>
+        <h1 style="align-items: center;justify-content: center;display: flex;">Student Application Management System</h1>
+        <h4 style="align-items: center;justify-content: center;display: flex;">Register and manage student applications</h4>
+    </header>
+
+    <form action="submission">
+        <h2  style="align-items: center;justify-content: center;display: flex;">Student Registration Form</h2>
+          <label><b>Name</b></label> : <input type="text" required><br><br>
+        <label><b>Email</b></label> : <input type="email" required ><br><br>
+        <label><b>Phone No.</b></label> : <input type="text" required ><br><br>
+        <label><b>Date of Birth</b></label> : <input type="date" required><br><br>
+        <label><b>Gender</b></label> :  <input type="radio" required>Male  <input type="radio">Female  <input type="radio">Others               <br><br>
+        <label><b>Course</b></label> : <select name="" id="">
+            <option>Select Course</option>
+            <option>Web Development</option>
+            <option>UI/UX</option>
+            <option>Python</option>
+            <option>Data Analytics</option>
+            <option>MERN Stack</option>
+            <option>Cloud Computing</option>
+        </select><br><br>
+       <label><b>Skills</b></label> : 
+       <input type="checkbox">HTML <br>
+       <pre>       <input type="checkbox">CSS  <br>
+       <input type="checkbox">JavaScript <br>
+       <input type="checkbox">Git <br>
+       <input type="checkbox">React <br>
+       <input type="checkbox">Node.js <br><br></pre>
+       <label><b>About Student</b></label> : <textarea ></textarea><br><br>
+       <label><b>Profile Photo</b></label> : <input type="file"><br><br>
+     
+       <pre>           <button type="submit"><b>Register Student</b></button>       <button type="reset"><b>Reset Form</button></b> </pre>
+
+    </form>
+    
+    <footer></footer>
+
+</body>
+</html>
