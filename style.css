@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.5;
+}
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 40px 0 20px;
+}
+.registration-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 7px;
+    font-size: 15px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+textarea {
+    resize: vertical;
+}
+.full-width {
+    grid-column: 1 / -1;
+}
+.registration-form button {
+    grid-column: 1 / -1;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.registration-form button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+.student-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.student-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.profile {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #2563eb;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.student-card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+.student-card p {
+    font-size: 14px;
+    margin-bottom: 7px;
+    color: #666;
+}
+.view-btn {
+    margin-top: 15px;
+    padding: 9px 15px;
+    background-color: white;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.view-btn:hover {
+    background-color: #2563eb;
+    color: white;
+}
+@media (max-width: 768px) {
+    .container {
+        width: 94%;
+        margin: 25px auto;
+    }
+    .registration-form {
+        grid-template-columns: 1fr;
+        padding: 22px;
+    }
+    .full-width {
+        grid-column: auto;
+    }
+    .registration-form button {
+        grid-column: auto;
+    }
+    .student-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+    h1 {
+        font-size: 26px;
+    }
+    h2 {
+        font-size: 21px;
+    }
+    .registration-form {
+        padding: 18px;
+        gap: 15px;
+    }
+    .student-container {
+        grid-template-columns: 1fr;
+    }
+    .student-card {
+        padding: 20px;
+    }
+    input,
+    select,
+    textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
