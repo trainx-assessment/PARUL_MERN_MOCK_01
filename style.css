@@ -1,0 +1,71 @@
+#head{
+    background-color: lightblue;
+    justify-items: center;
+    
+}
+#form{
+    background-color: rgb(128, 199, 240);
+    
+}
+
+#name{
+    display: flex;
+    margin: 10px 10px 10px;
+    justify-content: space-evenly;
+}
+
+#DOB{
+    display: flex;
+    margin: 10px 10px 10px;
+    justify-content: space-evenly;
+}
+
+#gen{
+    display: flex;
+    margin: 10px 10px 10px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20%;
+}
+
+#cards{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.student-card{
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #b5d7e8;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.student-card img{
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px){
+    #cards{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px){
+    #cards{
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .student-card{
+        padding: 16px;
+    }
+}
