@@ -3,6 +3,13 @@
     
 }
 
+h1{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+
 .f{
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
@@ -12,3 +19,36 @@
     width: 98vw;
 }
 /* @media (max-width: 768px) */
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+p{
+    background-color: black;
+    color: white;
+}
+.student-card{
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 300px;
+}
+
+.edit{
+    width: 50px;
+    height: 30px;
+}
+
+
+.del{
+    width: 50px;
+    height: 30px;
+}
+
+.stats{
+    text-align: center;
+    height: 100px;
+    width: 98vw;
+
+}

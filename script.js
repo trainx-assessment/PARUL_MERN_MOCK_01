@@ -15,19 +15,29 @@ const regstu = document.querySelector('.regstu')
 
 // })
 
+let i = 0
+const stats = document.querySelector('.stats')
+stats.textContent = `Total Students ${i}`
+
+
+const cards = document.querySelector('.cards')
+
 regstu.addEventListener('click', (event) => {
+
+    let flag = true
     event.preventDefault()
     const name = document.querySelector('#name')
 
 
-    validateName(name)
+    if(!validateName(name))flag = false
 
     const email = document.getElementById("email")
-    validateEmail(email)
+
+    if(!validateEmail(email))flag = false
     const phone = document.getElementById("phnumber")
-    validatePhone(phone)
+    if(!validatePhone(phone))flag = false
     const dob = document.getElementById("dob")
-    validateDOB(dob)
+    if(!validateDOB(dob))flag = false
     const gender = document.querySelectorAll(".gend")
     let gend
     gender.forEach(ele => {
@@ -35,7 +45,10 @@ regstu.addEventListener('click', (event) => {
             gend = ele.value
         }
     });
-    if (!gend) alert("Select a gender")
+    if (!gend){
+        alert("Select a gender")
+        flag = false
+    } 
 
     console.log(gend)
 
@@ -43,19 +56,29 @@ regstu.addEventListener('click', (event) => {
 
     if (course === "Select Course") {
         alert("Select a course")
+        flag = false
     }
 
     console.log(course)
 
     const skills = document.querySelectorAll('.Skills')
     let skar = []
+    let str = ""
     skills.forEach(ele => {
         if (ele.checked) {
             skar.push(ele.value)
         }
     });
-    if (skar.length == 0) alert("Select atleast one skill")
-    console.log(skar)
+    if (skar.length == 0){
+        alert("Select atleast one skill")
+        flag = false
+    }
+
+    skar.forEach(element => {
+        strr = element + " ,"
+        str+=strr
+    });
+    let curse =  str.slice(0,str.length-1)
 
     const pfp = document.querySelector('.pfp').value
     console.log(pfp)
@@ -63,7 +86,99 @@ regstu.addEventListener('click', (event) => {
     let ext = extt[extt.length - 1]
     if (!(ext === "jpg" || ext === "jpeg" || ext === "png")) {
         alert("File Type Wrong")
+        flag = false
     }
+
+    const txtar = document.querySelector('.abstudent').value
+    console.log(flag)
+
+    if(flag){
+        i++
+        stats.textContent = `Total Students ${i}`
+
+        let stcards = document.createElement('div')
+        stcards.classList.add('student-card')
+        
+        stcards.setAttribute("data-id" , i)
+
+        let edit = document.createElement('button')
+        edit.classList.add('edit')
+
+        let del = document.createElement('button')
+        del.classList.add('del')
+
+        stcards.innerHTML = `
+        <img class="dp" src="${pfp}" alt="Cannot access image">
+
+        <p> ${name.value.trim()}</p>
+        <p> E-mail: ${email.value}</p>
+        <p> Phone: ${phone.value}</p>
+        <p> DOB: ${dob.value}</p>
+        <p> Gender: ${gend}</p>
+        <p> Course: ${course}</p>
+        <p> Skills:</p>
+        <p> ${curse}</p>
+        <p> About:</p>
+        <p> ${txtar}</p>
+
+        `
+        let ename = name.value.trim()
+        let eemail = email.value
+        let ephn = phone.value
+        let edob = dob.value
+        let egend = gend
+        let ecourse = course
+        let etxt = txtar
+
+        edit.innerHTML = `Edit`
+        del.innerHTML = `Delete`
+        stcards.appendChild(edit)
+        stcards.appendChild(del)
+
+        cards.appendChild(stcards)
+
+        edit.addEventListener('click',()=>{
+            cards.removeChild(stcards)    
+            
+            i--
+            stats.textContent = `Total Students ${i}`
+
+            name.value = ename
+            email.value = eemail
+            phone.value = ephn
+            dob.value = edob
+            gender.forEach(ele => {
+
+                if (ele.value === egend) {
+                    ele.checked = true
+                } else {
+                    ele.checked = false
+                }
+
+            })
+
+            courseEle.value = ecourse
+            skills.forEach(ele => {
+
+                if (eskills.includes(ele.value)) {
+                    ele.checked = true
+                } else {
+                    ele.checked = false
+                }
+
+            })
+            txtArea.value = etxt
+
+        })
+
+        del.addEventListener('click',()=>{
+            i--
+            stats.textContent = `Total Students ${i}`
+            cards.removeChild(stcards)   
+        })
+
+    }
+
 
     function validateName() {
         let canContain = /^[a-zA-Z\s]+$/;
