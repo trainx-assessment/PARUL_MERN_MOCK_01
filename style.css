@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  background-color: #f5f5f5;
+}
+
+header {
+  padding: 20px 100px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+
+  color: white;
+  background-color: cornflowerblue;
+}
+
+main {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+form {
+  background-color: white;
+  margin: 25px 100px;
+  padding: 20px;
+
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+form .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
+
+  padding: 0 100px;
+}
+
+.field {
+  padding: 20px 0;
+}
+
+.field label:first-child {
+  display: block;
+  margin-bottom: 5px;
+
+  font-weight: 600;
+}
+
+.field input,
+.field textarea,
+.field select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.buttons {
+  display: flex;
+  padding: 20px 100px;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+}
+
+.buttons input {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+
+  font-size: 100%;
+  font-weight: bold;
+}
+
+input {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+.subfield-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: cornflowerblue;
+  box-shadow: inset 0 0 5px rgba(100, 149, 237, 0.5);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="select"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+  resize: vertical;
+  width: 300px;
+}
+
+p.count {
+  font-size: small;
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 20px;
+    text-align: center;
+  }
+  form {
+    margin: 10px;
+    padding: 20px;
+  }
+  form .grid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+
+    padding: 0;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="select"],
+  input[type="date"],
+  input[type="file"],
+  select,
+  textarea {
+    resize: vertical;
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 20px;
+    text-align: center;
+  }
+  form {
+    margin: 10px;
+    padding: 20px;
+  }
+  form .grid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+
+    padding: 0;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="select"],
+  input[type="date"],
+  input[type="file"],
+  select,
+  textarea {
+    resize: vertical;
+    width: 300px;
+  }
+}
+
+@media (max-width: 1140px) {
+  header {
+    padding: 20px;
+    text-align: center;
+  }
+  form {
+    margin: 10px;
+    padding: 20px;
+  }
+  form .grid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+
+    padding: 0;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="select"],
+  input[type="date"],
+  input[type="file"],
+  select,
+  textarea {
+    resize: vertical;
+    width: 300px;
+  }
+}
+
+.student-cards {
+  
+
+  background-color: white;
+  margin: 25px 100px;
+  padding: 20px;
+
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.cards-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.card-head {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+}
+
+.pfp {
+  width: 30%;
+}
+
+.pfp img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.details {
+  width: 70%;
+}
+
+.subdetails {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card-body {
+  margin-top: 20px;
+}
+
+.cardfield {
+  display: flex;
+  gap: 30px;
+}
+
+.cardfield p:first-child {
+  width: 30%;
+}
+
+.cardfield p:last-child {
+  width: 70%;
+}
