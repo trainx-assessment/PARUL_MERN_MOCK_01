@@ -1,9 +1,72 @@
 const students = [];
 const form = document.getElementById("student-form");
+const studentCardsContainer = document.getElementById("student-cards-container");
 
 function getNextStudentId() {
     const lastStudent = students[students.length - 1];
     return lastStudent ? lastStudent.id + 1 : 1;
+}
+
+function displayStudents() {
+    studentCardsContainer.innerHTML = "";
+
+    students.forEach((student) => {
+        const card = document.createElement("div");
+        card.classList.add("student-card");
+        card.setAttribute("data-id", student.id);
+
+        const photo = document.createElement("img");
+        photo.setAttribute("src", student.photo);
+        photo.setAttribute("alt", "Student Photo");
+
+        const name = document.createElement("h3");
+        name.textContent = student.name;
+
+        const email = document.createElement("p");
+        email.textContent = "Email: " + student.email;
+
+        const phone = document.createElement("p");
+        phone.textContent = "Phone: " + student.phone;
+
+        const dob = document.createElement("p");
+        dob.textContent = "DOB: " + student.dob;
+
+        const gender = document.createElement("p");
+        gender.textContent = "Gender: " + student.gender;
+
+        const course = document.createElement("p");
+        course.textContent = "Course: " + student.course;
+
+        const skillsTitle = document.createElement("p");
+        skillsTitle.textContent = "Skills:";
+
+        const skills = document.createElement("p");
+        skills.textContent = student.skills.join(", ");
+
+        const aboutTitle = document.createElement("p");
+        aboutTitle.textContent = "About:";
+
+        const about = document.createElement("p");
+        about.textContent = student.about;
+
+        const editButton = document.createElement("button");
+        editButton.textContent = "Edit";
+
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.classList.add("delete-student");
+        deleteButton.addEventListener("click", () => {
+            const studentIndex = students.findIndex((currentStudent) => currentStudent.id === student.id);
+
+            if (studentIndex !== -1) {
+                students.splice(studentIndex, 1);
+                displayStudents();
+            }
+        });
+
+        card.append(photo, name, email, phone, dob, gender, course, skillsTitle, skills, aboutTitle, about, editButton, deleteButton);
+        studentCardsContainer.appendChild(card);
+    });
 }
 
 form.addEventListener("submit", (event) => {
@@ -141,6 +204,7 @@ form.addEventListener("submit", (event) => {
     };
 
     students.push(student);
+    displayStudents();
     form.reset();
     document.getElementById("about-counter").innerText = "0 / 200";
 });

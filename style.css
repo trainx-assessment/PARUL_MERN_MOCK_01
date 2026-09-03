@@ -108,6 +108,12 @@ button:hover {
     transform: translateY(-1px);
 }
 
+.delete-student {
+    background: #d93025;
+    color: white;
+    margin-left: 8px;
+}
+
 
 #search-filter input,
 #search-filter select {
@@ -169,4 +175,13 @@ footer {
     #form-buttons {
         flex-direction: column;
     }
+}
+
+
+student-card {
+    display: block;
+    margin-bottom: 12px;
+    padding: 12px;
+    text-decoration: none;
+    line-height: 1.5;
 }
