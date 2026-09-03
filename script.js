@@ -203,3 +203,17 @@ function renderCards() {
         });
     }
 }
+// --- Statistics (Task 7) ---
+function updateStats() {
+    totalStudentsEl.textContent = `Total Students: ${students.length}`;
+    
+    const courses = ["Web Development", "UI/UX", "Python", "Data Analytics", "MERN Stack", "Cloud Computing"];
+    statsContainer.innerHTML = '';
+
+    courses.forEach(course => {
+        const count = students.filter(s => s.course === course).length;
+        const div = document.createElement('div');
+        div.innerHTML = `<strong>${course}:</strong> ${count}`;
+        statsContainer.appendChild(div);
+    });
+}
