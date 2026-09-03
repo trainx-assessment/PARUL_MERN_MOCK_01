@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #1e293b;
+}
+.mains {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.mains h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.mains p {
+    font-size: 16px;
+}
+
+.container {
+    width: 95%;
+    max-width: 1300px;
+    margin: 30px auto;
+}
+
+.details {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.details h2 {
+    margin-bottom: 20px;
+    color: green;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.data {
+    display: flex;
+    flex-direction: column;
+}
+
+.data label {
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+.data input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.data input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+small {
+    color: red;
+    margin-top: 5px;
+}
+#characterCounter {
+    text-align: right;
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 5px;
+}
+
+.button {
+    grid-column: 1 / -1;
+
+    display: flex;
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+.button button {
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 15px;
+    cursor: pointer;
+}
+#submitButton {
+    background-color:green;
+    color: white;
+}
+
+#submitButton:hover {
+    background-color: green;
+}
+#resetButton {
+    background-color: #e2e8f0;
+    color: #1e293b;
+}
+
+#resetButton:hover {
+    background-color: #cbd5e1;
+}
+.statistics {
+    margin-top: 25px;
+
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.statistics h2 {
+    margin-bottom: 15px;
+}
+
+.search-section {
+    margin-top: 25px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 15px;
+}
+.student-container {
+    margin-top: 25px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+.student-card {
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    border: 1px solid #e2e8f0;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.student-photo {
+    width: 100px;
+    height: 100px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+
+    margin: 0 auto 15px;
+}
+.student-card h3 {
+    text-align: center;
+
+    margin-bottom: 12px;
+
+    color: #1e3a8a;
+}
+
+.student-card p {
+    margin: 7px 0;
+}
+.skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-top: 5px;
+}
+
+.skill {
+    background-color: #dbeafe;
+
+    color: #1e40af;
+
+    padding: 4px 9px;
+
+    border-radius: 15px;
+
+    font-size: 12px;
+}
+.card-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.card-buttons button {
+    flex: 1;
+
+    padding: 9px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.edit-btn {
+    background-color: #f59e0b;
+}
+
+.edit-btn:hover {
+    background-color: #d97706;
+}
+.delete-btn {
+    background-color: #dc2626;
+}
+
+.delete-btn:hover {
+    background-color: #b91c1c;
+}
+.no-students {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #64748b;
+}
+footer {
+    background-color: #1e293b;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 30px;
+}
+@media (max-width: 768px) {
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .button {
+        grid-column: auto;
+    }
+
+    .student-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .search-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 94%;
+    }
+
+    .details {
+        padding: 18px;
+    }
+
+    .mains h1 {
+        font-size: 22px;
+    }
+
+    .student-container {
+        grid-template-columns: 1fr;
+    }
+
+    .button {
+        flex-direction: column;
+    }
+
+    .button button {
+        width: 100%;
+    }
+}
