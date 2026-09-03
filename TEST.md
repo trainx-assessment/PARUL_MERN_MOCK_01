@@ -95,7 +95,7 @@ Create a student registration form containing the following fields.
 
 * Input type: `text`
 * Required
-
+ 
 ## Email
 
 * Input type: `email`
