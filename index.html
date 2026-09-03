@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Student Application Management System</h1>
+    <h4>Register and manage student applications</h4>
+
+    <form id="studentForm" method="post">
+
+        <label for="name">Student Name: <input type="text" id="name" placeholder="Enter your Name" required>
+        </label>
+        <br>
+        <label for="email">Email ID:  <input type="email" id="email" name="email" placeholder="abc@gmail.com" required>
+        </label>
+        <br>
+
+        <label for="phone">Phone Number: <input type="number" id="phone" placeholder="XXXXXXX123" required>
+        </label>
+        <br>
+
+        <label for="date">Date of Birth: <input type="date" id="date" required>
+        </label>
+        <br>
+
+        <label>Gender:</label>
+        <label><input type="radio" name="gender"> Male</label>
+        <label><input type="radio" name="gender"> Female</label>
+        <label><input type="radio" name="gender"> Other</label>
+        <br>
+        <br>
+
+        <label for="course">Course:</label>
+        <select name="course" id="course">
+            <option value="">Select course</option>
+            <option value="Web Development">Web Development</option>
+            <option value="UI/UX">UI/UX</option>
+            <option value="Python">Python</option>
+            <option value="Data Analytics">Data Analytics</option>
+            <option value="MERN Stack">MERN Stack</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+        </select>
+
+        <fieldset>
+            <legend>Skills:</legend>
+
+            <div>
+                <input type="checkbox" id="html" name="skills" value="HTML">
+                <label for="html">HTML</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="css" name="skills" value="CSS">
+                <label for="css">CSS</label>
+            </div>
+            <div>
+                <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+                <label for="javascript">JavaScript</label>
+            </div>
+            <div>
+                <input type="checkbox" id="git" name="skills" value="Git">
+                <label for="git">Git</label>
+            </div>
+            <div>
+                <input type="checkbox" id="react" name="skills" value="React">
+                <label for="react">React</label>
+            </div>
+            <div>
+                <input type="checkbox" id="node" name="skills" value="Node.js">
+                <label for="node">Node.js</label>
+            </div>
+        </fieldset>
+
+        <br>
+
+        <label for="about">Add:
+            <br>
+            <textarea id="about" rows="4" cols="30"></textarea>
+        </label>
+        <br>
+
+        <label for="profile-pic">Upload Profile Photo:</label>
+        <input type="file" id="profile-pic" name="profile_picture" accept="image/jpeg, image/png, image/webp" required>
+        <br>
+
+        <button type="submit">Register Student</button>
+        <button type="reset">Reset Form</button>
+
+    </form>
+
+    <div id="studentContainer"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
