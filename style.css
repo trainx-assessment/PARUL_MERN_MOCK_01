@@ -1,0 +1,213 @@
+body {
+  font-family: Arial;
+  background-color: #f2f2f2;
+  margin: 10px;
+}
+
+header {
+  border : 1px solid gray;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+section {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  box-shadow: 2px 2px 5px gray;
+}
+
+h2 {
+  color: black;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 50%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.full-box {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.box label, .full-box label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.box input[type="text"],
+.box input[type="email"],
+.box input[type="date"],
+.box select,
+.full-box textarea,
+.full-box input[type="file"] {
+  width: 95%;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.inline-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.error-msg {
+  color: red;
+  font-size: 12px;
+  display: block;
+  margin-top: 3px;
+  min-height: 15px;
+}
+
+#charCount {
+  display: block;
+  font-size: 11px;
+  color: gray;
+  margin-top: 2px;
+}
+
+.btn-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  background-color: white;
+  color: black;
+  padding: 8px 15px;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: lovender;
+}
+
+button[type="reset"] {
+  background-color: white;
+}
+
+button[type="reset"]:hover {
+  background-color: whitesmoke;
+}
+
+#search {
+  padding: 5px;
+  width: 90%;
+}
+
+#cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.student-card {
+  width: 31%;
+  box-sizing: border-box;
+  background-color: lightyellow;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 2px 2px 4px lightgray;
+  word-wrap: break-word;
+}
+
+.student-card:hover {
+  background-color: #fffde0;
+}
+
+.student-card img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.student-card h3 {
+  margin: 5px 0;
+  color: black;
+}
+
+.student-card p {
+  margin: 3px 0;
+  font-size: 13px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.edit-btn {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 3px;
+  padding: 6px 12px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.edit-btn:hover {
+  background-color: lightgray;
+}
+
+.delete-btn {
+  background-color: white;
+  color: red;
+  border: none;
+  border-radius: 3px;
+  padding: 6px 12px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.delete-btn:hover {
+  background-color: rgb(238, 137, 137);
+}
+
+footer {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .student-card {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .box {
+    width: 100%;
+  }
+  .student-card {
+    width: 100%;
+  }
+}

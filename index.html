@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Application Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Student Application Management System</h1>
+    <p>Register and manage student applications</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Student Registration Form</h2>
+      <form id="studentForm" novalidate>
+        
+        <div class="box">
+          <label for="name">Student Name:</label>
+          <input type="text" id="name">
+          <span class="error-msg" id="nameError"></span>
+        </div>
+
+        <div class="box">
+          <label for="email">Email:</label>
+          <input type="email" id="email">
+          <span class="error-msg" id="emailError"></span>
+        </div>
+
+        <div class="box">
+          <label for="phone">Phone Number:</label>
+          <input type="text" id="phone">
+          <span class="error-msg" id="phoneError"></span>
+        </div>
+
+        <div class="box">
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob">
+          <span class="error-msg" id="dobError"></span>
+        </div>
+
+        <div class="box">
+          <label>Gender:</label>
+          <div class="inline-items">
+            <input type="radio" id="male" name="gender" value="Male"> Male
+            <input type="radio" id="female" name="gender" value="Female"> Female
+            <input type="radio" id="other" name="gender" value="Other"> Other
+          </div>
+          <span class="error-msg" id="genderError"></span>
+        </div>
+
+        <div class="box">
+          <label for="course">Course:</label>
+          <select id="course">
+            <option value="">Select Course</option>
+            <option value="Web Development">Web Development</option>
+            <option value="UI/UX">UI/UX</option>
+            <option value="Python">Python</option>
+            <option value="Data Analytics">Data Analytics</option>
+            <option value="MERN Stack">MERN Stack</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+          </select>
+          <span class="error-msg" id="courseError"></span>
+        </div>
+
+        <div class="full-box">
+          <label>Skills:</label>
+          <div class="inline-items">
+            <input type="checkbox" name="skill" value="HTML"> HTML
+            <input type="checkbox" name="skill" value="CSS"> CSS
+            <input type="checkbox" name="skill" value="JavaScript"> JavaScript
+            <input type="checkbox" name="skill" value="Git"> Git
+            <input type="checkbox" name="skill" value="React"> React
+            <input type="checkbox" name="skill" value="Node.js"> Node.js
+          </div>
+          <span class="error-msg" id="skillError"></span>
+        </div>
+
+        <div class="full-box">
+          <label for="about">About Student:</label>
+          <textarea id="about" maxlength="200"></textarea>
+          <small id="charCount">0 / 200</small>
+          <span class="error-msg" id="aboutError"></span>
+        </div>
+
+        <div class="full-box">
+          <label for="photo">Profile Photo:</label>
+          <input type="file" id="photo" accept="image/png, image/jpeg, image/jpg">
+          <span class="error-msg" id="photoError"></span>
+        </div>
+
+        <div class="full-box btn-container">
+          <button type="submit">Register Student</button>
+          <button type="reset" id="resetBtn">Reset Form</button>
+        </div>
+
+      </form>
+    </section>
+
+    <section>
+      <h2>Student Statistics</h2>
+      <p>Total Students: <b id="totalCount">0</b></p>
+      <p>Web Development: <b id="countWeb">0</b></p>
+      <p>UI/UX: <b id="countUIUX">0</b></p>
+      <p>Python: <b id="countPython">0</b></p>
+      <p>Data Analytics: <b id="countData">0</b></p>
+      <p>MERN Stack: <b id="countMern">0</b></p>
+      <p>Cloud Computing: <b id="countCloud">0</b></p>
+    </section>
+
+    <section>
+      <h2>Search and Filter Section</h2>
+      <input type="text" id="search" placeholder="Search by name..." onkeyup="filterStudents()">
+    </section>
+
+    <section>
+      <h2>Student Cards Container</h2>
+      <div id="cardsContainer"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Student Application Management System Footer</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
