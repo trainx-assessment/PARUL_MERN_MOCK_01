@@ -1,0 +1,290 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-track {
+  margin: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: #1e1e1e;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #e1e1e1;
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+  width: 100vw;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: larger;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+header p {
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+  opacity: 0.8;
+  font-size: 0.75rem;
+}
+
+main {
+  overflow-y: scroll;
+}
+
+section {
+  padding: 4rem 6rem;
+}
+
+.registration-sec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registration-sec form {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+
+  color: lightgray;
+
+  text-align: center;
+}
+
+.registration-sec form > p {
+  margin-top: 0.25rem;
+}
+
+.field-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1rem;
+  gap: 3rem;
+}
+
+.field {
+  border-radius: 0.25rem;
+  border: 1px solid gray;
+  color: gray;
+  min-width: 320px;
+}
+
+.field input {
+  padding: 0.75rem 1.25rem;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+.field input::placeholder {
+  color: inherit;
+}
+
+.field:focus-within {
+  color: lightgray;
+  border: 2px solid lightgray;
+}
+
+.radio-group {
+  text-align: left;
+  color: gray;
+}
+
+.radio-group p {
+  margin-bottom: 0.5rem;
+}
+
+.radio-group .group {
+  margin: 0 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.25rem;
+}
+
+.radio-group .group input:checked + span {
+  color: lightgray;
+  font-weight: 600;
+}
+
+.field select,
+.field textarea {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  color: gray;
+  outline: none;
+}
+
+.field:focus-within select,
+.field textarea {
+  color: lightgray;
+}
+
+.field select option {
+  color: #1e1e1e;
+}
+
+.skill-group p,
+.profile-group p,
+.about-field p {
+  margin-bottom: 0.5rem;
+}
+
+.skill-group,
+.profile-group,
+.about-field {
+  text-align: left;
+  color: gray;
+  grid-column: 1/3;
+}
+
+.skill-group .group,
+.profile-group .group {
+  margin: 0 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill-group .group label {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.skill-group .group input:checked + span {
+  color: lightgray;
+  font-weight: 600;
+}
+
+.profile-group {
+  margin-bottom: 1rem;
+}
+
+.field-group .btn {
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  border: 2px solid;
+  cursor: pointer;
+}
+
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  filter: brightness(0.85);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.field textarea {
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.btn[type="submit"] {
+  background-color: rgba(0, 128, 0, 0.25);
+  color: lightgreen;
+}
+
+.btn[type="reset"] {
+  background-color: rgba(255, 0, 0, 0.25);
+  color: lightcoral;
+}
+
+#name-err,
+#email-err,
+#phone-err,
+#dob-err {
+  color: lightcoral;
+}
+
+/* USer cards */
+#student-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.student-card {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .field-group {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-group,
+  .profile-group,
+  .about-field {
+    grid-column: 1/2;
+  }
+}
