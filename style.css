@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header{
+    background-color: aquamarine;
+}
+
+footer{
+    background-color: aqua;
+    height: 30px;
+}
+
+#header,
+#registeredStudents,
+footer {
+    text-align: center;
+}
+
+.container{
+    background-color: antiquewhite;
+    min-height: 800px;
+    width: 100%;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form {
+    border: 2px solid black;
+    padding: 20px;
+}
+
+#registerBtn,
+#resetBtn {
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+}
+
+.student-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    padding: 50px;
+}
+
+.student-card {
+    padding: 16px;
+    border: 1px solid black;
+    background: white;
+    height: 400px;
+    width: 250px;
+}
+
+.student-card img {
+    width: 72px;
+    height: 72px;
+    position: relative;
+    border-radius: 50%;
+}
