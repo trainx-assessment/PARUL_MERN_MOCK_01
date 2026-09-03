@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Student Application Manager</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main class="app-shell">
+		<section class="hero">
+			<h1>Student Application Manager</h1>
+			<p>Register students, validate their details, and manage records .</p>
+		</section>
+
+		<section class="panel">
+			<div class="count-bar" aria-live="polite">
+				<h2>Total Students: <span id="studentCount">0</span></h2>
+			</div>
+
+			<form id="studentForm" novalidate>
+				<div class="form-grid">
+					<div class="field">
+						<label for="studentName">Student Name</label>
+						<input type="text" id="studentName" name="studentName" placeholder="Enter student name">
+						<small class="error-message" id="studentNameError"></small>
+					</div>
+
+					<div class="field">
+						<label for="studentEmail">Email</label>
+						<input type="email" id="studentEmail" name="studentEmail" placeholder="Enter email address">
+						<small class="error-message" id="studentEmailError"></small>
+					</div>
+
+					<div class="field">
+						<label for="studentPhone">Phone Number</label>
+						<input type="tel" id="studentPhone" name="studentPhone" placeholder="10-digit phone number">
+						<small class="error-message" id="studentPhoneError"></small>
+					</div>
+
+					<div class="field">
+						<label for="studentDob">Date of Birth</label>
+						<input type="date" id="studentDob" name="studentDob">
+						<small class="error-message" id="studentDobError"></small>
+					</div>
+
+					<fieldset class="field fieldset-block">
+						<legend>Gender</legend>
+						<div class="choice-row">
+							<label><input type="radio" name="gender" value="Male"> Male</label>
+							<label><input type="radio" name="gender" value="Female"> Female</label>
+							<label><input type="radio" name="gender" value="Other"> Other</label>
+						</div>
+						<small class="error-message" id="genderError"></small>
+					</fieldset>
+
+					<div class="field">
+						<label for="studentCourse">Course</label>
+						<select id="studentCourse" name="studentCourse">
+							<option value="">Select  course</option>
+							<option value="Web Development">Web Development</option>
+							<option value="UI/UX">UI/UX</option>
+                            <option value="UI/UX">JAVA</option>
+                            <option value="UI/UX"> MERN</option>
+							<option value="Python">Python</option>
+							<option value="Data Analytics">Data Analytics</option>
+						</select>
+						<small class="error-message" id="courseError"></small>
+					</div>
+
+					<fieldset class="field fieldset-block">
+						<legend>Skills</legend>
+						<div class="choice-row wrap">
+							<label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+							<label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+							<label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+							<label><input type="checkbox" name="skills" value="Git"> Git</label>
+						</div>
+						<small class="error-message" id="skillsError"></small>
+					</fieldset>
+
+					<div class="field full-width">
+						<label for="studentAbout">About Student</label>
+						<textarea id="studentAbout" name="studentAbout" rows="4" placeholder="Tell us about the student"></textarea>
+						<small class="error-message" id="aboutError"></small>
+					</div>
+
+					<div class="field full-width">
+						<label for="studentPhoto">Profile Photo</label>
+						<input type="file" id="studentPhoto" name="studentPhoto" accept="image/*">
+						<small class="error-message" id="photoError"></small>
+					</div>
+				</div>
+
+				<button type="submit" class="submit-btn">Add Student</button>
+			</form>
+		</section>
+
+		<section class="panel">
+			<h2>Submitted Students</h2>
+			<div id="studentContainer" class="student-container" aria-live="polite"></div>
+		</section>
+	</main>
+
+	<script src="script.js"></script>
+</body>
+</html>
