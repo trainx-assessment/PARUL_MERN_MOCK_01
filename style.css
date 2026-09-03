@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(71, 70, 70);
+    color: white;
+    padding: 10px;
+}
+/* .registration_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.group{
+    
+    gap: 15px;
+    margin: 10px;
+}
+
+
+
+.registration_form{
+    border: 1px solid greenyellow;
+
+}
+button{
+    font-weight:bold ;
+    margin: 10px;
+    border-radius: 5px;
+    height: 30px;
+    width: 80px;
+    color: black;
+
+}
+button:hover{
+    background-color: rgb(183, 243, 233);
+    color: rgb(15, 15, 166);
+   
+}
