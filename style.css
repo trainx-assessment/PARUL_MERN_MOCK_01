@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+display: flex;
+flex-direction: column;
+/* gap: 20px; */
+justify-content: center;
+align-items: center;
+/* padding: 30px; */
+/* overflow: hidden; */
+background-color: bisque;
+}
+main{
+    border: 2px solid;
+    background-color: rgb(249, 250, 250);
+    font-size: large;
+    height: 100%;
+    border-radius: 15px;
+}
+input:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+header{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: aliceblue;
+    width: 100%;
+    height: 8vh;
+    margin-bottom: 10px;
+}
+/* main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+} */
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    width: 30vw;
+    height: 65vh;
+    /* border: 2px solid ; */
+    
+}
+.textarea{
+    display: flex;
+    gap: 45px;
+    width: 30vw;
+    /* border: 2px solid; */
+    height: 10vh;
+}
+input{
+    width: 130px;
+    height: 18px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+.title{
+    text-align: center;
+    font-size: x-large;
+    font-weight: 1rem
+    ;
+}
+.name,.sub2,.sub3,.sub4{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+/* .{
+    padding-left: 20px;
+}
+.sub2,.sub4{
+    padding-right: 80px;
+} */
+ .button{
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+    /* border: 2px solid; */
+    width: 30vw;
+    height: 4vh;
+ }
+ .text{
+      display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 7vh;
+    width: 30vw;
+    padding-bottom: 10px;
+    /* border: 2px solid; */
+    margin: 13px;
+ }
+.profile{
+    display: flex;
+    justify-content: space-around;
+    height: 5vh;
+    width: 30vw;
+    /* border: 2px solid; */
+}
+#profile{
+    width: 250px;
+    height: 23px;
+}
+button{
+    border-radius: 10px;
+    color: aliceblue;
+    background-color: rgb(77, 49, 49);
+    width: 10vw;
+}
+@media (max-width: 768px){
+input{
+    width: 100px;
+}
+label{
+    font-size: small;
+}
+main{
+    width: 50vw;
+}
+}
+@media (max-width: 480px){
+    input{
+    width: 80px;
+}
+label{
+    font-size: small;
+}
+main{
+    width: 60vw;
+}
+
+
+}
