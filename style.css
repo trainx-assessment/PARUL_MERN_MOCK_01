@@ -370,3 +370,14 @@ main {
         width: 100%;
     }
 }
+
+.error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 3px;
+    text-align: left;
+}
+
+.input-error {
+    border-color: #e74c3c !important;
+}
