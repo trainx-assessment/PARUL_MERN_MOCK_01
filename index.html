@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="header">
+  <div class="first-sec">
+    <h1>Student Application Management System</h1>
+    <p><em>Register and manage student applications</em></p>
+  </div>
+</header>
+
+ <main>
+  <section class="registration-sec">
+    <div class="container">
+      <h2><em>Registration form</em></h2>
+      <form id="student-form" novalidate>
+        <div class="form-box">
+
+        <div class="form-name">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName"name="studentName"placeholder="Enter student name"required >
+        </div>
+
+        <div class="form-name">
+            <label for="email">Student Email</label>
+            <input type="email" id="email"name="email"placeholder="Enter student email "required >
+        </div>
+
+        <div class="form-name">
+            <label for="phone">Phone Number </label>
+            <input type="text" id="phone"name="phone"placeholder="Enter 10-digit phone number"required >
+        </div>
+
+        <div class="form-name">
+            <label for="dob">Date of Birth </label>
+            <input type="date" id="dob"name="dob"placeholder="DoB"required >
+        </div>
+
+        <fieldset class="form-name"><legend>Gender</legend>
+          <div class="options">
+              <label><input type="radio" name="gender" value="Male"> Male</label>
+              <label><input type="radio" name="gender" value="Female"> Female</label>
+              <label><input type="radio" name="gender" value="Other"> Other</label>
+            </div>
+          </fieldset>
+
+          <div class="form-name">
+            <label for="course"> Course</label>
+            <select id="course" name="course" required>
+              <option value="">Select Course</option>
+              <option value="Web Development">Web Development</option>
+              <option value="UI/UX">UI/UX</option>
+              <option value="Python">Python</option>
+              <option value="Data Analytics">Data Analytics</option>
+              <option value="MERN Stack">MERN Stack</option>
+              <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+          </div>
+
+          <fieldset class="form-name full-width">
+            <legend>Skills</legend>
+            <div class="options-group">
+              <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+              <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+              <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+              <label><input type="checkbox" name="skills" value="Git"> Git</label>
+              <label><input type="checkbox" name="skills" value="React"> React</label>
+              <label><input type="checkbox" name="skills" value="Node.js"> Node.js</label>
+            </div>
+          </fieldset>
+      <div class="form-name ">
+        <label for="about">About Student</label>
+          <textarea id="about"name="about"maxlength="200"placeholder="Tell Something about the Student..."required></textarea>
+        <div class="input-info">
+          <span>Maximum 200 characters</span>
+          <span id="characterCount">0 / 200</span>
+        </div>
+        </div>
+        <div class="form-name">
+          <label for="photo">Profile Photo</label>
+          <input type="file" id="photo"name="photo"accept=".jpg,.jpeg,.png,image/jpeg,image/png"required>
+        </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" id="submitButton">Register Student</button>
+          <button type="reset" id="resetBtn">Reset Form</button>
+        </div>   
+      </form>
+    </div>
+  </section>
+
+<div class="display">
+  <div class="add">
+    <div class="photos"></div>
+
+    <div class="info">
+      <h3 class="name"></h3>
+      <p class="email"></p>
+      <p class="phone"></p>
+      <p class="dob"></p>
+      <p class="gender"></p>
+      <p class="course"></p>
+      <p class="skills"></p>
+      <p class="about"></p>
+    </div>
+  </div>
+</div>
+ </main> 
+</body>
+</html>
