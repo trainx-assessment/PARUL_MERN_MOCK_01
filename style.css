@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+	--ink: #18232b;
+	--muted: #65757c;
+	--paper: #f6f4ed;
+	--panel: #fffdf8;
+	--line: #d9ded8;
+	--teal: #087f82;
+	--teal-dark: #075e64;
+	--coral: #e9745f;
+	--danger: #bb493e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+	margin: 0;
+	color: var(--ink);
+	background: var(--paper);
+	font-family: 'DM Sans', sans-serif;
+}
+
+body::before {
+	content: '';
+	position: fixed;
+	inset: 0 0 auto;
+	height: 9px;
+	background: var(--coral);
+}
+
+.app-shell { 
+    max-width: 1280px; margin: 0 auto; padding: 72px 32px 64px; 
+}
+.page-header { 
+    max-width: 800px; margin-bottom: 50px; 
+}
+.eyebrow { 
+    margin: 0 0 9px; color: var(--teal); font-size: .75rem; font-weight: 700; letter-spacing: 0; text-transform: uppercase; 
+}
+h1, h2, h3 { 
+    font-family: 'Space Grotesk', sans-serif; letter-spacing: 0; 
+}
+h1 { 
+    margin: 0; font-size: clamp(2.35rem, 5vw, 4.7rem); line-height: .98; 
+}
+h2 { 
+    margin: 0; font-size: 1.55rem; 
+}
+.intro { 
+    margin: 18px 0 0; color: var(--muted); font-size: 1.05rem; 
+}
+.workspace { 
+    display: grid; grid-template-columns: minmax(420px, .9fr) minmax(500px, 1.1fr); gap: 28px; align-items: start; 
+}
+form, .directory { 
+    padding: 30px; border: 1px solid var(--line); background: var(--panel); box-shadow: 8px 8px 0 rgba(8, 127, 130, .09); 
+}
+.section-heading { 
+    padding-bottom: 24px; border-bottom: 1px solid var(--line); 
+}
+.form-grid { 
+    display: grid; grid-template-columns: 1fr 1fr; gap: 17px 18px; padding: 24px 0; 
+}
+.field { 
+    min-width: 0; 
+}
+.field-wide { 
+    grid-column: 1 / -1; 
+}
+label, legend { 
+    display: block; margin-bottom: 7px; color: var(--ink); font-size: .84rem; font-weight: 700; 
+}
+fieldset { 
+    margin: 0; padding: 0; border: 0; 
+}
+input, select, textarea { 
+    width: 100%; padding: 12px 13px; border: 1px solid var(--line); border-radius: 2px; color: var(--ink); background: #fff; font: inherit; 
+}
+textarea { 
+    resize: vertical; 
+}
+input:focus, select:focus, textarea:focus { 
+    outline: 2px solid rgba(8, 127, 130, .25); border-color: var(--teal); 
+}
+.options-inline { 
+    display: flex; flex-wrap: wrap; gap: 10px 18px; min-height: 42px; align-items: center; 
+}
+.options-inline label { 
+    margin: 0; font-weight: 500; 
+}
+.options-inline input { 
+    width: auto; margin-right: 5px; accent-color: var(--teal); 
+}
+.error-message { 
+    display: block; min-height: 17px; margin-top: 5px; color: var(--danger); font-size: .75rem; 
+}
+.has-error { 
+    border-color: var(--danger); 
+}
+.primary-button, .delete-button { 
+    border: 0; border-radius: 2px; font: inherit; font-weight: 700; cursor: pointer; 
+}
+.primary-button { 
+    width: 100%; padding: 14px; color: #fff; background: var(--teal); 
+}
+.primary-button:hover { 
+    background: var(--teal-dark); 
+}
+.directory-header { 
+    display: flex; align-items: end; justify-content: space-between; gap: 18px; padding-bottom: 24px; border-bottom: 1px solid var(--line); 
+}
+.student-count { 
+    margin: 0; color: var(--coral); font-size: .84rem; font-weight: 700; white-space: nowrap; 
+}
+.student-container { 
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 17px; padding-top: 24px; 
+}
+.empty-state { 
+    grid-column: 1 / -1; margin: 28px 0; color: var(--muted); text-align: center; 
+}
+.student-card { 
+    display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid var(--line); background: #fff; 
+}
+.student-photo { 
+    width: 100%; height: 175px; object-fit: cover; background: #dce9e4; 
+}
+.student-card-content { 
+    display: flex; flex: 1; flex-direction: column; padding: 17px; 
+}
+.student-card h3 {
+     margin: 0 0 12px; font-size: 1.2rem; 
+    }
+.student-details {
+     display: grid; gap: 7px; margin: 0; font-size: .8rem; 
+    }
+.student-details div { 
+    display: grid; grid-template-columns: 70px 1fr; gap: 8px; 
+}
+.student-details dt { 
+    color: var(--muted); font-weight: 700; 
+}
+.student-details dd { 
+    overflow-wrap: anywhere; margin: 0; 
+}
+.about-text { 
+    margin: 14px 0; color: var(--muted); font-size: .82rem; line-height: 1.45; 
+}
+.delete-button { 
+    margin-top: auto; padding: 10px; color: var(--danger); background: #fff0ec; 
+}
+.delete-button:hover { 
+    background: #ffe0d9; 
+}
+
+@media (max-width: 900px) {
+	.workspace { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+	.app-shell { padding: 54px 16px 40px; }
+	form, .directory { padding: 21px; }
+	.form-grid { grid-template-columns: 1fr; }
+	.field-wide { grid-column: auto; }
+	.directory-header { align-items: start; flex-direction: column; }
+}

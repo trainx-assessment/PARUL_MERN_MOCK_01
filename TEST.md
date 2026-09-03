@@ -83,7 +83,7 @@ Also add a short subtitle:
 Register and manage student applications
 ```
 
----
+--- 
 
 # Task 2 — Student Registration Form
 
