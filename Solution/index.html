@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Management System</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="left">
+            Student Management System
+        </div>
+    </nav>
+    <main>
+        <div class="form">
+            <div class="fields">
+                <div class="left">
+                    <p class="text">Name: </p>
+                    <input type="text" class="input1" id="Name">
+                    <p class="text">Email: </p>
+                    <input type="email" class="input1" id="Email">
+                    <p class="text">Phone Number: </p>
+                    <input type="text" class="input1" id="Number">
+                    <p class="text">Date of Birth: </p>
+                    <input type="date" class="input1" id="Date">
+                </div>
+                <div class="right">
+                    <p class="text">Gender: </p>
+                    <div class="gender">
+                        <div class="gender1">
+                            <input type="radio" class="input2"> Male
+                        </div>
+                        <div class="gender2">
+                            <input type="radio" class="input2"> Female
+                        </div>
+                        <div class="gender3">
+                            <input type="radio" class="input2"> Other
+                        </div>
+                    </div>
+                    <p class="text">Course</p>
+                    <input type="text" class="input1" id="Course">
+                    <p class="text">Skills: </p>
+                    <div class="skills">
+                        <div class="skill-set1">
+                            <input type="checkbox">HTML
+                            <input type="checkbox">CSS
+                            <input type="checkbox">JavaScript
+                        </div>
+                        <div class="skill-set2">
+                            <input type="checkbox">Git
+                            <input type="checkbox">React
+                            <input type="checkbox">Node.js
+                        </div>
+                    </div>
+                    <p class="text">About Student: </p>
+                    <input type="text" class="input1" id="About">
+                </div>
+            </div>
+            <div class="pfp">
+                <p class="text">Profile Photo: </p>
+                <input type="file" id="Image">
+            </div>
+            <div class="btn">
+                <a href="dashboard.html"><button class="btn1">Register Student</button></a>
+                <button class="btn2">Reset Form</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
