@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+<body>
+    <form>
+        <header class="head">
+            <h1>Student Registration Form</h1>
+        </header>
+        <div class="student-input">
+            <div>
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName" name="student_name" placeholder="Enter name" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="studentEmail">Email:</label>
+                <input type="email" id="studentEmail" name="student_email" placeholder="@email.com" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="studentPhone">Phone Number:</label>
+                <input type="tel" id="studentPhone" name="student_phone" placeholder="Number" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="studentDOB">DOB:</label>
+                <input type="date" id="studentDOB" name="student_dob" required>
+            </div>
+            <br>
+
+            <div>
+                <label>Gender:</label>
+                <input type="radio" id="genderMale" name="gender" value="male" required>
+                <label for="genderMale">Male</label>
+                <input type="radio" id="genderFemale" name="gender" value="female">
+                <label for="genderFemale">Female</label>
+            </div>
+            <br>
+            <div>
+                <label for="studentCourse">Course:</label>
+                <select id="studentCourse" name="student_course" required>
+                    <option value="" disabled selected>-- Select a Course --</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Python">Python</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                </select>
+            </div>
+            <br>
+
+            <div>
+                <label>Skills:</label><br>
+                <input type="checkbox" id="skillHTML" name="skills" value="html">
+                <label for="skillHTML">HTML</label><br>
+
+                <input type="checkbox" id="skillCSS" name="skills" value="css">
+                <label for="skillCSS">CSS</label><br>
+
+                <input type="checkbox" id="skillJS" name="skills" value="javascript">
+                <label for="skillJS">JavaScript</label><br>
+
+                <input type="checkbox" id="skillPython" name="skills" value="python">
+                <label for="skillPython">Python</label>
+            </div>
+            <br>
+
+            <div>
+                <label for="aboutStudent">About:</label><br>
+                <textarea id="aboutStudent" name="about_student" rows="5" cols="40"
+                    placeholder="Tell us about yourself..."></textarea>
+            </div>
+            <br>
+
+            <div>
+                <label for="profilePhoto">Profile Photo:</label>
+                <input type="file" id="profilePhoto" name="ProfilePhoto">
+            </div>
+            <br><br>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
