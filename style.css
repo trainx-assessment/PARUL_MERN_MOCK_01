@@ -1,0 +1,56 @@
+
+body {
+font-family: Arial,
+    margin: 30px;
+    background: lavender;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+
+    background:blueviolet,
+      padding:20px,
+    max-width:600px,
+    margin:20px auto,
+}
+
+label {
+
+    display:block;
+    margin-top:12px;
+    margin-bottom:5px;
+}
+
+input,
+select,
+textarea {
+ 
+    width:100%;
+   padding: 8px;
+    margin-bottom: 5px;
+}
+
+textarea {
+    height:80px
+}
+
+button {
+    padding: 10px 15px;
+    margin-top: 15px;
+ cursor: pointer;
+}
+
+#search,
+#filter{
+ max-width:400px;
+}
+
+#result {
+   background:lavender;
+   padding:15px;
+margin-top: 20px;
+}
+
