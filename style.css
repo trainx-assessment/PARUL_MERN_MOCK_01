@@ -1,0 +1,222 @@
+*{
+    padding: 0px;
+}
+header{
+    background-color: aqua;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100px;
+    border-radius: 20px;
+}
+.view1{
+    
+    border-radius: 30px;
+    padding: 20px;
+    
+}
+.view11{
+    height: 80px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    /* background-color: rgb(107, 107, 110); */
+    
+    
+    
+}
+
+.v{
+    /* background-color: brown; */
+    border-radius: 10px;
+    border: 2px solid rgb(186, 181, 181);
+}
+#name{
+    width: 300px;
+    height: 20px;
+    border-radius: 5px;
+}
+.view12{
+    height: 100px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    /* background-color: rgb(107, 107, 110); */
+    
+    
+}
+#email{
+    width: 300px;
+    height: 20px;
+    border-radius: 5px;
+}
+#phone{
+    width: 300px;
+    height: 20px;
+    border-radius: 5px;
+}
+#address{
+    width: 300px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.gender{
+    height: 50px;
+    /* background-color: rgb(117, 165, 207); */
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    border-radius: 10px;
+     border: 2px solid rgb(186, 181, 181);
+     margin-left: 20px;
+     margin-top: 10px;
+     margin-right: 20px;
+
+}
+
+#gender{
+    margin-left: 130px;
+    font-size: 30px;
+    
+}
+.dob{
+    height: 50px;
+    /* background-color: rgb(117, 165, 207); */
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    border-radius: 10px;
+     border: 2px solid rgb(186, 181, 181);
+     margin-left: 20px;
+     margin-top: 10px;
+     margin-right: 20px;
+}
+#dob{
+    margin-left: 130px;
+    font-size: 30px;
+    
+}
+#data{
+    height: 30px;
+    margin-left: -80px;
+    width: 200px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 20px;
+    border: 2px solid rgb(224, 197, 197);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.selectcourses{
+    height: 50px;
+    /* background-color: rgb(117, 165, 207); */
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    border-radius: 10px;
+     border: 2px solid rgb(186, 181, 181);
+     margin-left: 20px;
+     margin-top: -25px;
+     margin-right: 20px;
+}
+
+#course{
+    margin-left: 130px;
+    margin-right: 95px;
+    font-size: 30px;
+}
+
+#skil{
+    font-size: 25px;
+    color: rgb(2, 6, 1);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#ase{
+    color: red;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.checking{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid rgb(215, 203, 203);
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    
+
+}
+
+#skil{
+    font-size: 25px;
+    color: rgb(2, 6, 1);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#asee{
+    color: red;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+#maxi{
+    height: 50px;
+    width: 1500px;
+    border-radius: 20px;
+    margin-left: 20px;
+    font-size: 15px;
+    
+    border: 3px solid rgb(253, 228, 228);
+
+}
+#por{
+    font-size: 25px;
+    color: rgb(2, 6, 1);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 50px;
+}
+
+#if{
+    height: 20px;
+    width: 1475px;
+    /* background-color: red; */
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 20px;
+
+    border: 2px solid rgb(233, 209, 209);
+}
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+#RS{
+    height: 30px;
+    width: 200px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: azure;
+    border-radius: 5px;
+    border: 3px solid rgb(3, 157, 171);
+
+}
+
+main{
+    background-color: blanchedalmond;
+    border-radius: 20px;
+}
