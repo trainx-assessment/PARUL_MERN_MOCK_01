@@ -1,0 +1,329 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: #eef1f5;
+  color: #222;
+  line-height: 1.5;
+}
+
+header {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  padding: 25px 20px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 0.3px;
+}
+
+header p {
+  margin: 6px 0 0;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+#darkBtn {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background: #e67e22;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+#darkBtn:hover {
+  background: #d35400;
+  transform: translateY(-1px);
+}
+
+main {
+  max-width: 1000px;
+  margin: 25px auto;
+  padding: 0 15px;
+}
+
+section {
+  background: white;
+  padding: 22px;
+  margin-bottom: 22px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+h2 {
+  margin-top: 0;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+  color: #2c3e50;
+  font-size: 19px;
+}
+
+.formRow {
+  display: flex;
+  gap: 20px;
+}
+
+.formGroup {
+  flex: 1;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+  padding: 9px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.15s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.formGroup label:not(:first-child) {
+  font-weight: normal;
+  display: inline-block;
+  margin-right: 14px;
+  font-size: 14px;
+}
+
+.err {
+  color: #e74c3c;
+  font-size: 12px;
+  min-height: 14px;
+  margin-top: 3px;
+}
+
+button {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 14px;
+  transition: background 0.15s, transform 0.1s;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+#submitBtn {
+  background: #27ae60;
+  color: white;
+}
+
+#submitBtn:hover {
+  background: #219150;
+}
+
+#resetBtn {
+  background: #dcdfe1;
+  color: #333;
+}
+
+#resetBtn:hover {
+  background: #c9cdd0;
+}
+
+#statsBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+#statsBox p {
+  background: #f5f7fa;
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin: 0;
+  font-size: 14px;
+  border-left: 3px solid #3498db;
+}
+
+#searchSection input,
+#searchSection select {
+  padding: 9px 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#cardBox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.student-card {
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fafbfc;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.student-card:hover {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.student-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eee;
+}
+
+.student-card h3 {
+  margin: 10px 0 6px;
+  color: #2c3e50;
+  font-size: 16px;
+}
+
+.student-card p {
+  margin: 3px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.cardBtns {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.cardBtns button {
+  padding: 6px 12px;
+  font-size: 12px;
+  margin-right: 0;
+  flex: 1;
+}
+
+.editBtn {
+  background: #3498db;
+  color: white;
+}
+
+.editBtn:hover {
+  background: #2980b9;
+}
+
+.deleteBtn {
+  background: #e74c3c;
+  color: white;
+}
+
+.deleteBtn:hover {
+  background: #c0392b;
+}
+
+footer {
+  text-align: center;
+  padding: 18px;
+  color: #888;
+  font-size: 13px;
+}
+
+body.dark-mode {
+  background: #181818;
+  color: #eee;
+}
+
+body.dark-mode section {
+  background: #262626;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+body.dark-mode h2 {
+  color: #eee;
+  border-bottom-color: #333;
+}
+
+body.dark-mode .student-card {
+  background: #2f2f2f;
+  border-color: #3a3a3a;
+}
+
+body.dark-mode .student-card h3 {
+  color: #fff;
+}
+
+body.dark-mode .student-card p {
+  color: #bbb;
+}
+
+body.dark-mode #statsBox p {
+  background: #2f2f2f;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background: #333;
+  color: #eee;
+  border-color: #4a4a4a;
+}
+
+body.dark-mode #resetBtn {
+  background: #444;
+  color: #eee;
+}
+
+@media (max-width: 768px) {
+  .formRow {
+    flex-direction: column;
+    gap: 0;
+  }
+  #cardBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  #cardBox {
+    grid-template-columns: 1fr;
+  }
+  #darkBtn {
+    position: static;
+    margin-top: 12px;
+  }
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
