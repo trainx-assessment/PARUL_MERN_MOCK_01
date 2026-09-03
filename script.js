@@ -1,0 +1,1 @@
+console.log("Student Application Management System Loaded");
