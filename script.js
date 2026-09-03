@@ -1,6 +1,8 @@
 const students = [];
 const form = document.getElementById("student-form");
+const submitButton = form.querySelector('button[type="submit"]');
 const studentCardsContainer = document.getElementById("student-cards-container");
+let editingStudentId = null;
 
 function updateStatistics() {
     let webDevelopmentCount = 0;
@@ -85,6 +87,7 @@ function displayStudents() {
 
         const editButton = document.createElement("button");
         editButton.textContent = "Edit";
+        editButton.classList.add("edit-student");
 
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
@@ -96,9 +99,10 @@ function displayStudents() {
 }
 
 studentCardsContainer.addEventListener("click", (event) => {
+    const editButton = event.target.closest(".edit-student");
     const deleteButton = event.target.closest(".delete-student");
 
-    if (deleteButton === null) {
+    if (editButton === null && deleteButton === null) {
         return;
     }
 
@@ -107,6 +111,25 @@ studentCardsContainer.addEventListener("click", (event) => {
     const studentIndex = students.findIndex((student) => student.id === studentId);
 
     if (studentIndex === -1) {
+        return;
+    }
+
+    if (editButton !== null) {
+        const student = students[studentIndex];
+
+        document.getElementById("student-name").value = student.name;
+        document.getElementById("student-email").value = student.email;
+        document.getElementById("student-phone").value = student.phone;
+        document.getElementById("student-dob").value = student.dob;
+        document.querySelector('input[name="studentGender"][value="' + student.gender + '"]').checked = true;
+        document.getElementById("student-course").value = student.course;
+        document.getElementById("student-skills").value = student.skills[0];
+        document.getElementById("student-about").value = student.about;
+        document.getElementById("about-counter").innerText = student.about.length + " / 200";
+
+        editingStudentId = student.id;
+        submitButton.innerText = "Update Student";
+        
         return;
     }
 
@@ -230,15 +253,43 @@ form.addEventListener("submit", (event) => {
         valid = false;
     }
 
-    if (photo === undefined) {
+    if (photo === undefined && editingStudentId === null) {
         document.getElementById("photo-error").innerText = "Profile photo is required.";
         valid = false;
-    } else if (photo.type !== "image/jpeg" && photo.type !== "image/png") {
+    } else if (photo !== undefined && photo.type !== "image/jpeg" && photo.type !== "image/png") {
         document.getElementById("photo-error").innerText = "Select a JPG, JPEG, or PNG image.";
         valid = false;
     }
 
     if (!valid) {
+        return;
+    }
+
+    if (editingStudentId !== null) {
+        const studentIndex = students.findIndex((student) => student.id === editingStudentId);
+
+        if (studentIndex === -1) {
+            return;
+        }
+
+        students[studentIndex].name = name;
+        students[studentIndex].email = email;
+        students[studentIndex].phone = phone;
+        students[studentIndex].dob = dob;
+        students[studentIndex].gender = gender.value;
+        students[studentIndex].course = course;
+        students[studentIndex].skills = [skills];
+        students[studentIndex].about = about;
+
+        if (photo !== undefined) {
+            students[studentIndex].photo = photo.name;
+        }
+
+        editingStudentId = null;
+        submitButton.innerText = "Register Student";
+        displayStudents();
+        form.reset();
+        document.getElementById("about-counter").innerText = "0 / 200";
         return;
     }
 
@@ -280,4 +331,6 @@ document.getElementById("student-about").addEventListener("input", () => {
 form.addEventListener("reset", () => {
     document.querySelectorAll(".error-message").forEach((error) => error.innerText = "");
     document.getElementById("about-counter").innerText = "0 / 200";
+    editingStudentId = null;
+    submitButton.innerText = "Register Student";
 });
