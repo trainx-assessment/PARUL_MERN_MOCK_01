@@ -1,0 +1,18 @@
+.head{
+    margin:0%;
+    padding:0%;
+    background-color: aliceblue;
+
+}
+h1{
+    color:rgb(52, 181, 181);
+    padding-top: 5px;
+    padding-left: 100px;
+    
+}
+p{
+    color:rgb(14, 24, 24);
+    padding-top: 5px;
+    padding-left: 100px;
+    
+}
