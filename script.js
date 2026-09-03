@@ -1,53 +1,42 @@
-const form =document.querySelector("#studentForm");
-const studentName=document.querySelector("#studentName");
-const studentContainer=document.querySelector("#studentContainer");
+let students=[
+       {   
+        id:1,
+        name:"Tiya",
+        email:"tiya@example.com",
+        phone:"123-456-7890",
+        dob:"2000-01-01",
+        gender:"Female",
+        course:"Computer Science",
+        skills:["HTML", "CSS"],
+        about:"I am a passionate web developer.",
+        photo:"tiya.jpg"
+        },
 
-form.addEventListener("submit",
-    function (event) {
+        {   
+        id:2,
+        name:"Teesha",
+        email:"teesha@example.com",
+        phone:"123-456-7890",
+        dob:"2000-01-01",
+        gender:"Female",
+        course:"Computer Science",
+        skills:["HTML", "CSS"],
+        about:"I am a passionate web developer.",
+        photo:"teesha.jpg"
+        },
 
-        const name =
-            studentName.value;
+        {   
+        id:3,
+        name:"Krishna",
+        email:"krishna@example.com",
+        phone:"123-456-7890",
+        dob:"2000-01-01",
+        gender:"Female",
+        course:"Computer Science",
+        skills:["HTML", "CSS"],
+        about:"I am a passionate web developer.",
+        photo:"krishna.jpg"
+        },
 
-        if (name.trim() === "") {
-            alert("Name is required");
-        }
-
-        const card =
-            document.createElement("div");
-
-        card.classList.add("student-card");
-
-        const heading =
-            document.createElement("h3");
-
-        heading.textContent =
-            name;
-
-        const deleteButton =
-            document.createElement("button");
-
-        deleteButton.textContent =
-            "Delete";
-
-        card.appendChild(heading);
-        card.appendChild(deleteButton);
-
-        studentContainer.appendChild(card);
-    }
-);
-
-studentContainer.addEventListener(
-    "click",
-    function (event) {
-
-        if (
-            event.target.classList.contains("delete-btn")
-        ) {
-
-            const card =
-                event.target.parentElement;
-
-            card.remove();
-        }
-    }
-);
+       
+]
