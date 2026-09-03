@@ -153,6 +153,65 @@ footer {
     background-color: white;
     margin-top: 20px;
 }
+ 
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .dashboard-section {
+        grid-template-columns: 1fr;
+    }
+}
 
  
+@media (max-width: 480px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
 
+    .full-width {
+        grid-column: 1 / 2;
+    }
+
+    .header-content {
+        display: block;
+        text-align: center;
+    }
+
+    .header-content button {
+        margin-top: 10px;
+    }
+}
+ 
+
+body.dark-mode {
+    background-color: #222222;
+    color: white;
+}
+
+body.dark-mode header,
+body.dark-mode section,
+body.dark-mode footer,
+body.dark-mode .student-card {
+    background-color: black;
+    border-color: #555555;
+}
+
+body.dark-mode input[type="text"], 
+body.dark-mode input[type="email"], 
+body.dark-mode input[type="date"], 
+body.dark-mode select, 
+body.dark-mode textarea {
+    background-color: #444444;
+    color: white;
+    border-color: #666666;
+}
+
+body.dark-mode .card-actions {
+    border-top: 1px solid #555555;
+}
