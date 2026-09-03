@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="head">
+        <div id="heading">
+
+            <h1 id="heading">Student Application Management System</h1>
+        </div>
+        <div id="subheading">
+            
+            <h3>Register and manage student applications</h3>
+        </div>
+        </header>
+    <main id="hero">
+        <section>
+
+        <form action="" id="form">
+            <h2>Student Registration Form</h2>
+            <div class="name"> 
+                <label for="Name">Student Name</label>
+                <input id="Name" type="text" required>
+            </div>
+            
+
+            <div class="email">
+                <label for="Email">Email</label>
+                <input id="Email" type="email" required>
+            </div>
+
+            <div class="phone">
+                <label for="Phone">Phone Number</label>
+                <input id="Phone" type="text" required>
+            </div>
+            <div class="dob">
+                <label for="Dob">Date of Birth</label>
+                <input id="Dob" type="date" required>
+            </div>
+            
+            <div class="gender">
+
+                <label for="Gender">Gender</label>
+                <input type="radio" id="male" value="g1" name="gender">
+                <label for="male">Male</label>
+                <input type="radio" id="female" value="g1" name="gender">
+                <label for="female">Female</label>
+                <input type="radio" id="others" value="g1" name="gender">
+                <label for="others">Others</label>
+            </div>
+            
+
+            <div class="course">
+
+                <label for="Course">Course</label>
+                <select name="Course" id="Course" required>
+                    <option value="Select Course"></option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Python">Python</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="MERN Stack">MERN Stack</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                </select>
+            </div>
+                
+            <div class="skills">
+
+                <label for="Skills">Skills</label>
+                <label for="Html">HTML</label>
+                <input type="checkbox" id="Html">
+
+                <label for="Css">CSS</label>
+                <input type="checkbox" id="Css">
+                <label for="Javascript">JavaScript</label>
+                <input type="checkbox" id="Javascript">
+                <label for="Git">Git</label>
+                <input type="checkbox" id="Git">
+                <label for="React">React</label>
+                <input type="checkbox" id="React">
+                <label for="Node.js">Node.js</label>
+                <input type="checkbox" id="Node.js">
+            </div>
+
+            <div class="aboutStudent">
+                <label for="Aboutstudent">About Student</label>
+                <textarea name="Aboutstudent" id="Aboutstudent"></textarea>
+            </div>
+
+            <div class="profilePhoto">
+                <label for="Profilephoto">Profile Photo</label>
+                <input type="file" id="Profilephoto" accept="image/*">
+            </div>
+            <div class="buttons">
+                <button id="RegisterBtn">Register Student</button>
+                <button id="ResetBtn">Reset Form</button>
+            </div>
+        </form>
+        </section>
+
+        <section id="student-statistics">
+        <h2>Student Statistics</h2>
+        <div>
+            <p>Total Students: <span id="totalStudents">0</span></p>
+            <p>Web Development: <span id="webDevelopment">0</span></p>
+            <p>UI/UX: <span id="uiux">0</span></p>
+            <p>Python: <span id="python">0</span></p>
+        </div>
+    </section>
+    <section id="student-cards">
+        <h2>Student Cards Container</h2>
+        <div id="studentCardsContainer">
+        </div>
+    </section>
+    </main>
+
+    <footer>
+    <p> 2026 Student Application Management System</p>
+</footer>
+</body>
+</html>
