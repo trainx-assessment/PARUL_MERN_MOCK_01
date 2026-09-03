@@ -36,4 +36,6 @@ form.addEventListener("submit",function(event){
     if(!/^\d{10}$/.test(phoneV)){
         valid= false;
     }
+
+    /////
 })
