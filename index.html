@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <div class="headerCont">
+            <span class="head">Student Application Management System</span>
+            <span class="sub">Register and manage student applications</span>
+        </div>
+    </header>
+    <br>
+    <main>
+        <section class="mainCont">
+            <section class="formCont">
+                <form action="">
+                    <div class="twoCol">
+                        <div class="box">
+                            <label for="name">FullName</label>
+                            <input type="text" id="name" required>
+    
+                            <label for="phone">PhoneNo</label>
+                            <input type="text" id="phone" required>
+    
+                            <div class="gender">
+                                <label for="gender">Gender</label>
+                                <div class="radioCont">
+                                    <div class="radioDiv">
+                                        <input type="radio" id="male" name="gender">
+                                        <label for="male">Male</label>
+                                    </div>
+                
+                                    <div class="radioDiv">
+                                        <input type="radio" id="female" name="gender">
+                                        <label for="female">Female</label>
+                                    </div>
+                
+                                    <div class="radioDiv">
+                                        <input type="radio" id="other" name="gender">
+                                        <label for="other">Other</label>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            
+                        </div>
+    
+                        <div class="box">
+                            
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+    
+                            <label for="date">Date of Birth</label>
+                            <input type="date" id="date" required>
+    
+                            <label for="course">Course</label>
+                            <select name="course" id="course">
+                                <option value="">Select Course</option>
+                                <option value="web-dev">Web Development</option>
+                                <option value="ui-ux">UI/UX</option>
+                                <option value="python">Python</option>
+                                <option value="data-an">Data Analytics</option>
+                                <option value="mern">MERN Stack</option>
+                                <option value="cloud">Cloud Computing</option>
+                            </select>
+                        </div>
+    
+                    
+
+                    </div>
+                    <div>
+                        <label for="skills">Skills</label>
+    
+                        <div class="radioDiv">
+                            <input type="checkbox" id="html">
+                            <label for="html">HTML</label> 
+                        </div>
+                        <div class="radioDiv">
+                            <input type="checkbox" id="css">
+                            <label for="css">CSS</label> 
+                        </div>
+                        <div class="radioDiv">
+                            <input type="checkbox" id="js">
+                            <label for="js">JavaScript</label> 
+                        </div>
+                        <div class="radioDiv">
+                            <input type="checkbox" id="git">
+                            <label for="git">Git</label> 
+                        </div>
+                        <div class="radioDiv">
+                            <input type="checkbox" id="react">
+                            <label for="react">React</label> 
+                        </div>
+                        <div class="radioDiv">
+                            <input type="checkbox" id="node">
+                            <label for="node">Node.js</label> 
+                        </div>
+                    </div>
+                    
+                    <label for="textArea">About</label>
+                    <textarea name="textArea" id="textArea" placeholder="Maximum 200 characters"></textarea>
+
+                    <label for="pp">Profile Photo</label>
+                    <input type="file"  placeholder="" id="img">
+
+
+                    <div class="btnDiv">
+                        <button id="submit" class="btn">Register Student</button>
+                        <button id="reset" class="btn">Reset Form</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="cardsCont">
+                <span class="sub">Student Cards</span>
+                <div class="cards">
+
+                    <div class="card">
+                        <div>
+                            <img src="./images-removebg-preview.png" alt="" height="100px">
+                        </div>
+                        <div>Name: Tvisha Singh Thakur</div>
+                        <div>Email: example@gmail.com</div>
+                        <div>Phone: +91 92XXXXXXXX</div>
+                        <div>DOB: 01/10/2005</div>
+                        <div>Gender: Female</div>
+                        <div>Course: UI/UX</div>
+                        <div>Skills: <br>  HTML, CSS, JS, Git
+                        </div>
+                        <div>About: <br> 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dicta vitae recusandae aliquid consequuntur, reiciendis illo perferendis tenetur voluptates voluptatem quasi totam ab qui deleniti sit sunt excepturi possimus quidem.</div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <img src="./images-removebg-preview.png" alt="" height="100px">
+                        </div>
+                        <div>Name: Tvisha Singh Thakur</div>
+                        <div>Email: example@gmail.com</div>
+                        <div>Phone: +91 92XXXXXXXX</div>
+                        <div>DOB: 01/10/2005</div>
+                        <div>Gender: Female</div>
+                        <div>Course: UI/UX</div>
+                        <div>Skills: <br>  HTML, CSS, JS, Git
+                        </div>
+                        <div>About: <br> 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dicta vitae recusandae aliquid consequuntur, reiciendis illo perferendis tenetur voluptates voluptatem quasi totam ab qui deleniti sit sunt excepturi possimus quidem.</div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <img src="./images-removebg-preview.png" alt="" height="100px">
+                        </div>
+                        <div>Name: Tvisha Singh Thakur</div>
+                        <div>Email: example@gmail.com</div>
+                        <div>Phone: +91 92XXXXXXXX</div>
+                        <div>DOB: 01/10/2005</div>
+                        <div>Gender: Female</div>
+                        <div>Course: UI/UX</div>
+                        <div>Skills: <br>  HTML, CSS, JS, Git
+                        </div>
+                        <div>About: <br> 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dicta vitae recusandae aliquid consequuntur, reiciendis illo perferendis tenetur voluptates voluptatem quasi totam ab qui deleniti sit sunt excepturi possimus quidem.</div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <img src="./images-removebg-preview.png" alt="" height="100px">
+                        </div>
+                        <div>Name: Tvisha Singh Thakur</div>
+                        <div>Email: example@gmail.com</div>
+                        <div>Phone: +91 92XXXXXXXX</div>
+                        <div>DOB: 01/10/2005</div>
+                        <div>Gender: Female</div>
+                        <div>Course: UI/UX</div>
+                        <div>Skills: <br>  HTML, CSS, JS, Git
+                        </div>
+                        <div>About: <br> 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dicta vitae recusandae aliquid consequuntur, reiciendis illo perferendis tenetur voluptates voluptatem quasi totam ab qui deleniti sit sunt excepturi possimus quidem.</div>
+                    </div>
+                    
+
+                    
+                </div>
+            </section>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
