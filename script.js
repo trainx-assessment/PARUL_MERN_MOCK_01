@@ -2,6 +2,39 @@ const students = [];
 const form = document.getElementById("student-form");
 const studentCardsContainer = document.getElementById("student-cards-container");
 
+function updateStatistics() {
+    let webDevelopmentCount = 0;
+    let uiUxCount = 0;
+    let pythonCount = 0;
+    let dataAnalyticsCount = 0;
+    let mernStackCount = 0;
+    let cloudComputingCount = 0;
+
+    students.forEach((student) => {
+        if (student.course === "Web Development") {
+            webDevelopmentCount++;
+        } else if (student.course === "UI/UX") {
+            uiUxCount++;
+        } else if (student.course === "Python") {
+            pythonCount++;
+        } else if (student.course === "Data Analytics") {
+            dataAnalyticsCount++;
+        } else if (student.course === "MERN Stack") {
+            mernStackCount++;
+        } else if (student.course === "Cloud Computing") {
+            cloudComputingCount++;
+        }
+    });
+
+    document.getElementById("total-students").innerText = "Total Students: " + students.length;
+    document.getElementById("web-development-count").innerText = "Web Development: " + webDevelopmentCount;
+    document.getElementById("ui-ux-count").innerText = "UI/UX: " + uiUxCount;
+    document.getElementById("python-count").innerText = "Python: " + pythonCount;
+    document.getElementById("data-analytics-count").innerText = "Data Analytics: " + dataAnalyticsCount;
+    document.getElementById("mern-stack-count").innerText = "MERN Stack: " + mernStackCount;
+    document.getElementById("cloud-computing-count").innerText = "Cloud Computing: " + cloudComputingCount;
+}
+
 function getNextStudentId() {
     const lastStudent = students[students.length - 1];
     return lastStudent ? lastStudent.id + 1 : 1;
@@ -9,6 +42,7 @@ function getNextStudentId() {
 
 function displayStudents() {
     studentCardsContainer.innerHTML = "";
+    updateStatistics();
 
     students.forEach((student) => {
         const card = document.createElement("div");

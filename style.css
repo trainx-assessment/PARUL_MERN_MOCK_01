@@ -89,6 +89,13 @@ textarea {
     display: block;
 }
 
+#statistics-container {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 12px;
+}
+
 #form-buttons {
     display: flex;
     gap: 12px;
@@ -163,7 +170,8 @@ footer {
     }
 
     #student-form,
-    #student-cards-container {
+    #student-cards-container,
+    #statistics-container {
         grid-template-columns: 1fr;
     }
 
