@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Student Management Application System</h1>
+    <h3>Register and manage student applications</h3>
+</header>
+
+<div id="form">
+
+<form id="studentForm">
+
+    <input type="text" id="studentName" placeholder="Student Name">
+
+    <input type="email" id="studentEmail" placeholder="Student Email">
+
+    <input type="tel" id="studentPhone" placeholder="Student Phone">
+
+    <input type="date" id="studentDOB">
+
+    <div class="gender-section">
+        <h4>Gender</h4>
+
+        <div class="gender-group">
+            <label>
+                <input type="radio" name="gender" value="male">
+                Male
+            </label>
+
+            <label>
+                <input type="radio" name="gender" value="female">
+                Female
+            </label>
+
+            <label>
+                <input type="radio" name="gender" value="other">
+                Other
+            </label>
+        </div>
+    </div>
+
+    <div class="course-section">
+        <h4>Course</h4>
+
+        <select id="studentCourses" name="course">
+            <option value="">Select Course</option>
+            <option value="web-development">Web Development</option>
+            <option value="ui-ux">UI/UX</option>
+            <option value="python">Python</option>
+            <option value="data-analytics">Data Analytics</option>
+            <option value="mern">MERN Stack</option>
+            <option value="cloud">Cloud Computing</option>
+        </select>
+    </div>
+
+    <div class="skills-section">
+        <h4>Skills</h4>
+
+        <div class="skills-group">
+            <label>
+                <input type="checkbox" name="skill" value="html">
+                HTML
+            </label>
+
+            <label>
+                <input type="checkbox" name="skill" value="css">
+                CSS
+            </label>
+
+            <label>
+                <input type="checkbox" name="skill" value="javascript">
+                JavaScript
+            </label>
+
+            <label>
+                <input type="checkbox" name="skill" value="git">
+                Git
+            </label>
+
+            <label>
+                <input type="checkbox" name="skill" value="react">
+                React
+            </label>
+
+            <label>
+                <input type="checkbox" name="skill" value="node">
+                Node.js
+            </label>
+        </div>
+    </div>
+
+    <div class="about-section">
+        <h4>About Student</h4>
+
+        <textarea
+            id="studentAbout"
+            placeholder=""
+        ></textarea>
+    </div>
+
+    <div class="photo-section">
+        <h4>Profile Photo</h4>
+
+        <input
+            type="file"
+            id="profilePhoto"
+            accept="image/*"
+        >
+    </div>
+
+    <div class="button-section">
+        <button type="submit">Add Student</button>
+        <button type="reset">Reset</button>
+    </div>
+
+</form>
+
+
+</div>
+
+<div id="studentContainer"></div>
+
+</body>
+</html>
