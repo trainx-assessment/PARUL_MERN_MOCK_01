@@ -1,0 +1,125 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    gap: 5px;
+    background-color: cadetblue;
+
+}
+.head{
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+}
+form{
+    height: 700px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 2px solid;
+    background-color: deepskyblue;
+    
+}
+.div1{
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-evenly;
+    width: 600px;
+    gap: 10px;
+
+    
+}
+.div2{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 600px;
+    gap: 5px;
+}
+.div3{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 600px;
+    gap: 5px;
+}
+.div4{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 500px;
+    gap: 5px;
+}
+.div5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    gap: 5px;
+}
+.div6{
+    display: flex;
+    align-items: center;
+   justify-content: center;
+    width: 500px;
+    gap: 5px;
+}
+.div7{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    gap: 15px;
+}
+.button{
+    width: 150px;
+    height: 60px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px;
+    color:black;
+    background-color: cornsilk;
+}
+.button:hover{
+    transform: scale(1.1);
+}
+textarea{
+    height: 80px;
+    width: 500px;
+    border-radius: 15px;
+}
+header{
+    background-color: skyblue;
+    width: 100%;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    font-size: 15px;
+    font-weight: 400;
+    width: 200px;
+   border: 2px solid;
+   background-color: blue;
+   color: antiquewhite;
+   gap: 5px;
+
+
+    
+}
+.cardcontainer{
+    display: flex;
+    gap: 5px;
+    justify-content: space-evenly;
+    height: 1000px;
+    flex-wrap: wrap;
+    width: 100%;
+}
