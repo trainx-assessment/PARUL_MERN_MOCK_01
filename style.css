@@ -1,0 +1,314 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px 40px;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+
+/* Form Grid */
+#studentForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Form Fields */
+#studentForm div,
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+label,
+legend {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* Gender and Skills */
+fieldset {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+fieldset label {
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+}
+
+/* Textarea */
+#about {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* About Student Full Row */
+#studentForm div:has(#about) {
+    grid-column: 1 / -1;
+}
+
+/* Profile Photo Full Row */
+#studentForm div:has(#profilePhoto) {
+    grid-column: 1 / -1;
+}
+
+/* Form Buttons */
+#studentForm div:has(button) {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button[type="submit"] {
+    background-color: #2563eb;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #1d4ed8;
+}
+
+button[type="reset"] {
+    background-color: #e5e7eb;
+    color: #333;
+}
+
+button[type="reset"]:hover {
+    background-color: #d1d5db;
+}
+
+/* Student Cards */
+#studentsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Example style for future student cards */
+.student-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f2937;
+    color: white;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    #studentForm {
+        grid-template-columns: 1fr;
+    }
+
+    #studentsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #studentForm div:has(#about),
+    #studentForm div:has(#profilePhoto),
+    #studentForm div:has(button) {
+        grid-column: auto;
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    main {
+        padding: 0 12px 25px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    #studentsContainer {
+        grid-template-columns: 1fr;
+    }
+
+    #studentForm div:has(button) {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+}
+.student-photo {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.student-card h3 {
+    margin-bottom: 12px;
+}
+
+.student-card p {
+    margin-bottom: 8px;
+    word-break: break-word;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.edit-btn {
+    background-color: #f59e0b;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #d97706;
+}
+
+.delete-btn {
+    background-color: #dc2626;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #b91c1c;
+}
+.statistics-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.statistics-container p {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: #f8fafc;
+}
+
+.statistics-container span {
+    color: #2563eb;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .statistics-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .statistics-container {
+        grid-template-columns: 1fr;
+    }
+}
