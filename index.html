@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div>
+            <h1>Student Application Management System</h1>
+            <p>Register and manage student applications</p>
+        </div>
+        <button id="themeBtn" type="button" class="secondary-btn">Dark Mode</button>
+    </header>
+
+    <main class="container">
+        <section class="panel">
+            <h2>Student Registration</h2>
+
+ <form id="studentForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName" maxlength="40" required>
+            </div>
+             <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+            </div>
+
+             <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                <input type="number" id="phone" maxlength="10" required>
+            </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob">
+                    </div>
+
+                    <fieldset class="form-group">
+                        <legend>Gender</legend>
+                        <div class="options">
+                            <label><input type="radio" name="gender" value="Male"> Male</label>
+                            <label><input type="radio" name="gender" value="Female"> Female</label>
+                            <label><input type="radio" name="gender" value="Other"> Other</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="course">Course</label>
+                        <select id="course">
+                            <option value="">Select Course</option>
+                            <option>Web Development</option>
+                            <option>UI/UX</option>
+                            <option>Python</option>
+                            <option>Data Analytics</option>
+                            <option>MERN Stack</option>
+                            <option>Cloud Computing</option>
+                        </select>
+                        <small class="error" id="courseError"></small>
+                    </div>
+
+                    <fieldset class="form-group full-width">
+                        <legend>Skills</legend>
+                        <div class="options skill-options">
+                            <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+                            <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+                            <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+                            <label><input type="checkbox" name="skills" value="Git"> Git</label>
+                            <label><input type="checkbox" name="skills" value="React"> React</label>
+                            <label><input type="checkbox" name="skills" value="Node.js"> Node.js</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group full-width">
+                        <label for="about">About Student</label>
+                        <textarea id="about" maxlength="200" placeholder="Maximum 200 characters"></textarea>
+                        <div class="counter"><span id="charCount">0</span> / 200</div>
+                        <small class="error" id="aboutError"></small>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="photo">Profile Photo</label>
+                        <input type="file" id="photo" accept="image/jpeg,image/png,image/jpg">
+                        <small class="hint">Accepted: JPG, JPEG, PNG</small>
+                        <small class="error" id="photoError"></small>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button id="submitBtn" type="submit" class="primary-btn">Register Student</button>
+                    <button id="resetBtn" type="button" class="secondary-btn">Reset Form</button>
+                </div>
+            </form>
+        </section>
+
+ <section class="stats-section">
+        <h2>Student Statistics</h2>
+        <div class="stats-grid" id="statsContainer"></div>
+     </section>
+
+  <section class="panel">
+        <div class="search-row">
+             <div class="form-group">
+                <label for="searchInput">Search Students</label>
+                    <input type="search" id="searchInput" placeholder="Search student by name...">
+         </div>
+<div class="form-group">
+            <label for="courseFilter">Filter by Course</label>
+              <select id="courseFilter">
+                        <option value="">All Courses</option>
+                        <option>Web Development</option>
+                        <option>UI/UX</option>
+                        <option>Python</option>
+                        <option>Data Analytics</option>
+                        <option>MERN Stack</option>
+                        <option>Cloud Computing</option>
+                 </select>
+           </div>
+ </div>
+ </section>
+
+  <section>
+      <div class="section-heading">
+            <h2>Student Applications</h2>
+             <span id="resultCount"></span>
+       </div>
+        <div id="studentContainer" class="student-grid"></div>
+    </section>
+</main>
+
+<footer>
+    <p>Student Application Management System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
