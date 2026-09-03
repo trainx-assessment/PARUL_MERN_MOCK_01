@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="title">
+      <div>
+        <h1>Student Application Management System</h1>
+        
+        <h4>Register and Manage Student Application</h4>
+      </div>
+    </header>
+
+    <header>
+        <h2 style="margin-left: 40%">Student Registration Form</h2>
+    </header>
+
+    <main class="header">
+      <form style="    width: 60%;
+    background: pink;
+    margin-left: 20%;">
+        <div id="student_name">
+          <p>
+            Name:
+            <input type="text" placeholder="Enter name" required />
+          </p>
+        </div>
+        <div id="student_email">
+          <p>
+            Email Id:
+            <input type="email" placeholder="Enter email" required />
+          </p>
+        </div>
+        <div id="student_number">
+          <p>
+            Mobile Number:
+            <input type="text" placeholder="Enter number" />
+          </p>
+        </div>
+        <div id="student_DOB">
+          <p>
+            Date of Birth:
+            <input type="date" placeholder="Enter DOB" />
+          </p>
+        </div>
+
+        <div id="student_gender">
+
+            <p>
+               Gender:
+            </p>
+            <label>
+              <input type="radio" name="gender" value="male" />
+              Male
+            </label>
+            <br>
+            <label>
+              <input type="radio" name="gender" value="female" />
+              Female
+            </label>
+            <br>
+            <label>
+              <input type="radio" name="gender" value="other" />
+              Other
+            </label>
+        </div>
+         <br>
+
+        <div id="student_course">
+            <p>
+              <label for="Course">Course:</label>
+           </p> 
+          <select id="course" name="course">
+            <option value="course">Web Development</option>
+            <option value="course">UI/UX</option>
+            <option value="course">Python</option>
+            <option value="course">Data Analytics</option>
+            <option value="course">Mern Stack</option>
+            <option value="course">Cloud Computing</option>
+          </select>
+        </div>
+
+        <div id="student_skills">
+            <p>Skills:</p>
+            
+                <input type="checkbox"> HTML
+                <br>
+                <input type="checkbox"> CSS
+                <br>
+                <input type="checkbox"> JAVASCRIPT
+                <br>
+                <input type="checkbox"> GIT
+                <br>
+                <input type="checkbox"> NODE.JS
+             
+        </div>
+
+        <div id="about_student">
+            <p>About: 
+                <input type="text">
+            </p>
+        </div>
+
+        <div id="Profile">
+            <p>Profile 
+                <input type="file">
+            </p>
+        </div>
+
+        <button>Submit Form</button>
+        <button>Reset Form</button>
+
+      </form>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
