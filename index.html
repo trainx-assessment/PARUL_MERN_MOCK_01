@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Student Application Management System</h1>
+
+        <h3>Register and manage student applications</h3>
+    </header>
+
+    <main>
+        <section class="registration">
+            <form class="form">
+                <h2 class="form-heading">Register student</h2>
+                <section class="student-name-email">
+                    <section class="student-name">
+                        <label for="name">Student Name: </label>
+                        <input type="text" placeholder="John Doe" id="name" name="name" required>
+                    </section>
+
+                    <section class="student-email">
+                        <label for="email">Email: </label>
+                        <input type="email" placeholder="example@gmail.com" id="email" name="email" required>
+                    </section>
+                </section>
+
+
+                <section class="student-phone-dob">
+                    <section class="student-phone">
+                        <label for="phone">Phone Number: </label>
+                        <input type="text" placeholder="XXXXXXXXXX" id="phone" name="phone" required>
+                    </section>
+
+                    <section class="student-dob">
+                        <label for="dob">Date of Birth: </label>
+                        <input type="date" placeholder="DOB" id="dob" name="dob" required>
+                    </section>
+                    </section>
+
+                <section class="student-gender">
+                    <label>Gender: </label>
+                        <label>Male</label>
+                        <input type="radio" name="gender" class ="gender" value="Male">
+
+                        <label>Female</label>
+                        <input type="radio" name="gender" class="gender" value="Female">
+
+                        <label>Other</label>
+                        <input type="radio" name="gender" class="genderque" value="Other">
+                </section>
+                
+                <section class="student-courses-skills">
+                    <section class="one"></section>
+                    <label for="courses">Course: </label>
+                        <select id="courses" name="courses">
+                            <option value="Select Course">Select Course</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="UI/UX">UI/UX</option>
+                            <option value="Python">Python</option>
+                            <option value="Data Analaytics">Data Analytics</option>
+                            <option value="MERN Stack">MERN Stack</option>
+                            <option value="Cloud Computing">Cloud Computing</option>
+                        </select>   
+                 
+                    <section class="two"></section>
+                    <label>Skills: </label>
+                    <div class="skill-options">
+                        <span><input type="checkbox" id="html"> HTML</span>
+                        <span><input type="checkbox" id="css"> CSS</span>
+                        <span><input type="checkbox" id="js"> JavaScript</span>
+                        <span><input type="checkbox" id="git"> Git</span>
+                        <span><input type="checkbox" id="react"> React</span>
+                        <span><input type="checkbox" id="node"> Node.js</span>
+                    </div>
+
+                </section>
+
+                <section class="student-about">
+                    <label for="about">About student: </label>
+                    <textarea id="about" name="About" placeholder="Maximum 200 characters"></textarea>
+
+                </section>
+                
+                <section class="student-profile">
+                    <label for="profile">Profile Photo: </label>
+                    <input type="file" id="profile" name="profile">
+                </section>
+
+
+                <section class="buttons">
+                    <button type="submit">Register Student</button>
+                    <button type="reset">Reset Form</button>
+                </section>
+
+            </form>
+        </section>
+
+        <section class="stats">
+
+        </section>
+
+        <section class="filter">
+
+        </section>
+
+        <section class="card-container">
+            
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
