@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+
+    <header>
+        <h1>Student Application Management System</h1>
+        <p>Register and manage student applications</p>
+    </header>
+
+    <br>
+
+    <main> 
+        
+
+        <form action="" id="form">
+            Name : <input type="text" placeholder="Enter your name" required id="name">
+            
+            Email : <input type="email" placeholder="Enter your email" required id="email">
+            <br><br>
+            Mobile Number : <input type="text" placeholder="Enter your number" required id="number">
+
+            Date of Birth: <input type="date" placeholder="Enter your date of birth" required id="bdate">
+            <br>
+            <br>
+
+            <p class="para">SELECT YOUR GENDER :</p>
+           
+            <label for="male" class="gender">
+                <input type="radio" name = "male" >Male
+            </label>
+            <br>
+            
+            <label for="male" class="gender">
+                <input type="radio" name = "female" >Female
+            </label>
+            <br>
+
+            <label for="male" class="gender">
+                <input type="radio" name = "others" >others
+            </label>
+            <br>
+
+
+            <p class="para">SELECT YOUR COURSE :</p>
+            <select name="select-course" id="course">
+                <option value="Web Development" >Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Python">Python</option>
+                <option value="Data Analytics">Data Analytics</option>
+                <option value="MERN Stack">MERN Stack</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+
+            <br>
+
+            <p class="para">SELCT YOUR SKILLS :</p>
+
+            <input type="checkbox" name="skills" class="skills" >
+            <label for="skills">HTML</label>
+
+            <input type="checkbox" name="skills" class="skills" >
+            <label for="skills">CSS</label>
+
+            <input type="checkbox" name="skills" class="skills" >
+            <label for="skills">JavaScript</label>
+
+            <input type="checkbox" name="skills" class="skills" >
+            <label for="skills">Git</label>
+
+            <input type="checkbox" name="skills" class="skills" >
+            <label for="skills">React</label>
+
+            <input type="checkbox" name="skills" class="skills" >
+            <label for="skills">Node.js</label>
+
+            <br>
+
+            <p class="para">WRITE HERE ABOUT YOU :</p>
+            <textarea name="about" id="about">About Student (Minimun 200 words)</textarea>
+            <br>
+
+            <p class="para">UPLOAD YOUR PROFILE IMAGE HERE :</p>
+            <input type="file" id="image">
+
+            <br>
+            <br>
+
+            <button type="text" id="register">Register Student</button>
+            <button type="text" id="reset">Reset</button>
+
+        </form>
+
+
+
+    </main>
+
+
+
+
+
+
+</body>
+<script src="script.js"></script>
+</html>

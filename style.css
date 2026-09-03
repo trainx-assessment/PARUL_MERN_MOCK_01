@@ -1,0 +1,27 @@
+
+body{
+
+    border: 2px solid black;
+    border-radius : 10px;
+    padding: 20px;
+    display: grid;
+    
+}
+header{
+    font-size: largee;
+    font-weight: bolder;
+    
+    border: 2px solid black;
+    padding: 20px;
+}
+
+form{
+    border : 2px solid black;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding : 20px;
+}
+
+.para{
+   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
