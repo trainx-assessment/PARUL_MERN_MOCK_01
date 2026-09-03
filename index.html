@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Student Application Management System</h1>
+            <p>Register and manage student applications</p>
+        </div>
+    </header>
+    <main class="container">
+        <!-- REGISTRATION FORM -->
+        <section class="form-section">
+            <div class="section-title">
+                <h2>Student Registration</h2>
+                <p>Enter student information below</p>
+            </div>
+            <form id="studentForm" novalidate>
+                <div class="form-grid">
+                    <!-- Student Name -->
+                    <div class="form-group">
+                        <label for="studentName">Student Name: </label>
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Enter full name"
+                            maxlength="40">
+                    </div>
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email: </label>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="student@gmail.com">
+                    </div>
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number: </label>
+                        <input
+                            type="text"
+                            id="phone"
+                            placeholder="10 digit number"
+                            maxlength="10">
+                    </div>
+                    <!-- DOB -->
+                    <div class="form-group">
+                        <label for="dob">Date of Birth: </label>
+                        <input type="date" id="dob">
+                    </div>
+                    <!-- Gender -->
+                    <div class="form-group">
+                        <label>Gender </label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="gender" value="Male">
+                                Male
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="Female">
+                                Female
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="Other">
+                                Other
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Course -->
+                    <div class="form-group">
+                        <label for="course">Course: </label>
+                        <select id="course">
+                            <option value="">Select Course</option>
+                            <option value="Web Development">Web Development</option>
+                            <br>
+                            <option value="UI/UX">UI/UX</option>
+                            <br>
+                            <option value="Python">Python</option>
+                            <br>
+                            <option value="Data Analytics">Data Analytics</option>
+                            <br>
+                            <option value="MERN Stack">MERN Stack</option>
+                            <br>
+                            <option value="Cloud Computing">Cloud Computing</option>
+                        </select>
+                    </div>
+                    <!-- Skills -->
+                    <div class="form-group full-width">
+                        <label>Skills: </label>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="skills" value="HTML">
+                                HTML
+                            </label>
+                            <label>
+                                <input type="checkbox" name="skills" value="CSS">
+                                CSS
+                            </label>
+                            <label>
+                                <input type="checkbox" name="skills" value="JavaScript">
+                                JavaScript
+                            </label>
+                            <label>
+                                <input type="checkbox" name="skills" value="Git">
+                                Git
+                            </label>
+                            <label>
+                                <input type="checkbox" name="skills" value="React">
+                                React
+                            </label>
+                            <label>
+                                <input type="checkbox" name="skills" value="Node.js">
+                                Node.js
+                            </label>
+                        </div>
+                    </div>
+                    <!-- About Student -->
+                    <div class="form-group full-width">
+                        <label for="about">About Student: </label>
+                        <textarea
+                            id="about"
+                            maxlength="200"
+                            placeholder="Tell us about the student...">
+                        </textarea>
+                        <div class="character-counter">
+                            <span id="charCount">0 / 200</span>
+                        </div>
+                    </div>
+                    <!-- Profile Photo -->
+                    <div class="form-group full-width">
+                        <label for="photo">Profile Photo </label>
+                        <input
+                            type="file"
+                            id="photo"
+                            accept="image/jpeg,image/jpg,image/png">
+                    </div>
+                </div>
+                <!-- Buttons -->
+                <div class="form-buttons">
+                    <button type="submit" id="submitBtn" class="btn primary-btn">
+                        Register Student
+                    </button>
+                    <button type="button" id="resetBtn" class="btn secondary-btn">
+                        Reset Form
+                    </button>
+                </div>
+            </form>
+        </section>
+        <!-- STATISTICS -->
+        <section class="statistics-section">
+
+            <div class="section-title">
+                <h2>Student Statistics</h2>
+                <p>Overview of registered students</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Students</h3>
+                    <p id="totalStudents">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Web Development</h3>
+                    <p id="webDevelopmentCount">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>UI/UX</h3>
+                    <p id="uiuxCount">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Python</h3>
+                    <p id="pythonCount">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Data Analytics</h3>
+                    <p id="dataAnalyticsCount">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>MERN Stack</h3>
+                    <p id="mernCount">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Cloud Computing</h3>
+                    <p id="cloudCount">0</p>
+                </div>
+            </div>
+        </section>
+        <!-- SEARCH & FILTER -->
+        <section class="search-section">
+            <div class="section-title">
+                <h2>Search & Filter</h2>
+            </div>
+            <div class="search-grid">
+                <div class="form-group">
+                    <label for="searchInput">Search Student</label>
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search student by name...">
+                </div>
+                <div class="form-group">
+                    <label for="courseFilter">Filter by Course</label>
+                    <select id="courseFilter">
+                        <option value="All">All Courses</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="UI/UX">UI/UX</option>
+                        <option value="Python">Python</option>
+                        <option value="Data Analytics">Data Analytics</option>
+                        <option value="MERN Stack">MERN Stack</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        <!-- STUDENT CARDS -->
+        <section class="students-section">
+            <div class="section-title">
+                <h2>Registered Students</h2>
+            </div>
+            <div id="studentContainer" class="student-container"></div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Student Application Management System</p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
