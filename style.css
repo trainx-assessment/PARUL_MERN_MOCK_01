@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: gray;
+    color: rgb(55, 41, 41);
+}
+header {
+    background-color: rgb(82, 82, 82);
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+header p {
+    margin: 5px;
+}
+
+header button {
+    margin-top: 10px;
+}
+
+main {
+    width: 88%;
+    max-width: 1100px;
+    margin: 25px auto;
+}
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+   
+}
+
+h2 {
+    margin-top: 0;
+    border-bottom: 1px solid violet;
+    padding-bottom: 10px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 21px;
+}
+form label{
+    display: block;
+    margin-bottom: 5px;
+}
+form textarea{
+    height: 100px;
+    resize: vertical;
+}
+.a1{
+    background-color: lightblue;
+}
+.a{
+    background: lightcyan;
+}
+form fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 12px;
+}
+
+form fieldset label {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+form span {
+    color: red;
+    font-size: 13px;
+}
+form button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(87, 87, 87);
+    color: white;
+    margin-right: 8px;
+}
+
+form button:hover,
+header button:hover {
+    background-color: #555;
+}
+
+#statistics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+#statistics div {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+#statistics h3 {
+    margin: 5px 0;
+}
+.student-card button {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+}
