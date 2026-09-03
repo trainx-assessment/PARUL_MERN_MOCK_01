@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <div class="head">
+       <h3> STUDENT APPLICATION MANAGEMENT SYSTEM</h3>
+          <h5>  Register and manage student applications</h5>
+    </div>
+
+    <div class="form">
+
+        <form id="Student-application">
+            <h5>Name</h5>
+            <input type="text" name="name" id="name"><br>
+            <h5>Email</h5>
+            <input type="email" name="email" id="email"><br>
+            <h5>Phone</h5>
+            <input type="text" name="phone" id="phone"><br>
+            <h5>Date of Birth</h5>
+            <input type="date" name="dob" id="dob"><br>
+            <h5>Gender</h5>
+
+            <span>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female">  
+            <label for="Other">Other</label>  
+            <input type="radio" name="gender" id="Other" value="Other">      
+            </span>
+
+            <h5>Courses</h5>
+            <input type="dropdown" name="Courses" id="Courses" list="Courses" placeholder="Select Courses">
+
+            <h5>Skills</h5>
+            <span>
+             <label for="Other">Html</label>  <input type="checkbox" >
+             <label for="Other">Css</label>  <input type="checkbox" >
+             <label for="Other">Js</label>  <input type="checkbox" >
+             <label for="Other">UI/UX</label>  <input type="checkbox" >
+             <label for="Other">Other</label>  <input type="checkbox" >
+            </span>
+
+            <h5>Profile Photo</h5> <input type="file">
+            <button>Register Student</button>
+            <button>Reset Form</button>
+        </form>
+<div class="cards">
+            <div class="card1">CARD 1</div>
+            <div class="card2">CARD 2</div>
+            <div class="card3">CARD 3</div>
+        </div>
+
+        
+ </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
