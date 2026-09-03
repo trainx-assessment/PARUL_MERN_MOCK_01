@@ -1,0 +1,460 @@
+/* css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+}
+  /* header */
+header {
+    background: linear-gradient(135deg, #f9fafa, #41413b);
+    color: rgb(254, 251, 251);
+    padding: 30px 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header-content h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.header-content p {
+    font-size: 17px;
+    opacity: 0.9;
+}
+/* main */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+/* scection */
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+section h2 {
+    font-size: 24px;
+    color: #1e293b;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 10px;
+}
+
+ /* Registration Form */
+#studentForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label,
+.form-group legend {
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+ /* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="search"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: inherit;
+    background-color: #fff;
+    color: #333;
+    transition: 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="search"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+fieldset {
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    padding: 15px;
+}
+
+fieldset legend {
+    padding: 0 5px;
+}
+
+ /* Radio Buttons & Checkboxes */
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: normal;
+    margin: 0;
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+  /* File Input */
+input[type="file"] {
+    padding: 10px;
+    border: 1px dashed #94a3b8;
+    border-radius: 7px;
+    background-color: #f8fafc;
+    cursor: pointer;
+}
+
+input[type="file"]:hover {
+    border-color: #2563eb;
+    background-color: #eff6ff;
+}
+
+
+small {
+    color: #64748b;
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+#studentForm .form-group:nth-of-type(7),
+#studentForm .form-group:nth-of-type(8) {
+    grid-column: 1 / -1;
+}
+
+/*Buttons */
+
+.form-buttons {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+button {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#registerBtn {
+    background-color: #2563eb;
+    color: white;
+}
+
+#registerBtn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(37, 99, 235, 0.25);
+}
+
+#resetBtn {
+    background-color: #e2e8f0;
+    color: #334155;
+}
+
+#resetBtn:hover {
+    background-color: #cbd5e1;
+    transform: translateY(-2px);
+}
+
+/* Statistic */
+
+#statistics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.stat-card p {
+    color: #2563eb;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+ /* Search and Filter */
+.search-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+/* Student Cards */
+#studentCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.student-card {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    transition: 0.3s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.student-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px;
+    border: 3px solid #2563eb;
+}
+
+.student-card h3 {
+    text-align: center;
+    color: #1e293b;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.student-card p {
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 7px;
+}
+
+.student-card strong {
+    color: #1e293b;
+}
+
+/* Footer
+ */
+footer {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+ /* Tablet Responsive Design */
+   /* Max Width: 768px */
+@media (max-width: 768px) {
+
+    .header-content h1 {
+        font-size: 26px;
+    }
+
+    main {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    section {
+        padding: 22px;
+    }
+
+    /* Registration form becomes one column */
+    #studentForm {
+        grid-template-columns: 1fr;
+    }
+
+    #studentForm .form-group:nth-of-type(7),
+    #studentForm .form-group:nth-of-type(8),
+    .form-buttons {
+        grid-column: auto;
+    }
+
+    /* Statistics */
+    #statistics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Search and filter */
+    .search-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Student cards */
+    #studentCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ========================================
+   Student Card Buttons
+======================================== */
+
+.student-card-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.student-card-buttons button {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+.edit-btn {
+    background-color: #2563eb;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.delete-btn {
+    background-color: #dc2626;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #b91c1c;
+}
+
+   /* Mobile Responsive Design */
+   /* Max Width: 480px */
+@media (max-width: 480px) {
+
+    header {
+        padding: 30px 15px;
+    }
+
+    .header-content h1 {
+        font-size: 22px;
+    }
+
+    .header-content p {
+        font-size: 14px;
+    }
+
+    main {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 18px;
+        margin-bottom: 20px;
+    }
+
+    section h2 {
+        font-size: 20px;
+    }
+
+    /* Statistics become one column */
+    #statistics {
+        grid-template-columns: 1fr;
+    }
+
+    /* Student cards become one column */
+    #studentCards {
+        grid-template-columns: 1fr;
+    }
+
+    /* Radio and checkbox groups */
+    .radio-group,
+    .checkbox-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Buttons stack vertically */
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    footer {
+        padding: 20px 15px;
+    }
+}
+
