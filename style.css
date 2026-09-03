@@ -1,39 +1,27 @@
-* {
-  box-sizing: border-box;
-}
 body{
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f0f2f5;
-  color: #222;
+  color: #5b8452;
+  font-size: 25px;;
 }
 h1, h2{
-  margin: 0;
+  margin: 20px;
 }
 main{
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px;
 }
 header{
-  background-color: #105f81;
+  background-color: #0d0918;
   color: white;
-  padding: 20px;
+  padding: 70px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
 }
 header p{
-  margin: 5px;
-}
-#themeToggle{
-  padding: 8px 14px;
-  background-color: #ffffff33;
-  color: white;
-  border: 1px solid white;
-  border-radius: 5px;
-  cursor: pointer;
+  margin: 40px;
 }
 section{
   background-color: white;
@@ -47,183 +35,7 @@ section h2{
   padding-bottom: 8px;
   margin-bottom: 15px;
 }
-.form-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px 20px;
-}
 .form-group{
   display: flex;
   flex-direction: column;
-}
-.full-row{
-  grid-column: 1 / -1;
-}
-label, .group-label{
-  font-weight: bold;
-  margin-bottom: 5px;
-  font-size: 14px;
-}
-input, select, textarea{
-  padding: 8px;
-  border: 1px solid #bbb;
-  border-radius: 4px;
-  font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-textarea{
-  resize: vertical;
-}
-.inline-options{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-.inline-options label{
-  font-weight: normal;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.char-counter{
-  font-size: 12px;
-  color: #666;
-  text-align: right;
-}
-.error-msg{
-  color: red;
-  font-size: 12px;
-  min-height: 14px;
-}
-.form-actions{
-  margin-top: 15px;
-}
-.form-actions button{
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-right: 10px;
-  font-size: 14px;
-}
-#submitBtn{
-  background-color: #131618;
-  color: white;
-}
-#resetBtn{
-  background-color: #e0e0e0;
-}
-.stats-grid{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-}
-.stat-box{
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 12px;
-  text-align: center;
-}
-.stat-box h3{
-  margin: 0;
-  font-size: 22px;
-}
-.stat-box p{
-  margin: 4px 0 0 0;
-  font-size: 12px;
-  color: #666;
-}
-.filter-section{
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-.filter-section input,
-.filter-section select{
-  flex: 1;
-}
-.student-container{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
-.student-card{
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 15px;
-}
-.student-card img{
-  width: 100%;
-  height: 130px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 8px;
-}
-.student-card h3{
-  margin: 0 0 5px 0;
-}
-.student-card p{
-  margin: 2px 0;
-  font-size: 13px;
-  color: #444;
-}
-.card-buttons{
-  margin-top: 10px;
-}
-.card-buttons button{
-  padding: 6px 12px;
-  margin-right: 8px;
-  border: 1px solid #999;
-  background-color: #f5f5f5;
-  border-radius: 4px;
-  cursor: pointer;
-}
-#noResults{
-  text-align: center;
-  color: #777;
-}
-body.dark-mode{
-  background-color: #181818;
-  color: #eee;
-}
-body.dark-mode section{
-  background-color: #262626;
-  border-color: #444;
-}
-body.dark-mode input,
-body.dark-mode select,
-body.dark-mode textarea{
-  background-color: #333;
-  color: #eee;
-  border-color: #555;
-}
-body.dark-mode .stat-box,
-body.dark-mode .student-card{
-  border-color: #444;
-}
-@media (max-width: 768px){
-  .form-grid{
-    grid-template-columns: 1fr;
-  }
-  .stats-grid{
-    grid-template-columns: 1fr 1fr;
-  }
-  .student-container{
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 480px){
-    header{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    header button{
-        margin-top: 10px;
-    }
-    .student-container{
-        grid-template-columns: 1fr;
-    }
-    .filter-section{
-        flex-direction: column;
-    }
 }

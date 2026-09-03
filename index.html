@@ -11,9 +11,8 @@
   <header>
     <div>
       <h1>Student Application Management System</h1>
-      <p>Register and manage student applications</p>
+      <p>Register and manage student applications : </p>
     </div>
-    <button type="button" id="themeToggle">Dark Mode</button>
   </header>
   <main>
     <section>
@@ -24,26 +23,28 @@
           <div class="form-group">
             <label for="studentName">Student Name</label>
             <input type="text" id="studentName" placeholder="e.g. Rahul Sharma">
-            <span class="error-msg" id="studentNameError"></span>
           </div>
-
+          <br></br>
           <div class="form-group">
             <label for="email">Email</label>
             <input type="email" id="email" placeholder="e.g. rahul@gmail.com">
-            <span class="error-msg" id="emailError"></span>
           </div>
+
+          <br></br>
 
           <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input type="text" id="phone" placeholder="10 digit number">
-            <span class="error-msg" id="phoneError"></span>
+            <input type="text" id="phone" placeholder="978XXXXXXX">
           </div>
+
+          <br></br>
 
           <div class="form-group">
             <label for="dob">Date of Birth</label>
             <input type="date" id="dob">
-            <span class="error-msg" id="dobError"></span>
           </div>
+
+          <br></br>
 
           <div class="form-group">
             <span class="group-label">Gender</span>
@@ -58,8 +59,9 @@
                 <input type="radio" name="gender" value="Other"> Other
               </label>
             </div>
-            <span class="error-msg" id="genderError"></span>
           </div>
+
+          <br></br>
 
           <div class="form-group">
             <label for="course">Course</label>
@@ -72,8 +74,9 @@
               <option value="MERN Stack">MERN Stack</option>
               <option value="Cloud Computing">Cloud Computing</option>
             </select>
-            <span class="error-msg" id="courseError"></span>
           </div>
+
+          <br></br>
 
           <div class="form-group full-row">
             <span class="group-label">Skills</span>
@@ -97,22 +100,25 @@
                 <input type="checkbox" name="skills" value="Node.js"> Node.js
               </label>
             </div>
-            <span class="error-msg" id="skillsError"></span>
           </div>
+
+          <br></br>
 
           <div class="form-group full-row">
             <label for="about">About Student</label>
             <textarea id="about" maxlength="200" rows="3" placeholder="A short note about the student (minimum 20 characters)"></textarea>
-            <div class="char-counter"><span id="aboutCount">0</span> / 200</div>
-            <span class="error-msg" id="aboutError"></span>
+            <div class="char-counter"> / 200</div>
           </div>
+
+          <br></br>
 
           <div class="form-group full-row">
             <label for="photo">Profile Photo</label>
             <input type="file" id="photo" accept=".jpg,.jpeg,.png,image/jpeg,image/png">
-            <span class="error-msg" id="photoError"></span>
           </div>
         </div>
+
+        <br></br>
 
         <div class="form-actions">
           <button type="submit" id="submitBtn">Register Student</button>
@@ -120,6 +126,8 @@
         </div>
       </form>
     </section>
+
+    <br></br>
 
     <section>
       <h2>Student Statistics</h2>
@@ -129,34 +137,36 @@
           <p>Total Students</p>
         </div>
         <div class="stat-box">
-          <h3 class="stat-value" data-course="Web Development">0</h3>
+          <h3 class="stat-value" >0</h3>
           <p>Web Development</p>
         </div>
         <div class="stat-box">
-          <h3 class="stat-value" data-course="UI/UX">0</h3>
+          <h3 class="stat-value" data-course="UI/UX"></h3>
           <p>UI/UX</p>
         </div>
         <div class="stat-box">
-          <h3 class="stat-value" data-course="Python">0</h3>
+          <h3 class="stat-value"></h3>
           <p>Python</p>
         </div>
         <div class="stat-box">
-          <h3 class="stat-value" data-course="Data Analytics">0</h3>
+          <h3 class="stat-value"></h3>
           <p>Data Analytics</p>
         </div>
         <div class="stat-box">
-          <h3 class="stat-value" data-course="MERN Stack">0</h3>
+          <h3 class="stat-value"></h3>
           <p>MERN Stack</p>
         </div>
         <div class="stat-box">
-          <h3 class="stat-value" data-course="Cloud Computing">0</h3>
+          <h3 class="stat-value"></h3>
           <p>Cloud Computing</p>
         </div>
       </div>
     </section>
 
+    <br></br>
+
     <section class="filter-section">
-      <input type="text" id="searchInput" placeholder="Search student by name...">
+      <input type="text" id="searchInput" placeholder="Search student name">
       <select id="courseFilter">
         <option value="All Courses">All Courses</option>
         <option value="Web Development">Web Development</option>
@@ -168,14 +178,14 @@
       </select>
     </section>
 
+    <br></br>
+
     <section>
       <h2>Registered Students</h2>
       <div id="studentContainer" class="student-container"></div>
       <p id="noResults" hidden>No students found</p>
     </section>
-
   </main>
-
   <script src="script.js"></script>
 </body>
 </html>
