@@ -9,12 +9,25 @@ html {
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-track {
+  margin: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -47,12 +60,39 @@ header p {
 }
 
 footer {
-    text-align: center;
-    padding: 1rem 2rem;
+  text-align: center;
+  padding: 1rem 2rem;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 footer p {
-    opacity: 0.8;
-    font-size: 0.75rem
+  opacity: 0.8;
+  font-size: 0.75rem;
+}
+
+main {
+  overflow-y: scroll;
+}
+
+section {
+  padding: 4rem 6rem;
+}
+
+.registration-sec {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registration-sec form {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  color: lightgray;
 }
