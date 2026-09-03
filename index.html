@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Application Management System</h1>
+    </header>
+
+    <main><fieldset>
+
+        <section class="registration">
+            <h2>Student Registration</h2>
+
+            <form id="studentForm">
+                <label for="name">Student Name</label>
+                <input type="text" id="name" placeholder="EnterStudentName" required><br>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="EnterEmail" required><br>
+                <label for="phoneNumber">PhoneNumber</label>
+                <input type="number" id="phoneNumber" placeholder="EnterPhoneNumber" required><br>
+                <label for="dateOfBirth">Date of Birth</label>
+                <input type="date" id="dateOfBirth" placeholder="EnterDateOfBirth" required><br>
+                <label for="gender">Gender: </label>
+                <label for="gender">male</label>
+                <input type="radio" name="gender">
+                
+                <label for="gender" >female</label>
+                <input type="radio" name="gender">
+                  <label for="gender" >others</label>
+                <input type="radio" name="gender"><br>
+                <label for="course">Course</label>
+
+
+                <!-- <input type="" id="course" placeholder="EnterCourseName" readonly required><br> -->
+
+                     <select id="courseFilter">
+                        <option value="all">Select Course </option>
+                <option value="all">Web Development </option>
+                <option value="all">UI/UX</option>
+                <option value="all">Pyhton </option>
+                <option value="all">data Analytics</option>
+                <option value="all">MERN STACK </option>
+                <option value="all">Cloud Computing</option>
+                
+            </select><br>
+
+
+
+
+                <label for="skills">Skills: </label>
+                <label for="skills">HTML</label>
+                <input type="checkbox" name="skills">
+                <label for="skills">CSS</label>
+                <input type="checkbox" name="skills">
+                <label for="skills">JS</label>
+                <input type="checkbox" name="skills">
+                 <label for="skills">Node.js</label>
+                <input type="checkbox" name="skills">
+                <label for="skills">REACT</label>
+                <input type="checkbox" name="skills">
+                 <label for="skills">Express.js</label>
+                <input type="checkbox" name="skills">
+                <label for="skills">MongoDB</label>
+                <input type="checkbox" name="skills"><br>
+                <h3>Text Area </h1>
+                    <h5>write only 200 words</p>
+
+                <textarea></textarea><br>
+                <label for="profilePhoto">profile Photo</label>
+                <input type="file"><br>
+
+                
+                <button type="submit">SUBMIT</button><br>
+
+                <button type="reset">RESET</button>
+
+
+               
+
+            </form>
+        </section>
+        <br>
+        </fieldset>
+
+        <section class="statistics">
+            <h2>Student Statistics</h2>
+
+            <div class="stats">
+                <div>
+                    <h3 id="totalStudents"></h3>
+                    <p>Total Students</p>
+                </div>
+
+                <div>
+                    <h3 id="totalApplications"></h3>
+                    <p>Total Applications</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-section">
+            <h2>Search Students</h2>
+
+            <input type="text" id="searchInput" placeholder="Search student">
+
+            <select id="courseFilter">
+                <option value="all">All Courses</option>
+                
+                
+            </select>
+        </section>
+
+        <section class="students-section">
+            <h2>Student Applications</h2>
+
+            <div id="studentContainer">
+                
+               
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+       
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
