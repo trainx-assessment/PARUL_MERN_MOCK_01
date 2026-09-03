@@ -1,0 +1,14 @@
+*{
+    background-color: white;
+    
+}
+
+.f{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    /* flex-wrap: wrap;
+    justify-content: space-between; */
+    gap: 50px;
+    width: 98vw;
+}
+/* @media (max-width: 768px) */
