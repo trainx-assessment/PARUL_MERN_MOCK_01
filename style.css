@@ -1,0 +1,196 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(176, 188, 189);
+    position: relative;
+}
+
+nav{
+    height: 10%;
+    position: fixed;
+    background-color:rgba(222, 184, 135, 0.758) ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    box-shadow: 0 0 15px 0;
+}
+
+#navHead{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 5%;
+}
+
+main{
+    height: 85%;
+    width: 100%;
+    margin-top: 5%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#formDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 90%;
+}
+
+form{
+    height: 100%;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+}
+#searchDiv{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    height: 15%;
+    width: 90%;
+    background-color: rgb(196, 205, 205);
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+#srch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    gap: 5%;
+}
+
+#searchStudent{
+    border: none;
+    outline: none;
+    height: 40%;
+    width: 60%;
+    padding-left: 5%;
+    border-radius: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#searchStudentBtn{
+    border: none;
+    background-color:rgba(222, 184, 135, 0.758) ;
+    height: 30%;
+    width: 20%;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#searchStudentBtn:hover{
+    border: 2px solid rgba(204, 121, 12, 0.758) ;
+}
+
+.inp{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    width: 60%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inp input{
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 60%;
+    padding-left: 2%;
+}
+
+.inp select{
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 60%;
+}
+
+
+#register{
+    background-color: rgba(222, 184, 135, 0.758);
+    border: none;
+    height: 10%;
+    width: 20%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    margin-top:5% ;
+}
+
+#register:hover{
+    border: 2px solid rgba(193, 111, 3, 0.758);
+}
+
+#studentFilter{
+    position: absolute;
+    background-color:antiquewhite;
+    border-radius: 30px;
+    height: 95%;
+    width: 95%;
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    flex-direction: column;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#close{
+    position: absolute;
+    font-size: 1.5rem;
+    top:5%;
+    left: 95%;
+    cursor: pointer;
+}
+
+
+#stdData{
+    height:30%;
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 5%;
+    
+}
+
+
+
+
+
+
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color:rgb(226, 209, 187);
+    height: 5%;
+    width: 100%;
+    position: absolute;
+    margin-top: 47.9%;
+    box-shadow: 15px 0 0 0;
+    overflow: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-right: 2%;
+}

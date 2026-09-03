@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application MS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav><h1 id="navHead">Student Application Management System</h1></nav>
+    </header>
+    <main>
+        <div id="searchDiv">
+            <h1>Register</h1>
+            <div id="srch">
+            <input type="text" id="searchStudent" placeholder="search">
+            <button type="submit" id="searchStudentBtn">Search</button>
+            </div>
+        </div>
+        <div id="formDiv">
+        <form action="submit">
+            
+            <div class="inp">
+            <input type="text" placeholder="Student Name" required id="name"></div>
+            <div class="inp"><input type="email" required placeholder="Email" id="mail"></div>
+            <div class="inp"><input type="text" required placeholder="Phone No." id="phone"></div>
+            <div class="inp">
+            <input type="date" required placeholder="DOB" id="dob"></div>
+            <div class="inp">
+            <select id="course">
+                <option value="Web Development">Web Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Python">Python</option>
+                <option value="Data Analysis">Data Analysis</option>
+                <option value="MERN Stack">MERN Stack</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+            </select>
+            </div>
+            
+            <button type="submit" id="register">Register</button>
+        </form>
+        </div>
+        <div id="studentFilter">
+            <div id="stdData">
+            </div>
+            <div id="close">X</div>
+        </div>
+    </main>
+    <footer>
+        <h3>Parul University</h3>
+    </footer>
+    
+<script src="script.js"></script>
+</body>
+</html>
