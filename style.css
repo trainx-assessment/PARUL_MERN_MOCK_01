@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5dc; /* beige */
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #000;
+}
+
+header p {
+  font-size: 1rem;
+  color: #000;
+}
+
+#registration {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+#studentForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+#studentForm label {
+  font-weight: bold;
+}
+
+#studentForm input,
+#studentForm select,
+#studentForm textarea,
+#studentForm button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#studentForm textarea {
+  resize: none;
+  grid-column: span 2;
+}
+
+#studentForm fieldset {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  grid-column: span 2;
+}
+
+#studentForm button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#studentForm button:hover {
+  background: #0056b3;
+}
+
+#studentContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.student-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.student-card img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.student-card h3 {
+  margin: 10px 0;
+}
+
+.student-card button {
+  margin-right: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.student-card button:hover {
+  opacity: 0.8;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  #studentForm {
+    grid-template-columns: 1fr;
+  }
+  #studentContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  #studentContainer {
+    grid-template-columns: 1fr;
+  }
+}
